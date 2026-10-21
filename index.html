@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barbershop Harmony Explainer</title>
+<style>
+:root{
+  --bg:#0f1117; --panel:#171a23; --panel2:#1e2230; --text:#e8eaf2;
+  --muted:#8b90a3; --accent:#e0b35a; --root:#e05c5c; --third:#5ca8e0;
+  --fifth:#5ce08a; --seventh:#c07ce0; --tenor:#5ca8e0; --lead:#5ce08a;
+  --bari:#e0b35a; --bass:#e05c5c;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{padding:20px 24px 8px;max-width:1100px;margin:0 auto}
+h1{font-size:1.4rem;margin:0 0 4px}
+header p{color:var(--muted);margin:0;font-size:.9rem}
+main{max-width:1100px;margin:0 auto;padding:12px 24px 48px}
+.panel{background:var(--panel);border:1px solid #262b3a;border-radius:12px;padding:16px;margin-top:14px}
+.panel h2{font-size:.95rem;margin:0 0 10px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
+/* progression display */
+.prog{display:flex;gap:8px;flex-wrap:wrap}
+.chord-chip{background:var(--panel2);border:1px solid #2c3245;border-radius:8px;padding:8px 14px;min-width:74px;text-align:center;cursor:pointer;transition:all .15s}
+.chord-chip .sym{font-size:1.25rem;font-weight:700}
+.chord-chip .roman{color:var(--muted);font-size:.75rem;margin-top:2px}
+.chord-chip.active{border-color:var(--accent);background:#2a2416;transform:translateY(-2px)}
+.chord-chip:hover{border-color:#4a5270}
+/* voices */
+.voices{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.voice{background:var(--panel2);border-radius:8px;padding:10px;text-align:center}
+.voice .name{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.voice .note{font-size:1.6rem;font-weight:700;margin-top:2px}
+.voice.tenor{border-top:3px solid var(--tenor)}
+.voice.lead{border-top:3px solid var(--lead)}
+.voice.bari{border-top:3px solid var(--bari)}
+.voice.bass{border-top:3px solid var(--bass)}
+.voice.muted .note{color:#555}
+/* keyboard */
+#keyboard{width:100%;height:170px;display:block;touch-action:none}
+/* controls */
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+button{background:var(--panel2);color:var(--text);border:1px solid #2c3245;border-radius:8px;padding:9px 16px;font-size:.9rem;cursor:pointer}
+button:hover{border-color:#4a5270}
+button.primary{background:var(--accent);color:#1a1408;border-color:var(--accent);font-weight:700}
+button.playing{background:#3a2a10;border-color:var(--accent)}
+select,input[type=text]{background:var(--panel2);color:var(--text);border:1px solid #2c3245;border-radius:8px;padding:8px 10px;font-size:.9rem}
+input[type=range]{accent-color:var(--accent)}
+.label{color:var(--muted);font-size:.8rem}
+.legend{display:flex;gap:14px;margin-top:10px;flex-wrap:wrap}
+.legend span{font-size:.78rem;color:var(--muted);display:flex;align-items:center;gap:5px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.status{color:var(--muted);font-size:.8rem;margin-left:auto}
+footer{max-width:1100px;margin:0 auto;padding:0 24px 40px;color:var(--muted);font-size:.8rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>Barbershop Harmony Explainer</h1>
+  <p>Barbershop 7th-chord progressions: hear the root move by fifths, watch the voices resolve. Click a chord to hear it solo.</p>
+</header>
+<main>
+  <div class="panel">
+    <h2>Progression</h2>
+    <div class="prog" id="prog"></div>
+    <div class="controls" style="margin-top:14px">
+      <button id="playBtn" class="primary">&#9654; Play</button>
+      <select id="mode" title="Playback style">
+        <option value="block">Block chords</option>
+        <option value="strum">Voice-leading strum</option>
+        <option value="arp">Arpeggio</option>
+      </select>
+      <select id="progSel" title="Progression"></select>
+      <label class="label">Tempo <input type="range" id="tempo" min="30" max="90" value="48" style="vertical-align:middle"> <span id="bpm">48</span> BPM</label>
+      <span class="status" id="status">loading samples&hellip;</span>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Voices <span class="label" style="text-transform:none;letter-spacing:0">(barbershop order)</span></h2>
+    <div class="voices">
+      <div class="voice tenor"><div class="name">Tenor</div><div class="note" id="v-tenor">&ndash;</div></div>
+      <div class="voice lead"><div class="name">Lead</div><div class="note" id="v-lead">&ndash;</div></div>
+      <div class="voice bari"><div class="name">Bari</div><div class="note" id="v-bari">&ndash;</div></div>
+      <div class="voice bass"><div class="name">Bass</div><div class="note" id="v-bass">&ndash;</div></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Keyboard</h2>
+    <svg id="keyboard" viewBox="0 0 1060 170" preserveAspectRatio="none"></svg>
+    <div class="legend">
+      <span><span class="dot" style="background:var(--root)"></span>root</span>
+      <span><span class="dot" style="background:var(--third)"></span>third</span>
+      <span><span class="dot" style="background:var(--fifth)"></span>fifth</span>
+      <span><span class="dot" style="background:var(--seventh)"></span>seventh</span>
+      <span><span class="dot" style="background:#3a3f52"></span>inactive</span>
+    </div>
+  </div>
+</main>
+<footer>Click a chord chip to hear it in isolation. "Voice-leading strum" staggers voice entries by ~70ms so you can hear each part resolve into place.</footer>
+
+<script type="module">
+import * as Tonal from 'https://cdn.jsdelivr.net/npm/tonal@6/+esm';
+import * as Tone from 'https://cdn.jsdelivr.net/npm/tone@15/+esm';
+
+/* ---------- data model ---------- */
+const pcName = m => ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'][m];
+
+// voice-ordered barbershop voicings: bass, bari, lead, tenor (low to high)
+// chord tones as pitch names; we pick octaves for a comfortable range per voice.
+const V = (bass, bari, lead, tenor, symbol, roman) => ({bass, bari, lead, tenor, symbol, roman});
+
+const PROGRESSIONS = {
+  'Barbershop 7th (C)': {
+    tonic: 'C',
+    chords: [
+      V('C3','E3','G3','Bb3','C7','I7'),
+      V('A2','C#3','E3','G3','A7','VI7'),
+      V('D3','F#3','A3','C4','D7','II7'),
+      V('G2','B2','D3','F3','G7','V7'),
+      V('C3','E3','G3','Bb3','C7','I7'),
+    ],
+  },
+  'Barbershop turnaround (C)': {
+    tonic: 'C',
+    chords: [
+      V('C3','E3','G3','C4','C','I'),
+      V('A2','C3','E3','G3','A7','VI7'),
+      V('D3','F3','A3','C4','Dm7','ii7'),
+      V('G2','B2','D3','F3','G7','V7'),
+      V('C3','E3','G3','C4','C','I'),
+    ],
+  },
+  'Circle of fifths (C)': {
+    tonic: 'C',
+    chords: [
+      V('C3','E3','G3','Bb3','C7','I7'),
+      V('F2','A2','C3','Eb3','F7','IV7'),
+      V('Bb2','D3','F3','Ab3','Bb7','bVII7'),
+      V('Eb3','G3','Bb3','Db4','Eb7','bIII7'),
+      V('Ab2','C3','Eb3','Gb3','Ab7','bVI7'),
+      V('D3','F#3','A3','C4','D7','II7'),
+      V('G2','B2','D3','F3','G7','V7'),
+      V('C3','E3','G3','Bb3','C7','I7'),
+    ],
+  },
+};
+
+/* ---------- helpers ---------- */
+function noteToMidi(n){
+  const m = Tonal.Note.midi(n);
+  return m;
+}
+
+function classify(midi, rootMidi, quality){
+  // interval semitones from root, mod 12
+  let iv = ((midi - rootMidi) % 12 + 12) % 12;
+  if (iv === 0) return 0;               // root
+  if (iv === 3 || iv === 4) return 1;   // third
+  if (iv === 7 || iv === 6) return 2;   // fifth (6 = flat5 in bluesy chords)
+  if (iv === 10) return 3;              // seventh (dom7)
+  if (iv === 11) return 3;              // maj7
+  return 2; // fallback: treat as fifth-ish
+}
+
+/* ---------- keyboard ---------- */
+const LOW = 36; // C2
+const HIGH = 84; // C6
+const kb = document.getElementById('keyboard');
+const whitePcs = [0,2,4,5,7,9,11];
+const blackAfter = {0:1,2:3,5:6,7:8,9:10}; // white pc -> black pc to its right
+
+// build key elements once
+const keyEls = {}; // midi -> {el, isBlack}
+(function buildKeyboard(){
+  let whiteCount = 0;
+  for (let m = LOW; m <= HIGH; m++){
+    const pc = m % 12;
+    const isBlack = !whitePcs.includes(pc);
+    if (!isBlack) whiteCount++;
+  }
+  const totalWhite = whiteCount;
+  const wW = 1060 / totalWhite; // white key width
+  const svgNS = 'http://www.w3.org/2000/svg';
+  let wIdx = 0;
+  const whites = [], blacks = [];
+  for (let m = LOW; m <= HIGH; m++){
+    const pc = m % 12;
+    const isBlack = !whitePcs.includes(pc);
+    if (isBlack){
+      blacks.push(m);
+    } else {
+      const el = document.createElementNS(svgNS,'rect');
+      el.setAttribute('x', wIdx*wW + 1); el.setAttribute('y', 1);
+      el.setAttribute('width', wW - 2); el.setAttribute('height', 168);
+      el.setAttribute('rx', 3);
+      el.setAttribute('fill', '#f4f5f8');
+      el.dataset.midi = m;
+      el.addEventListener('pointerdown', () => previewNote(m));
+      kb.appendChild(el);
+      keyEls[m] = {el, isBlack:false};
+      // label C's
+      if (pc === 0){
+        const t = document.createElementNS(svgNS,'text');
+        t.setAttribute('x', wIdx*wW + wW/2); t.setAttribute('y', 160);
+        t.setAttribute('text-anchor','middle'); t.setAttribute('font-size','10');
+        t.setAttribute('fill','#888');
+        t.textContent = '';
+        try { t.textContent = Tonal.Note.fromMidi(m); } catch(e){ t.textContent='C'; }
+        kb.appendChild(t);
+      }
+      wIdx++;
+    }
+  }
+  // black keys positioned relative to the white key to their left
+  wIdx = 0;
+  for (let m = LOW; m <= HIGH; m++){
+    const pc = m % 12;
+    const isBlack = !whitePcs.includes(pc);
+    if (!isBlack){ wIdx++; continue; }
+    const el = document.createElementNS(svgNS,'rect');
+    const x = wIdx*wW - wW*0.3;
+    el.setAttribute('x', x); el.setAttribute('y', 1);
+    el.setAttribute('width', wW*0.6); el.setAttribute('height', 105);
+    el.setAttribute('rx', 2);
+    el.setAttribute('fill', '#22242e');
+    el.dataset.midi = m;
+    el.addEventListener('pointerdown', () => previewNote(m));
+    kb.appendChild(el);
+    keyEls[m] = {el, isBlack:true};
+  }
+})();
+
+const baseColors = ['#e05c5c','#5ca8e0','#5ce08a','#c07ce0'];
+const inactiveColors = {w:'#f4f5f8', b:'#22242e'};
+
+function paintKeyboard(chord){
+  const rootMidi = noteToMidi(chord.bass);
+  const voices = [chord.bass, chord.bari, chord.lead, chord.tenor];
+  // reset
+  for (const m in keyEls){
+    const {el, isBlack} = keyEls[m];
+    el.setAttribute('fill', inactiveColors[isBlack?'b':'w']);
+  }
+  voices.forEach((n, vi) => {
+    const midi = noteToMidi(n);
+    const fn = classify(midi, rootMidi);
+    const k = keyEls[midi];
+    if (k) k.el.setAttribute('fill', baseColors[fn]);
+  });
+}
+
+/* ---------- voices panel ---------- */
+function updateVoices(chord){
+  document.getElementById('v-tenor').textContent = chord.tenor;
+  document.getElementById('v-lead').textContent = chord.lead;
+  document.getElementById('v-bari').textContent = chord.bari;
+  document.getElementById('v-bass').textContent = chord.bass;
+}
+
+/* ---------- progression UI ---------- */
+let currentProgKey = 'Barbershop 7th (C)';
+let currentIndex = -1;
+
+const progSel = document.getElementById('progSel');
+Object.keys(PROGRESSIONS).forEach(k => {
+  const o = document.createElement('option');
+  o.value = k; o.textContent = k;
+  progSel.appendChild(o);
+});
+progSel.onchange = () => { stop(); currentProgKey = progSel.value; renderProg(); };
+
+function renderProg(){
+  const wrap = document.getElementById('prog');
+  wrap.innerHTML = '';
+  PROGRESSIONS[currentProgKey].chords.forEach((c, i) => {
+    const chip = document.createElement('div');
+    chip.className = 'chord-chip';
+    chip.innerHTML = `<div class="sym">${c.symbol}</div><div class="roman">${c.roman}</div>`;
+    chip.onclick = () => { previewChord(i); };
+    wrap.appendChild(chip);
+  });
+}
+
+function highlightChip(i){
+  document.querySelectorAll('.chord-chip').forEach((el, j) =>
+    el.classList.toggle('active', j === i));
+}
+
+/* ---------- audio ---------- */
+let sampler = null;
+let playing = false;
+let part = null;
+
+let audioReady = false;
+let audioIniting = false;
+const status = document.getElementById('status');
+async function initAudio(){
+  if (audioReady || audioIniting) return;
+  audioIniting = true;
+  window.__audioStage = 'before-start';
+  await Tone.start();
+  window.__audioStage = 'started';
+  try {
+    sampler = new Tone.Sampler({
+      urls: {
+        A0: 'A0.mp3', C1: 'C1.mp3', 'D#1': 'Ds1.mp3', 'F#1': 'Fs1.mp3', A1: 'A1.mp3',
+        C2: 'C2.mp3', 'D#2': 'Ds2.mp3', 'F#2': 'Fs2.mp3', A2: 'A2.mp3',
+        C3: 'C3.mp3', 'D#3': 'Ds3.mp3', 'F#3': 'Fs3.mp3', A3: 'A3.mp3',
+        C4: 'C4.mp3', 'D#4': 'Ds4.mp3', 'F#4': 'Fs4.mp3', A4: 'A4.mp3',
+        C5: 'C5.mp3', 'D#5': 'Ds5.mp3', 'F#5': 'Fs5.mp3', A5: 'A5.mp3',
+        C6: 'C6.mp3', 'D#6': 'Ds6.mp3', 'F#6': 'Fs6.mp3', A6: 'A6.mp3',
+        C7: 'C7.mp3', 'D#7': 'Ds7.mp3', 'F#7': 'Fs7.mp3', A7: 'A7.mp3',
+        C8: 'C8.mp3',
+      },
+      release: 1,
+      baseUrl: 'https://tonejs.github.io/audio/salamander/',
+      onload: () => status.textContent = 'ready',
+      onerror: () => { status.textContent = 'samples failed — using synth'; fallbackSynth(); },
+    }).toDestination();
+    window.__audioStage = 'sampler-constructed';
+    await Tone.loaded();
+    window.__audioStage = 'loaded';
+  } catch (e) {
+    window.__audioStage = 'error: ' + e.message;
+    fallbackSynth();
+  }
+  audioReady = true;
+}
+function fallbackSynth(){
+  sampler = new Tone.PolySynth(Tone.Synth, {oscillator:{type:'triangle'}, envelope:{attack:.01, decay:.4, sustain:.6, release:.8}}).toDestination();
+  sampler.volume.value = -8;
+  status.textContent = 'ready (synth)';
+}
+initAudio();
+
+function playNotes(notes, time, dur, vel=.7){
+  const midis = notes.map(noteToMidi);
+  midis.forEach(m => sampler.triggerAttackRelease(Tone.Frequency(m, 'midi').toNote(), dur, time, vel));
+}
+
+async function previewChord(i){
+  await initAudio();
+  const chord = PROGRESSIONS[currentProgKey].chords[i];
+  currentIndex = i;
+  highlightChip(i);
+  updateVoices(chord);
+  paintKeyboard(chord);
+  const mode = document.getElementById('mode').value;
+  const notes = [chord.bass, chord.bari, chord.lead, chord.tenor];
+  const now = Tone.now();
+  if (mode === 'strum'){
+    notes.forEach((n, j) => playNotes([n], now + j*0.07, '2n'));
+  } else if (mode === 'arp'){
+    notes.forEach((n, j) => playNotes([n], now + j*0.18, '8n'));
+  } else {
+    playNotes(notes, now, '2n');
+  }
+}
+
+async function previewNote(m){
+  await initAudio();
+  if (!sampler) return;
+  sampler.triggerAttackRelease(Tone.Frequency(m, 'midi').toNote(), '8n', Tone.now(), .7);
+}
+
+/* ---------- playback ---------- */
+const playBtn = document.getElementById('playBtn');
+const tempo = document.getElementById('tempo');
+const bpmLabel = document.getElementById('bpm');
+tempo.oninput = () => {
+  bpmLabel.textContent = tempo.value;
+  Tone.Transport.bpm.rampTo(+tempo.value, .1);
+};
+
+function stop(){
+  playing = false;
+  Tone.Transport.stop(); Tone.Transport.cancel();
+  playBtn.classList.remove('playing');
+  playBtn.innerHTML = '&#9654; Play';
+  highlightChip(-1);
+}
+
+playBtn.onclick = async () => {
+  await initAudio();
+  if (playing) { stop(); return; }
+  playing = true;
+  playBtn.classList.add('playing');
+  playBtn.innerHTML = '&#9632; Stop';
+  Tone.Transport.bpm.value = +tempo.value;
+  const chords = PROGRESSIONS[currentProgKey].chords;
+  const mode = document.getElementById('mode').value;
+  Tone.Transport.cancel();
+  chords.forEach((chord, i) => {
+    const start = i * 2; // 2 beats per chord
+    const notes = [chord.bass, chord.bari, chord.lead, chord.tenor];
+    if (mode === 'strum'){
+      notes.forEach((n, j) => {
+        const t = start + j * (60 / +tempo.value * 0.29);
+        Tone.Transport.schedule(time => playNotes([n], time, '4n'), t);
+      });
+    } else if (mode === 'arp'){
+      notes.forEach((n, j) => {
+        Tone.Transport.schedule(time => playNotes([n], time, '4n'), start + j*0.5);
+      });
+    } else {
+      Tone.Transport.schedule(time => playNotes(notes, time, '2n'), start);
+    }
+    // visual sync
+    Tone.Transport.schedule(time => {
+      Tone.Draw.schedule(() => {
+        currentIndex = i; highlightChip(i); updateVoices(chord); paintKeyboard(chord);
+      }, time);
+    }, start);
+  });
+  Tone.Transport.schedule(() => { Tone.Draw.schedule(stop); }, chords.length * 2);
+  Tone.Transport.start('+0.05');
+};
+
+renderProg();
+updateVoices(PROGRESSIONS[currentProgKey].chords[0]);
+paintKeyboard(PROGRESSIONS[currentProgKey].chords[0]);
+highlightChip(0);
+</script>
+</body>
+</html>
