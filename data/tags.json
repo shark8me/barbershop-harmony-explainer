@@ -1,0 +1,4151 @@
+[
+ {
+  "id": "1682",
+  "key": "G major",
+  "events": {
+   "Bass": [
+    {
+     "t": 0.0,
+     "d": 1.0,
+     "m": "C4",
+     "meas": 0
+    },
+    {
+     "t": 0.0,
+     "d": 1.0,
+     "m": "C4",
+     "meas": 0
+    },
+    {
+     "t": 1.0,
+     "d": 1.0,
+     "m": "B3",
+     "meas": 1
+    },
+    {
+     "t": 1.0,
+     "d": 1.0,
+     "m": "B3",
+     "meas": 1
+    },
+    {
+     "t": 2.0,
+     "d": 1.0,
+     "m": "A3",
+     "meas": 1
+    },
+    {
+     "t": 2.0,
+     "d": 1.0,
+     "m": "A3",
+     "meas": 1
+    },
+    {
+     "t": 3.0,
+     "d": 1.0,
+     "m": "A3",
+     "meas": 1
+    },
+    {
+     "t": 3.0,
+     "d": 1.0,
+     "m": "D3",
+     "meas": 1
+    },
+    {
+     "t": 4.0,
+     "d": 3.0,
+     "m": "Bb3",
+     "meas": 2
+    },
+    {
+     "t": 4.0,
+     "d": 3.0,
+     "m": "Eb3",
+     "meas": 2
+    },
+    {
+     "t": 7.0,
+     "d": 1.0,
+     "m": "Bb3",
+     "meas": 3
+    },
+    {
+     "t": 7.0,
+     "d": 1.0,
+     "m": "Eb3",
+     "meas": 3
+    },
+    {
+     "t": 8.0,
+     "d": 2.0,
+     "m": "A3",
+     "meas": 3
+    },
+    {
+     "t": 8.0,
+     "d": 2.0,
+     "m": "F3",
+     "meas": 3
+    },
+    {
+     "t": 10.0,
+     "d": 3.0,
+     "m": "B3",
+     "meas": 4
+    },
+    {
+     "t": 10.0,
+     "d": 3.0,
+     "m": "G3",
+     "meas": 4
+    },
+    {
+     "t": 13.0,
+     "d": 1.0,
+     "m": "D4",
+     "meas": 5
+    },
+    {
+     "t": 13.0,
+     "d": 3.0,
+     "m": "G3",
+     "meas": 5
+    },
+    {
+     "t": 14.0,
+     "d": 2.0,
+     "m": "C4",
+     "meas": 5
+    },
+    {
+     "t": 16.0,
+     "d": 3.0,
+     "m": "D4",
+     "meas": 6
+    },
+    {
+     "t": 16.0,
+     "d": 3.0,
+     "m": "G3",
+     "meas": 6
+    },
+    {
+     "t": 19.0,
+     "d": 3.0,
+     "m": "D4",
+     "meas": 7
+    },
+    {
+     "t": 19.0,
+     "d": 3.0,
+     "m": "G3",
+     "meas": 7
+    }
+   ],
+   "Bari": [
+    {
+     "t": 0.0,
+     "d": 1.0,
+     "m": "C4",
+     "meas": 0
+    },
+    {
+     "t": 0.0,
+     "d": 1.0,
+     "m": "C4",
+     "meas": 0
+    },
+    {
+     "t": 1.0,
+     "d": 1.0,
+     "m": "D4",
+     "meas": 1
+    },
+    {
+     "t": 1.0,
+     "d": 1.0,
+     "m": "D4",
+     "meas": 1
+    },
+    {
+     "t": 2.0,
+     "d": 1.0,
+     "m": "E4",
+     "meas": 1
+    },
+    {
+     "t": 2.0,
+     "d": 1.0,
+     "m": "C4",
+     "meas": 1
+    },
+    {
+     "t": 3.0,
+     "d": 1.0,
+     "m": "F#4",
+     "meas": 1
+    },
+    {
+     "t": 3.0,
+     "d": 1.0,
+     "m": "C4",
+     "meas": 1
+    },
+    {
+     "t": 4.0,
+     "d": 3.0,
+     "m": "G4",
+     "meas": 2
+    },
+    {
+     "t": 4.0,
+     "d": 3.0,
+     "m": "Eb4",
+     "meas": 2
+    },
+    {
+     "t": 7.0,
+     "d": 3.0,
+     "m": "G4",
+     "meas": 3
+    },
+    {
+     "t": 7.0,
+     "d": 1.0,
+     "m": "Eb4",
+     "meas": 3
+    },
+    {
+     "t": 8.0,
+     "d": 2.0,
+     "m": "Eb4",
+     "meas": 3
+    },
+    {
+     "t": 10.0,
+     "d": 3.0,
+     "m": "G4",
+     "meas": 4
+    },
+    {
+     "t": 10.0,
+     "d": 3.0,
+     "m": "D4",
+     "meas": 4
+    },
+    {
+     "t": 13.0,
+     "d": 3.0,
+     "m": "A#4",
+     "meas": 5
+    },
+    {
+     "t": 13.0,
+     "d": 3.0,
+     "m": "E4",
+     "meas": 5
+    },
+    {
+     "t": 16.0,
+     "d": 3.0,
+     "m": "B4",
+     "meas": 6
+    },
+    {
+     "t": 16.0,
+     "d": 3.0,
+     "m": "G4",
+     "meas": 6
+    },
+    {
+     "t": 19.0,
+     "d": 3.0,
+     "m": "B4",
+     "meas": 7
+    },
+    {
+     "t": 19.0,
+     "d": 3.0,
+     "m": "G4",
+     "meas": 7
+    }
+   ]
+  },
+  "chords": [
+   {
+    "measure": 0,
+    "t": 0.0,
+    "d": 1.0,
+    "symbol": "C",
+    "roman": "iv",
+    "pitches": [
+     "C4"
+    ],
+    "roman_anchored": "iv"
+   },
+   {
+    "measure": 1,
+    "t": 1.0,
+    "d": 1.0,
+    "symbol": "Bm",
+    "roman": "iii",
+    "pitches": [
+     "B3",
+     "D4"
+    ],
+    "roman_anchored": "#iii"
+   },
+   {
+    "measure": 1,
+    "t": 2.0,
+    "d": 1.0,
+    "symbol": "Am",
+    "roman": "ii",
+    "pitches": [
+     "A3",
+     "C4",
+     "E4"
+    ],
+    "roman_anchored": "ii"
+   },
+   {
+    "measure": 1,
+    "t": 3.0,
+    "d": 1.0,
+    "symbol": "D7",
+    "roman": "V7",
+    "pitches": [
+     "D3",
+     "A3",
+     "C4",
+     "F#4"
+    ],
+    "roman_anchored": "V7"
+   },
+   {
+    "measure": 2,
+    "t": 4.0,
+    "d": 3.0,
+    "symbol": "Eb",
+    "roman": "bVI",
+    "pitches": [
+     "Eb3",
+     "Bb3",
+     "Eb4",
+     "G4"
+    ],
+    "roman_anchored": "bVI"
+   },
+   {
+    "measure": 3,
+    "t": 7.0,
+    "d": 1.0,
+    "symbol": "Eb",
+    "roman": "bVI",
+    "pitches": [
+     "Eb3",
+     "Bb3",
+     "Eb4",
+     "G4"
+    ],
+    "roman_anchored": "bVI"
+   },
+   {
+    "measure": 3,
+    "t": 8.0,
+    "d": 2.0,
+    "symbol": "F7",
+    "roman": "bVII7",
+    "pitches": [
+     "F3",
+     "A3",
+     "Eb4",
+     "G4"
+    ],
+    "roman_anchored": "bVII7"
+   },
+   {
+    "measure": 4,
+    "t": 10.0,
+    "d": 3.0,
+    "symbol": "G",
+    "roman": "I",
+    "pitches": [
+     "G3",
+     "B3",
+     "D4",
+     "G4"
+    ],
+    "roman_anchored": "I"
+   },
+   {
+    "measure": 5,
+    "t": 13.0,
+    "d": 1.0,
+    "symbol": "Em7",
+    "roman": "vi7/G",
+    "pitches": [
+     "G3",
+     "D4",
+     "E4",
+     "A#4"
+    ],
+    "roman_anchored": "vi7/G"
+   },
+   {
+    "measure": 5,
+    "t": 14.0,
+    "d": 2.0,
+    "symbol": "Bb(sus)",
+    "roman": "#ii\u00b0/G",
+    "pitches": [
+     "G3",
+     "C4",
+     "E4",
+     "A#4"
+    ],
+    "roman_anchored": "#ii\u00b0/G"
+   },
+   {
+    "measure": 6,
+    "t": 16.0,
+    "d": 3.0,
+    "symbol": "G",
+    "roman": "I",
+    "pitches": [
+     "G3",
+     "D4",
+     "G4",
+     "B4"
+    ],
+    "roman_anchored": "I"
+   },
+   {
+    "measure": 7,
+    "t": 19.0,
+    "d": 3.0,
+    "symbol": "G",
+    "roman": "I",
+    "pitches": [
+     "G3",
+     "D4",
+     "G4",
+     "B4"
+    ],
+    "roman_anchored": "I"
+   }
+  ],
+  "cadence": {
+   "type": "backdoor sweeper (iv\u2013iii\u2013ii\u2013V7\u2013bVI\u2013bVII7 \u2192 I)",
+   "desc": "A doubly-colored close: the descending turnaround (iv\u2013iii\u2013ii\u2013V7) is followed by the borrowed bVI and a backdoor bVII7 \u2014 two color chords in a row before the tonic lands. Unusual even for barbershop; the bVI\u2192bVII7\u2192I \u201cdouble backdoor\u201d is worth a name of its own: the \u201cTwo-Door Finish\u201d.",
+   "measure": 7
+  },
+  "total_len": 22.0,
+  "key_anchored": "G minor",
+  "key_basis": "final-major",
+  "diatonic_pct": 91,
+  "mp3_duration": 24.25095238095238,
+  "sec_per_ql": 1.1023160173160174,
+  "key_label": "G major",
+  "ending_roman": "I",
+  "harmonic_walk": "iv \u2192 iii \u2192 ii \u2192 V7 \u2192 bVI \u2192 bVII7 \u2192 I turnaround sweep, then a I hanger with a chromatic #ii\u00b0 slip (Bb over G = bIII color) \u2014 the \u201cheart-melt\u201d bVI before the home stretch is the signature barbershop sweeper; the bVII7\u2192I is a backdoor resolution."
+ },
+ {
+  "id": "2296",
+  "key": "b minor",
+  "events": {
+   "Bass": [
+    {
+     "t": 0.0,
+     "d": 1.0,
+     "m": "F#3",
+     "meas": 1
+    },
+    {
+     "t": 0.0,
+     "d": 1.0,
+     "m": "B2",
+     "meas": 1
+    },
+    {
+     "t": 1.0,
+     "d": 0.5,
+     "m": "A#3",
+     "meas": 1
+    },
+    {
+     "t": 1.0,
+     "d": 0.5,
+     "m": "F#3",
+     "meas": 1
+    },
+    {
+     "t": 1.5,
+     "d": 0.5,
+     "m": "B3",
+     "meas": 1
+    },
+    {
+     "t": 1.5,
+     "d": 0.5,
+     "m": "B2",
+     "meas": 1
+    },
+    {
+     "t": 2.0,
+     "d": 0.5,
+     "m": "A#3",
+     "meas": 1
+    },
+    {
+     "t": 2.0,
+     "d": 0.5,
+     "m": "F#3",
+     "meas": 1
+    },
+    {
+     "t": 2.5,
+     "d": 0.5,
+     "m": "B3",
+     "meas": 1
+    },
+    {
+     "t": 2.5,
+     "d": 0.5,
+     "m": "F#3",
+     "meas": 1
+    },
+    {
+     "t": 3.0,
+     "d": 1.0,
+     "m": "A#3",
+     "meas": 1
+    },
+    {
+     "t": 3.0,
+     "d": 1.0,
+     "m": "F#3",
+     "meas": 1
+    },
+    {
+     "t": 4.0,
+     "d": 1.0,
+     "m": "B3",
+     "meas": 2
+    },
+    {
+     "t": 4.0,
+     "d": 3.0,
+     "m": "B2",
+     "meas": 2
+    },
+    {
+     "t": 5.0,
+     "d": 0.5,
+     "m": "B3",
+     "meas": 2
+    },
+    {
+     "t": 5.5,
+     "d": 0.5,
+     "m": "F#3",
+     "meas": 2
+    },
+    {
+     "t": 6.0,
+     "d": 1.0,
+     "m": "A3",
+     "meas": 2
+    },
+    {
+     "t": 7.0,
+     "d": 1.0,
+     "m": "G#3",
+     "meas": 2
+    },
+    {
+     "t": 7.0,
+     "d": 1.0,
+     "m": "E2",
+     "meas": 2
+    },
+    {
+     "t": 8.0,
+     "d": 1.0,
+     "m": "B3",
+     "meas": 3
+    },
+    {
+     "t": 8.0,
+     "d": 1.0,
+     "m": "G2",
+     "meas": 3
+    },
+    {
+     "t": 9.0,
+     "d": 0.5,
+     "m": "B3",
+     "meas": 3
+    },
+    {
+     "t": 9.0,
+     "d": 0.5,
+     "m": "G2",
+     "meas": 3
+    },
+    {
+     "t": 9.5,
+     "d": 0.5,
+     "m": "B3",
+     "meas": 3
+    },
+    {
+     "t": 9.5,
+     "d": 0.5,
+     "m": "G2",
+     "meas": 3
+    },
+    {
+     "t": 10.0,
+     "d": 0.5,
+     "m": "G3",
+     "meas": 3
+    },
+    {
+     "t": 10.0,
+     "d": 0.5,
+     "m": "A2",
+     "meas": 3
+    },
+    {
+     "t": 10.5,
+     "d": 0.5,
+     "m": "A3",
+     "meas": 3
+    },
+    {
+     "t": 10.5,
+     "d": 0.5,
+     "m": "A2",
+     "meas": 3
+    },
+    {
+     "t": 11.0,
+     "d": 1.0,
+     "m": "G3",
+     "meas": 3
+    },
+    {
+     "t": 11.0,
+     "d": 1.0,
+     "m": "A2",
+     "meas": 3
+    },
+    {
+     "t": 12.0,
+     "d": 2.0,
+     "m": "D4",
+     "meas": 4
+    },
+    {
+     "t": 12.0,
+     "d": 2.0,
+     "m": "D3",
+     "meas": 4
+    },
+    {
+     "t": 14.0,
+     "d": 0.6666666666666666,
+     "m": "B3",
+     "meas": 4
+    },
+    {
+     "t": 14.0,
+     "d": 0.6666666666666666,
+     "m": "G2",
+     "meas": 4
+    },
+    {
+     "t": 14.666666666666666,
+     "d": 0.6666666666666666,
+     "m": "B3",
+     "meas": 4
+    },
+    {
+     "t": 14.666666666666666,
+     "d": 0.6666666666666666,
+     "m": "D3",
+     "meas": 4
+    },
+    {
+     "t": 15.333333333333334,
+     "d": 0.6666666666666666,
+     "m": "G#3",
+     "meas": 4
+    },
+    {
+     "t": 15.333333333333334,
+     "d": 0.6666666666666666,
+     "m": "C#3",
+     "meas": 4
+    },
+    {
+     "t": 16.0,
+     "d": 4.0,
+     "m": "A3",
+     "meas": 5
+    },
+    {
+     "t": 16.0,
+     "d": 4.0,
+     "m": "D3",
+     "meas": 5
+    }
+   ],
+   "Bari": [
+    {
+     "t": 0.0,
+     "d": 1.0,
+     "m": "D4",
+     "meas": 1
+    },
+    {
+     "t": 0.0,
+     "d": 1.0,
+     "m": "B3",
+     "meas": 1
+    },
+    {
+     "t": 1.0,
+     "d": 0.5,
+     "m": "E4",
+     "meas": 1
+    },
+    {
+     "t": 1.0,
+     "d": 0.5,
+     "m": "C#4",
+     "meas": 1
+    },
+    {
+     "t": 1.5,
+     "d": 0.5,
+     "m": "F#4",
+     "meas": 1
+    },
+    {
+     "t": 1.5,
+     "d": 0.5,
+     "m": "D4",
+     "meas": 1
+    },
+    {
+     "t": 2.0,
+     "d": 0.5,
+     "m": "E4",
+     "meas": 1
+    },
+    {
+     "t": 2.0,
+     "d": 0.5,
+     "m": "C#4",
+     "meas": 1
+    },
+    {
+     "t": 2.5,
+     "d": 0.5,
+     "m": "F#4",
+     "meas": 1
+    },
+    {
+     "t": 2.5,
+     "d": 0.5,
+     "m": "D4",
+     "meas": 1
+    },
+    {
+     "t": 3.0,
+     "d": 1.0,
+     "m": "E4",
+     "meas": 1
+    },
+    {
+     "t": 3.0,
+     "d": 1.0,
+     "m": "C#4",
+     "meas": 1
+    },
+    {
+     "t": 4.0,
+     "d": 4.0,
+     "m": "F#4",
+     "meas": 2
+    },
+    {
+     "t": 4.0,
+     "d": 4.0,
+     "m": "D4",
+     "meas": 2
+    },
+    {
+     "t": 8.0,
+     "d": 1.0,
+     "m": "D4",
+     "meas": 3
+    },
+    {
+     "t": 8.0,
+     "d": 1.0,
+     "m": "D3",
+     "meas": 3
+    },
+    {
+     "t": 9.0,
+     "d": 0.5,
+     "m": "D4",
+     "meas": 3
+    },
+    {
+     "t": 9.0,
+     "d": 0.5,
+     "m": "E3",
+     "meas": 3
+    },
+    {
+     "t": 9.5,
+     "d": 0.5,
+     "m": "D4",
+     "meas": 3
+    },
+    {
+     "t": 9.5,
+     "d": 0.5,
+     "m": "F#3",
+     "meas": 3
+    },
+    {
+     "t": 10.0,
+     "d": 0.5,
+     "m": "C#4",
+     "meas": 3
+    },
+    {
+     "t": 10.0,
+     "d": 0.5,
+     "m": "E3",
+     "meas": 3
+    },
+    {
+     "t": 10.5,
+     "d": 0.5,
+     "m": "C#4",
+     "meas": 3
+    },
+    {
+     "t": 10.5,
+     "d": 0.5,
+     "m": "F#3",
+     "meas": 3
+    },
+    {
+     "t": 11.0,
+     "d": 1.0,
+     "m": "C#4",
+     "meas": 3
+    },
+    {
+     "t": 11.0,
+     "d": 1.0,
+     "m": "E3",
+     "meas": 3
+    },
+    {
+     "t": 12.0,
+     "d": 2.0,
+     "m": "D4",
+     "meas": 4
+    },
+    {
+     "t": 12.0,
+     "d": 2.0,
+     "m": "D3",
+     "meas": 4
+    },
+    {
+     "t": 14.0,
+     "d": 0.6666666666666666,
+     "m": "D4",
+     "meas": 4
+    },
+    {
+     "t": 14.0,
+     "d": 0.6666666666666666,
+     "m": "E3",
+     "meas": 4
+    },
+    {
+     "t": 14.666666666666666,
+     "d": 0.6666666666666666,
+     "m": "E4",
+     "meas": 4
+    },
+    {
+     "t": 14.666666666666666,
+     "d": 0.6666666666666666,
+     "m": "G3",
+     "meas": 4
+    },
+    {
+     "t": 15.333333333333334,
+     "d": 0.6666666666666666,
+     "m": "E#4",
+     "meas": 4
+    },
+    {
+     "t": 15.333333333333334,
+     "d": 0.6666666666666666,
+     "m": "B3",
+     "meas": 4
+    },
+    {
+     "t": 16.0,
+     "d": 4.0,
+     "m": "F#4",
+     "meas": 5
+    },
+    {
+     "t": 16.0,
+     "d": 4.0,
+     "m": "D4",
+     "meas": 5
+    }
+   ]
+  },
+  "chords": [
+   {
+    "measure": 1,
+    "t": 0.0,
+    "d": 1.0,
+    "symbol": "Bm",
+    "roman": "i",
+    "pitches": [
+     "B2",
+     "F#3",
+     "B3",
+     "D4"
+    ],
+    "roman_anchored": "vi"
+   },
+   {
+    "measure": 1,
+    "t": 1.0,
+    "d": 0.5,
+    "symbol": "F#7",
+    "roman": "V7",
+    "pitches": [
+     "F#3",
+     "A#3",
+     "C#4",
+     "E4"
+    ],
+    "roman_anchored": "III7"
+   },
+   {
+    "measure": 1,
+    "t": 1.5,
+    "d": 0.5,
+    "symbol": "Bm",
+    "roman": "i",
+    "pitches": [
+     "B2",
+     "B3",
+     "D4",
+     "F#4"
+    ],
+    "roman_anchored": "vi"
+   },
+   {
+    "measure": 1,
+    "t": 2.0,
+    "d": 0.5,
+    "symbol": "F#7",
+    "roman": "V7",
+    "pitches": [
+     "F#3",
+     "A#3",
+     "C#4",
+     "E4"
+    ],
+    "roman_anchored": "III7"
+   },
+   {
+    "measure": 1,
+    "t": 2.5,
+    "d": 0.5,
+    "symbol": "Bm",
+    "roman": "i/F#",
+    "pitches": [
+     "F#3",
+     "B3",
+     "D4",
+     "F#4"
+    ],
+    "roman_anchored": "vi/F#"
+   },
+   {
+    "measure": 1,
+    "t": 3.0,
+    "d": 1.0,
+    "symbol": "F#7",
+    "roman": "V7",
+    "pitches": [
+     "F#3",
+     "A#3",
+     "C#4",
+     "E4"
+    ],
+    "roman_anchored": "III7"
+   },
+   {
+    "measure": 2,
+    "t": 4.0,
+    "d": 1.0,
+    "symbol": "Bm",
+    "roman": "i",
+    "pitches": [
+     "B2",
+     "B3",
+     "D4",
+     "F#4"
+    ],
+    "roman_anchored": "vi"
+   },
+   {
+    "measure": 2,
+    "t": 5.0,
+    "d": 0.5,
+    "symbol": "Bm",
+    "roman": "i",
+    "pitches": [
+     "B2",
+     "B3",
+     "D4",
+     "F#4"
+    ],
+    "roman_anchored": "vi"
+   },
+   {
+    "measure": 2,
+    "t": 5.5,
+    "d": 0.5,
+    "symbol": "Bm",
+    "roman": "i",
+    "pitches": [
+     "B2",
+     "F#3",
+     "D4",
+     "F#4"
+    ],
+    "roman_anchored": "vi"
+   },
+   {
+    "measure": 2,
+    "t": 6.0,
+    "d": 1.0,
+    "symbol": "Bm7",
+    "roman": "i7",
+    "pitches": [
+     "B2",
+     "A3",
+     "D4",
+     "F#4"
+    ],
+    "roman_anchored": "vi7"
+   },
+   {
+    "measure": 2,
+    "t": 7.0,
+    "d": 1.0,
+    "symbol": "E7",
+    "roman": "IV7",
+    "pitches": [
+     "E2",
+     "G#3",
+     "D4",
+     "F#4"
+    ],
+    "roman_anchored": "II7"
+   },
+   {
+    "measure": 3,
+    "t": 8.0,
+    "d": 1.0,
+    "symbol": "G",
+    "roman": "bVI",
+    "pitches": [
+     "G2",
+     "D3",
+     "B3",
+     "D4"
+    ],
+    "roman_anchored": "IV"
+   },
+   {
+    "measure": 3,
+    "t": 9.0,
+    "d": 0.5,
+    "symbol": "Em7",
+    "roman": "iv7/G",
+    "pitches": [
+     "G2",
+     "E3",
+     "B3",
+     "D4"
+    ],
+    "roman_anchored": "ii7/G"
+   },
+   {
+    "measure": 3,
+    "t": 9.5,
+    "d": 0.5,
+    "symbol": "G",
+    "roman": "bVI",
+    "pitches": [
+     "G2",
+     "F#3",
+     "B3",
+     "D4"
+    ],
+    "roman_anchored": "IV"
+   },
+   {
+    "measure": 3,
+    "t": 10.0,
+    "d": 0.5,
+    "symbol": "A7",
+    "roman": "bVII7",
+    "pitches": [
+     "A2",
+     "E3",
+     "G3",
+     "C#4"
+    ],
+    "roman_anchored": "V7"
+   },
+   {
+    "measure": 3,
+    "t": 10.5,
+    "d": 0.5,
+    "symbol": "F#m",
+    "roman": "v/A",
+    "pitches": [
+     "A2",
+     "F#3",
+     "A3",
+     "C#4"
+    ],
+    "roman_anchored": "iii/A"
+   },
+   {
+    "measure": 3,
+    "t": 11.0,
+    "d": 1.0,
+    "symbol": "A7",
+    "roman": "bVII7",
+    "pitches": [
+     "A2",
+     "E3",
+     "G3",
+     "C#4"
+    ],
+    "roman_anchored": "V7"
+   },
+   {
+    "measure": 4,
+    "t": 12.0,
+    "d": 2.0,
+    "symbol": "D",
+    "roman": "iii",
+    "pitches": [
+     "D3",
+     "D4"
+    ],
+    "roman_anchored": "i"
+   },
+   {
+    "measure": 4,
+    "t": 14.0,
+    "d": 0.6666666666666666,
+    "symbol": "Em7",
+    "roman": "iv7/G",
+    "pitches": [
+     "G2",
+     "E3",
+     "B3",
+     "D4"
+    ],
+    "roman_anchored": "ii7/G"
+   },
+   {
+    "measure": 4,
+    "t": 14.666666666666666,
+    "d": 0.6666666666666666,
+    "symbol": "Em7",
+    "roman": "iv7/D",
+    "pitches": [
+     "D3",
+     "G3",
+     "B3",
+     "E4"
+    ],
+    "roman_anchored": "ii7/D"
+   },
+   {
+    "measure": 4,
+    "t": 15.333333333333334,
+    "d": 0.6666666666666666,
+    "symbol": "C#7",
+    "roman": "II7",
+    "pitches": [
+     "C#3",
+     "G#3",
+     "B3",
+     "E#4"
+    ],
+    "roman_anchored": "VII7"
+   },
+   {
+    "measure": 5,
+    "t": 16.0,
+    "d": 4.0,
+    "symbol": "D",
+    "roman": "III",
+    "pitches": [
+     "D3",
+     "A3",
+     "D4",
+     "F#4"
+    ],
+    "roman_anchored": "I"
+   }
+  ],
+  "cadence": {
+   "type": "backdoor into minor (VII7 \u2192 i)",
+   "desc": "The tag modulates to the relative-minor territory for the ending and closes with a backdoor bVII7 \u2192 i \u2014 blues-tinged and distinctly unclassical; combined with the preceding ii7 color it\u2019s a minor-mode backdoor close.",
+   "measure": 5
+  },
+  "total_len": 20.0,
+  "key_anchored": "D major",
+  "key_basis": "final-minor",
+  "diatonic_pct": 100,
+  "mp3_duration": 37.015510204081636,
+  "sec_per_ql": 1.8507755102040817,
+  "key_label": "B minor",
+  "ending_roman": "i",
+  "harmonic_walk": "Song is in D major but the tag restates it in B minor (barbershop key-flip for the ending); oscillates i\u2013V7 then IV7\u2013bVI\u2013VII7 color chain, ii\u00b0-half-dim slips, and finishes i\u2013ii7\u2013VII7\u2013i\u2026 ends with VII7\u2192i backdoor into the minor tonic."
+ },
+ {
+  "id": "4833",
+  "key": "g minor",
+  "events": {
+   "Bass": [
+    {
+     "t": 1.0,
+     "d": 0.5,
+     "m": "C4",
+     "meas": 2
+    },
+    {
+     "t": 1.0,
+     "d": 0.5,
+     "m": "A3",
+     "meas": 2
+    },
+    {
+     "t": 1.5,
+     "d": 0.5,
+     "m": "C4",
+     "meas": 2
+    },
+    {
+     "t": 1.5,
+     "d": 0.5,
+     "m": "A3",
+     "meas": 2
+    },
+    {
+     "t": 2.0,
+     "d": 0.5,
+     "m": "C4",
+     "meas": 2
+    },
+    {
+     "t": 2.0,
+     "d": 0.5,
+     "m": "A3",
+     "meas": 2
+    },
+    {
+     "t": 2.5,
+     "d": 0.5,
+     "m": "C4",
+     "meas": 2
+    },
+    {
+     "t": 2.5,
+     "d": 0.5,
+     "m": "G#3",
+     "meas": 2
+    },
+    {
+     "t": 3.0,
+     "d": 0.5,
+     "m": "C4",
+     "meas": 2
+    },
+    {
+     "t": 3.0,
+     "d": 0.5,
+     "m": "G#3",
+     "meas": 2
+    },
+    {
+     "t": 3.5,
+     "d": 0.5,
+     "m": "C4",
+     "meas": 2
+    },
+    {
+     "t": 3.5,
+     "d": 0.5,
+     "m": "G#3",
+     "meas": 2
+    },
+    {
+     "t": 4.0,
+     "d": 0.5,
+     "m": "C4",
+     "meas": 2
+    },
+    {
+     "t": 4.0,
+     "d": 0.5,
+     "m": "G#3",
+     "meas": 2
+    },
+    {
+     "t": 4.5,
+     "d": 0.5,
+     "m": "C4",
+     "meas": 2
+    },
+    {
+     "t": 4.5,
+     "d": 0.5,
+     "m": "G3",
+     "meas": 2
+    },
+    {
+     "t": 5.0,
+     "d": 1.0,
+     "m": "C4",
+     "meas": 3
+    },
+    {
+     "t": 5.0,
+     "d": 1.0,
+     "m": "G3",
+     "meas": 3
+    },
+    {
+     "t": 6.5,
+     "d": 0.5,
+     "m": "C4",
+     "meas": 3
+    },
+    {
+     "t": 6.5,
+     "d": 0.5,
+     "m": "F#3",
+     "meas": 3
+    },
+    {
+     "t": 7.0,
+     "d": 1.0,
+     "m": "C4",
+     "meas": 3
+    },
+    {
+     "t": 7.0,
+     "d": 1.0,
+     "m": "F#3",
+     "meas": 3
+    },
+    {
+     "t": 8.0,
+     "d": 1.0,
+     "m": "C4",
+     "meas": 3
+    },
+    {
+     "t": 8.0,
+     "d": 1.0,
+     "m": "F#3",
+     "meas": 3
+    },
+    {
+     "t": 9.0,
+     "d": 2.0,
+     "m": "C4",
+     "meas": 4
+    },
+    {
+     "t": 9.0,
+     "d": 2.0,
+     "m": "D3",
+     "meas": 4
+    },
+    {
+     "t": 11.0,
+     "d": 2.0,
+     "m": "F4",
+     "meas": 4
+    },
+    {
+     "t": 11.0,
+     "d": 2.0,
+     "m": "Bb3",
+     "meas": 4
+    },
+    {
+     "t": 13.0,
+     "d": 4.0,
+     "m": "F#4",
+     "meas": 5
+    },
+    {
+     "t": 13.0,
+     "d": 2.0,
+     "m": "G#3",
+     "meas": 5
+    },
+    {
+     "t": 15.0,
+     "d": 2.0,
+     "m": "A3",
+     "meas": 5
+    },
+    {
+     "t": 17.0,
+     "d": 1.0,
+     "m": "D4",
+     "meas": 6
+    },
+    {
+     "t": 17.0,
+     "d": 1.0,
+     "m": "G3",
+     "meas": 6
+    },
+    {
+     "t": 19.0,
+     "d": 0.5,
+     "m": "Eb4",
+     "meas": 6
+    },
+    {
+     "t": 19.0,
+     "d": 0.5,
+     "m": "C4",
+     "meas": 6
+    },
+    {
+     "t": 19.5,
+     "d": 1.5,
+     "m": "Eb4",
+     "meas": 6
+    },
+    {
+     "t": 19.5,
+     "d": 1.5,
+     "m": "C4",
+     "meas": 6
+    },
+    {
+     "t": 21.0,
+     "d": 1.0,
+     "m": "D4",
+     "meas": 7
+    },
+    {
+     "t": 21.0,
+     "d": 1.0,
+     "m": "G3",
+     "meas": 7
+    },
+    {
+     "t": 22.5,
+     "d": 0.5,
+     "m": "Eb4",
+     "meas": 7
+    },
+    {
+     "t": 22.5,
+     "d": 0.5,
+     "m": "C4",
+     "meas": 7
+    },
+    {
+     "t": 23.0,
+     "d": 1.0,
+     "m": "Eb4",
+     "meas": 7
+    },
+    {
+     "t": 23.0,
+     "d": 1.0,
+     "m": "C4",
+     "meas": 7
+    },
+    {
+     "t": 24.0,
+     "d": 1.0,
+     "m": "E4",
+     "meas": 7
+    },
+    {
+     "t": 24.0,
+     "d": 1.0,
+     "m": "C#4",
+     "meas": 7
+    },
+    {
+     "t": 25.0,
+     "d": 4.0,
+     "m": "E4",
+     "meas": 8
+    },
+    {
+     "t": 25.0,
+     "d": 4.0,
+     "m": "D4",
+     "meas": 8
+    },
+    {
+     "t": 29.0,
+     "d": 4.0,
+     "m": "D4",
+     "meas": 9
+    },
+    {
+     "t": 29.0,
+     "d": 4.0,
+     "m": "G3",
+     "meas": 9
+    }
+   ],
+   "Bari": [
+    {
+     "t": 0.0,
+     "d": 1.0,
+     "m": "D4",
+     "meas": 1
+    },
+    {
+     "t": 1.0,
+     "d": 0.5,
+     "m": "G4",
+     "meas": 2
+    },
+    {
+     "t": 1.0,
+     "d": 4.0,
+     "m": "E4",
+     "meas": 2
+    },
+    {
+     "t": 1.5,
+     "d": 0.5,
+     "m": "G4",
+     "meas": 2
+    },
+    {
+     "t": 2.0,
+     "d": 0.5,
+     "m": "G4",
+     "meas": 2
+    },
+    {
+     "t": 2.5,
+     "d": 0.5,
+     "m": "G#4",
+     "meas": 2
+    },
+    {
+     "t": 3.0,
+     "d": 0.5,
+     "m": "G#4",
+     "meas": 2
+    },
+    {
+     "t": 3.5,
+     "d": 0.5,
+     "m": "G#4",
+     "meas": 2
+    },
+    {
+     "t": 4.0,
+     "d": 0.5,
+     "m": "G#4",
+     "meas": 2
+    },
+    {
+     "t": 4.5,
+     "d": 0.5,
+     "m": "A4",
+     "meas": 2
+    },
+    {
+     "t": 5.0,
+     "d": 1.0,
+     "m": "A4",
+     "meas": 3
+    },
+    {
+     "t": 5.0,
+     "d": 4.0,
+     "m": "E4",
+     "meas": 3
+    },
+    {
+     "t": 6.5,
+     "d": 0.5,
+     "m": "Bb4",
+     "meas": 3
+    },
+    {
+     "t": 7.0,
+     "d": 1.0,
+     "m": "Bb4",
+     "meas": 3
+    },
+    {
+     "t": 8.0,
+     "d": 1.0,
+     "m": "Bb4",
+     "meas": 3
+    },
+    {
+     "t": 9.0,
+     "d": 2.0,
+     "m": "A4",
+     "meas": 4
+    },
+    {
+     "t": 9.0,
+     "d": 2.0,
+     "m": "F#4",
+     "meas": 4
+    },
+    {
+     "t": 11.0,
+     "d": 2.0,
+     "m": "Bb4",
+     "meas": 4
+    },
+    {
+     "t": 11.0,
+     "d": 2.0,
+     "m": "D4",
+     "meas": 4
+    },
+    {
+     "t": 13.0,
+     "d": 2.0,
+     "m": "B4",
+     "meas": 5
+    },
+    {
+     "t": 13.0,
+     "d": 4.0,
+     "m": "D4",
+     "meas": 5
+    },
+    {
+     "t": 15.0,
+     "d": 2.0,
+     "m": "C5",
+     "meas": 5
+    },
+    {
+     "t": 17.0,
+     "d": 1.0,
+     "m": "Bb4",
+     "meas": 6
+    },
+    {
+     "t": 17.0,
+     "d": 4.0,
+     "m": "G4",
+     "meas": 6
+    },
+    {
+     "t": 19.0,
+     "d": 0.5,
+     "m": "A4",
+     "meas": 6
+    },
+    {
+     "t": 19.5,
+     "d": 1.5,
+     "m": "A4",
+     "meas": 6
+    },
+    {
+     "t": 21.0,
+     "d": 1.0,
+     "m": "Bb4",
+     "meas": 7
+    },
+    {
+     "t": 21.0,
+     "d": 4.0,
+     "m": "G4",
+     "meas": 7
+    },
+    {
+     "t": 22.5,
+     "d": 0.5,
+     "m": "A4",
+     "meas": 7
+    },
+    {
+     "t": 23.0,
+     "d": 1.0,
+     "m": "A4",
+     "meas": 7
+    },
+    {
+     "t": 24.0,
+     "d": 1.0,
+     "m": "A4",
+     "meas": 7
+    },
+    {
+     "t": 25.0,
+     "d": 4.0,
+     "m": "Bb4",
+     "meas": 8
+    },
+    {
+     "t": 25.0,
+     "d": 4.0,
+     "m": "G4",
+     "meas": 8
+    },
+    {
+     "t": 29.0,
+     "d": 4.0,
+     "m": "B4",
+     "meas": 9
+    },
+    {
+     "t": 29.0,
+     "d": 4.0,
+     "m": "G4",
+     "meas": 9
+    }
+   ]
+  },
+  "chords": [
+   {
+    "measure": 1,
+    "t": 0.0,
+    "d": 1.0,
+    "symbol": "D",
+    "roman": "v",
+    "pitches": [
+     "D4"
+    ],
+    "roman_anchored": "v"
+   },
+   {
+    "measure": 2,
+    "t": 1.0,
+    "d": 0.5,
+    "symbol": "Am7",
+    "roman": "ii7",
+    "pitches": [
+     "A3",
+     "C4",
+     "E4",
+     "G4"
+    ],
+    "roman_anchored": "ii7"
+   },
+   {
+    "measure": 2,
+    "t": 1.5,
+    "d": 0.5,
+    "symbol": "Am7",
+    "roman": "ii7",
+    "pitches": [
+     "A3",
+     "C4",
+     "E4",
+     "G4"
+    ],
+    "roman_anchored": "ii7"
+   },
+   {
+    "measure": 2,
+    "t": 2.0,
+    "d": 0.5,
+    "symbol": "Am7",
+    "roman": "ii7",
+    "pitches": [
+     "A3",
+     "C4",
+     "E4",
+     "G4"
+    ],
+    "roman_anchored": "ii7"
+   },
+   {
+    "measure": 2,
+    "t": 2.5,
+    "d": 0.5,
+    "symbol": "C",
+    "roman": "IV/G#",
+    "pitches": [
+     "G#3",
+     "C4",
+     "E4",
+     "G#4"
+    ],
+    "roman_anchored": "IV/G#"
+   },
+   {
+    "measure": 2,
+    "t": 3.0,
+    "d": 0.5,
+    "symbol": "C",
+    "roman": "IV/G#",
+    "pitches": [
+     "G#3",
+     "C4",
+     "E4",
+     "G#4"
+    ],
+    "roman_anchored": "IV/G#"
+   },
+   {
+    "measure": 2,
+    "t": 3.5,
+    "d": 0.5,
+    "symbol": "C",
+    "roman": "IV/G#",
+    "pitches": [
+     "G#3",
+     "C4",
+     "E4",
+     "G#4"
+    ],
+    "roman_anchored": "IV/G#"
+   },
+   {
+    "measure": 2,
+    "t": 4.0,
+    "d": 0.5,
+    "symbol": "C",
+    "roman": "IV/G#",
+    "pitches": [
+     "G#3",
+     "C4",
+     "E4",
+     "G#4"
+    ],
+    "roman_anchored": "IV/G#"
+   },
+   {
+    "measure": 2,
+    "t": 4.5,
+    "d": 0.5,
+    "symbol": "Am7",
+    "roman": "ii7/G",
+    "pitches": [
+     "G3",
+     "C4",
+     "E4",
+     "A4"
+    ],
+    "roman_anchored": "ii7/G"
+   },
+   {
+    "measure": 3,
+    "t": 5.0,
+    "d": 1.0,
+    "symbol": "Am7",
+    "roman": "ii7/G",
+    "pitches": [
+     "G3",
+     "C4",
+     "E4",
+     "A4"
+    ],
+    "roman_anchored": "ii7/G"
+   },
+   {
+    "measure": 3,
+    "t": 6.0,
+    "d": 0.5,
+    "symbol": "E",
+    "roman": "vi",
+    "pitches": [
+     "E4"
+    ],
+    "roman_anchored": "vi"
+   },
+   {
+    "measure": 3,
+    "t": 6.5,
+    "d": 0.5,
+    "symbol": "C7",
+    "roman": "IV7/F#",
+    "pitches": [
+     "F#3",
+     "C4",
+     "E4",
+     "Bb4"
+    ],
+    "roman_anchored": "IV7/F#"
+   },
+   {
+    "measure": 3,
+    "t": 7.0,
+    "d": 1.0,
+    "symbol": "C7",
+    "roman": "IV7/F#",
+    "pitches": [
+     "F#3",
+     "C4",
+     "E4",
+     "Bb4"
+    ],
+    "roman_anchored": "IV7/F#"
+   },
+   {
+    "measure": 3,
+    "t": 8.0,
+    "d": 1.0,
+    "symbol": "C7",
+    "roman": "IV7/F#",
+    "pitches": [
+     "F#3",
+     "C4",
+     "E4",
+     "Bb4"
+    ],
+    "roman_anchored": "IV7/F#"
+   },
+   {
+    "measure": 4,
+    "t": 9.0,
+    "d": 2.0,
+    "symbol": "D7",
+    "roman": "V7",
+    "pitches": [
+     "D3",
+     "C4",
+     "F#4",
+     "A4"
+    ],
+    "roman_anchored": "V7"
+   },
+   {
+    "measure": 4,
+    "t": 11.0,
+    "d": 2.0,
+    "symbol": "Bb",
+    "roman": "III",
+    "pitches": [
+     "Bb3",
+     "D4",
+     "F4",
+     "Bb4"
+    ],
+    "roman_anchored": "bIII"
+   },
+   {
+    "measure": 5,
+    "t": 13.0,
+    "d": 2.0,
+    "symbol": "Abm7",
+    "roman": "#i7\u00b0",
+    "pitches": [
+     "G#3",
+     "D4",
+     "F#4",
+     "B4"
+    ],
+    "roman_anchored": "#i7\u00b0"
+   },
+   {
+    "measure": 5,
+    "t": 15.0,
+    "d": 2.0,
+    "symbol": "D7",
+    "roman": "V7/A",
+    "pitches": [
+     "A3",
+     "D4",
+     "F#4",
+     "C5"
+    ],
+    "roman_anchored": "V7/A"
+   },
+   {
+    "measure": 6,
+    "t": 17.0,
+    "d": 1.0,
+    "symbol": "Gm",
+    "roman": "i",
+    "pitches": [
+     "G3",
+     "D4",
+     "G4",
+     "Bb4"
+    ],
+    "roman_anchored": "i"
+   },
+   {
+    "measure": 6,
+    "t": 18.0,
+    "d": 1.0,
+    "symbol": "G",
+    "roman": "i",
+    "pitches": [
+     "G4"
+    ],
+    "roman_anchored": "i"
+   },
+   {
+    "measure": 6,
+    "t": 19.0,
+    "d": 0.5,
+    "symbol": "Am7",
+    "roman": "ii7\u00b0/C",
+    "pitches": [
+     "C4",
+     "Eb4",
+     "G4",
+     "A4"
+    ],
+    "roman_anchored": "ii7\u00b0/C"
+   },
+   {
+    "measure": 6,
+    "t": 19.5,
+    "d": 1.5,
+    "symbol": "Am7",
+    "roman": "ii7\u00b0/C",
+    "pitches": [
+     "C4",
+     "Eb4",
+     "G4",
+     "A4"
+    ],
+    "roman_anchored": "ii7\u00b0/C"
+   },
+   {
+    "measure": 7,
+    "t": 21.0,
+    "d": 1.0,
+    "symbol": "Gm",
+    "roman": "i",
+    "pitches": [
+     "G3",
+     "D4",
+     "G4",
+     "Bb4"
+    ],
+    "roman_anchored": "i"
+   },
+   {
+    "measure": 7,
+    "t": 22.0,
+    "d": 0.5,
+    "symbol": "G",
+    "roman": "i",
+    "pitches": [
+     "G4"
+    ],
+    "roman_anchored": "i"
+   },
+   {
+    "measure": 7,
+    "t": 22.5,
+    "d": 0.5,
+    "symbol": "Am7",
+    "roman": "ii7\u00b0/C",
+    "pitches": [
+     "C4",
+     "Eb4",
+     "G4",
+     "A4"
+    ],
+    "roman_anchored": "ii7\u00b0/C"
+   },
+   {
+    "measure": 7,
+    "t": 23.0,
+    "d": 1.0,
+    "symbol": "Am7",
+    "roman": "ii7\u00b0/C",
+    "pitches": [
+     "C4",
+     "Eb4",
+     "G4",
+     "A4"
+    ],
+    "roman_anchored": "ii7\u00b0/C"
+   },
+   {
+    "measure": 7,
+    "t": 24.0,
+    "d": 1.0,
+    "symbol": "A7",
+    "roman": "II7/C#",
+    "pitches": [
+     "C#4",
+     "E4",
+     "G4",
+     "A4"
+    ],
+    "roman_anchored": "II7/C#"
+   },
+   {
+    "measure": 8,
+    "t": 25.0,
+    "d": 4.0,
+    "symbol": "Em7",
+    "roman": "vi7\u00b0/D",
+    "pitches": [
+     "D4",
+     "E4",
+     "G4",
+     "Bb4"
+    ],
+    "roman_anchored": "vi7\u00b0/D"
+   },
+   {
+    "measure": 9,
+    "t": 29.0,
+    "d": 4.0,
+    "symbol": "G",
+    "roman": "I",
+    "pitches": [
+     "G3",
+     "D4",
+     "G4",
+     "B4"
+    ],
+    "roman_anchored": "I"
+   }
+  ],
+  "cadence": {
+   "type": "chromatic climb (ii\u00b07 \u2192 #I\u00b07 \u2192 i)",
+   "desc": "An unusual chromatic slide: a chain of secondary leading-tone diminished 7ths (ii\u00b07/C = A\u00b07, II7/C# = A7, vii\u00b07/D) climbs by half-steps into the minor tonic \u2014 barbershop arrangers call this family of moves a \u201cchromatic parsec\u201d; it lands without a plain V\u2013I.",
+   "measure": 9
+  },
+  "total_len": 33.0,
+  "key_anchored": "G major",
+  "key_basis": "final-minor",
+  "diatonic_pct": 88,
+  "mp3_duration": 17.1101875,
+  "sec_per_ql": 0.5184905303030303,
+  "key_label": "G minor",
+  "ending_roman": "i",
+  "harmonic_walk": "Long tag with a cycle of ii7 color chords, then V7 \u2192 bIII \u2192 #i\u00b07 \u2192 V7/A chromatic climb resolving to i; ends via ii\u00b07/C \u2192 II7/C# \u2192 vii\u00b07/D chain \u2014 a rising chromatic \u201cclimb to the post\u201d into the tonic."
+ },
+ {
+  "id": "3856",
+  "key": "C# major",
+  "events": {
+   "Bass": [
+    {
+     "t": 0.0,
+     "d": 1.0,
+     "m": "Ab2",
+     "meas": 0
+    },
+    {
+     "t": 1.0,
+     "d": 1.0,
+     "m": "F3",
+     "meas": 1
+    },
+    {
+     "t": 2.0,
+     "d": 1.0,
+     "m": "F3",
+     "meas": 1
+    },
+    {
+     "t": 3.0,
+     "d": 1.0,
+     "m": "F3",
+     "meas": 1
+    },
+    {
+     "t": 4.0,
+     "d": 0.5,
+     "m": "Bb2",
+     "meas": 1
+    },
+    {
+     "t": 4.5,
+     "d": 0.5,
+     "m": "Bb2",
+     "meas": 1
+    },
+    {
+     "t": 5.0,
+     "d": 0.5,
+     "m": "Bb2",
+     "meas": 1
+    },
+    {
+     "t": 5.5,
+     "d": 0.5,
+     "m": "Bb2",
+     "meas": 1
+    },
+    {
+     "t": 6.0,
+     "d": 1.0,
+     "m": "Eb3",
+     "meas": 2
+    },
+    {
+     "t": 8.0,
+     "d": 0.5,
+     "m": "G3",
+     "meas": 2
+    },
+    {
+     "t": 8.5,
+     "d": 0.5,
+     "m": "Ab3",
+     "meas": 2
+    },
+    {
+     "t": 9.0,
+     "d": 0.5,
+     "m": "Ab3",
+     "meas": 2
+    },
+    {
+     "t": 9.5,
+     "d": 0.5,
+     "m": "Bb3",
+     "meas": 2
+    },
+    {
+     "t": 10.0,
+     "d": 3.0,
+     "m": "Bb3",
+     "meas": 3
+    },
+    {
+     "t": 14.0,
+     "d": 1.0,
+     "m": "Ab2",
+     "meas": 4
+    },
+    {
+     "t": 15.0,
+     "d": 1.0,
+     "m": "C3",
+     "meas": 4
+    },
+    {
+     "t": 16.0,
+     "d": 0.5,
+     "m": "C3",
+     "meas": 4
+    },
+    {
+     "t": 16.5,
+     "d": 0.5,
+     "m": "C3",
+     "meas": 4
+    },
+    {
+     "t": 17.0,
+     "d": 1.0,
+     "m": "Ab2",
+     "meas": 4
+    },
+    {
+     "t": 18.0,
+     "d": 1.0,
+     "m": "Bb2",
+     "meas": 5
+    },
+    {
+     "t": 19.0,
+     "d": 1.0,
+     "m": "C3",
+     "meas": 5
+    },
+    {
+     "t": 20.0,
+     "d": 0.5,
+     "m": "Db3",
+     "meas": 5
+    },
+    {
+     "t": 20.5,
+     "d": 0.5,
+     "m": "Db3",
+     "meas": 5
+    },
+    {
+     "t": 21.0,
+     "d": 0.5,
+     "m": "Db3",
+     "meas": 5
+    },
+    {
+     "t": 21.5,
+     "d": 0.5,
+     "m": "Db3",
+     "meas": 5
+    },
+    {
+     "t": 22.0,
+     "d": 0.5,
+     "m": "Eb3",
+     "meas": 6
+    },
+    {
+     "t": 22.5,
+     "d": 0.5,
+     "m": "Eb3",
+     "meas": 6
+    },
+    {
+     "t": 23.0,
+     "d": 0.5,
+     "m": "Fb3",
+     "meas": 6
+    },
+    {
+     "t": 23.5,
+     "d": 0.5,
+     "m": "Fb3",
+     "meas": 6
+    },
+    {
+     "t": 24.0,
+     "d": 1.0,
+     "m": "F3",
+     "meas": 6
+    },
+    {
+     "t": 25.0,
+     "d": 0.5,
+     "m": "F3",
+     "meas": 6
+    },
+    {
+     "t": 25.5,
+     "d": 0.5,
+     "m": "F3",
+     "meas": 6
+    },
+    {
+     "t": 26.0,
+     "d": 0.5,
+     "m": "Bb2",
+     "meas": 7
+    },
+    {
+     "t": 26.5,
+     "d": 0.5,
+     "m": "Bb2",
+     "meas": 7
+    },
+    {
+     "t": 27.0,
+     "d": 1.0,
+     "m": "F3",
+     "meas": 7
+    },
+    {
+     "t": 28.0,
+     "d": 1.0,
+     "m": "E3",
+     "meas": 7
+    },
+    {
+     "t": 29.0,
+     "d": 0.5,
+     "m": "E3",
+     "meas": 7
+    },
+    {
+     "t": 29.5,
+     "d": 0.5,
+     "m": "E3",
+     "meas": 7
+    },
+    {
+     "t": 30.0,
+     "d": 2.0,
+     "m": "F3",
+     "meas": 8
+    },
+    {
+     "t": 32.0,
+     "d": 2.0,
+     "m": "Bb3",
+     "meas": 8
+    },
+    {
+     "t": 34.0,
+     "d": 3.0,
+     "m": "Cb4",
+     "meas": 9
+    },
+    {
+     "t": 38.0,
+     "d": 1.0,
+     "m": "Db4",
+     "meas": 10
+    },
+    {
+     "t": 39.0,
+     "d": 1.0,
+     "m": "Db4",
+     "meas": 10
+    },
+    {
+     "t": 40.0,
+     "d": 2.0,
+     "m": "Db4",
+     "meas": 10
+    },
+    {
+     "t": 42.0,
+     "d": 4.0,
+     "m": "Ab3",
+     "meas": 11
+    }
+   ],
+   "Bari": [
+    {
+     "t": 0.0,
+     "d": 1.0,
+     "m": "C4",
+     "meas": 0
+    },
+    {
+     "t": 1.0,
+     "d": 1.0,
+     "m": "Ab3",
+     "meas": 1
+    },
+    {
+     "t": 2.0,
+     "d": 1.0,
+     "m": "Ab3",
+     "meas": 1
+    },
+    {
+     "t": 3.0,
+     "d": 1.0,
+     "m": "A3",
+     "meas": 1
+    },
+    {
+     "t": 4.0,
+     "d": 0.5,
+     "m": "Ab3",
+     "meas": 1
+    },
+    {
+     "t": 4.5,
+     "d": 0.5,
+     "m": "Ab3",
+     "meas": 1
+    },
+    {
+     "t": 5.0,
+     "d": 0.5,
+     "m": "D4",
+     "meas": 1
+    },
+    {
+     "t": 5.5,
+     "d": 0.5,
+     "m": "Db4",
+     "meas": 1
+    },
+    {
+     "t": 6.0,
+     "d": 1.0,
+     "m": "Bb3",
+     "meas": 2
+    },
+    {
+     "t": 8.0,
+     "d": 0.5,
+     "m": "Bb3",
+     "meas": 2
+    },
+    {
+     "t": 8.5,
+     "d": 0.5,
+     "m": "C4",
+     "meas": 2
+    },
+    {
+     "t": 9.0,
+     "d": 0.5,
+     "m": "C4",
+     "meas": 2
+    },
+    {
+     "t": 9.5,
+     "d": 0.5,
+     "m": "Db4",
+     "meas": 2
+    },
+    {
+     "t": 10.0,
+     "d": 3.0,
+     "m": "Db4",
+     "meas": 3
+    },
+    {
+     "t": 14.0,
+     "d": 1.0,
+     "m": "C4",
+     "meas": 4
+    },
+    {
+     "t": 15.0,
+     "d": 1.0,
+     "m": "Ab3",
+     "meas": 4
+    },
+    {
+     "t": 16.0,
+     "d": 0.5,
+     "m": "Gb3",
+     "meas": 4
+    },
+    {
+     "t": 16.5,
+     "d": 0.5,
+     "m": "Gb3",
+     "meas": 4
+    },
+    {
+     "t": 17.0,
+     "d": 1.0,
+     "m": "Eb3",
+     "meas": 4
+    },
+    {
+     "t": 18.0,
+     "d": 1.0,
+     "m": "F3",
+     "meas": 5
+    },
+    {
+     "t": 19.0,
+     "d": 1.0,
+     "m": "Bb3",
+     "meas": 5
+    },
+    {
+     "t": 20.0,
+     "d": 0.5,
+     "m": "Bb3",
+     "meas": 5
+    },
+    {
+     "t": 20.5,
+     "d": 0.5,
+     "m": "Bb3",
+     "meas": 5
+    },
+    {
+     "t": 21.0,
+     "d": 0.5,
+     "m": "Cb4",
+     "meas": 5
+    },
+    {
+     "t": 21.5,
+     "d": 0.5,
+     "m": "Cb4",
+     "meas": 5
+    },
+    {
+     "t": 22.0,
+     "d": 0.5,
+     "m": "C4",
+     "meas": 6
+    },
+    {
+     "t": 22.5,
+     "d": 0.5,
+     "m": "C4",
+     "meas": 6
+    },
+    {
+     "t": 23.0,
+     "d": 0.5,
+     "m": "Cb4",
+     "meas": 6
+    },
+    {
+     "t": 23.5,
+     "d": 0.5,
+     "m": "Cb4",
+     "meas": 6
+    },
+    {
+     "t": 24.0,
+     "d": 1.0,
+     "m": "Bb3",
+     "meas": 6
+    },
+    {
+     "t": 25.0,
+     "d": 0.5,
+     "m": "Bb3",
+     "meas": 6
+    },
+    {
+     "t": 25.5,
+     "d": 0.5,
+     "m": "Bb3",
+     "meas": 6
+    },
+    {
+     "t": 26.0,
+     "d": 0.5,
+     "m": "F4",
+     "meas": 7
+    },
+    {
+     "t": 26.5,
+     "d": 0.5,
+     "m": "F4",
+     "meas": 7
+    },
+    {
+     "t": 27.0,
+     "d": 1.0,
+     "m": "C5",
+     "meas": 7
+    },
+    {
+     "t": 28.0,
+     "d": 1.0,
+     "m": "Bb4",
+     "meas": 7
+    },
+    {
+     "t": 29.0,
+     "d": 0.5,
+     "m": "B4",
+     "meas": 7
+    },
+    {
+     "t": 29.5,
+     "d": 0.5,
+     "m": "B4",
+     "meas": 7
+    },
+    {
+     "t": 30.0,
+     "d": 2.0,
+     "m": "C5",
+     "meas": 8
+    },
+    {
+     "t": 32.0,
+     "d": 2.0,
+     "m": "F4",
+     "meas": 8
+    },
+    {
+     "t": 34.0,
+     "d": 3.0,
+     "m": "Fb4",
+     "meas": 9
+    },
+    {
+     "t": 38.0,
+     "d": 1.0,
+     "m": "Bb4",
+     "meas": 10
+    },
+    {
+     "t": 39.0,
+     "d": 1.0,
+     "m": "Bb4",
+     "meas": 10
+    },
+    {
+     "t": 40.0,
+     "d": 2.0,
+     "m": "Cb5",
+     "meas": 10
+    },
+    {
+     "t": 42.0,
+     "d": 4.0,
+     "m": "C5",
+     "meas": 11
+    }
+   ],
+   "Lead": [
+    {
+     "t": 0.0,
+     "d": 1.0,
+     "m": "Ab3",
+     "meas": 0
+    },
+    {
+     "t": 1.0,
+     "d": 1.0,
+     "m": "Bb3",
+     "meas": 1
+    },
+    {
+     "t": 2.0,
+     "d": 1.0,
+     "m": "Cb4",
+     "meas": 1
+    },
+    {
+     "t": 3.0,
+     "d": 1.0,
+     "m": "C4",
+     "meas": 1
+    },
+    {
+     "t": 4.0,
+     "d": 0.5,
+     "m": "D4",
+     "meas": 1
+    },
+    {
+     "t": 4.5,
+     "d": 0.5,
+     "m": "Db4",
+     "meas": 1
+    },
+    {
+     "t": 5.0,
+     "d": 0.5,
+     "m": "C4",
+     "meas": 1
+    },
+    {
+     "t": 5.5,
+     "d": 0.5,
+     "m": "Bb3",
+     "meas": 1
+    },
+    {
+     "t": 6.0,
+     "d": 4.0,
+     "m": "Eb4",
+     "meas": 2
+    },
+    {
+     "t": 10.0,
+     "d": 3.0,
+     "m": "Eb4",
+     "meas": 3
+    },
+    {
+     "t": 14.0,
+     "d": 1.0,
+     "m": "Eb4",
+     "meas": 4
+    },
+    {
+     "t": 15.0,
+     "d": 1.0,
+     "m": "Eb4",
+     "meas": 4
+    },
+    {
+     "t": 16.0,
+     "d": 0.5,
+     "m": "F4",
+     "meas": 4
+    },
+    {
+     "t": 16.5,
+     "d": 0.5,
+     "m": "Eb4",
+     "meas": 4
+    },
+    {
+     "t": 17.0,
+     "d": 1.0,
+     "m": "F4",
+     "meas": 4
+    },
+    {
+     "t": 18.0,
+     "d": 1.0,
+     "m": "D4",
+     "meas": 5
+    },
+    {
+     "t": 19.0,
+     "d": 1.0,
+     "m": "Eb4",
+     "meas": 5
+    },
+    {
+     "t": 20.0,
+     "d": 0.5,
+     "m": "Fb4",
+     "meas": 5
+    },
+    {
+     "t": 20.5,
+     "d": 0.5,
+     "m": "Fb4",
+     "meas": 5
+    },
+    {
+     "t": 21.0,
+     "d": 0.5,
+     "m": "F4",
+     "meas": 5
+    },
+    {
+     "t": 21.5,
+     "d": 0.5,
+     "m": "F4",
+     "meas": 5
+    },
+    {
+     "t": 22.0,
+     "d": 0.5,
+     "m": "F4",
+     "meas": 6
+    },
+    {
+     "t": 22.5,
+     "d": 0.5,
+     "m": "F4",
+     "meas": 6
+    },
+    {
+     "t": 23.0,
+     "d": 0.5,
+     "m": "D4",
+     "meas": 6
+    },
+    {
+     "t": 23.5,
+     "d": 0.5,
+     "m": "D4",
+     "meas": 6
+    },
+    {
+     "t": 24.0,
+     "d": 1.0,
+     "m": "D4",
+     "meas": 6
+    },
+    {
+     "t": 25.0,
+     "d": 0.5,
+     "m": "D4",
+     "meas": 6
+    },
+    {
+     "t": 25.5,
+     "d": 0.5,
+     "m": "D4",
+     "meas": 6
+    },
+    {
+     "t": 26.0,
+     "d": 0.5,
+     "m": "Db4",
+     "meas": 7
+    },
+    {
+     "t": 26.5,
+     "d": 0.5,
+     "m": "Db4",
+     "meas": 7
+    },
+    {
+     "t": 27.0,
+     "d": 1.0,
+     "m": "Eb4",
+     "meas": 7
+    },
+    {
+     "t": 28.0,
+     "d": 1.0,
+     "m": "D4",
+     "meas": 7
+    },
+    {
+     "t": 29.0,
+     "d": 0.5,
+     "m": "D4",
+     "meas": 7
+    },
+    {
+     "t": 29.5,
+     "d": 0.5,
+     "m": "D4",
+     "meas": 7
+    },
+    {
+     "t": 30.0,
+     "d": 2.0,
+     "m": "Db4",
+     "meas": 8
+    },
+    {
+     "t": 32.0,
+     "d": 2.0,
+     "m": "D4",
+     "meas": 8
+    },
+    {
+     "t": 34.0,
+     "d": 3.0,
+     "m": "Gb4",
+     "meas": 9
+    },
+    {
+     "t": 38.0,
+     "d": 1.0,
+     "m": "Fb4",
+     "meas": 10
+    },
+    {
+     "t": 39.0,
+     "d": 1.0,
+     "m": "Fb4",
+     "meas": 10
+    },
+    {
+     "t": 40.0,
+     "d": 2.0,
+     "m": "F4",
+     "meas": 10
+    },
+    {
+     "t": 42.0,
+     "d": 4.0,
+     "m": "Eb4",
+     "meas": 11
+    }
+   ],
+   "Tenor": [
+    {
+     "t": 0.0,
+     "d": 1.0,
+     "m": "Eb4",
+     "meas": 0
+    },
+    {
+     "t": 1.0,
+     "d": 1.0,
+     "m": "D4",
+     "meas": 1
+    },
+    {
+     "t": 2.0,
+     "d": 1.0,
+     "m": "Db4",
+     "meas": 1
+    },
+    {
+     "t": 3.0,
+     "d": 1.0,
+     "m": "Eb4",
+     "meas": 1
+    },
+    {
+     "t": 4.0,
+     "d": 0.5,
+     "m": "F4",
+     "meas": 1
+    },
+    {
+     "t": 4.5,
+     "d": 0.5,
+     "m": "F4",
+     "meas": 1
+    },
+    {
+     "t": 5.0,
+     "d": 0.5,
+     "m": "F4",
+     "meas": 1
+    },
+    {
+     "t": 5.5,
+     "d": 0.5,
+     "m": "F4",
+     "meas": 1
+    },
+    {
+     "t": 6.0,
+     "d": 4.0,
+     "m": "G4",
+     "meas": 2
+    },
+    {
+     "t": 10.0,
+     "d": 1.0,
+     "m": "G4",
+     "meas": 3
+    },
+    {
+     "t": 12.0,
+     "d": 0.5,
+     "m": "F4",
+     "meas": 3
+    },
+    {
+     "t": 12.5,
+     "d": 1.5,
+     "m": "G4",
+     "meas": 3
+    },
+    {
+     "t": 14.0,
+     "d": 4.0,
+     "m": "Ab4",
+     "meas": 4
+    },
+    {
+     "t": 18.0,
+     "d": 4.0,
+     "m": "Ab4",
+     "meas": 5
+    },
+    {
+     "t": 22.0,
+     "d": 4.0,
+     "m": "Ab4",
+     "meas": 6
+    },
+    {
+     "t": 26.0,
+     "d": 4.0,
+     "m": "Ab4",
+     "meas": 7
+    },
+    {
+     "t": 30.0,
+     "d": 4.0,
+     "m": "Ab4",
+     "meas": 8
+    },
+    {
+     "t": 34.0,
+     "d": 4.0,
+     "m": "Ab4",
+     "meas": 9
+    },
+    {
+     "t": 38.0,
+     "d": 4.0,
+     "m": "Ab4",
+     "meas": 10
+    },
+    {
+     "t": 42.0,
+     "d": 4.0,
+     "m": "Ab4",
+     "meas": 11
+    }
+   ]
+  },
+  "chords": [
+   {
+    "measure": 0,
+    "t": 0.0,
+    "d": 1.0,
+    "symbol": "Ab",
+    "roman": "bbVI",
+    "pitches": [
+     "Ab2",
+     "Ab3",
+     "C4",
+     "Eb4"
+    ],
+    "roman_anchored": "I"
+   },
+   {
+    "measure": 1,
+    "t": 1.0,
+    "d": 1.0,
+    "symbol": "Bb7",
+    "roman": "bbVII7/F",
+    "pitches": [
+     "F3",
+     "Ab3",
+     "Bb3",
+     "D4"
+    ],
+    "roman_anchored": "II7/F"
+   },
+   {
+    "measure": 1,
+    "t": 2.0,
+    "d": 1.0,
+    "symbol": "C#7",
+    "roman": "bbII7/F",
+    "pitches": [
+     "F3",
+     "Ab3",
+     "Cb4",
+     "Db4"
+    ],
+    "roman_anchored": "IV7/F"
+   },
+   {
+    "measure": 1,
+    "t": 3.0,
+    "d": 1.0,
+    "symbol": "F7",
+    "roman": "bIV7",
+    "pitches": [
+     "F3",
+     "A3",
+     "C4",
+     "Eb4"
+    ],
+    "roman_anchored": "VI7"
+   },
+   {
+    "measure": 1,
+    "t": 4.0,
+    "d": 0.5,
+    "symbol": "Bb7",
+    "roman": "bbVII7",
+    "pitches": [
+     "Bb2",
+     "Ab3",
+     "D4",
+     "F4"
+    ],
+    "roman_anchored": "II7"
+   },
+   {
+    "measure": 1,
+    "t": 4.5,
+    "d": 0.5,
+    "symbol": "Bbm7",
+    "roman": "bbvii7",
+    "pitches": [
+     "Bb2",
+     "Ab3",
+     "Db4",
+     "F4"
+    ],
+    "roman_anchored": "ii7"
+   },
+   {
+    "measure": 1,
+    "t": 5.0,
+    "d": 0.5,
+    "symbol": "Bb",
+    "roman": "bbVII",
+    "pitches": [
+     "Bb2",
+     "C4",
+     "D4",
+     "F4"
+    ],
+    "roman_anchored": "II"
+   },
+   {
+    "measure": 1,
+    "t": 5.5,
+    "d": 0.5,
+    "symbol": "Bbm",
+    "roman": "bbvii",
+    "pitches": [
+     "Bb2",
+     "Bb3",
+     "Db4",
+     "F4"
+    ],
+    "roman_anchored": "ii"
+   },
+   {
+    "measure": 2,
+    "t": 6.0,
+    "d": 1.0,
+    "symbol": "Eb",
+    "roman": "bbIII",
+    "pitches": [
+     "Eb3",
+     "Bb3",
+     "Eb4",
+     "G4"
+    ],
+    "roman_anchored": "V"
+   },
+   {
+    "measure": 2,
+    "t": 7.0,
+    "d": 1.0,
+    "symbol": "Eb",
+    "roman": "bbIII",
+    "pitches": [
+     "Eb4",
+     "G4"
+    ],
+    "roman_anchored": "V"
+   },
+   {
+    "measure": 2,
+    "t": 8.0,
+    "d": 0.5,
+    "symbol": "Eb",
+    "roman": "bbIII/G",
+    "pitches": [
+     "G3",
+     "Bb3",
+     "Eb4",
+     "G4"
+    ],
+    "roman_anchored": "V/G"
+   },
+   {
+    "measure": 2,
+    "t": 8.5,
+    "d": 0.5,
+    "symbol": "Ab",
+    "roman": "bbVI",
+    "pitches": [
+     "Ab3",
+     "C4",
+     "Eb4",
+     "G4"
+    ],
+    "roman_anchored": "I"
+   },
+   {
+    "measure": 2,
+    "t": 9.0,
+    "d": 0.5,
+    "symbol": "Ab",
+    "roman": "bbVI",
+    "pitches": [
+     "Ab3",
+     "C4",
+     "Eb4",
+     "G4"
+    ],
+    "roman_anchored": "I"
+   },
+   {
+    "measure": 2,
+    "t": 9.5,
+    "d": 0.5,
+    "symbol": "Eb7",
+    "roman": "bbIII7/Bb",
+    "pitches": [
+     "Bb3",
+     "Db4",
+     "Eb4",
+     "G4"
+    ],
+    "roman_anchored": "V7/Bb"
+   },
+   {
+    "measure": 3,
+    "t": 10.0,
+    "d": 1.0,
+    "symbol": "Eb7",
+    "roman": "bbIII7/Bb",
+    "pitches": [
+     "Bb3",
+     "Db4",
+     "Eb4",
+     "G4"
+    ],
+    "roman_anchored": "V7/Bb"
+   },
+   {
+    "measure": 3,
+    "t": 11.0,
+    "d": 1.0,
+    "symbol": "Eb7",
+    "roman": "bbiii7/Bb",
+    "pitches": [
+     "Bb3",
+     "Db4",
+     "Eb4"
+    ],
+    "roman_anchored": "v7/Bb"
+   },
+   {
+    "measure": 3,
+    "t": 12.0,
+    "d": 0.5,
+    "symbol": "Bbm",
+    "roman": "bbvii",
+    "pitches": [
+     "Bb3",
+     "Db4",
+     "Eb4",
+     "F4"
+    ],
+    "roman_anchored": "ii"
+   },
+   {
+    "measure": 3,
+    "t": 12.5,
+    "d": 0.5,
+    "symbol": "Eb7",
+    "roman": "bbIII7/Bb",
+    "pitches": [
+     "Bb3",
+     "Db4",
+     "Eb4",
+     "G4"
+    ],
+    "roman_anchored": "V7/Bb"
+   },
+   {
+    "measure": 3,
+    "t": 13.0,
+    "d": 1.0,
+    "symbol": "G",
+    "roman": "bv",
+    "pitches": [
+     "G4"
+    ],
+    "roman_anchored": "vii"
+   },
+   {
+    "measure": 4,
+    "t": 14.0,
+    "d": 1.0,
+    "symbol": "Ab",
+    "roman": "bbVI",
+    "pitches": [
+     "Ab2",
+     "C4",
+     "Eb4",
+     "Ab4"
+    ],
+    "roman_anchored": "I"
+   },
+   {
+    "measure": 4,
+    "t": 15.0,
+    "d": 1.0,
+    "symbol": "Ab",
+    "roman": "bbVI/C",
+    "pitches": [
+     "C3",
+     "Ab3",
+     "Eb4",
+     "Ab4"
+    ],
+    "roman_anchored": "I/C"
+   },
+   {
+    "measure": 4,
+    "t": 16.0,
+    "d": 0.5,
+    "symbol": "Fm",
+    "roman": "biv/C",
+    "pitches": [
+     "C3",
+     "Gb3",
+     "F4",
+     "Ab4"
+    ],
+    "roman_anchored": "vi/C"
+   },
+   {
+    "measure": 4,
+    "t": 16.5,
+    "d": 0.5,
+    "symbol": "Ab7",
+    "roman": "bbVI7/C",
+    "pitches": [
+     "C3",
+     "Gb3",
+     "Eb4",
+     "Ab4"
+    ],
+    "roman_anchored": "I7/C"
+   },
+   {
+    "measure": 4,
+    "t": 17.0,
+    "d": 1.0,
+    "symbol": "Fm7",
+    "roman": "biv7/Ab",
+    "pitches": [
+     "Ab2",
+     "Eb3",
+     "F4",
+     "Ab4"
+    ],
+    "roman_anchored": "vi7/Ab"
+   },
+   {
+    "measure": 5,
+    "t": 18.0,
+    "d": 1.0,
+    "symbol": "Bb7",
+    "roman": "bbVII7",
+    "pitches": [
+     "Bb2",
+     "F3",
+     "D4",
+     "Ab4"
+    ],
+    "roman_anchored": "II7"
+   },
+   {
+    "measure": 5,
+    "t": 19.0,
+    "d": 1.0,
+    "symbol": "Ab",
+    "roman": "bbVI/C",
+    "pitches": [
+     "C3",
+     "Bb3",
+     "Eb4",
+     "Ab4"
+    ],
+    "roman_anchored": "I/C"
+   },
+   {
+    "measure": 5,
+    "t": 20.0,
+    "d": 0.5,
+    "symbol": "Bbm7",
+    "roman": "bbvii7\u00b0/Db",
+    "pitches": [
+     "Db3",
+     "Bb3",
+     "Fb4",
+     "Ab4"
+    ],
+    "roman_anchored": "ii7\u00b0/Db"
+   },
+   {
+    "measure": 5,
+    "t": 20.5,
+    "d": 0.5,
+    "symbol": "Bbm7",
+    "roman": "bbvii7\u00b0/Db",
+    "pitches": [
+     "Db3",
+     "Bb3",
+     "Fb4",
+     "Ab4"
+    ],
+    "roman_anchored": "ii7\u00b0/Db"
+   },
+   {
+    "measure": 5,
+    "t": 21.0,
+    "d": 0.5,
+    "symbol": "C#7",
+    "roman": "bbII7",
+    "pitches": [
+     "Db3",
+     "Cb4",
+     "F4",
+     "Ab4"
+    ],
+    "roman_anchored": "IV7"
+   },
+   {
+    "measure": 5,
+    "t": 21.5,
+    "d": 0.5,
+    "symbol": "C#7",
+    "roman": "bbII7",
+    "pitches": [
+     "Db3",
+     "Cb4",
+     "F4",
+     "Ab4"
+    ],
+    "roman_anchored": "IV7"
+   },
+   {
+    "measure": 6,
+    "t": 22.0,
+    "d": 0.5,
+    "symbol": "Fm7",
+    "roman": "biv7/Eb",
+    "pitches": [
+     "Eb3",
+     "C4",
+     "F4",
+     "Ab4"
+    ],
+    "roman_anchored": "vi7/Eb"
+   },
+   {
+    "measure": 6,
+    "t": 22.5,
+    "d": 0.5,
+    "symbol": "Fm7",
+    "roman": "biv7/Eb",
+    "pitches": [
+     "Eb3",
+     "C4",
+     "F4",
+     "Ab4"
+    ],
+    "roman_anchored": "vi7/Eb"
+   },
+   {
+    "measure": 6,
+    "t": 23.0,
+    "d": 0.5,
+    "symbol": "D(sus)",
+    "roman": "bii\u00b0/Fb",
+    "pitches": [
+     "Fb3",
+     "Cb4",
+     "D4",
+     "Ab4"
+    ],
+    "roman_anchored": "?"
+   },
+   {
+    "measure": 6,
+    "t": 23.5,
+    "d": 0.5,
+    "symbol": "D(sus)",
+    "roman": "bii\u00b0/Fb",
+    "pitches": [
+     "Fb3",
+     "Cb4",
+     "D4",
+     "Ab4"
+    ],
+    "roman_anchored": "?"
+   },
+   {
+    "measure": 6,
+    "t": 24.0,
+    "d": 1.0,
+    "symbol": "Bb7",
+    "roman": "bbVII7/F",
+    "pitches": [
+     "F3",
+     "Bb3",
+     "D4",
+     "Ab4"
+    ],
+    "roman_anchored": "II7/F"
+   },
+   {
+    "measure": 6,
+    "t": 25.0,
+    "d": 0.5,
+    "symbol": "Bb7",
+    "roman": "bbVII7/F",
+    "pitches": [
+     "F3",
+     "Bb3",
+     "D4",
+     "Ab4"
+    ],
+    "roman_anchored": "II7/F"
+   },
+   {
+    "measure": 6,
+    "t": 25.5,
+    "d": 0.5,
+    "symbol": "Bb7",
+    "roman": "bbVII7/F",
+    "pitches": [
+     "F3",
+     "Bb3",
+     "D4",
+     "Ab4"
+    ],
+    "roman_anchored": "II7/F"
+   },
+   {
+    "measure": 7,
+    "t": 26.0,
+    "d": 0.5,
+    "symbol": "Bbm7",
+    "roman": "bbvii7",
+    "pitches": [
+     "Bb2",
+     "Db4",
+     "F4",
+     "Ab4"
+    ],
+    "roman_anchored": "ii7"
+   },
+   {
+    "measure": 7,
+    "t": 26.5,
+    "d": 0.5,
+    "symbol": "Bbm7",
+    "roman": "bbvii7",
+    "pitches": [
+     "Bb2",
+     "Db4",
+     "F4",
+     "Ab4"
+    ],
+    "roman_anchored": "ii7"
+   },
+   {
+    "measure": 7,
+    "t": 27.0,
+    "d": 1.0,
+    "symbol": "Fm7",
+    "roman": "biv7",
+    "pitches": [
+     "F3",
+     "Eb4",
+     "Ab4",
+     "C5"
+    ],
+    "roman_anchored": "vi7"
+   },
+   {
+    "measure": 7,
+    "t": 28.0,
+    "d": 1.0,
+    "symbol": "Bb7",
+    "roman": "bbVII7/E",
+    "pitches": [
+     "E3",
+     "D4",
+     "Ab4",
+     "Bb4"
+    ],
+    "roman_anchored": "II7/E"
+   },
+   {
+    "measure": 7,
+    "t": 29.0,
+    "d": 0.5,
+    "symbol": "Bm",
+    "roman": "bvii/E",
+    "pitches": [
+     "E3",
+     "D4",
+     "Ab4",
+     "B4"
+    ],
+    "roman_anchored": "#ii/E"
+   },
+   {
+    "measure": 7,
+    "t": 29.5,
+    "d": 0.5,
+    "symbol": "Bm",
+    "roman": "bvii/E",
+    "pitches": [
+     "E3",
+     "D4",
+     "Ab4",
+     "B4"
+    ],
+    "roman_anchored": "#ii/E"
+   },
+   {
+    "measure": 8,
+    "t": 30.0,
+    "d": 2.0,
+    "symbol": "C#",
+    "roman": "bbII/F",
+    "pitches": [
+     "F3",
+     "Db4",
+     "Ab4",
+     "C5"
+    ],
+    "roman_anchored": "IV/F"
+   },
+   {
+    "measure": 8,
+    "t": 32.0,
+    "d": 2.0,
+    "symbol": "Bb7",
+    "roman": "bbVII7",
+    "pitches": [
+     "Bb3",
+     "D4",
+     "F4",
+     "Ab4"
+    ],
+    "roman_anchored": "II7"
+   },
+   {
+    "measure": 9,
+    "t": 34.0,
+    "d": 3.0,
+    "symbol": "E",
+    "roman": "bbIV/Cb",
+    "pitches": [
+     "Cb4",
+     "Fb4",
+     "Gb4",
+     "Ab4"
+    ],
+    "roman_anchored": "bVI/Cb"
+   },
+   {
+    "measure": 9,
+    "t": 37.0,
+    "d": 1.0,
+    "symbol": "Ab",
+    "roman": "bbvi",
+    "pitches": [
+     "Ab4"
+    ],
+    "roman_anchored": "i"
+   },
+   {
+    "measure": 10,
+    "t": 38.0,
+    "d": 1.0,
+    "symbol": "Bbm7",
+    "roman": "bbvii7\u00b0/Db",
+    "pitches": [
+     "Db4",
+     "Fb4",
+     "Ab4",
+     "Bb4"
+    ],
+    "roman_anchored": "ii7\u00b0/Db"
+   },
+   {
+    "measure": 10,
+    "t": 39.0,
+    "d": 1.0,
+    "symbol": "Bbm7",
+    "roman": "bbvii7\u00b0/Db",
+    "pitches": [
+     "Db4",
+     "Fb4",
+     "Ab4",
+     "Bb4"
+    ],
+    "roman_anchored": "ii7\u00b0/Db"
+   },
+   {
+    "measure": 10,
+    "t": 40.0,
+    "d": 2.0,
+    "symbol": "C#7",
+    "roman": "bbII7",
+    "pitches": [
+     "Db4",
+     "F4",
+     "Ab4",
+     "Cb5"
+    ],
+    "roman_anchored": "IV7"
+   },
+   {
+    "measure": 11,
+    "t": 42.0,
+    "d": 4.0,
+    "symbol": "Ab",
+    "roman": "bbVI",
+    "pitches": [
+     "Ab3",
+     "Eb4",
+     "Ab4",
+     "C5"
+    ],
+    "roman_anchored": "I"
+   }
+  ],
+  "cadence": {
+   "type": "bluesy plagal (IV7 \u2192 I)",
+   "desc": "The subdominant arrives carrying a dominant 7th (IV7) \u2014 the blues-inflected plagal close; in barbershop this IV7\u2192I with the 7th on top is sometimes called the \u201cglorified Amen\u201d.",
+   "measure": 11
+  },
+  "total_len": 50.0,
+  "key_anchored": "Ab major",
+  "key_basis": "final-major",
+  "diatonic_pct": 89,
+  "mp3_duration": 39.5,
+  "sec_per_ql": 0.79,
+  "key_label": "Ab major",
+  "ending_roman": "I",
+  "harmonic_walk": "Extremely chromatic tag (the bb-romans earlier); ends IV7 \u2192 I \u2014 a dominant-seventh subdominant (\u201cbluesy plagal\u201d) close."
+ },
+ {
+  "id": "2501",
+  "key": "D major",
+  "events": {
+   "Bass": [
+    {
+     "t": 0.0,
+     "d": 1.0,
+     "m": "F#3",
+     "meas": 1
+    },
+    {
+     "t": 1.0,
+     "d": 1.0,
+     "m": "D3",
+     "meas": 1
+    },
+    {
+     "t": 2.0,
+     "d": 1.0,
+     "m": "F#3",
+     "meas": 1
+    },
+    {
+     "t": 3.0,
+     "d": 1.5,
+     "m": "G3",
+     "meas": 2
+    },
+    {
+     "t": 4.5,
+     "d": 0.5,
+     "m": "E3",
+     "meas": 2
+    },
+    {
+     "t": 5.0,
+     "d": 1.0,
+     "m": "G3",
+     "meas": 2
+    },
+    {
+     "t": 6.0,
+     "d": 2.0,
+     "m": "D3",
+     "meas": 3
+    },
+    {
+     "t": 8.0,
+     "d": 1.0,
+     "m": "D3",
+     "meas": 3
+    },
+    {
+     "t": 9.0,
+     "d": 3.0,
+     "m": "D3",
+     "meas": 4
+    },
+    {
+     "t": 12.0,
+     "d": 3.0,
+     "m": "D2",
+     "meas": 5
+    },
+    {
+     "t": 15.0,
+     "d": 3.0,
+     "m": "D#2",
+     "meas": 6
+    },
+    {
+     "t": 18.0,
+     "d": 3.0,
+     "m": "D2",
+     "meas": 7
+    }
+   ],
+   "Bari": [
+    {
+     "t": 0.0,
+     "d": 1.0,
+     "m": "A5",
+     "meas": 1
+    },
+    {
+     "t": 1.0,
+     "d": 1.0,
+     "m": "F#5",
+     "meas": 1
+    },
+    {
+     "t": 2.0,
+     "d": 1.0,
+     "m": "A5",
+     "meas": 1
+    },
+    {
+     "t": 3.0,
+     "d": 1.5,
+     "m": "E5",
+     "meas": 2
+    },
+    {
+     "t": 4.5,
+     "d": 0.5,
+     "m": "G5",
+     "meas": 2
+    },
+    {
+     "t": 5.0,
+     "d": 1.0,
+     "m": "E5",
+     "meas": 2
+    },
+    {
+     "t": 6.0,
+     "d": 2.0,
+     "m": "F#5",
+     "meas": 3
+    },
+    {
+     "t": 8.0,
+     "d": 1.0,
+     "m": "F#5",
+     "meas": 3
+    },
+    {
+     "t": 9.0,
+     "d": 3.0,
+     "m": "F#5",
+     "meas": 4
+    },
+    {
+     "t": 12.0,
+     "d": 3.0,
+     "m": "C#5",
+     "meas": 5
+    },
+    {
+     "t": 15.0,
+     "d": 3.0,
+     "m": "C#5",
+     "meas": 6
+    },
+    {
+     "t": 18.0,
+     "d": 3.0,
+     "m": "A5",
+     "meas": 7
+    }
+   ]
+  },
+  "chords": [
+   {
+    "measure": 1,
+    "t": 0.0,
+    "d": 1.0,
+    "symbol": "D",
+    "roman": "I/F#",
+    "pitches": [
+     "F#3",
+     "A3",
+     "D5",
+     "A5"
+    ],
+    "roman_anchored": "I/F#"
+   },
+   {
+    "measure": 1,
+    "t": 1.0,
+    "d": 1.0,
+    "symbol": "D",
+    "roman": "I",
+    "pitches": [
+     "D3",
+     "A3",
+     "D5",
+     "F#5"
+    ],
+    "roman_anchored": "I"
+   },
+   {
+    "measure": 1,
+    "t": 2.0,
+    "d": 1.0,
+    "symbol": "D",
+    "roman": "I/F#",
+    "pitches": [
+     "F#3",
+     "A3",
+     "D5",
+     "A5"
+    ],
+    "roman_anchored": "I/F#"
+   },
+   {
+    "measure": 2,
+    "t": 3.0,
+    "d": 1.5,
+    "symbol": "Em7",
+    "roman": "ii7/G",
+    "pitches": [
+     "G3",
+     "A#3",
+     "D5",
+     "E5"
+    ],
+    "roman_anchored": "ii7/G"
+   },
+   {
+    "measure": 2,
+    "t": 4.5,
+    "d": 0.5,
+    "symbol": "Em7",
+    "roman": "ii7",
+    "pitches": [
+     "E3",
+     "A#3",
+     "D5",
+     "G5"
+    ],
+    "roman_anchored": "ii7"
+   },
+   {
+    "measure": 2,
+    "t": 5.0,
+    "d": 1.0,
+    "symbol": "Em7",
+    "roman": "ii7/G",
+    "pitches": [
+     "G3",
+     "A#3",
+     "D5",
+     "E5"
+    ],
+    "roman_anchored": "ii7/G"
+   },
+   {
+    "measure": 3,
+    "t": 6.0,
+    "d": 2.0,
+    "symbol": "D",
+    "roman": "I",
+    "pitches": [
+     "D3",
+     "A3",
+     "C#5",
+     "F#5"
+    ],
+    "roman_anchored": "I"
+   },
+   {
+    "measure": 3,
+    "t": 8.0,
+    "d": 1.0,
+    "symbol": "D",
+    "roman": "I",
+    "pitches": [
+     "D3",
+     "A3",
+     "C#5",
+     "F#5"
+    ],
+    "roman_anchored": "I"
+   },
+   {
+    "measure": 4,
+    "t": 9.0,
+    "d": 3.0,
+    "symbol": "D",
+    "roman": "I",
+    "pitches": [
+     "D3",
+     "A3",
+     "C#5",
+     "F#5"
+    ],
+    "roman_anchored": "I"
+   },
+   {
+    "measure": 5,
+    "t": 12.0,
+    "d": 3.0,
+    "symbol": "D",
+    "roman": "I",
+    "pitches": [
+     "D2",
+     "A2",
+     "F#4",
+     "C#5"
+    ],
+    "roman_anchored": "I"
+   },
+   {
+    "measure": 6,
+    "t": 15.0,
+    "d": 3.0,
+    "symbol": "Bbm",
+    "roman": "#v/D#",
+    "pitches": [
+     "D#2",
+     "A#2",
+     "G4",
+     "C#5"
+    ],
+    "roman_anchored": "#v/D#"
+   },
+   {
+    "measure": 7,
+    "t": 18.0,
+    "d": 3.0,
+    "symbol": "D",
+    "roman": "i",
+    "pitches": [
+     "D2",
+     "A2",
+     "C#5",
+     "A5"
+    ],
+    "roman_anchored": "i"
+   }
+  ],
+  "cadence": {
+   "type": "picardy slip (#v\u00b0 \u2192 I)",
+   "desc": "An unusual chromatic approach: a raised-fifth diminished sonority (#v\u00b0/D#) sits a half-step under the final tonic, then resolves \u2014 a \u201cslip cadence\u201d where the last chord is approached purely chromatically, no functional dominant at all.",
+   "measure": 7
+  },
+  "total_len": 24.0,
+  "key_anchored": "D minor",
+  "key_basis": "final-minor",
+  "diatonic_pct": 100,
+  "mp3_duration": 25.028820861678003,
+  "sec_per_ql": 1.0428675359032502,
+  "key_label": "D minor\u2192D major? ends D",
+  "ending_roman": "I",
+  "harmonic_walk": "Entirely I and ii7 for most of the tag (plagal hovering), then a #v\u00b0/D# chromatic slip (Bbm over D#) before the final D \u2014 a Picardy-like major ending after minor hovering."
+ }
+]

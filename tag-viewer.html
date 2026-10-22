@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barbershop Tag Explorer — real tags</title>
+<style>
+:root{
+  --bg:#0f1117; --panel:#171a23; --panel2:#1e2230; --text:#e8eaf2;
+  --muted:#8b90a3; --accent:#e0b35a; --root:#e05c5c; --third:#5ca8e0;
+  --fifth:#5ce08a; --seventh:#c07ce0;
+  --tenor:#5ca8e0; --lead:#5ce08a; --bari:#e0b35a; --bass:#e05c5c;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{padding:20px 24px 8px;max-width:1150px;margin:0 auto}
+h1{font-size:1.35rem;margin:0 0 4px}
+header p{color:var(--muted);margin:0;font-size:.9rem}
+main{max-width:1150px;margin:0 auto;padding:12px 24px 48px}
+.panel{background:var(--panel);border:1px solid #262b3a;border-radius:12px;padding:16px;margin-top:14px}
+.panel h2{font-size:.95rem;margin:0 0 10px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+button{background:var(--panel2);color:var(--text);border:1px solid #2c3245;border-radius:8px;padding:9px 16px;font-size:.9rem;cursor:pointer}
+button:hover{border-color:#4a5270}
+button.primary{background:var(--accent);color:#1a1408;border-color:var(--accent);font-weight:700}
+button.playing{background:#3a2a10;border-color:var(--accent)}
+select{background:var(--panel2);color:var(--text);border:1px solid #2c3245;border-radius:8px;padding:8px 10px;font-size:.9rem}
+.label{color:var(--muted);font-size:.8rem}
+.status{color:var(--muted);font-size:.8rem;margin-left:auto}
+.legend{display:flex;gap:14px;margin-top:10px;flex-wrap:wrap}
+.legend span{font-size:.78rem;color:var(--muted);display:flex;align-items:center;gap:5px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+#keyboard{width:100%;height:190px;display:block}
+/* chord timeline */
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{background:var(--panel2);border:1px solid #2c3245;border-radius:7px;padding:6px 10px;text-align:center;cursor:pointer;min-width:64px;transition:all .12s}
+.chip .rn{font-size:1.05rem;font-weight:700}
+.chip .sub{color:var(--muted);font-size:.68rem;margin-top:1px}
+.chip.active{border-color:var(--accent);background:#2a2416;transform:translateY(-2px)}
+.chip.cadence{border-color:#7ce0d0;box-shadow:0 0 8px #7ce0d055}
+.cadence-box{background:#12241f;border:1px solid #2a5a4c;border-radius:10px;padding:14px;margin-top:12px}
+.cadence-box h3{margin:0 0 6px;font-size:1.05rem;color:#7ce0d0}
+.cadence-box p{margin:0;color:var(--text);font-size:.9rem;line-height:1.5}
+.meta{color:var(--muted);font-size:.82rem;margin-top:6px}
+/* sheet music */
+#osmd{background:#fff;border-radius:8px;overflow:auto;max-height:430px}
+footer{max-width:1150px;margin:0 auto;padding:0 24px 40px;color:var(--muted);font-size:.8rem}
+.voices{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.voice{background:var(--panel2);border-radius:8px;padding:10px;text-align:center}
+.voice .name{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.voice .note{font-size:1.45rem;font-weight:700;margin-top:2px}
+.voice.tenor{border-top:3px solid var(--tenor)}
+.voice.lead{border-top:3px solid var(--lead)}
+.voice.bari{border-top:3px solid var(--bari)}
+.voice.bass{border-top:3px solid var(--bass)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Barbershop Tag Explorer</h1>
+  <p>Real tags from barbershoptags.com (MusicXML + original learning-track audio). Pick a tag: watch the four voices move on the keyboard, follow the roman-numeral analysis with measure numbers, and see where the cadence lands.</p>
+</header>
+<main>
+  <div class="panel">
+    <h2>Tag</h2>
+    <div class="controls">
+      <select id="tagSel" style="min-width:280px"></select>
+      <button id="playBtn" class="primary">&#9654; Play tag</button>
+      <span class="status" id="status">loading&hellip;</span>
+    </div>
+    <div class="meta" id="tagMeta"></div>
+  </div>
+
+  <div class="panel">
+    <h2>Harmony timeline</h2>
+    <div class="chips" id="chips"></div>
+    <div class="cadence-box" id="cadBox" style="display:none"></div>
+  </div>
+
+  <div class="panel">
+    <h2>Keyboard — four voices, colored by chord tone</h2>
+    <svg id="keyboard" viewBox="0 0 1060 190" preserveAspectRatio="none"></svg>
+    <div class="legend">
+      <span><span class="dot" style="background:var(--root)"></span>root</span>
+      <span><span class="dot" style="background:var(--third)"></span>third</span>
+      <span><span class="dot" style="background:var(--fifth)"></span>fifth</span>
+      <span><span class="dot" style="background:var(--seventh)"></span>seventh</span>
+      <span><span class="dot" style="background:#3a3f52"></span>inactive</span>
+      <span class="label">Bass&nbsp;<span class="dot" style="background:var(--bass)"></span>&nbsp;Bari&nbsp;<span class="dot" style="background:var(--bari)"></span>&nbsp;Lead&nbsp;<span class="dot" style="background:var(--lead)"></span>&nbsp;Tenor&nbsp;<span class="dot" style="background:var(--tenor)"></span></span>
+    </div>
+    <div class="voices">
+      <div class="voice tenor"><div class="name">Tenor</div><div class="note" id="v-tenor">&ndash;</div></div>
+      <div class="voice lead"><div class="name">Lead</div><div class="note" id="v-lead">&ndash;</div></div>
+      <div class="voice bari"><div class="name">Bari</div><div class="note" id="v-bari">&ndash;</div></div>
+      <div class="voice bass"><div class="name">Bass</div><div class="note" id="v-bass">&ndash;</div></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Sheet music</h2>
+    <div id="osmd"></div>
+  </div>
+</main>
+<footer>Audio is the tag's original learning-track full mix from barbershoptags.com; score and roman numerals are derived from the site's MusicXML. Voice parts are matched by register (lowest=Bass&hellip;highest=Tenor).</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/opensheetmusicdisplay@2.2.1/build/opensheetmusicdisplay.min.js"></script>
+<script>const TAGS_ALL = [{"id": "1682", "key": "G major", "events": {"Bass": [{"t": 0.0, "d": 1.0, "m": "C4"}, {"t": 1.0, "d": 1.0, "m": "B3"}, {"t": 2.0, "d": 1.0, "m": "A3"}, {"t": 3.0, "d": 1.0, "m": "D3"}, {"t": 4.0, "d": 3.0, "m": "Eb3"}, {"t": 7.0, "d": 1.0, "m": "Eb3"}, {"t": 8.0, "d": 2.0, "m": "F3"}, {"t": 10.0, "d": 3.0, "m": "G3"}, {"t": 13.0, "d": 3.0, "m": "G3"}, {"t": 16.0, "d": 3.0, "m": "G3"}, {"t": 19.0, "d": 3.0, "m": "G3"}], "Bari": [{"t": 0.0, "d": 1.0, "m": "C4"}, {"t": 1.0, "d": 1.0, "m": "B3"}, {"t": 2.0, "d": 1.0, "m": "A3"}, {"t": 3.0, "d": 1.0, "m": "A3"}, {"t": 4.0, "d": 3.0, "m": "Bb3"}, {"t": 7.0, "d": 1.0, "m": "Bb3"}, {"t": 8.0, "d": 2.0, "m": "A3"}, {"t": 10.0, "d": 3.0, "m": "B3"}, {"t": 13.0, "d": 1.0, "m": "D4"}, {"t": 14.0, "d": 2.0, "m": "C4"}, {"t": 16.0, "d": 3.0, "m": "D4"}, {"t": 19.0, "d": 3.0, "m": "D4"}], "Lead": [{"t": 0.0, "d": 1.0, "m": "C4"}, {"t": 1.0, "d": 1.0, "m": "D4"}, {"t": 2.0, "d": 1.0, "m": "C4"}, {"t": 3.0, "d": 1.0, "m": "C4"}, {"t": 4.0, "d": 3.0, "m": "Eb4"}, {"t": 7.0, "d": 1.0, "m": "Eb4"}, {"t": 8.0, "d": 2.0, "m": "Eb4"}, {"t": 10.0, "d": 3.0, "m": "D4"}, {"t": 13.0, "d": 3.0, "m": "E4"}, {"t": 16.0, "d": 3.0, "m": "G4"}, {"t": 19.0, "d": 3.0, "m": "G4"}], "Tenor": [{"t": 0.0, "d": 1.0, "m": "C4"}, {"t": 1.0, "d": 1.0, "m": "D4"}, {"t": 2.0, "d": 1.0, "m": "E4"}, {"t": 3.0, "d": 1.0, "m": "F#4"}, {"t": 4.0, "d": 3.0, "m": "G4"}, {"t": 7.0, "d": 3.0, "m": "G4"}, {"t": 10.0, "d": 3.0, "m": "G4"}, {"t": 13.0, "d": 3.0, "m": "A#4"}, {"t": 16.0, "d": 3.0, "m": "B4"}, {"t": 19.0, "d": 3.0, "m": "B4"}]}, "chords": [{"measure": 0, "t": 0.0, "d": 1.0, "symbol": "C", "roman": "iv", "pitches": ["C4"], "roman_anchored": "iv"}, {"measure": 1, "t": 1.0, "d": 1.0, "symbol": "Bm", "roman": "iii", "pitches": ["B3", "D4"], "roman_anchored": "#iii"}, {"measure": 1, "t": 2.0, "d": 1.0, "symbol": "Am", "roman": "ii", "pitches": ["A3", "C4", "E4"], "roman_anchored": "ii"}, {"measure": 1, "t": 3.0, "d": 1.0, "symbol": "D7", "roman": "V7", "pitches": ["D3", "A3", "C4", "F#4"], "roman_anchored": "V7"}, {"measure": 2, "t": 4.0, "d": 3.0, "symbol": "Eb", "roman": "bVI", "pitches": ["Eb3", "Bb3", "Eb4", "G4"], "roman_anchored": "bVI"}, {"measure": 3, "t": 7.0, "d": 1.0, "symbol": "Eb", "roman": "bVI", "pitches": ["Eb3", "Bb3", "Eb4", "G4"], "roman_anchored": "bVI"}, {"measure": 3, "t": 8.0, "d": 2.0, "symbol": "F7", "roman": "bVII7", "pitches": ["F3", "A3", "Eb4", "G4"], "roman_anchored": "bVII7"}, {"measure": 4, "t": 10.0, "d": 3.0, "symbol": "G", "roman": "I", "pitches": ["G3", "B3", "D4", "G4"], "roman_anchored": "I"}, {"measure": 5, "t": 13.0, "d": 1.0, "symbol": "Em7", "roman": "vi7/G", "pitches": ["G3", "D4", "E4", "A#4"], "roman_anchored": "vi7/G"}, {"measure": 5, "t": 14.0, "d": 2.0, "symbol": "Bb(sus)", "roman": "#ii\u00b0/G", "pitches": ["G3", "C4", "E4", "A#4"], "roman_anchored": "#ii\u00b0/G"}, {"measure": 6, "t": 16.0, "d": 3.0, "symbol": "G", "roman": "I", "pitches": ["G3", "D4", "G4", "B4"], "roman_anchored": "I"}, {"measure": 7, "t": 19.0, "d": 3.0, "symbol": "G", "roman": "I", "pitches": ["G3", "D4", "G4", "B4"], "roman_anchored": "I"}], "cadence": {"type": "backdoor sweeper (iv\u2013iii\u2013ii\u2013V7\u2013bVI\u2013bVII7 \u2192 I)", "desc": "A doubly-colored close: the descending turnaround (iv\u2013iii\u2013ii\u2013V7) is followed by the borrowed bVI and a backdoor bVII7 \u2014 two color chords in a row before the tonic lands. Unusual even for barbershop; the bVI\u2192bVII7\u2192I \u201cdouble backdoor\u201d is worth a name of its own: the \u201cTwo-Door Finish\u201d.", "measure": 7}, "total_len": 22.0, "key_anchored": "G minor", "key_basis": "final-major", "diatonic_pct": 91, "mp3_duration": 24.25095238095238, "sec_per_ql": 1.1023160173160174, "key_label": "G major", "ending_roman": "I", "harmonic_walk": "iv \u2192 iii \u2192 ii \u2192 V7 \u2192 bVI \u2192 bVII7 \u2192 I turnaround sweep, then a I hanger with a chromatic #ii\u00b0 slip (Bb over G = bIII color) \u2014 the \u201cheart-melt\u201d bVI before the home stretch is the signature barbershop sweeper; the bVII7\u2192I is a backdoor resolution.", "title": "My Heart Broke Last Night"}, {"id": "2296", "key": "b minor", "events": {"Bass": [{"t": 0.0, "d": 1.0, "m": "B2"}, {"t": 1.0, "d": 0.5, "m": "F#3"}, {"t": 1.5, "d": 0.5, "m": "B2"}, {"t": 2.0, "d": 0.5, "m": "F#3"}, {"t": 2.5, "d": 0.5, "m": "F#3"}, {"t": 3.0, "d": 1.0, "m": "F#3"}, {"t": 4.0, "d": 3.0, "m": "B2"}, {"t": 7.0, "d": 1.0, "m": "E2"}, {"t": 8.0, "d": 1.0, "m": "G2"}, {"t": 9.0, "d": 0.5, "m": "G2"}, {"t": 9.5, "d": 0.5, "m": "G2"}, {"t": 10.0, "d": 0.5, "m": "A2"}, {"t": 10.5, "d": 0.5, "m": "A2"}, {"t": 11.0, "d": 1.0, "m": "A2"}, {"t": 12.0, "d": 2.0, "m": "D3"}, {"t": 14.0, "d": 0.6666666666666666, "m": "G2"}, {"t": 14.666666666666666, "d": 0.6666666666666666, "m": "D3"}, {"t": 15.333333333333334, "d": 0.6666666666666666, "m": "C#3"}, {"t": 16.0, "d": 4.0, "m": "D3"}], "Bari": [{"t": 0.0, "d": 1.0, "m": "B3"}, {"t": 1.0, "d": 0.5, "m": "C#4"}, {"t": 1.5, "d": 0.5, "m": "D4"}, {"t": 2.0, "d": 0.5, "m": "C#4"}, {"t": 2.5, "d": 0.5, "m": "D4"}, {"t": 3.0, "d": 1.0, "m": "C#4"}, {"t": 4.0, "d": 4.0, "m": "D4"}, {"t": 8.0, "d": 1.0, "m": "D3"}, {"t": 9.0, "d": 0.5, "m": "E3"}, {"t": 9.5, "d": 0.5, "m": "F#3"}, {"t": 10.0, "d": 0.5, "m": "E3"}, {"t": 10.5, "d": 0.5, "m": "F#3"}, {"t": 11.0, "d": 1.0, "m": "E3"}, {"t": 12.0, "d": 2.0, "m": "D3"}, {"t": 14.0, "d": 0.6666666666666666, "m": "E3"}, {"t": 14.666666666666666, "d": 0.6666666666666666, "m": "G3"}, {"t": 15.333333333333334, "d": 0.6666666666666666, "m": "B3"}, {"t": 16.0, "d": 4.0, "m": "D4"}], "Lead": [{"t": 0.0, "d": 1.0, "m": "F#3"}, {"t": 1.0, "d": 0.5, "m": "A#3"}, {"t": 1.5, "d": 0.5, "m": "B3"}, {"t": 2.0, "d": 0.5, "m": "A#3"}, {"t": 2.5, "d": 0.5, "m": "B3"}, {"t": 3.0, "d": 1.0, "m": "A#3"}, {"t": 4.0, "d": 1.0, "m": "B3"}, {"t": 5.0, "d": 0.5, "m": "B3"}, {"t": 5.5, "d": 0.5, "m": "F#3"}, {"t": 6.0, "d": 1.0, "m": "A3"}, {"t": 7.0, "d": 1.0, "m": "G#3"}, {"t": 8.0, "d": 1.0, "m": "B3"}, {"t": 9.0, "d": 0.5, "m": "B3"}, {"t": 9.5, "d": 0.5, "m": "B3"}, {"t": 10.0, "d": 0.5, "m": "G3"}, {"t": 10.5, "d": 0.5, "m": "A3"}, {"t": 11.0, "d": 1.0, "m": "G3"}, {"t": 12.0, "d": 2.0, "m": "D4"}, {"t": 14.0, "d": 0.6666666666666666, "m": "B3"}, {"t": 14.666666666666666, "d": 0.6666666666666666, "m": "B3"}, {"t": 15.333333333333334, "d": 0.6666666666666666, "m": "G#3"}, {"t": 16.0, "d": 4.0, "m": "A3"}], "Tenor": [{"t": 0.0, "d": 1.0, "m": "D4"}, {"t": 1.0, "d": 0.5, "m": "E4"}, {"t": 1.5, "d": 0.5, "m": "F#4"}, {"t": 2.0, "d": 0.5, "m": "E4"}, {"t": 2.5, "d": 0.5, "m": "F#4"}, {"t": 3.0, "d": 1.0, "m": "E4"}, {"t": 4.0, "d": 4.0, "m": "F#4"}, {"t": 8.0, "d": 1.0, "m": "D4"}, {"t": 9.0, "d": 0.5, "m": "D4"}, {"t": 9.5, "d": 0.5, "m": "D4"}, {"t": 10.0, "d": 0.5, "m": "C#4"}, {"t": 10.5, "d": 0.5, "m": "C#4"}, {"t": 11.0, "d": 1.0, "m": "C#4"}, {"t": 12.0, "d": 2.0, "m": "D4"}, {"t": 14.0, "d": 0.6666666666666666, "m": "D4"}, {"t": 14.666666666666666, "d": 0.6666666666666666, "m": "E4"}, {"t": 15.333333333333334, "d": 0.6666666666666666, "m": "E#4"}, {"t": 16.0, "d": 4.0, "m": "F#4"}]}, "chords": [{"measure": 1, "t": 0.0, "d": 1.0, "symbol": "Bm", "roman": "i", "pitches": ["B2", "F#3", "B3", "D4"], "roman_anchored": "vi"}, {"measure": 1, "t": 1.0, "d": 0.5, "symbol": "F#7", "roman": "V7", "pitches": ["F#3", "A#3", "C#4", "E4"], "roman_anchored": "III7"}, {"measure": 1, "t": 1.5, "d": 0.5, "symbol": "Bm", "roman": "i", "pitches": ["B2", "B3", "D4", "F#4"], "roman_anchored": "vi"}, {"measure": 1, "t": 2.0, "d": 0.5, "symbol": "F#7", "roman": "V7", "pitches": ["F#3", "A#3", "C#4", "E4"], "roman_anchored": "III7"}, {"measure": 1, "t": 2.5, "d": 0.5, "symbol": "Bm", "roman": "i/F#", "pitches": ["F#3", "B3", "D4", "F#4"], "roman_anchored": "vi/F#"}, {"measure": 1, "t": 3.0, "d": 1.0, "symbol": "F#7", "roman": "V7", "pitches": ["F#3", "A#3", "C#4", "E4"], "roman_anchored": "III7"}, {"measure": 2, "t": 4.0, "d": 1.0, "symbol": "Bm", "roman": "i", "pitches": ["B2", "B3", "D4", "F#4"], "roman_anchored": "vi"}, {"measure": 2, "t": 5.0, "d": 0.5, "symbol": "Bm", "roman": "i", "pitches": ["B2", "B3", "D4", "F#4"], "roman_anchored": "vi"}, {"measure": 2, "t": 5.5, "d": 0.5, "symbol": "Bm", "roman": "i", "pitches": ["B2", "F#3", "D4", "F#4"], "roman_anchored": "vi"}, {"measure": 2, "t": 6.0, "d": 1.0, "symbol": "Bm7", "roman": "i7", "pitches": ["B2", "A3", "D4", "F#4"], "roman_anchored": "vi7"}, {"measure": 2, "t": 7.0, "d": 1.0, "symbol": "E7", "roman": "IV7", "pitches": ["E2", "G#3", "D4", "F#4"], "roman_anchored": "II7"}, {"measure": 3, "t": 8.0, "d": 1.0, "symbol": "G", "roman": "bVI", "pitches": ["G2", "D3", "B3", "D4"], "roman_anchored": "IV"}, {"measure": 3, "t": 9.0, "d": 0.5, "symbol": "Em7", "roman": "iv7/G", "pitches": ["G2", "E3", "B3", "D4"], "roman_anchored": "ii7/G"}, {"measure": 3, "t": 9.5, "d": 0.5, "symbol": "G", "roman": "bVI", "pitches": ["G2", "F#3", "B3", "D4"], "roman_anchored": "IV"}, {"measure": 3, "t": 10.0, "d": 0.5, "symbol": "A7", "roman": "bVII7", "pitches": ["A2", "E3", "G3", "C#4"], "roman_anchored": "V7"}, {"measure": 3, "t": 10.5, "d": 0.5, "symbol": "F#m", "roman": "v/A", "pitches": ["A2", "F#3", "A3", "C#4"], "roman_anchored": "iii/A"}, {"measure": 3, "t": 11.0, "d": 1.0, "symbol": "A7", "roman": "bVII7", "pitches": ["A2", "E3", "G3", "C#4"], "roman_anchored": "V7"}, {"measure": 4, "t": 12.0, "d": 2.0, "symbol": "D", "roman": "iii", "pitches": ["D3", "D4"], "roman_anchored": "i"}, {"measure": 4, "t": 14.0, "d": 0.6666666666666666, "symbol": "Em7", "roman": "iv7/G", "pitches": ["G2", "E3", "B3", "D4"], "roman_anchored": "ii7/G"}, {"measure": 4, "t": 14.666666666666666, "d": 0.6666666666666666, "symbol": "Em7", "roman": "iv7/D", "pitches": ["D3", "G3", "B3", "E4"], "roman_anchored": "ii7/D"}, {"measure": 4, "t": 15.333333333333334, "d": 0.6666666666666666, "symbol": "C#7", "roman": "II7", "pitches": ["C#3", "G#3", "B3", "E#4"], "roman_anchored": "VII7"}, {"measure": 5, "t": 16.0, "d": 4.0, "symbol": "D", "roman": "III", "pitches": ["D3", "A3", "D4", "F#4"], "roman_anchored": "I"}], "cadence": {"type": "backdoor into minor (VII7 \u2192 i)", "desc": "The tag modulates to the relative-minor territory for the ending and closes with a backdoor bVII7 \u2192 i \u2014 blues-tinged and distinctly unclassical; combined with the preceding ii7 color it\u2019s a minor-mode backdoor close.", "measure": 5}, "total_len": 20.0, "key_anchored": "D major", "key_basis": "final-minor", "diatonic_pct": 100, "mp3_duration": 37.015510204081636, "sec_per_ql": 1.8507755102040817, "key_label": "B minor", "ending_roman": "i", "harmonic_walk": "Song is in D major but the tag restates it in B minor (barbershop key-flip for the ending); oscillates i\u2013V7 then IV7\u2013bVI\u2013VII7 color chain, ii\u00b0-half-dim slips, and finishes i\u2013ii7\u2013VII7\u2013i\u2026 ends with VII7\u2192i backdoor into the minor tonic.", "title": "My Funny Valentine"}, {"id": "4833", "key": "g minor", "events": {"Bass": [{"t": 1.0, "d": 0.5, "m": "A3"}, {"t": 1.5, "d": 0.5, "m": "A3"}, {"t": 2.0, "d": 0.5, "m": "A3"}, {"t": 2.5, "d": 0.5, "m": "G#3"}, {"t": 3.0, "d": 0.5, "m": "G#3"}, {"t": 3.5, "d": 0.5, "m": "G#3"}, {"t": 4.0, "d": 0.5, "m": "G#3"}, {"t": 4.5, "d": 0.5, "m": "G3"}, {"t": 5.0, "d": 1.0, "m": "G3"}, {"t": 6.5, "d": 0.5, "m": "F#3"}, {"t": 7.0, "d": 1.0, "m": "F#3"}, {"t": 8.0, "d": 1.0, "m": "F#3"}, {"t": 9.0, "d": 2.0, "m": "D3"}, {"t": 11.0, "d": 2.0, "m": "Bb3"}, {"t": 13.0, "d": 2.0, "m": "G#3"}, {"t": 15.0, "d": 2.0, "m": "A3"}, {"t": 17.0, "d": 1.0, "m": "G3"}, {"t": 19.0, "d": 0.5, "m": "C4"}, {"t": 19.5, "d": 1.5, "m": "C4"}, {"t": 21.0, "d": 1.0, "m": "G3"}, {"t": 22.5, "d": 0.5, "m": "C4"}, {"t": 23.0, "d": 1.0, "m": "C4"}, {"t": 24.0, "d": 1.0, "m": "C#4"}, {"t": 25.0, "d": 4.0, "m": "D4"}, {"t": 29.0, "d": 4.0, "m": "G3"}], "Bari": [{"t": 1.0, "d": 0.5, "m": "C4"}, {"t": 1.5, "d": 0.5, "m": "C4"}, {"t": 2.0, "d": 0.5, "m": "C4"}, {"t": 2.5, "d": 0.5, "m": "C4"}, {"t": 3.0, "d": 0.5, "m": "C4"}, {"t": 3.5, "d": 0.5, "m": "C4"}, {"t": 4.0, "d": 0.5, "m": "C4"}, {"t": 4.5, "d": 0.5, "m": "C4"}, {"t": 5.0, "d": 1.0, "m": "C4"}, {"t": 6.5, "d": 0.5, "m": "C4"}, {"t": 7.0, "d": 1.0, "m": "C4"}, {"t": 8.0, "d": 1.0, "m": "C4"}, {"t": 9.0, "d": 2.0, "m": "C4"}, {"t": 11.0, "d": 2.0, "m": "F4"}, {"t": 13.0, "d": 4.0, "m": "F#4"}, {"t": 17.0, "d": 1.0, "m": "D4"}, {"t": 19.0, "d": 0.5, "m": "Eb4"}, {"t": 19.5, "d": 1.5, "m": "Eb4"}, {"t": 21.0, "d": 1.0, "m": "D4"}, {"t": 22.5, "d": 0.5, "m": "Eb4"}, {"t": 23.0, "d": 1.0, "m": "Eb4"}, {"t": 24.0, "d": 1.0, "m": "E4"}, {"t": 25.0, "d": 4.0, "m": "E4"}, {"t": 29.0, "d": 4.0, "m": "D4"}], "Lead": [{"t": 1.0, "d": 4.0, "m": "E4"}, {"t": 5.0, "d": 4.0, "m": "E4"}, {"t": 9.0, "d": 2.0, "m": "F#4"}, {"t": 11.0, "d": 2.0, "m": "D4"}, {"t": 13.0, "d": 4.0, "m": "D4"}, {"t": 17.0, "d": 4.0, "m": "G4"}, {"t": 21.0, "d": 4.0, "m": "G4"}, {"t": 25.0, "d": 4.0, "m": "G4"}, {"t": 29.0, "d": 4.0, "m": "G4"}], "Tenor": [{"t": 0.0, "d": 1.0, "m": "D4"}, {"t": 1.0, "d": 0.5, "m": "G4"}, {"t": 1.5, "d": 0.5, "m": "G4"}, {"t": 2.0, "d": 0.5, "m": "G4"}, {"t": 2.5, "d": 0.5, "m": "G#4"}, {"t": 3.0, "d": 0.5, "m": "G#4"}, {"t": 3.5, "d": 0.5, "m": "G#4"}, {"t": 4.0, "d": 0.5, "m": "G#4"}, {"t": 4.5, "d": 0.5, "m": "A4"}, {"t": 5.0, "d": 1.0, "m": "A4"}, {"t": 6.5, "d": 0.5, "m": "Bb4"}, {"t": 7.0, "d": 1.0, "m": "Bb4"}, {"t": 8.0, "d": 1.0, "m": "Bb4"}, {"t": 9.0, "d": 2.0, "m": "A4"}, {"t": 11.0, "d": 2.0, "m": "Bb4"}, {"t": 13.0, "d": 2.0, "m": "B4"}, {"t": 15.0, "d": 2.0, "m": "C5"}, {"t": 17.0, "d": 1.0, "m": "Bb4"}, {"t": 19.0, "d": 0.5, "m": "A4"}, {"t": 19.5, "d": 1.5, "m": "A4"}, {"t": 21.0, "d": 1.0, "m": "Bb4"}, {"t": 22.5, "d": 0.5, "m": "A4"}, {"t": 23.0, "d": 1.0, "m": "A4"}, {"t": 24.0, "d": 1.0, "m": "A4"}, {"t": 25.0, "d": 4.0, "m": "Bb4"}, {"t": 29.0, "d": 4.0, "m": "B4"}]}, "chords": [{"measure": 1, "t": 0.0, "d": 1.0, "symbol": "D", "roman": "v", "pitches": ["D4"], "roman_anchored": "v"}, {"measure": 2, "t": 1.0, "d": 0.5, "symbol": "Am7", "roman": "ii7", "pitches": ["A3", "C4", "E4", "G4"], "roman_anchored": "ii7"}, {"measure": 2, "t": 1.5, "d": 0.5, "symbol": "Am7", "roman": "ii7", "pitches": ["A3", "C4", "E4", "G4"], "roman_anchored": "ii7"}, {"measure": 2, "t": 2.0, "d": 0.5, "symbol": "Am7", "roman": "ii7", "pitches": ["A3", "C4", "E4", "G4"], "roman_anchored": "ii7"}, {"measure": 2, "t": 2.5, "d": 0.5, "symbol": "C", "roman": "IV/G#", "pitches": ["G#3", "C4", "E4", "G#4"], "roman_anchored": "IV/G#"}, {"measure": 2, "t": 3.0, "d": 0.5, "symbol": "C", "roman": "IV/G#", "pitches": ["G#3", "C4", "E4", "G#4"], "roman_anchored": "IV/G#"}, {"measure": 2, "t": 3.5, "d": 0.5, "symbol": "C", "roman": "IV/G#", "pitches": ["G#3", "C4", "E4", "G#4"], "roman_anchored": "IV/G#"}, {"measure": 2, "t": 4.0, "d": 0.5, "symbol": "C", "roman": "IV/G#", "pitches": ["G#3", "C4", "E4", "G#4"], "roman_anchored": "IV/G#"}, {"measure": 2, "t": 4.5, "d": 0.5, "symbol": "Am7", "roman": "ii7/G", "pitches": ["G3", "C4", "E4", "A4"], "roman_anchored": "ii7/G"}, {"measure": 3, "t": 5.0, "d": 1.0, "symbol": "Am7", "roman": "ii7/G", "pitches": ["G3", "C4", "E4", "A4"], "roman_anchored": "ii7/G"}, {"measure": 3, "t": 6.0, "d": 0.5, "symbol": "E", "roman": "vi", "pitches": ["E4"], "roman_anchored": "vi"}, {"measure": 3, "t": 6.5, "d": 0.5, "symbol": "C7", "roman": "IV7/F#", "pitches": ["F#3", "C4", "E4", "Bb4"], "roman_anchored": "IV7/F#"}, {"measure": 3, "t": 7.0, "d": 1.0, "symbol": "C7", "roman": "IV7/F#", "pitches": ["F#3", "C4", "E4", "Bb4"], "roman_anchored": "IV7/F#"}, {"measure": 3, "t": 8.0, "d": 1.0, "symbol": "C7", "roman": "IV7/F#", "pitches": ["F#3", "C4", "E4", "Bb4"], "roman_anchored": "IV7/F#"}, {"measure": 4, "t": 9.0, "d": 2.0, "symbol": "D7", "roman": "V7", "pitches": ["D3", "C4", "F#4", "A4"], "roman_anchored": "V7"}, {"measure": 4, "t": 11.0, "d": 2.0, "symbol": "Bb", "roman": "III", "pitches": ["Bb3", "D4", "F4", "Bb4"], "roman_anchored": "bIII"}, {"measure": 5, "t": 13.0, "d": 2.0, "symbol": "Abm7", "roman": "#i7\u00b0", "pitches": ["G#3", "D4", "F#4", "B4"], "roman_anchored": "#i7\u00b0"}, {"measure": 5, "t": 15.0, "d": 2.0, "symbol": "D7", "roman": "V7/A", "pitches": ["A3", "D4", "F#4", "C5"], "roman_anchored": "V7/A"}, {"measure": 6, "t": 17.0, "d": 1.0, "symbol": "Gm", "roman": "i", "pitches": ["G3", "D4", "G4", "Bb4"], "roman_anchored": "i"}, {"measure": 6, "t": 18.0, "d": 1.0, "symbol": "G", "roman": "i", "pitches": ["G4"], "roman_anchored": "i"}, {"measure": 6, "t": 19.0, "d": 0.5, "symbol": "Am7", "roman": "ii7\u00b0/C", "pitches": ["C4", "Eb4", "G4", "A4"], "roman_anchored": "ii7\u00b0/C"}, {"measure": 6, "t": 19.5, "d": 1.5, "symbol": "Am7", "roman": "ii7\u00b0/C", "pitches": ["C4", "Eb4", "G4", "A4"], "roman_anchored": "ii7\u00b0/C"}, {"measure": 7, "t": 21.0, "d": 1.0, "symbol": "Gm", "roman": "i", "pitches": ["G3", "D4", "G4", "Bb4"], "roman_anchored": "i"}, {"measure": 7, "t": 22.0, "d": 0.5, "symbol": "G", "roman": "i", "pitches": ["G4"], "roman_anchored": "i"}, {"measure": 7, "t": 22.5, "d": 0.5, "symbol": "Am7", "roman": "ii7\u00b0/C", "pitches": ["C4", "Eb4", "G4", "A4"], "roman_anchored": "ii7\u00b0/C"}, {"measure": 7, "t": 23.0, "d": 1.0, "symbol": "Am7", "roman": "ii7\u00b0/C", "pitches": ["C4", "Eb4", "G4", "A4"], "roman_anchored": "ii7\u00b0/C"}, {"measure": 7, "t": 24.0, "d": 1.0, "symbol": "A7", "roman": "II7/C#", "pitches": ["C#4", "E4", "G4", "A4"], "roman_anchored": "II7/C#"}, {"measure": 8, "t": 25.0, "d": 4.0, "symbol": "Em7", "roman": "vi7\u00b0/D", "pitches": ["D4", "E4", "G4", "Bb4"], "roman_anchored": "vi7\u00b0/D"}, {"measure": 9, "t": 29.0, "d": 4.0, "symbol": "G", "roman": "I", "pitches": ["G3", "D4", "G4", "B4"], "roman_anchored": "I"}], "cadence": {"type": "chromatic climb (ii\u00b07 \u2192 #I\u00b07 \u2192 i)", "desc": "An unusual chromatic slide: a chain of secondary leading-tone diminished 7ths (ii\u00b07/C = A\u00b07, II7/C# = A7, vii\u00b07/D) climbs by half-steps into the minor tonic \u2014 barbershop arrangers call this family of moves a \u201cchromatic parsec\u201d; it lands without a plain V\u2013I.", "measure": 9}, "total_len": 33.0, "key_anchored": "G major", "key_basis": "final-minor", "diatonic_pct": 88, "mp3_duration": 17.1101875, "sec_per_ql": 0.5184905303030303, "key_label": "G minor", "ending_roman": "i", "harmonic_walk": "Long tag with a cycle of ii7 color chords, then V7 \u2192 bIII \u2192 #i\u00b07 \u2192 V7/A chromatic climb resolving to i; ends via ii\u00b07/C \u2192 II7/C# \u2192 vii\u00b07/D chain \u2014 a rising chromatic \u201cclimb to the post\u201d into the tonic.", "title": "Too Darn Hot"}, {"id": "3856", "key": "C# major", "events": {"Bass": [{"t": 0.0, "d": 1.0, "m": "Ab2", "meas": 0}, {"t": 1.0, "d": 1.0, "m": "F3", "meas": 1}, {"t": 2.0, "d": 1.0, "m": "F3", "meas": 1}, {"t": 3.0, "d": 1.0, "m": "F3", "meas": 1}, {"t": 4.0, "d": 0.5, "m": "Bb2", "meas": 1}, {"t": 4.5, "d": 0.5, "m": "Bb2", "meas": 1}, {"t": 5.0, "d": 0.5, "m": "Bb2", "meas": 1}, {"t": 5.5, "d": 0.5, "m": "Bb2", "meas": 1}, {"t": 6.0, "d": 1.0, "m": "Eb3", "meas": 2}, {"t": 8.0, "d": 0.5, "m": "G3", "meas": 2}, {"t": 8.5, "d": 0.5, "m": "Ab3", "meas": 2}, {"t": 9.0, "d": 0.5, "m": "Ab3", "meas": 2}, {"t": 9.5, "d": 0.5, "m": "Bb3", "meas": 2}, {"t": 10.0, "d": 3.0, "m": "Bb3", "meas": 3}, {"t": 14.0, "d": 1.0, "m": "Ab2", "meas": 4}, {"t": 15.0, "d": 1.0, "m": "C3", "meas": 4}, {"t": 16.0, "d": 0.5, "m": "C3", "meas": 4}, {"t": 16.5, "d": 0.5, "m": "C3", "meas": 4}, {"t": 17.0, "d": 1.0, "m": "Ab2", "meas": 4}, {"t": 18.0, "d": 1.0, "m": "Bb2", "meas": 5}, {"t": 19.0, "d": 1.0, "m": "C3", "meas": 5}, {"t": 20.0, "d": 0.5, "m": "Db3", "meas": 5}, {"t": 20.5, "d": 0.5, "m": "Db3", "meas": 5}, {"t": 21.0, "d": 0.5, "m": "Db3", "meas": 5}, {"t": 21.5, "d": 0.5, "m": "Db3", "meas": 5}, {"t": 22.0, "d": 0.5, "m": "Eb3", "meas": 6}, {"t": 22.5, "d": 0.5, "m": "Eb3", "meas": 6}, {"t": 23.0, "d": 0.5, "m": "Fb3", "meas": 6}, {"t": 23.5, "d": 0.5, "m": "Fb3", "meas": 6}, {"t": 24.0, "d": 1.0, "m": "F3", "meas": 6}, {"t": 25.0, "d": 0.5, "m": "F3", "meas": 6}, {"t": 25.5, "d": 0.5, "m": "F3", "meas": 6}, {"t": 26.0, "d": 0.5, "m": "Bb2", "meas": 7}, {"t": 26.5, "d": 0.5, "m": "Bb2", "meas": 7}, {"t": 27.0, "d": 1.0, "m": "F3", "meas": 7}, {"t": 28.0, "d": 1.0, "m": "E3", "meas": 7}, {"t": 29.0, "d": 0.5, "m": "E3", "meas": 7}, {"t": 29.5, "d": 0.5, "m": "E3", "meas": 7}, {"t": 30.0, "d": 2.0, "m": "F3", "meas": 8}, {"t": 32.0, "d": 2.0, "m": "Bb3", "meas": 8}, {"t": 34.0, "d": 3.0, "m": "Cb4", "meas": 9}, {"t": 38.0, "d": 1.0, "m": "Db4", "meas": 10}, {"t": 39.0, "d": 1.0, "m": "Db4", "meas": 10}, {"t": 40.0, "d": 2.0, "m": "Db4", "meas": 10}, {"t": 42.0, "d": 4.0, "m": "Ab3", "meas": 11}], "Bari": [{"t": 0.0, "d": 1.0, "m": "C4", "meas": 0}, {"t": 1.0, "d": 1.0, "m": "Ab3", "meas": 1}, {"t": 2.0, "d": 1.0, "m": "Ab3", "meas": 1}, {"t": 3.0, "d": 1.0, "m": "A3", "meas": 1}, {"t": 4.0, "d": 0.5, "m": "Ab3", "meas": 1}, {"t": 4.5, "d": 0.5, "m": "Ab3", "meas": 1}, {"t": 5.0, "d": 0.5, "m": "D4", "meas": 1}, {"t": 5.5, "d": 0.5, "m": "Db4", "meas": 1}, {"t": 6.0, "d": 1.0, "m": "Bb3", "meas": 2}, {"t": 8.0, "d": 0.5, "m": "Bb3", "meas": 2}, {"t": 8.5, "d": 0.5, "m": "C4", "meas": 2}, {"t": 9.0, "d": 0.5, "m": "C4", "meas": 2}, {"t": 9.5, "d": 0.5, "m": "Db4", "meas": 2}, {"t": 10.0, "d": 3.0, "m": "Db4", "meas": 3}, {"t": 14.0, "d": 1.0, "m": "C4", "meas": 4}, {"t": 15.0, "d": 1.0, "m": "Ab3", "meas": 4}, {"t": 16.0, "d": 0.5, "m": "Gb3", "meas": 4}, {"t": 16.5, "d": 0.5, "m": "Gb3", "meas": 4}, {"t": 17.0, "d": 1.0, "m": "Eb3", "meas": 4}, {"t": 18.0, "d": 1.0, "m": "F3", "meas": 5}, {"t": 19.0, "d": 1.0, "m": "Bb3", "meas": 5}, {"t": 20.0, "d": 0.5, "m": "Bb3", "meas": 5}, {"t": 20.5, "d": 0.5, "m": "Bb3", "meas": 5}, {"t": 21.0, "d": 0.5, "m": "Cb4", "meas": 5}, {"t": 21.5, "d": 0.5, "m": "Cb4", "meas": 5}, {"t": 22.0, "d": 0.5, "m": "C4", "meas": 6}, {"t": 22.5, "d": 0.5, "m": "C4", "meas": 6}, {"t": 23.0, "d": 0.5, "m": "Cb4", "meas": 6}, {"t": 23.5, "d": 0.5, "m": "Cb4", "meas": 6}, {"t": 24.0, "d": 1.0, "m": "Bb3", "meas": 6}, {"t": 25.0, "d": 0.5, "m": "Bb3", "meas": 6}, {"t": 25.5, "d": 0.5, "m": "Bb3", "meas": 6}, {"t": 26.0, "d": 0.5, "m": "F4", "meas": 7}, {"t": 26.5, "d": 0.5, "m": "F4", "meas": 7}, {"t": 27.0, "d": 1.0, "m": "C5", "meas": 7}, {"t": 28.0, "d": 1.0, "m": "Bb4", "meas": 7}, {"t": 29.0, "d": 0.5, "m": "B4", "meas": 7}, {"t": 29.5, "d": 0.5, "m": "B4", "meas": 7}, {"t": 30.0, "d": 2.0, "m": "C5", "meas": 8}, {"t": 32.0, "d": 2.0, "m": "F4", "meas": 8}, {"t": 34.0, "d": 3.0, "m": "Fb4", "meas": 9}, {"t": 38.0, "d": 1.0, "m": "Bb4", "meas": 10}, {"t": 39.0, "d": 1.0, "m": "Bb4", "meas": 10}, {"t": 40.0, "d": 2.0, "m": "Cb5", "meas": 10}, {"t": 42.0, "d": 4.0, "m": "C5", "meas": 11}], "Lead": [{"t": 0.0, "d": 1.0, "m": "Ab3", "meas": 0}, {"t": 1.0, "d": 1.0, "m": "Bb3", "meas": 1}, {"t": 2.0, "d": 1.0, "m": "Cb4", "meas": 1}, {"t": 3.0, "d": 1.0, "m": "C4", "meas": 1}, {"t": 4.0, "d": 0.5, "m": "D4", "meas": 1}, {"t": 4.5, "d": 0.5, "m": "Db4", "meas": 1}, {"t": 5.0, "d": 0.5, "m": "C4", "meas": 1}, {"t": 5.5, "d": 0.5, "m": "Bb3", "meas": 1}, {"t": 6.0, "d": 4.0, "m": "Eb4", "meas": 2}, {"t": 10.0, "d": 3.0, "m": "Eb4", "meas": 3}, {"t": 14.0, "d": 1.0, "m": "Eb4", "meas": 4}, {"t": 15.0, "d": 1.0, "m": "Eb4", "meas": 4}, {"t": 16.0, "d": 0.5, "m": "F4", "meas": 4}, {"t": 16.5, "d": 0.5, "m": "Eb4", "meas": 4}, {"t": 17.0, "d": 1.0, "m": "F4", "meas": 4}, {"t": 18.0, "d": 1.0, "m": "D4", "meas": 5}, {"t": 19.0, "d": 1.0, "m": "Eb4", "meas": 5}, {"t": 20.0, "d": 0.5, "m": "Fb4", "meas": 5}, {"t": 20.5, "d": 0.5, "m": "Fb4", "meas": 5}, {"t": 21.0, "d": 0.5, "m": "F4", "meas": 5}, {"t": 21.5, "d": 0.5, "m": "F4", "meas": 5}, {"t": 22.0, "d": 0.5, "m": "F4", "meas": 6}, {"t": 22.5, "d": 0.5, "m": "F4", "meas": 6}, {"t": 23.0, "d": 0.5, "m": "D4", "meas": 6}, {"t": 23.5, "d": 0.5, "m": "D4", "meas": 6}, {"t": 24.0, "d": 1.0, "m": "D4", "meas": 6}, {"t": 25.0, "d": 0.5, "m": "D4", "meas": 6}, {"t": 25.5, "d": 0.5, "m": "D4", "meas": 6}, {"t": 26.0, "d": 0.5, "m": "Db4", "meas": 7}, {"t": 26.5, "d": 0.5, "m": "Db4", "meas": 7}, {"t": 27.0, "d": 1.0, "m": "Eb4", "meas": 7}, {"t": 28.0, "d": 1.0, "m": "D4", "meas": 7}, {"t": 29.0, "d": 0.5, "m": "D4", "meas": 7}, {"t": 29.5, "d": 0.5, "m": "D4", "meas": 7}, {"t": 30.0, "d": 2.0, "m": "Db4", "meas": 8}, {"t": 32.0, "d": 2.0, "m": "D4", "meas": 8}, {"t": 34.0, "d": 3.0, "m": "Gb4", "meas": 9}, {"t": 38.0, "d": 1.0, "m": "Fb4", "meas": 10}, {"t": 39.0, "d": 1.0, "m": "Fb4", "meas": 10}, {"t": 40.0, "d": 2.0, "m": "F4", "meas": 10}, {"t": 42.0, "d": 4.0, "m": "Eb4", "meas": 11}], "Tenor": [{"t": 0.0, "d": 1.0, "m": "Eb4", "meas": 0}, {"t": 1.0, "d": 1.0, "m": "D4", "meas": 1}, {"t": 2.0, "d": 1.0, "m": "Db4", "meas": 1}, {"t": 3.0, "d": 1.0, "m": "Eb4", "meas": 1}, {"t": 4.0, "d": 0.5, "m": "F4", "meas": 1}, {"t": 4.5, "d": 0.5, "m": "F4", "meas": 1}, {"t": 5.0, "d": 0.5, "m": "F4", "meas": 1}, {"t": 5.5, "d": 0.5, "m": "F4", "meas": 1}, {"t": 6.0, "d": 4.0, "m": "G4", "meas": 2}, {"t": 10.0, "d": 1.0, "m": "G4", "meas": 3}, {"t": 12.0, "d": 0.5, "m": "F4", "meas": 3}, {"t": 12.5, "d": 1.5, "m": "G4", "meas": 3}, {"t": 14.0, "d": 4.0, "m": "Ab4", "meas": 4}, {"t": 18.0, "d": 4.0, "m": "Ab4", "meas": 5}, {"t": 22.0, "d": 4.0, "m": "Ab4", "meas": 6}, {"t": 26.0, "d": 4.0, "m": "Ab4", "meas": 7}, {"t": 30.0, "d": 4.0, "m": "Ab4", "meas": 8}, {"t": 34.0, "d": 4.0, "m": "Ab4", "meas": 9}, {"t": 38.0, "d": 4.0, "m": "Ab4", "meas": 10}, {"t": 42.0, "d": 4.0, "m": "Ab4", "meas": 11}]}, "chords": [{"measure": 0, "t": 0.0, "d": 1.0, "symbol": "Ab", "roman": "bbVI", "pitches": ["Ab2", "Ab3", "C4", "Eb4"], "roman_anchored": "I"}, {"measure": 1, "t": 1.0, "d": 1.0, "symbol": "Bb7", "roman": "bbVII7/F", "pitches": ["F3", "Ab3", "Bb3", "D4"], "roman_anchored": "II7/F"}, {"measure": 1, "t": 2.0, "d": 1.0, "symbol": "C#7", "roman": "bbII7/F", "pitches": ["F3", "Ab3", "Cb4", "Db4"], "roman_anchored": "IV7/F"}, {"measure": 1, "t": 3.0, "d": 1.0, "symbol": "F7", "roman": "bIV7", "pitches": ["F3", "A3", "C4", "Eb4"], "roman_anchored": "VI7"}, {"measure": 1, "t": 4.0, "d": 0.5, "symbol": "Bb7", "roman": "bbVII7", "pitches": ["Bb2", "Ab3", "D4", "F4"], "roman_anchored": "II7"}, {"measure": 1, "t": 4.5, "d": 0.5, "symbol": "Bbm7", "roman": "bbvii7", "pitches": ["Bb2", "Ab3", "Db4", "F4"], "roman_anchored": "ii7"}, {"measure": 1, "t": 5.0, "d": 0.5, "symbol": "Bb", "roman": "bbVII", "pitches": ["Bb2", "C4", "D4", "F4"], "roman_anchored": "II"}, {"measure": 1, "t": 5.5, "d": 0.5, "symbol": "Bbm", "roman": "bbvii", "pitches": ["Bb2", "Bb3", "Db4", "F4"], "roman_anchored": "ii"}, {"measure": 2, "t": 6.0, "d": 1.0, "symbol": "Eb", "roman": "bbIII", "pitches": ["Eb3", "Bb3", "Eb4", "G4"], "roman_anchored": "V"}, {"measure": 2, "t": 7.0, "d": 1.0, "symbol": "Eb", "roman": "bbIII", "pitches": ["Eb4", "G4"], "roman_anchored": "V"}, {"measure": 2, "t": 8.0, "d": 0.5, "symbol": "Eb", "roman": "bbIII/G", "pitches": ["G3", "Bb3", "Eb4", "G4"], "roman_anchored": "V/G"}, {"measure": 2, "t": 8.5, "d": 0.5, "symbol": "Ab", "roman": "bbVI", "pitches": ["Ab3", "C4", "Eb4", "G4"], "roman_anchored": "I"}, {"measure": 2, "t": 9.0, "d": 0.5, "symbol": "Ab", "roman": "bbVI", "pitches": ["Ab3", "C4", "Eb4", "G4"], "roman_anchored": "I"}, {"measure": 2, "t": 9.5, "d": 0.5, "symbol": "Eb7", "roman": "bbIII7/Bb", "pitches": ["Bb3", "Db4", "Eb4", "G4"], "roman_anchored": "V7/Bb"}, {"measure": 3, "t": 10.0, "d": 1.0, "symbol": "Eb7", "roman": "bbIII7/Bb", "pitches": ["Bb3", "Db4", "Eb4", "G4"], "roman_anchored": "V7/Bb"}, {"measure": 3, "t": 11.0, "d": 1.0, "symbol": "Eb7", "roman": "bbiii7/Bb", "pitches": ["Bb3", "Db4", "Eb4"], "roman_anchored": "v7/Bb"}, {"measure": 3, "t": 12.0, "d": 0.5, "symbol": "Bbm", "roman": "bbvii", "pitches": ["Bb3", "Db4", "Eb4", "F4"], "roman_anchored": "ii"}, {"measure": 3, "t": 12.5, "d": 0.5, "symbol": "Eb7", "roman": "bbIII7/Bb", "pitches": ["Bb3", "Db4", "Eb4", "G4"], "roman_anchored": "V7/Bb"}, {"measure": 3, "t": 13.0, "d": 1.0, "symbol": "G", "roman": "bv", "pitches": ["G4"], "roman_anchored": "vii"}, {"measure": 4, "t": 14.0, "d": 1.0, "symbol": "Ab", "roman": "bbVI", "pitches": ["Ab2", "C4", "Eb4", "Ab4"], "roman_anchored": "I"}, {"measure": 4, "t": 15.0, "d": 1.0, "symbol": "Ab", "roman": "bbVI/C", "pitches": ["C3", "Ab3", "Eb4", "Ab4"], "roman_anchored": "I/C"}, {"measure": 4, "t": 16.0, "d": 0.5, "symbol": "Fm", "roman": "biv/C", "pitches": ["C3", "Gb3", "F4", "Ab4"], "roman_anchored": "vi/C"}, {"measure": 4, "t": 16.5, "d": 0.5, "symbol": "Ab7", "roman": "bbVI7/C", "pitches": ["C3", "Gb3", "Eb4", "Ab4"], "roman_anchored": "I7/C"}, {"measure": 4, "t": 17.0, "d": 1.0, "symbol": "Fm7", "roman": "biv7/Ab", "pitches": ["Ab2", "Eb3", "F4", "Ab4"], "roman_anchored": "vi7/Ab"}, {"measure": 5, "t": 18.0, "d": 1.0, "symbol": "Bb7", "roman": "bbVII7", "pitches": ["Bb2", "F3", "D4", "Ab4"], "roman_anchored": "II7"}, {"measure": 5, "t": 19.0, "d": 1.0, "symbol": "Ab", "roman": "bbVI/C", "pitches": ["C3", "Bb3", "Eb4", "Ab4"], "roman_anchored": "I/C"}, {"measure": 5, "t": 20.0, "d": 0.5, "symbol": "Bbm7", "roman": "bbvii7\u00b0/Db", "pitches": ["Db3", "Bb3", "Fb4", "Ab4"], "roman_anchored": "ii7\u00b0/Db"}, {"measure": 5, "t": 20.5, "d": 0.5, "symbol": "Bbm7", "roman": "bbvii7\u00b0/Db", "pitches": ["Db3", "Bb3", "Fb4", "Ab4"], "roman_anchored": "ii7\u00b0/Db"}, {"measure": 5, "t": 21.0, "d": 0.5, "symbol": "C#7", "roman": "bbII7", "pitches": ["Db3", "Cb4", "F4", "Ab4"], "roman_anchored": "IV7"}, {"measure": 5, "t": 21.5, "d": 0.5, "symbol": "C#7", "roman": "bbII7", "pitches": ["Db3", "Cb4", "F4", "Ab4"], "roman_anchored": "IV7"}, {"measure": 6, "t": 22.0, "d": 0.5, "symbol": "Fm7", "roman": "biv7/Eb", "pitches": ["Eb3", "C4", "F4", "Ab4"], "roman_anchored": "vi7/Eb"}, {"measure": 6, "t": 22.5, "d": 0.5, "symbol": "Fm7", "roman": "biv7/Eb", "pitches": ["Eb3", "C4", "F4", "Ab4"], "roman_anchored": "vi7/Eb"}, {"measure": 6, "t": 23.0, "d": 0.5, "symbol": "D(sus)", "roman": "bii\u00b0/Fb", "pitches": ["Fb3", "Cb4", "D4", "Ab4"], "roman_anchored": "?"}, {"measure": 6, "t": 23.5, "d": 0.5, "symbol": "D(sus)", "roman": "bii\u00b0/Fb", "pitches": ["Fb3", "Cb4", "D4", "Ab4"], "roman_anchored": "?"}, {"measure": 6, "t": 24.0, "d": 1.0, "symbol": "Bb7", "roman": "bbVII7/F", "pitches": ["F3", "Bb3", "D4", "Ab4"], "roman_anchored": "II7/F"}, {"measure": 6, "t": 25.0, "d": 0.5, "symbol": "Bb7", "roman": "bbVII7/F", "pitches": ["F3", "Bb3", "D4", "Ab4"], "roman_anchored": "II7/F"}, {"measure": 6, "t": 25.5, "d": 0.5, "symbol": "Bb7", "roman": "bbVII7/F", "pitches": ["F3", "Bb3", "D4", "Ab4"], "roman_anchored": "II7/F"}, {"measure": 7, "t": 26.0, "d": 0.5, "symbol": "Bbm7", "roman": "bbvii7", "pitches": ["Bb2", "Db4", "F4", "Ab4"], "roman_anchored": "ii7"}, {"measure": 7, "t": 26.5, "d": 0.5, "symbol": "Bbm7", "roman": "bbvii7", "pitches": ["Bb2", "Db4", "F4", "Ab4"], "roman_anchored": "ii7"}, {"measure": 7, "t": 27.0, "d": 1.0, "symbol": "Fm7", "roman": "biv7", "pitches": ["F3", "Eb4", "Ab4", "C5"], "roman_anchored": "vi7"}, {"measure": 7, "t": 28.0, "d": 1.0, "symbol": "Bb7", "roman": "bbVII7/E", "pitches": ["E3", "D4", "Ab4", "Bb4"], "roman_anchored": "II7/E"}, {"measure": 7, "t": 29.0, "d": 0.5, "symbol": "Bm", "roman": "bvii/E", "pitches": ["E3", "D4", "Ab4", "B4"], "roman_anchored": "#ii/E"}, {"measure": 7, "t": 29.5, "d": 0.5, "symbol": "Bm", "roman": "bvii/E", "pitches": ["E3", "D4", "Ab4", "B4"], "roman_anchored": "#ii/E"}, {"measure": 8, "t": 30.0, "d": 2.0, "symbol": "C#", "roman": "bbII/F", "pitches": ["F3", "Db4", "Ab4", "C5"], "roman_anchored": "IV/F"}, {"measure": 8, "t": 32.0, "d": 2.0, "symbol": "Bb7", "roman": "bbVII7", "pitches": ["Bb3", "D4", "F4", "Ab4"], "roman_anchored": "II7"}, {"measure": 9, "t": 34.0, "d": 3.0, "symbol": "E", "roman": "bbIV/Cb", "pitches": ["Cb4", "Fb4", "Gb4", "Ab4"], "roman_anchored": "bVI/Cb"}, {"measure": 9, "t": 37.0, "d": 1.0, "symbol": "Ab", "roman": "bbvi", "pitches": ["Ab4"], "roman_anchored": "i"}, {"measure": 10, "t": 38.0, "d": 1.0, "symbol": "Bbm7", "roman": "bbvii7\u00b0/Db", "pitches": ["Db4", "Fb4", "Ab4", "Bb4"], "roman_anchored": "ii7\u00b0/Db"}, {"measure": 10, "t": 39.0, "d": 1.0, "symbol": "Bbm7", "roman": "bbvii7\u00b0/Db", "pitches": ["Db4", "Fb4", "Ab4", "Bb4"], "roman_anchored": "ii7\u00b0/Db"}, {"measure": 10, "t": 40.0, "d": 2.0, "symbol": "C#7", "roman": "bbII7", "pitches": ["Db4", "F4", "Ab4", "Cb5"], "roman_anchored": "IV7"}, {"measure": 11, "t": 42.0, "d": 4.0, "symbol": "Ab", "roman": "bbVI", "pitches": ["Ab3", "Eb4", "Ab4", "C5"], "roman_anchored": "I"}], "cadence": {"type": "bluesy plagal (IV7 \u2192 I)", "desc": "The subdominant arrives carrying a dominant 7th (IV7) \u2014 the blues-inflected plagal close; in barbershop this IV7\u2192I with the 7th on top is sometimes called the \u201cglorified Amen\u201d.", "measure": 11}, "total_len": 50.0, "key_anchored": "Ab major", "key_basis": "final-major", "diatonic_pct": 89, "mp3_duration": 39.5, "sec_per_ql": 0.79, "key_label": "Ab major", "ending_roman": "I", "harmonic_walk": "Extremely chromatic tag (the bb-romans earlier); ends IV7 \u2192 I \u2014 a dominant-seventh subdominant (\u201cbluesy plagal\u201d) close.", "title": "Don't Make Toast"}, {"id": "2501", "key": "D major", "events": {"Bass": [{"t": 0.0, "d": 1.0, "m": "F#3"}, {"t": 1.0, "d": 1.0, "m": "D3"}, {"t": 2.0, "d": 1.0, "m": "F#3"}, {"t": 3.0, "d": 1.5, "m": "G3"}, {"t": 4.5, "d": 0.5, "m": "E3"}, {"t": 5.0, "d": 1.0, "m": "G3"}, {"t": 6.0, "d": 2.0, "m": "D3"}, {"t": 8.0, "d": 1.0, "m": "D3"}, {"t": 9.0, "d": 3.0, "m": "D3"}, {"t": 12.0, "d": 3.0, "m": "D2"}, {"t": 15.0, "d": 3.0, "m": "D#2"}, {"t": 18.0, "d": 3.0, "m": "D2"}], "Bari": [{"t": 0.0, "d": 1.0, "m": "A3"}, {"t": 1.0, "d": 1.0, "m": "A3"}, {"t": 2.0, "d": 1.0, "m": "A3"}, {"t": 3.0, "d": 1.5, "m": "A#3"}, {"t": 4.5, "d": 0.5, "m": "A#3"}, {"t": 5.0, "d": 1.0, "m": "A#3"}, {"t": 6.0, "d": 2.0, "m": "A3"}, {"t": 8.0, "d": 1.0, "m": "A3"}, {"t": 9.0, "d": 3.0, "m": "A3"}, {"t": 12.0, "d": 3.0, "m": "A2"}, {"t": 15.0, "d": 3.0, "m": "A#2"}, {"t": 18.0, "d": 3.0, "m": "A2"}], "Lead": [{"t": 0.0, "d": 1.0, "m": "D5"}, {"t": 1.0, "d": 1.0, "m": "D5"}, {"t": 2.0, "d": 1.0, "m": "D5"}, {"t": 3.0, "d": 1.5, "m": "D5"}, {"t": 4.5, "d": 0.5, "m": "D5"}, {"t": 5.0, "d": 1.0, "m": "D5"}, {"t": 6.0, "d": 2.0, "m": "C#5"}, {"t": 8.0, "d": 1.0, "m": "C#5"}, {"t": 9.0, "d": 3.0, "m": "C#5"}, {"t": 12.0, "d": 3.0, "m": "F#4"}, {"t": 15.0, "d": 3.0, "m": "G4"}, {"t": 18.0, "d": 3.0, "m": "C#5"}], "Tenor": [{"t": 0.0, "d": 1.0, "m": "A5"}, {"t": 1.0, "d": 1.0, "m": "F#5"}, {"t": 2.0, "d": 1.0, "m": "A5"}, {"t": 3.0, "d": 1.5, "m": "E5"}, {"t": 4.5, "d": 0.5, "m": "G5"}, {"t": 5.0, "d": 1.0, "m": "E5"}, {"t": 6.0, "d": 2.0, "m": "F#5"}, {"t": 8.0, "d": 1.0, "m": "F#5"}, {"t": 9.0, "d": 3.0, "m": "F#5"}, {"t": 12.0, "d": 3.0, "m": "C#5"}, {"t": 15.0, "d": 3.0, "m": "C#5"}, {"t": 18.0, "d": 3.0, "m": "A5"}]}, "chords": [{"measure": 1, "t": 0.0, "d": 1.0, "symbol": "D", "roman": "I/F#", "pitches": ["F#3", "A3", "D5", "A5"], "roman_anchored": "I/F#"}, {"measure": 1, "t": 1.0, "d": 1.0, "symbol": "D", "roman": "I", "pitches": ["D3", "A3", "D5", "F#5"], "roman_anchored": "I"}, {"measure": 1, "t": 2.0, "d": 1.0, "symbol": "D", "roman": "I/F#", "pitches": ["F#3", "A3", "D5", "A5"], "roman_anchored": "I/F#"}, {"measure": 2, "t": 3.0, "d": 1.5, "symbol": "Em7", "roman": "ii7/G", "pitches": ["G3", "A#3", "D5", "E5"], "roman_anchored": "ii7/G"}, {"measure": 2, "t": 4.5, "d": 0.5, "symbol": "Em7", "roman": "ii7", "pitches": ["E3", "A#3", "D5", "G5"], "roman_anchored": "ii7"}, {"measure": 2, "t": 5.0, "d": 1.0, "symbol": "Em7", "roman": "ii7/G", "pitches": ["G3", "A#3", "D5", "E5"], "roman_anchored": "ii7/G"}, {"measure": 3, "t": 6.0, "d": 2.0, "symbol": "D", "roman": "I", "pitches": ["D3", "A3", "C#5", "F#5"], "roman_anchored": "I"}, {"measure": 3, "t": 8.0, "d": 1.0, "symbol": "D", "roman": "I", "pitches": ["D3", "A3", "C#5", "F#5"], "roman_anchored": "I"}, {"measure": 4, "t": 9.0, "d": 3.0, "symbol": "D", "roman": "I", "pitches": ["D3", "A3", "C#5", "F#5"], "roman_anchored": "I"}, {"measure": 5, "t": 12.0, "d": 3.0, "symbol": "D", "roman": "I", "pitches": ["D2", "A2", "F#4", "C#5"], "roman_anchored": "I"}, {"measure": 6, "t": 15.0, "d": 3.0, "symbol": "Bbm", "roman": "#v/D#", "pitches": ["D#2", "A#2", "G4", "C#5"], "roman_anchored": "#v/D#"}, {"measure": 7, "t": 18.0, "d": 3.0, "symbol": "D", "roman": "i", "pitches": ["D2", "A2", "C#5", "A5"], "roman_anchored": "i"}], "cadence": {"type": "picardy slip (#v\u00b0 \u2192 I)", "desc": "An unusual chromatic approach: a raised-fifth diminished sonority (#v\u00b0/D#) sits a half-step under the final tonic, then resolves \u2014 a \u201cslip cadence\u201d where the last chord is approached purely chromatically, no functional dominant at all.", "measure": 7}, "total_len": 24.0, "key_anchored": "D minor", "key_basis": "final-minor", "diatonic_pct": 100, "mp3_duration": 25.028820861678003, "sec_per_ql": 1.0428675359032502, "key_label": "D minor\u2192D major? ends D", "ending_roman": "I", "harmonic_walk": "Entirely I and ii7 for most of the tag (plagal hovering), then a #v\u00b0/D# chromatic slip (Bbm over D#) before the final D \u2014 a Picardy-like major ending after minor hovering.", "title": "Lonesome Road"}];</script>
+<script type="module">
+import * as Tone from 'https://cdn.jsdelivr.net/npm/tone@15/+esm';
+
+const TAGS = TAGS_ALL; // array of 5 tag objects
+const tagSel = document.getElementById('tagSel');
+const statusEl = document.getElementById('status');
+const playBtn = document.getElementById('playBtn');
+const audio = new Audio();
+let TAG = null, raf = null, osmd = null;
+
+/* ---------- keyboard ---------- */
+const LOW = 33, HIGH = 89; // A1..F6
+const kb = document.getElementById('keyboard');
+const svgNS = 'http://www.w3.org/2000/svg';
+const whitePcs = [0,2,4,5,7,9,11];
+const keyEls = {};
+(function build(){
+  let totalWhite = 0;
+  for (let m=LOW;m<=HIGH;m++) if (whitePcs.includes(m%12)) totalWhite++;
+  const wW = 1060/totalWhite;
+  let wIdx = 0; const blacks = [];
+  for (let m=LOW;m<=HIGH;m++){
+    const isBlack = !whitePcs.includes(m%12);
+    if (isBlack){ blacks.push(m); continue; }
+    const el = document.createElementNS(svgNS,'rect');
+    el.setAttribute('x', wIdx*wW+1); el.setAttribute('y',1);
+    el.setAttribute('width', wW-2); el.setAttribute('height',188);
+    el.setAttribute('rx',3); el.setAttribute('fill','#f4f5f8');
+    kb.appendChild(el); keyEls[m]={el,isBlack:false};
+    if (m%12===0){
+      const t=document.createElementNS(svgNS,'text');
+      t.setAttribute('x',wIdx*wW+wW/2); t.setAttribute('y',182);
+      t.setAttribute('text-anchor','middle'); t.setAttribute('font-size','10'); t.setAttribute('fill','#999');
+      t.textContent=['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'][m%12]+(Math.floor(m/12)-1);
+      kb.appendChild(t);
+    }
+    wIdx++;
+  }
+  wIdx = 0;
+  for (let m=LOW;m<=HIGH;m++){
+    if (whitePcs.includes(m%12)){ wIdx++; continue; }
+    const el=document.createElementNS(svgNS,'rect');
+    el.setAttribute('x', wIdx*wW - wW*0.3); el.setAttribute('y',1);
+    el.setAttribute('width', wW*0.6); el.setAttribute('height',115);
+    el.setAttribute('rx',2); el.setAttribute('fill','#22242e');
+    kb.appendChild(el); keyEls[m]={el,isBlack:true};
+  }
+})();
+
+function noteToMidi(n){
+  const m = n.match(/^([A-G](?:#|b|##|bb)?)(-?\d+)$/);
+  if (!m) return NaN;
+  let pc = {C:0,D:2,E:4,F:5,G:7,A:9,B:11}[m[1][0]];
+  for (const acc of m[1].slice(1)) pc += (acc === '#' ? 1 : -1);
+  return pc + (+m[2]+1)*12;
+}
+function classify(midi, pitches){
+  if (!isFinite(midi)) return 2;
+  const root = Math.min(...pitches.filter(isFinite));
+  if (!isFinite(root)) return 2;
+  const iv = ((midi-root)%12+12)%12;
+  if (iv===0) return 0;
+  if (iv===3||iv===4) return 1;
+  if (iv===7||iv===6) return 2;
+  if (iv===10||iv===11) return 3;
+  return 2;
+}
+const colors = ['#e05c5c','#5ca8e0','#5ce08a','#c07ce0'];
+const inactive = {w:'#f4f5f8', b:'#22242e'};
+const VOICE_COLOR = {Bass:'#e05c5c', Bari:'#e0b35a', Lead:'#5ce08a', Tenor:'#5ca8e0'};
+
+function paintKey(midi, color, active){
+  const k = keyEls[midi]; if(!k) return;
+  if (active){ k.el.setAttribute('fill', color); k.el.setAttribute('stroke','#fff'); k.el.setAttribute('stroke-width','1.5'); }
+  else { k.el.setAttribute('fill', inactive[k.isBlack?'b':'w']); k.el.removeAttribute('stroke'); k.el.removeAttribute('stroke-width'); }
+}
+function clearKeyboard(){
+  for (const m in keyEls) paintKey(+m, null, false);
+}
+
+/* ---------- chord lookup ---------- */
+function chordAt(t){
+  const cs = TAG.chords;
+  let best = cs[0];
+  for (const c of cs){ if (t >= c.t - 0.01) best = c; else break; }
+  return best;
+}
+function voiceNoteAt(name, t){
+  const evs = TAG.events && TAG.events[name];
+  if (!evs || !evs.length) return null;
+  let best = null;
+  for (const e of evs){
+    if (e.t <= t + 0.02 && t < e.t + e.d + 0.35) best = e;
+    if (e.t > t + 0.5) break;
+  }
+  return best;
+}
+function showAt(t){
+  const c = chordAt(t);
+  clearKeyboard();
+  const midis = c.pitches.map(noteToMidi);
+  midis.forEach(m => paintKey(m, colors[classify(m, midis)], true));
+  for (const name of ['Bass','Bari','Lead','Tenor']){
+    const e = voiceNoteAt(name, t);
+    document.getElementById('v-'+name.toLowerCase()).textContent = e ? e.m : '\u2013';
+    if (e){ const k=keyEls[noteToMidi(e.m)]; if(k){ k.el.setAttribute('stroke', VOICE_COLOR[name]); k.el.setAttribute('stroke-width','3'); } }
+  }
+  document.querySelectorAll('.chip').forEach((el,i)=>{
+    el.classList.toggle('active', TAG.chords[i]===c);
+  });
+}
+
+/* ---------- chips ---------- */
+function renderChips(){
+  const wrap = document.getElementById('chips');
+  wrap.innerHTML = '';
+  TAG.chords.forEach(c => {
+    const d = document.createElement('div');
+    d.className = 'chip' + (c.cadence ? ' cadence' : '');
+    d.innerHTML = `<div class="rn">${c.roman_anchored}</div><div class="sub">m.${c.measure}</div>`;
+    d.onclick = () => { audio.currentTime = Math.max(0, c.t * TAG.sec_per_ql - 0.15); if(audio.paused) audio.play(); };
+    wrap.appendChild(d);
+  });
+}
+
+/* ---------- cadence box ---------- */
+function renderCadence(){
+  const box = document.getElementById('cadBox');
+  if (!TAG.cadence){ box.style.display='none'; return; }
+  box.style.display='block';
+  box.innerHTML = `<h3>Cadence at m.${TAG.cadence.measure}: ${TAG.cadence.type}</h3>
+    <p>${TAG.cadence.desc}</p>
+    <div class="meta">Ending on: ${TAG.ending_roman} &middot; sounds in ${TAG.key_label}</div>`;
+}
+
+/* ---------- audio sync ---------- */
+function loop(){
+  if (!audio.paused){
+    try {
+      showAt(audio.currentTime / TAG.sec_per_ql);
+    } catch (e) {
+      console.error('showAt failed at t=' + audio.currentTime, e);
+    }
+    raf = requestAnimationFrame(loop);  // always keep the loop alive while playing
+  }
+}
+audio.addEventListener('play', () => { playBtn.innerHTML='&#9632; Stop'; playBtn.classList.add('playing'); loop(); });
+audio.addEventListener('pause', () => { playBtn.innerHTML='&#9654; Play'; playBtn.classList.remove('playing'); cancelAnimationFrame(raf); });
+playBtn.onclick = () => { if (audio.paused) audio.play(); else audio.pause(); };
+
+/* ---------- tag loading ---------- */
+function loadTag(id){
+  TAG = TAGS.find(t => t.id === id);
+  audio.pause(); audio.src = `data/${id}.mp3`; audio.load();
+  document.getElementById('tagMeta').innerHTML =
+    `<b>${TAG.title}</b> &mdash; key: <b>${TAG.key_label}</b> &middot; ${TAG.harmonic_walk}`;
+  renderChips(); renderCadence();
+  try { showAt(0); } catch (e) { console.error('showAt(0) failed', e); }
+  statusEl.textContent = 'rendering score\u2026';
+  const el = document.getElementById('osmd');
+  el.innerHTML = '';
+  try {
+    osmd = new window.opensheetmusicdisplay.OpenSheetMusicDisplay(el, {autoResize:true, backend:'svg'});
+  } catch (e) {
+    statusEl.textContent = 'OSMD init failed: ' + e.message;
+    return;
+  }
+  fetch(`data/${id}.xml`).then(r=>r.text()).then(xml=>{
+    return osmd.load(xml);
+  }).then(()=>{
+    osmd.render();
+    statusEl.textContent = 'ready \u2014 press Play';
+  }).catch(e=>{ statusEl.textContent = 'score render failed: ' + e; });
+}
+tagSel.onchange = () => loadTag(tagSel.value);
+
+TAGS.forEach(t => {
+  const o=document.createElement('option'); o.value=t.id;
+  o.textContent = `${t.title} \u2014 ${t.key_label}`;
+  tagSel.appendChild(o);
+});
+loadTag(tagSel.value);
+window.__dbg = { get audio(){return audio;}, get TAG(){return TAG;}, showAt, noteToMidi };
+</script>
+</body>
+</html>
