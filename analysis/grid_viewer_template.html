@@ -34,6 +34,7 @@
   th.corner { text-align: left; padding: 2px 8px 6px 0; color: var(--dim);
               font-size: 11px; font-weight: 500; }
   th.ton { color: var(--dim); font-size: 12px; padding: 2px 4px; text-align: center; }
+  th.ton.trcol { color: #6a707c; font-size: 11px; }
   th.rowlab { text-align: right; padding: 0 8px 0 0; font-size: 12.5px;
               color: var(--ink); font-variant: small-caps; white-space: nowrap; }
   th.rowlab .cnt { color: var(--dim); font-size: 10px; margin-left: 4px; }
@@ -95,6 +96,7 @@
 
 <div class="bar">
   <label class="lab">Tag <select id="tagSel"></select></label>
+  <button id="btnMode" title="collapse columns to [IV | tonic | V] with transposed echoes">full 11-tonic view</button>
   <button id="btnPlayTag">▶ Whole tag</button>
   <label class="lab">Lead n-gram <select id="ngSel"></select></label>
   <button id="btnPlayNg">▶ n-gram</button>
@@ -133,8 +135,11 @@
           <li><b>Watch phrase ends.</b> Dashed sequence rows are phrase boundaries; green/amber outlines
             show whether the phrase resolved or stalled in tension — the ear learns “tension wants to move,
             resolution can rest”.</li>
-          <li><b>Then transpose.</b> Re-select the same n-gram in another tag (same sequence, new tonic
-            column) — the identical row-pattern lighting up in a neighbouring column is the transposition lesson.</li>
+          <li><b>Then transpose.</b> The grid collapses to three columns — [IV ⟨tr⟩ | tonic | V ⟨tr⟩].
+            The side columns are the tag's own sequence transposed up a 4th/5th (dimmed, italic):
+            the same n-gram pattern appears shifted, so a V7→I cadence reads as a two-step
+            walk across columns. Click a side cell to audition the transposed chord. Switch to
+            the full 11-tonic view to compare tags in other keys.</li>
         </ol>
       </div>
     </div>
@@ -153,8 +158,9 @@
 
 <script>
 const DATA = __DATA__;
-const ROWS = ['I','i','#I','bII','II','ii','bIII','III','iii','IV','#IV','iv','#iv',
-              'bV','V','v','bv','bVI','VI','vi','bVII','VII','vii','bvii'];
+const ROWS = ['I','i','#I','bII','bii','II','ii','bIII','biii','III','iii',
+              'IV','iv','bIV','biv','#IV','#iv','bV','bv','V','v',
+              'bVI','VI','vi','bVII','bvii','VII','vii','#VII'];
 const TONICS = ['C','G','D','A','B','F#','C#','Ab','Eb','Bb','F'];
 const DEG_SEMI = {'1':0,'2':2,'3':4,'4':5,'5':7,'6':9,'7':11,'b2':1,'b3':3,'b5':6,'b6':8,'b7':10,'b1':-1,'#1':1};
 const FC_HUE = {T:165, S:45, D:340};
@@ -177,34 +183,81 @@ const maxCount = Math.max(...Object.values(cellCount));
 const maxCountRow = {}; // for row-label counts
 for (const k in cellCount) { const n = k.split('|')[0]; maxCountRow[n] = Math.max(maxCountRow[n]||0, cellCount[k]); }
 
-/* ---------- build grid ---------- */
+/* ---------- build grid (3-col collapsed default, full 11-col toggle) ---------- */
 const grid = document.getElementById('grid');
-let tr = document.createElement('tr');
-tr.innerHTML = '<th class="corner">degree ↓ / tonic →</th>' + TONICS.map(t=>`<th class="ton">${t}</th>`).join('');
-grid.appendChild(tr);
 const cellEls = {};
-for (const rn of ROWS) {
-  tr = document.createElement('tr');
-  const base = romanRootSemi(rn), isMin = rn[0] === rn[0].toLowerCase() && /[a-z]/.test(rn[0]);
+let gridMode = 'col3'; // 'col3' = [IV tr | tonic | V tr], 'full' = all 11 tonics
+const SEMI_NORM = {0:'I',1:'bII',2:'II',3:'bIII',4:'III',5:'IV',6:'#IV',7:'V',8:'bVI',9:'VI',10:'bVII',11:'VII'};
+
+function transNorm(rn, shift) {
+  // same sounding chord reinterpreted in the key a `shift` semitones up
+  const semi = ((romanRootSemi(rn) + shift) % 12 + 12) % 12;
+  const base = SEMI_NORM[semi];
+  return romanIsMinor(rn) ? base.toLowerCase() : base;
+}
+function colsForTag(tonic) {
+  if (gridMode === 'full') return TONICS.map(t => ({ ton: t, tr: 0 }));
+  const i = TONICS.indexOf(tonic);
+  return [
+    { ton: TONICS[(i + 10) % 11], tr: -1 },  // IV-side: subdominant neighbour, content shown transposed
+    { ton: tonic,                 tr: 0 },
+    { ton: TONICS[(i + 1) % 11],  tr: +1 },  // V-side: dominant neighbour
+  ];
+}
+function buildGrid() {
+  const tag = curTagObj();
+  grid.innerHTML = '';
+  for (const k in cellEls) delete cellEls[k];
+  const cols = colsForTag(tag.tonic);
+  let hr = document.createElement('tr');
+  hr.innerHTML = '<th class="corner">degree ↓ / tonic →</th>' +
+    cols.map(c => `<th class="ton${c.tr ? ' trcol' : ''}">${c.ton}${c.tr ? ' ⟨tr⟩' : ''}</th>`).join('');
+  grid.appendChild(hr);
+  for (const rn of ROWS) {
+    const isMin = rn[0] === rn[0].toLowerCase() && /[a-z]/.test(rn[0]);
+    const tr = document.createElement('tr');
+    let cells = `<th class="rowlab">${rn}<span class="cnt">×${maxCountRow[rn]||''}</span></th>`;
+    for (const c of cols) {
+      if (c.tr === 0) { // real data column
+        const k = rn + '|' + c.ton, n = cellCount[k] || 0;
+        if (!n) { cells += `<td class="cell empty"></td>`; continue; }
+        const alpha = 0.28 + 0.72 * Math.sqrt(n / maxCount);
+        const bg = cellBg(rn, isMin, alpha);
+        const best = Object.entries(cellLead[k]||{}).sort((a,b)=>b[1]-a[1])[0]?.[0] || '';
+        cells += `<td class="cell" data-rn="${rn}" data-ton="${c.ton}" style="background:${bg}"
+                   title="${rn} in ${c.ton} — ×${n}"><span class="rn">${rn}</span>` +
+                 (best ? `<span class="ld" style="background:#fff;opacity:.9"></span>` : '') + `</td>`;
+      } else { // transposed echo of the tag's own rows in the neighbour key
+        const shift = c.tr > 0 ? 7 : 5;
+        const rnT = transNorm(rn, shift);
+        const k = rn + '|' + tag.tonic, n = cellCount[k] || 0;
+        if (!n) { cells += `<td class="cell empty"></td>`; continue; }
+        const isMinT = rnT[0] === rnT[0].toLowerCase() && /[a-z]/.test(rnT[0]);
+        const alpha = (0.28 + 0.72 * Math.sqrt(n / maxCount)) * 0.55;
+        const bg = cellBg(rnT, isMinT, alpha);
+        const best = Object.entries(cellLead[k]||{}).sort((a,b)=>b[1]-a[1])[0]?.[0] || '';
+        cells += `<td class="cell trcell" data-rn="${rnT}" data-ton="${c.ton}" data-src="${rn}"
+                   style="background:${bg}" title="${rnT} in ${c.ton} — ${rn} of ${tag.tonic} transposed">
+                   <span class="rn" style="font-style:italic">${rnT}</span>` +
+                 (best ? `<span class="ld" style="background:#fff;opacity:.5"></span>` : '') + `</td>`;
+      }
+    }
+    tr.innerHTML = cells;
+    for (const td of tr.querySelectorAll('td.cell:not(.empty)')) {
+      if (!td.classList.contains('trcell')) cellEls[td.dataset.rn + '|' + td.dataset.ton] = td;
+      td.addEventListener('click', () =>
+        playCell(td.dataset.rn, td.dataset.ton,
+          td.classList.contains('trcell')
+            ? (Object.entries(cellLead[td.dataset.src + '|' + tag.tonic]||{}).sort((a,b)=>b[1]-a[1])[0]?.[0] || '1')
+            : undefined));
+    }
+    grid.appendChild(tr);
+  }
+}
+function cellBg(rn, isMin, alpha) {
   const fc = fcOfNorm(rn);
-  let cells = `<th class="rowlab">${rn}<span class="cnt">×${maxCountRow[rn]||''}</span></th>`;
-  for (const ton of TONICS) {
-    const k = rn + '|' + ton, n = cellCount[k] || 0;
-    if (!n) { cells += `<td class="cell empty"></td>`; continue; }
-    const sat = isMin ? 22 : 58, light = isMin ? 34 : 44;
-    const alpha = 0.28 + 0.72 * Math.sqrt(n / maxCount);
-    const bg = `hsla(${FC_HUE[fc]},${sat}%,${light}%,${alpha.toFixed(2)})`;
-    const best = Object.entries(cellLead[k]||{}).sort((a,b)=>b[1]-a[1])[0]?.[0] || '';
-    cells += `<td class="cell" data-rn="${rn}" data-ton="${ton}" style="background:${bg}"
-               title="${rn} in ${ton} — ×${n}"><span class="rn">${rn}</span>` +
-             (best ? `<span class="ld" style="background:#fff;opacity:.9"></span>` : '') + `</td>`;
-  }
-  tr.innerHTML = cells;
-  for (const td of tr.querySelectorAll('td.cell:not(.empty)')) {
-    cellEls[td.dataset.rn + '|' + td.dataset.ton] = td;
-    td.addEventListener('click', () => playCell(td.dataset.rn, td.dataset.ton));
-  }
-  grid.appendChild(tr);
+  const sat = isMin ? 22 : 58, light = isMin ? 34 : 44;
+  return `hsla(${FC_HUE[fc]},${sat}%,${light}%,${alpha.toFixed(2)})`;
 }
 function fcOfNorm(rn) {
   const m = rn.match(/[IViv]+/)[0].toLowerCase();
@@ -215,7 +268,7 @@ function romanRootSemi(rn) {
   const m = rn.match(/[IViv]+/)[0].toUpperCase();
   let s = {I:0,II:2,III:4,IV:5,V:7,VI:9,VII:11}[m];
   if (rn[0]==='b') s -= 1; else if (rn[0]==='#') s += 1;
-  return s;
+  return ((s % 12) + 12) % 12;
 }
 function romanIsMinor(rn) { return /[iv]/.test(rn.match(/[IViv]+/)[0][0]); }
 
@@ -471,7 +524,12 @@ function stepTo(i) {
   playSteps(steps.slice(0,1), false);
 }
 
-tagSel.addEventListener('change', () => { stopAll(); fillNg(); fillStrip(); updateRoll(); });
+tagSel.addEventListener('change', () => { stopAll(); fillNg(); fillStrip(); updateRoll(); buildGrid(); });
+document.getElementById('btnMode').addEventListener('click', () => {
+  gridMode = gridMode === 'col3' ? 'full' : 'col3';
+  document.getElementById('btnMode').textContent = gridMode === 'col3' ? 'full 11-tonic view' : '3-tonic view';
+  buildGrid();
+});
 document.getElementById('btnPlayTag').addEventListener('click', () => {
   const tag = curTagObj();
   const first = tag.rows[0], last = tag.rows[tag.rows.length - 1];
@@ -499,17 +557,18 @@ document.getElementById('btnPrev').addEventListener('click', () => {
 });
 tempo.addEventListener('input', () => document.getElementById('bpmLab').textContent = tempo.value + ' bpm');
 
-function playCell(rn, ton) {
+function playCell(rn, ton, leadDeg) {
   audio();
   const tag = curTagObj();
+  const ld = leadDeg || Object.entries(cellLead[rn+'|'+ton]||{}).sort((a,b)=>b[1]-a[1])[0]?.[0] || '1';
   const fake = { ...tag, tonic: ton, rows: [{ roman: rn, roman_norm: rn, function_class: fcOfNorm(rn),
-    pos_from_start: '0', lead_degree: Object.entries(cellLead[rn+'|'+ton]||{}).sort((a,b)=>b[1]-a[1])[0]?.[0] || '1',
+    pos_from_start: '0', lead_degree: ld,
     lead_dur: '1', phrase_end: 'False', resolution: '' }] };
   playSteps(stepsFor(fake, 0, 0), false);
 }
 
 /* init */
-fillNg(); fillStrip(); updateRoll();
+fillNg(); fillStrip(); updateRoll(); buildGrid();
 </script>
 </body>
 </html>
