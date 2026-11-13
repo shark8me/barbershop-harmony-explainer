@@ -25,6 +25,13 @@
   #stopBtn { background: #55242e; color: var(--ink); border: 1px solid #7a3340;
              border-radius: 6px; padding: 6px 14px; font-size: 13px; cursor: pointer; }
   #stopBtn:active { filter: brightness(1.4); }
+  #startOverlay { position: fixed; inset: 0; z-index: 10; display: flex;
+                  flex-direction: column; align-items: center; justify-content: center;
+                  gap: 10px; background: rgba(10,12,16,.92); cursor: pointer;
+                  -webkit-user-select: none; user-select: none; }
+  #startOverlay.hidden { display: none; }
+  #startOverlay .big { font-size: 20px; font-weight: 700; }
+  #startOverlay .small { color: var(--dim); font-size: 13px; }
   #status { font-size: 12.5px; min-width: 220px; }
   #status .rn { font-weight: 700; font-size: 14px; }
 
@@ -68,7 +75,13 @@
     <option value="arp">Arpeggio</option>
   </select></label>
   <button id="stopBtn" type="button">■ Stop</button>
+  <label class="lab">Tempo <input type="range" id="bpmRange" min="40" max="240" value="120" style="vertical-align:middle"> <span id="bpmLab">120</span> BPM</label>
   <span id="status">tap a pad to play</span>
+</div>
+
+<div id="startOverlay">
+  <div class="big">Tap to load sounds</div>
+  <div class="small">Browsers on iPad require a tap before audio can start.</div>
 </div>
 
 <div id="padwrap"><table id="grid"></table></div>
@@ -158,17 +171,35 @@ const SYNTHS = [
 /* ================= strudel ================= */
 import { initStrudel, getAudioContext } from 'https://cdn.jsdelivr.net/npm/@strudel/web@1/+esm';
 let sd = null;
-async function ensureStrudel() {
-  if (sd) return sd;
-  status('loading strudel…');
-  sd = await initStrudel({
-    prebake: () => {
-      samples('https://strudel.cc/piano.json');
-      samples('https://strudel.cc/vcsl.json', 'https://raw.githubusercontent.com/sgossner/VCSL/master/');
-    },
-  });
-  prewarm();
-  return sd;
+let unlocked = false;          /* audio unlocked by a user gesture? */
+/* single-flight: concurrent callers (page-load preload + unlock gesture) must
+   share ONE initStrudel call — a second concurrent initStrudel hangs forever */
+let sdPromise = null;
+function ensureStrudel() {
+  if (!sdPromise) {
+    status('loading strudel…');
+    sdPromise = initStrudel({
+      prebake: () => {
+        samples('https://strudel.cc/piano.json');
+        samples('https://strudel.cc/vcsl.json', 'https://raw.githubusercontent.com/sgossner/VCSL/master/');
+      },
+    }).then(s => { sd = s; return s; })
+      .catch(e => { sdPromise = null; throw e; });
+  }
+  return sdPromise;
+}
+/* unlock: must run synchronously inside a trusted gesture (iPad/Safari keep the
+   AudioContext suspended otherwise, and sample decode never completes). Resume
+   the context first, before any await; then load strudel + prewarm samples. */
+let unlockStarted = false;
+function unlock() {
+  startOverlay.classList.add('hidden');
+  const ac = getAudioContext();
+  if (ac && ac.state !== 'running') ac.resume().catch(e => console.error('ctx resume', e));
+  if (unlockStarted) return;
+  unlockStarted = true;
+  ensureStrudel().then(() => { unlocked = true; applyBpm(false); prewarm(); })
+    .catch(e => status('strudel failed to load: ' + e.message));
 }
 function midiToNote(m) {
   const p = ((m % 12) + 12) % 12;
@@ -186,36 +217,50 @@ function chordNotes(tonicIdx, rowOffset, colSemi, qual) {
   if (ivs.length === 3) ivs.push(12);          /* every chord voices 4 notes */
   return ivs.map(iv => midiToNote(root + iv));
 }
+let lastPlay = null;         /* last chord args, to re-arm after a tempo change */
 function playChord(tonicIdx, rowOffset, colSemi, qual, synth) {
   const notes = chordNotes(tonicIdx, rowOffset, colSemi, qual);
   const g = SYNTHS.find(s => s.id === synth).gain;
   const arp = modeSel.value === 'arp';
-  /* commas stack all notes together; spaces sequence them 1/4-cycle apart */
+  lastPlay = { tonicIdx, rowOffset, colSemi, qual, synth };
+  /* commas stack all notes together; spaces sequence them evenly across the cycle */
   const seq = notes.join(arp ? ' ' : ',');
-  let code = `note("${seq}").s('${synth}').gain(${g}).release(.6).room(.25).repeatCycles(1)`;
-  const step = 0.25;
-  const now = sd.scheduler.now();
-  if (arp) {
-    /* start on the next 1/4-cycle grid line so successive presses share one beat */
-    code += `.late(${(Math.ceil(now / step) * step - now).toFixed(4)})`;
-  }
-  try {
-    sd.evaluate(code);
-  } catch (e) { console.error('strudel eval', e); }
-  /* repeatCycles(1) does not stop the pattern in this build — it re-strikes every
-     cycle. Replace with silence just before the second cycle would be scheduled. */
+  const code = `note("${seq}").s('${synth}').gain(${g}).release(.6).room(.25).repeatCycles(1)`;
   const cycDur = 1 / sd.scheduler.cps;                       /* seconds per cycle */
-  const evCycle = arp ? Math.ceil(now / step) * step : now + 0.15 / cycDur;
-  const ms = Math.max(600, (evCycle - now + 1) * cycDur * 1000 - 350);
+  /* arp: one subdivision of the cycle per voiced note (always 4 — triads are
+     octave-doubled in chordNotes) */
+  const step = arp ? 1 / notes.length : 0;
+  const now = sd.scheduler.now();
+  /* quantize the arp start onto the next step grid line by DELAYING the evaluate
+     itself — NOT with .late(): a fractional late() shifts the last note's span
+     across the cycle boundary and the scheduler re-triggers the leftover fragment
+     as an extra onset (a 5th note per cycle) */
+  const delayMs = arp ? (Math.ceil(now / step) * step - now) * cycDur * 1000 : 0;
+  clearTimeout(evalTimer);
   clearTimeout(oneShotTimer);
+  evalTimer = setTimeout(() => {
+    try { sd.evaluate(code); } catch (e) { console.error('strudel eval', e); }
+  }, delayMs);
+  /* repeatCycles(1) does not stop the pattern in this build — it re-strikes every
+     cycle. Replace with silence just before the second cycle would be scheduled
+     (small margin so the final arp note keeps nearly its full duration). */
+  const ms = Math.max(600, delayMs + cycDur * 1000 - (arp ? 80 : 350));
   oneShotTimer = setTimeout(() => { try { sd.evaluate('silence'); } catch (e) {} }, ms);
 }
-let oneShotTimer = 0;
+let evalTimer = 0, oneShotTimer = 0;
 /* prewarm: load every sample the current grid needs (silent), so chord presses
    fire together instead of staggering while buffers stream in */
 let prewarmTimer = 0, prewarmDone = 0;
 function prewarm() {
-  if (!sd) return;
+  /* sample decode needs a running AudioContext — before the unlock gesture it
+     would stall on iPad, so wait (unlock() calls prewarm once audio is free) */
+  const ac = getAudioContext();
+  if (!sd || !unlocked) return;
+  if (ac && ac.state !== 'running') {
+    /* resume() is async — retry prewarm once it completes instead of bailing */
+    ac.resume().then(prewarm).catch(() => {});
+    return;
+  }
   clearTimeout(prewarmTimer);
   prewarmTimer = setTimeout(() => {
     try {
@@ -254,6 +299,9 @@ const synthSel = document.getElementById('synthSel');
 const modeSel = document.getElementById('modeSel');
 const stopBtn = document.getElementById('stopBtn');
 const grid = document.getElementById('grid');
+const bpmRange = document.getElementById('bpmRange');
+const bpmLab = document.getElementById('bpmLab');
+const startOverlay = document.getElementById('startOverlay');
 NOTE_NAMES.forEach(n => keySel.add(new Option(n, n)));
 keySel.value = 'G';
 for (const k in SETS) setSel.add(new Option(SETS[k].name, k));
@@ -300,10 +348,7 @@ function buildGrid() {
       td.style.background = `hsla(${row.hue},50%,${isMinor ? 30 : 42}%,.85)`;
       const press = ev => {
         ev.preventDefault();
-        /* resume strudel's AudioContext synchronously inside the user gesture —
-           it is created at page load (no gesture) and stays suspended otherwise */
-        const ac = getAudioContext();
-        if (ac && ac.state !== 'running') ac.resume().catch(e => console.error('ctx resume', e));
+        unlock();   /* resume ctx synchronously inside the gesture (iPad-safe) */
         pressCell(tonicIdx, row, c, td);
       };
       td.addEventListener('pointerdown', press);
@@ -336,15 +381,41 @@ keySel.addEventListener('change', () => { buildGrid(); prewarm(); });
 setSel.addEventListener('change', () => { buildGrid(); prewarm(); });
 synthSel.addEventListener('change', prewarm);
 stopBtn.addEventListener('click', () => {
+  clearTimeout(evalTimer);
   clearTimeout(oneShotTimer);
   if (sd) sd.stop();
   status('stopped — tap a pad to play again');
 });
+/* tempo: global setcpm control — changes sd.scheduler.cps so every derived timing
+   in playChord (grid delay, one-shot timer) stays consistent automatically.
+   The arp has 4 notes per cycle (4 = beats per cycle), so BPM = setcpm(bpm/4). */
+function applyBpm(rearm) {
+  const bpm = +bpmRange.value;
+  bpmLab.textContent = bpm;
+  if (!sd) return;
+  try { sd.evaluate(`setcpm(${bpm / 4})`); } catch (e) { console.error('setcpm', e); }
+  /* re-strike the current one-shot so a tempo change is heard immediately */
+  if (rearm && oneShotTimer && lastPlay) {
+    clearTimeout(oneShotTimer);
+    playChord(lastPlay.tonicIdx, lastPlay.rowOffset, lastPlay.colSemi,
+              lastPlay.qual, lastPlay.synth);
+  }
+}
+bpmRange.addEventListener('input', () => applyBpm(true));
+/* start overlay: the first trusted gesture unlocks audio. Resume the context
+   synchronously in the handler, then load strudel and prewarm all samples. */
+startOverlay.addEventListener('pointerdown', ev => {
+  ev.preventDefault();
+  unlock();
+});
+/* also accept any first touch on the page (e.g. a pad press under the overlay) */
+document.addEventListener('pointerdown', () => unlock(), { once: true, capture: true });
 buildGrid();
-/* warm up at page load: fetch strudel + all sample banks in the background so
-   the first pad press is instant; the AudioContext stays suspended until the
-   first trusted gesture resumes it (pressCell) */
-ensureStrudel().catch(e => console.error('preload', e));
+/* fetch strudel itself (module + sample-bank JSONs) at page load — network
+   requests are not gesture-gated; the sample DECODE is, so prewarm waits for
+   the overlay tap via unlock() */
+ensureStrudel().then(() => { startOverlay.querySelector('.small').textContent = 'engine ready — tap to load sounds'; })
+  .catch(e => console.error('preload', e));
 </script>
 </body>
 </html>
