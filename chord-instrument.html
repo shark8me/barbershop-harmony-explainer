@@ -22,6 +22,9 @@
   .lab { color: var(--dim); font-size: 12px; }
   select { background: #2a2e36; color: var(--ink); border: 1px solid #3a3f49;
            border-radius: 6px; padding: 6px 10px; font-size: 13px; cursor: pointer; }
+  #stopBtn { background: #55242e; color: var(--ink); border: 1px solid #7a3340;
+             border-radius: 6px; padding: 6px 14px; font-size: 13px; cursor: pointer; }
+  #stopBtn:active { filter: brightness(1.4); }
   #status { font-size: 12.5px; min-width: 220px; }
   #status .rn { font-weight: 700; font-size: 14px; }
 
@@ -60,6 +63,11 @@
   <label class="lab">Key <select id="keySel"></select></label>
   <label class="lab">Chord set <select id="setSel"></select></label>
   <label class="lab">Synth <select id="synthSel"></select></label>
+  <label class="lab">Play <select id="modeSel">
+    <option value="chord" selected>Chord (together)</option>
+    <option value="arp">Arpeggio</option>
+  </select></label>
+  <button id="stopBtn" type="button">■ Stop</button>
   <span id="status">tap a pad to play</span>
 </div>
 
@@ -132,18 +140,19 @@ const SETS = {
     { name: '−2',     semi: -2, q: 'M' },
   ]},
 };
-/* strudel sounds — every entry RMS-verified audible; gain lifts quiet VCSL/supersaw banks */
+/* strudel sounds — all acoustic sample patches (Salamander piano + VCSL), each
+   RMS-verified audible; gain balances the sampled instruments to comparable level */
 const SYNTHS = [
-  { id: 'piano',        label: 'Grand Piano',   gain: 1 },
-  { id: 'fmpiano',      label: 'FM Piano',      gain: 4 },
-  { id: 'marimba',      label: 'Marimba',       gain: 4 },
-  { id: 'glockenspiel', label: 'Glockenspiel',  gain: 24 },
-  { id: 'sawtooth',     label: 'Saw Lead',      gain: 1 },
-  { id: 'square',       label: 'Square Lead',   gain: 1 },
-  { id: 'triangle',     label: 'Triangle Bell', gain: 1 },
-  { id: 'sine',         label: 'Pure Sine',     gain: 1 },
-  { id: 'saw2',         label: 'Detuned Saw',   gain: 1 },
-  { id: 'supersaw',     label: 'Supersaw Pad',  gain: 8 },
+  { id: 'piano',             label: 'Grand Piano',   gain: 1 },
+  { id: 'harp',              label: 'Harp',          gain: 4 },
+  { id: 'vibraphone',        label: 'Vibraphone',    gain: 2 },
+  { id: 'harmonica',         label: 'Harmonica',     gain: 2 },
+  { id: 'sax',               label: 'Saxophone',     gain: 4 },
+  { id: 'organ_full',        label: 'Church Organ',  gain: 2 },
+  { id: 'balafon',           label: 'Balafon',       gain: 4 },
+  { id: 'clavisynth',        label: 'Clavinet',      gain: 2 },
+  { id: 'recorder_alto_sus', label: 'Alto Recorder', gain: 4 },
+  { id: 'kalimba',           label: 'Kalimba',       gain: 4 },
 ];
 
 /* ================= strudel ================= */
@@ -158,6 +167,7 @@ async function ensureStrudel() {
       samples('https://strudel.cc/vcsl.json', 'https://raw.githubusercontent.com/sgossner/VCSL/master/');
     },
   });
+  prewarm();
   return sd;
 }
 function midiToNote(m) {
@@ -170,21 +180,63 @@ function midiOf(tonicIdx, semi) {
   while (m > 59) m -= 12;
   return m;
 }
-function playChord(tonicIdx, rowOffset, colSemi, qual, synth) {
+function chordNotes(tonicIdx, rowOffset, colSemi, qual) {
   const root = midiOf(tonicIdx, rowOffset + colSemi);
-  const ivs = QUAL[qual].ivs;
-  const notes = ivs.map(iv => midiToNote(root + iv)).join(' ');
+  const ivs = QUAL[qual].ivs.slice();
+  if (ivs.length === 3) ivs.push(12);          /* every chord voices 4 notes */
+  return ivs.map(iv => midiToNote(root + iv));
+}
+function playChord(tonicIdx, rowOffset, colSemi, qual, synth) {
+  const notes = chordNotes(tonicIdx, rowOffset, colSemi, qual);
   const g = SYNTHS.find(s => s.id === synth).gain;
-  const code = `note("${notes}").s('${synth}').gain(${g}).release(.6).room(.25).repeatCycles(1)`;
+  const arp = modeSel.value === 'arp';
+  /* commas stack all notes together; spaces sequence them 1/4-cycle apart */
+  const seq = notes.join(arp ? ' ' : ',');
+  let code = `note("${seq}").s('${synth}').gain(${g}).release(.6).room(.25).repeatCycles(1)`;
+  const step = 0.25;
+  const now = sd.scheduler.now();
+  if (arp) {
+    /* start on the next 1/4-cycle grid line so successive presses share one beat */
+    code += `.late(${(Math.ceil(now / step) * step - now).toFixed(4)})`;
+  }
   try {
     sd.evaluate(code);
   } catch (e) { console.error('strudel eval', e); }
+  /* repeatCycles(1) does not stop the pattern in this build — it re-strikes every
+     cycle. Replace with silence just before the second cycle would be scheduled. */
+  const cycDur = 1 / sd.scheduler.cps;                       /* seconds per cycle */
+  const evCycle = arp ? Math.ceil(now / step) * step : now + 0.15 / cycDur;
+  const ms = Math.max(600, (evCycle - now + 1) * cycDur * 1000 - 350);
+  clearTimeout(oneShotTimer);
+  oneShotTimer = setTimeout(() => { try { sd.evaluate('silence'); } catch (e) {} }, ms);
+}
+let oneShotTimer = 0;
+/* prewarm: load every sample the current grid needs (silent), so chord presses
+   fire together instead of staggering while buffers stream in */
+let prewarmTimer = 0;
+function prewarm() {
+  if (!sd) return;
+  clearTimeout(prewarmTimer);
+  prewarmTimer = setTimeout(() => {
+    try {
+      const tonicIdx = NOTE_NAMES.indexOf(keySel.value);
+      const set = SETS[setSel.value];
+      const notes = new Set();
+      for (const row of ROWS)
+        for (const c of set.cols)
+          chordNotes(tonicIdx, row.offset, c.semi, c.q).forEach(n => notes.add(n));
+      sd.evaluate(`note("${[...notes].join(',')}").s('${synthSel.value}').gain(0.001).release(.01).repeatCycles(1)`);
+      setTimeout(() => { try { sd.evaluate('silence'); } catch (e) {} }, 2400);
+    } catch (e) { console.error('prewarm', e); }
+  }, 400);
 }
 
 /* ================= UI ================= */
 const keySel = document.getElementById('keySel');
 const setSel = document.getElementById('setSel');
 const synthSel = document.getElementById('synthSel');
+const modeSel = document.getElementById('modeSel');
+const stopBtn = document.getElementById('stopBtn');
 const grid = document.getElementById('grid');
 NOTE_NAMES.forEach(n => keySel.add(new Option(n, n)));
 keySel.value = 'G';
@@ -264,8 +316,14 @@ function pressCell(tonicIdx, row, col, td) {
   }).catch(e => status('strudel failed to load: ' + e.message));
 }
 
-keySel.addEventListener('change', buildGrid);
-setSel.addEventListener('change', buildGrid);
+keySel.addEventListener('change', () => { buildGrid(); prewarm(); });
+setSel.addEventListener('change', () => { buildGrid(); prewarm(); });
+synthSel.addEventListener('change', prewarm);
+stopBtn.addEventListener('click', () => {
+  clearTimeout(oneShotTimer);
+  if (sd) sd.stop();
+  status('stopped — tap a pad to play again');
+});
 buildGrid();
 </script>
 </body>
