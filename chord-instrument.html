@@ -132,17 +132,32 @@ const SETS = {
     { name: '−2',     semi: -2, q: 'M' },
   ]},
 };
-/* strudel sound names (verified against @strudel/sound registry at runtime) */
-const SYNTHS = ['piano','rhodes','sawtooth','square','triangle','sine',
-                'supersaw','fm','pulse','gm_acoustic_guitar'];
+/* strudel sounds — every entry RMS-verified audible; gain lifts quiet VCSL/supersaw banks */
+const SYNTHS = [
+  { id: 'piano',        label: 'Grand Piano',   gain: 1 },
+  { id: 'fmpiano',      label: 'FM Piano',      gain: 4 },
+  { id: 'marimba',      label: 'Marimba',       gain: 4 },
+  { id: 'glockenspiel', label: 'Glockenspiel',  gain: 24 },
+  { id: 'sawtooth',     label: 'Saw Lead',      gain: 1 },
+  { id: 'square',       label: 'Square Lead',   gain: 1 },
+  { id: 'triangle',     label: 'Triangle Bell', gain: 1 },
+  { id: 'sine',         label: 'Pure Sine',     gain: 1 },
+  { id: 'saw2',         label: 'Detuned Saw',   gain: 1 },
+  { id: 'supersaw',     label: 'Supersaw Pad',  gain: 8 },
+];
 
 /* ================= strudel ================= */
-import { initStrudel } from 'https://cdn.jsdelivr.net/npm/@strudel/web@1/+esm';
+import { initStrudel, getAudioContext } from 'https://cdn.jsdelivr.net/npm/@strudel/web@1/+esm';
 let sd = null;
 async function ensureStrudel() {
   if (sd) return sd;
   status('loading strudel…');
-  sd = await initStrudel({ preload: [] });
+  sd = await initStrudel({
+    prebake: () => {
+      samples('https://strudel.cc/piano.json');
+      samples('https://strudel.cc/vcsl.json', 'https://raw.githubusercontent.com/sgossner/VCSL/master/');
+    },
+  });
   return sd;
 }
 function midiToNote(m) {
@@ -159,7 +174,8 @@ function playChord(tonicIdx, rowOffset, colSemi, qual, synth) {
   const root = midiOf(tonicIdx, rowOffset + colSemi);
   const ivs = QUAL[qual].ivs;
   const notes = ivs.map(iv => midiToNote(root + iv)).join(' ');
-  const code = `note("${notes}").s('${synth}').release(.6).room(.25).repeatCycles(1)`;
+  const g = SYNTHS.find(s => s.id === synth).gain;
+  const code = `note("${notes}").s('${synth}').gain(${g}).release(.6).room(.25).repeatCycles(1)`;
   try {
     sd.evaluate(code);
   } catch (e) { console.error('strudel eval', e); }
@@ -174,7 +190,7 @@ NOTE_NAMES.forEach(n => keySel.add(new Option(n, n)));
 keySel.value = 'G';
 for (const k in SETS) setSel.add(new Option(SETS[k].name, k));
 setSel.value = 'stradella';
-SYNTHS.forEach(s => synthSel.add(new Option(s, s)));
+SYNTHS.forEach(s => synthSel.add(new Option(s.label, s.id)));
 synthSel.value = 'piano';
 
 function status(html) { document.getElementById('status').innerHTML = html; }
@@ -216,6 +232,10 @@ function buildGrid() {
       td.style.background = `hsla(${row.hue},50%,${isMinor ? 30 : 42}%,.85)`;
       const press = ev => {
         ev.preventDefault();
+        /* resume strudel's AudioContext synchronously inside the user gesture —
+           it is created at page load (no gesture) and stays suspended otherwise */
+        const ac = getAudioContext();
+        if (ac && ac.state !== 'running') ac.resume().catch(e => console.error('ctx resume', e));
         pressCell(tonicIdx, row, c, td);
       };
       td.addEventListener('pointerdown', press);
@@ -233,12 +253,14 @@ function pressCell(tonicIdx, row, col, td) {
   setTimeout(() => td.classList.remove('pressed'), 140);
   ensureStrudel().then(() => {
     playChord(tonicIdx, row.offset, col.semi, col.q, synthSel.value);
+    const acState = getAudioContext().state;
     const rootPc = FLAT[((tonicIdx + row.offset + col.semi) % 12 + 12) % 12];
     const deg = degreeLabel(row.offset + col.semi);
     const minor = ['m','m7','dim'].includes(col.q);
     status(`<span class="rn">${minor ? deg.toLowerCase() : deg}</span>` +
            ` ${rootPc}${QUAL[col.q].label === 'maj' ? '' : QUAL[col.q].label}` +
-           ` · ${row.fn} row · ${synthSel.value}`);
+           ` · ${row.fn} row · ${synthSel.value}` +
+           (acState !== 'running' ? ` · ⚠ audio ${acState}` : ''));
   }).catch(e => status('strudel failed to load: ' + e.message));
 }
 
