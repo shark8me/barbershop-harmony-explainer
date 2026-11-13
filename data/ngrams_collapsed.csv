@@ -1,0 +1,635 @@
+rank,ngram_roman_sequence,ngram_norm_sequence,function_class_sequence,count,frequency_pct,occurrences,tag_id,tag_title,pos_from_start,pos_from_end,tonic,key,lead_note_sequence
+1,I | ii | I | IV,I | ii | I | IV,T-S-T-S,3,0.47,3865 (Ron Rogers Medley)@6|47,3865,Ron Rogers Medley,6,47,G,G major,iii -> ii -> I -> I
+1,I | ii | I | IV,I | ii | I | IV,T-S-T-S,3,0.47,3912 (The Next Ten Minutes)@20|6,3912,The Next Ten Minutes,20,6,Bb,Bb major,V -> IV -> iii -> vi
+1,I | ii | I | IV,I | ii | I | IV,T-S-T-S,3,0.47,5388 (Grace Kelly)@1|19,5388,Grace Kelly,1,19,F,F major,I -> ii -> iii -> IV
+2,I | IV | ii | I,I | IV | ii | I,T-S-S-T,3,0.47,3865 (Ron Rogers Medley)@15|38,3865,Ron Rogers Medley,15,38,G,G major,iii -> iii -> ii -> V
+2,I | IV | ii | I,I | IV | ii | I,T-S-S-T,3,0.47,3865 (Ron Rogers Medley)@52|1,3865,Ron Rogers Medley,52,1,G,G major,I -> I -> I -> I
+2,I | IV | ii | I,I | IV | ii | I,T-S-S-T,3,0.47,3979 (It's the End of the World as We Know It)@3|10,3979,It's the End of the World as We Know It,3,10,C,C major,iii -> IV -> IV -> I
+3,ii | I | IV | ii,ii | I | IV | ii,S-T-S-S,3,0.47,3865 (Ron Rogers Medley)@17|36,3865,Ron Rogers Medley,17,36,G,G major,ii -> V -> vi -> vi
+3,ii | I | IV | ii,ii | I | IV | ii,S-T-S-S,3,0.47,3912 (The Next Ten Minutes)@21|4,3912,The Next Ten Minutes,21,4,Bb,Bb major,IV -> iii -> vi -> vi
+3,ii | I | IV | ii,ii | I | IV | ii,S-T-S-S,3,0.47,3979 (It's the End of the World as We Know It)@2|11,3979,It's the End of the World as We Know It,2,11,C,C major,? -> iii -> IV -> IV
+4,bVII | bVI | V | i,bVII | bVI | V | i,D-T-D-T,3,0.47,5377 (Reaching Out)@11|35,5377,Reaching Out,11,35,B,B minor,iv -> ? -> ii -> v
+4,bVII | bVI | V | i,bVII | bVI | V | i,D-T-D-T,3,0.47,5377 (Reaching Out)@27|21,5377,Reaching Out,27,21,B,B minor,iv -> ? -> ii -> v
+4,bVII | bVI | V | i,bVII | bVI | V | i,D-T-D-T,3,0.47,5377 (Reaching Out)@42|7,5377,Reaching Out,42,7,B,B minor,iv -> ? -> ii -> v
+5,i | vi | ii | vii,i | vi | ii | vii,T-T-S-D,2,0.32,2042 (And So It's Over)@3|9,2042,And So It's Over,3,9,C,C major,I -> I -> I -> vii
+5,i | vi | ii | vii,i | vi | ii | vii,T-T-S-D,2,0.32,3292 (Shangri La Rags to Riches)@8|58,3292,Shangri La Rags to Riches,8,58,Eb,Eb major,? -> ? -> ii -> IV
+6,i | V | i | V,i | V | i | V,T-D-T-D,2,0.32,2296 (My Funny Valentine)@1|19,2296,My Funny Valentine,1,19,B,B minor,v -> #vii -> i -> #vii
+6,i | V | i | V,i | V | i | V,T-D-T-D,2,0.32,2296 (My Funny Valentine)@3|17,2296,My Funny Valentine,3,17,B,B minor,i -> #vii -> i -> #vii
+7,V | i | V | i,V | i | V | i,D-T-D-T,2,0.32,2296 (My Funny Valentine)@2|18,2296,My Funny Valentine,2,18,B,B minor,#vii -> i -> #vii -> i
+7,V | i | V | i,V | i | V | i,D-T-D-T,2,0.32,2296 (My Funny Valentine)@4|16,2296,My Funny Valentine,4,16,B,B minor,#vii -> i -> #vii -> i
+8,ii | iii | ii | iii,ii | iii | ii | iii,S-T-S-T,2,0.32,2559 (Mother's/Father's Day Tag)@1|12,2559,Mother's/Father's Day Tag,1,12,F,F major,ii -> iii -> IV -> V
+8,ii | iii | ii | iii,ii | iii | ii | iii,S-T-S-T,2,0.32,2560 (Mother's/Father's Day Tag)@1|12,2560,Mother's/Father's Day Tag,1,12,Bb,Bb major,ii -> iii -> IV -> V
+9,iii | ii | iii | ii,iii | ii | iii | ii,T-S-T-S,2,0.32,2559 (Mother's/Father's Day Tag)@2|11,2559,Mother's/Father's Day Tag,2,11,F,F major,iii -> IV -> V -> vi
+9,iii | ii | iii | ii,iii | ii | iii | ii,T-S-T-S,2,0.32,2560 (Mother's/Father's Day Tag)@2|11,2560,Mother's/Father's Day Tag,2,11,Bb,Bb major,iii -> IV -> V -> vi
+10,ii | iii | ii | V,ii | iii | ii | V,S-T-S-D,2,0.32,2559 (Mother's/Father's Day Tag)@3|10,2559,Mother's/Father's Day Tag,3,10,F,F major,IV -> V -> vi -> V
+10,ii | iii | ii | V,ii | iii | ii | V,S-T-S-D,2,0.32,2560 (Mother's/Father's Day Tag)@3|10,2560,Mother's/Father's Day Tag,3,10,Bb,Bb major,IV -> V -> vi -> V
+11,iii | ii | V | ii,iii | ii | V | ii,T-S-D-S,2,0.32,2559 (Mother's/Father's Day Tag)@4|9,2559,Mother's/Father's Day Tag,4,9,F,F major,V -> vi -> V -> vi
+11,iii | ii | V | ii,iii | ii | V | ii,T-S-D-S,2,0.32,2560 (Mother's/Father's Day Tag)@4|9,2560,Mother's/Father's Day Tag,4,9,Bb,Bb major,V -> vi -> V -> vi
+12,ii | V | ii | V,ii | V | ii | V,S-D-S-D,2,0.32,2559 (Mother's/Father's Day Tag)@5|8,2559,Mother's/Father's Day Tag,5,8,F,F major,vi -> V -> vi -> vii
+12,ii | V | ii | V,ii | V | ii | V,S-D-S-D,2,0.32,2560 (Mother's/Father's Day Tag)@5|8,2560,Mother's/Father's Day Tag,5,8,Bb,Bb major,vi -> V -> vi -> vii
+13,V | ii | V | IVb,V | ii | V | IVb,D-S-D-X,2,0.32,2559 (Mother's/Father's Day Tag)@6|7,2559,Mother's/Father's Day Tag,6,7,F,F major,V -> vi -> vii -> I
+13,V | ii | V | IVb,V | ii | V | IVb,D-S-D-X,2,0.32,2560 (Mother's/Father's Day Tag)@6|7,2560,Mother's/Father's Day Tag,6,7,Bb,Bb major,V -> vi -> vii -> I
+14,ii | V | IVb | viøb,ii | V | IVb | viøb,S-D-X-X,2,0.32,2559 (Mother's/Father's Day Tag)@7|6,2559,Mother's/Father's Day Tag,7,6,F,F major,vi -> vii -> I -> I
+14,ii | V | IVb | viøb,ii | V | IVb | viøb,S-D-X-X,2,0.32,2560 (Mother's/Father's Day Tag)@7|6,2560,Mother's/Father's Day Tag,7,6,Bb,Bb major,vi -> vii -> I -> I
+15,V | IVb | viøb | IVb,V | IVb | viøb | IVb,D-X-X-X,2,0.32,2559 (Mother's/Father's Day Tag)@8|5,2559,Mother's/Father's Day Tag,8,5,F,F major,vii -> I -> I -> I
+15,V | IVb | viøb | IVb,V | IVb | viøb | IVb,D-X-X-X,2,0.32,2560 (Mother's/Father's Day Tag)@8|5,2560,Mother's/Father's Day Tag,8,5,Bb,Bb major,vii -> I -> I -> I
+16,v | IV | vi | ii,v | IV | vi | ii,D-S-T-S,2,0.32,2963 (Pinot Noir)@1|2,2963,Pinot Noir,1,2,Ab,Ab major,V -> I -> I -> ii
+16,v | IV | vi | ii,v | IV | vi | ii,D-S-T-S,2,0.32,3390 (Nothing Compares To You)@5|12,3390,Nothing Compares To You,5,12,F,F major,V -> ? -> ? -> IV
+17,IV | vi | ii | I,IV | vi | ii | I,S-T-S-T,2,0.32,2963 (Pinot Noir)@2|1,2963,Pinot Noir,2,1,Ab,Ab major,I -> I -> ii -> V
+17,IV | vi | ii | I,IV | vi | ii | I,S-T-S-T,2,0.32,3390 (Nothing Compares To You)@6|11,3390,Nothing Compares To You,6,11,F,F major,? -> ? -> IV -> V
+18,ii | i | ii | bII#,ii | i | ii | bII#,S-T-S-X,2,0.32,3137 (Hard Times)@9|3,3137,Hard Times,9,3,A,A major,I -> I -> I -> I
+18,ii | i | ii | bII#,ii | i | ii | bII#,S-T-S-X,2,0.32,5688 (What'll I Do)@39|2,5688,What'll I Do,39,2,D,D major,I -> I -> I -> I
+19,i | ii | bII# | I,i | ii | bII# | I,T-S-X-T,2,0.32,3137 (Hard Times)@11|2,3137,Hard Times,11,2,A,A major,I -> I -> I -> I
+19,i | ii | bII# | I,i | ii | bII# | I,T-S-X-T,2,0.32,5688 (What'll I Do)@40|1,5688,What'll I Do,40,1,D,D major,I -> I -> I -> I
+20,V | ii | V | I,V | ii | V | I,D-S-D-T,2,0.32,3772 (Telegraph Line)@56|4,3772,Telegraph Line,56,4,F,F major,ii -> I -> V -> I
+20,V | ii | V | I,V | ii | V | I,D-S-D-T,2,0.32,5388 (Grace Kelly)@24|1,5388,Grace Kelly,24,1,F,F major,V -> IV -> V -> I
+21,i | I | bVII# | I,i | I | bVII# | I,T-T-X-T,2,0.32,3853 (If I May)@1|21,3853,If I May,1,21,Ab,Ab major,I -> I -> I -> I
+21,i | I | bVII# | I,i | I | bVII# | I,T-T-X-T,2,0.32,"4074 (Love me, and the world behind)@2|21",4074,"Love me, and the world behind",2,21,E,E major,? -> I -> I -> I
+22,I | vi | I | vi,I | vi | I | vi,T-T-T-T,2,0.32,3853 (If I May)@18|5,3853,If I May,18,5,Ab,Ab major,I -> I -> I -> I
+22,I | vi | I | vi,I | vi | I | vi,T-T-T-T,2,0.32,3856 (Don't Make Toast)@20|28,3856,Don't Make Toast,20,28,Ab,Ab major,V -> vi -> V -> vi
+23,IV | ii | bVII | I,IV | ii | bVII | I,S-S-D-T,2,0.32,3858 (Cops!)@9|4,3858,Cops!,9,4,B,B major,V -> IV -> I -> I
+23,IV | ii | bVII | I,IV | ii | bVII | I,S-S-D-T,2,0.32,3859 (Shadow of The Day)@16|2,3859,Shadow of The Day,16,2,Bb,Bb major,iii -> ii -> ii -> I
+24,ii | I | IV | V,ii | I | IV | V,S-T-S-D,2,0.32,3865 (Ron Rogers Medley)@7|46,3865,Ron Rogers Medley,7,46,G,G major,ii -> I -> I -> ii
+24,ii | I | IV | V,ii | I | IV | V,S-T-S-D,2,0.32,5388 (Grace Kelly)@13|10,5388,Grace Kelly,13,10,F,F major,ii -> iii -> IV -> V
+25,IV | ii | I | IV,IV | ii | I | IV,S-S-T-S,2,0.32,3865 (Ron Rogers Medley)@16|37,3865,Ron Rogers Medley,16,37,G,G major,iii -> ii -> V -> vi
+25,IV | ii | I | IV,IV | ii | I | IV,S-S-T-S,2,0.32,3979 (It's the End of the World as We Know It)@6|9,3979,It's the End of the World as We Know It,6,9,C,C major,IV -> IV -> I -> IV
+26,I | V | I | V,I | V | I | V,T-D-T-D,2,0.32,3865 (Ron Rogers Medley)@30|23,3865,Ron Rogers Medley,30,23,G,G major,iii -> ii -> I -> V
+26,I | V | I | V,I | V | I | V,T-D-T-D,2,0.32,"4074 (Love me, and the world behind)@19|3",4074,"Love me, and the world behind",19,3,E,E major,iii -> V -> V -> vii
+27,iv | ii | iv | ii,iv | ii | iv | ii,S-S-S-S,2,0.32,3912 (The Next Ten Minutes)@1|25,3912,The Next Ten Minutes,1,25,Bb,Bb major,? -> ? -> ? -> ?
+27,iv | ii | iv | ii,iv | ii | iv | ii,S-S-S-S,2,0.32,5688 (What'll I Do)@28|13,5688,What'll I Do,28,13,D,D major,I -> I -> I -> I
+28,iii | iv | vi | iii,iii | iv | vi | iii,T-S-T-T,2,0.32,4178 (Professional Pirate)@5|16,4178,Professional Pirate,5,16,F,F major,ii -> iii -> iii -> iii
+28,iii | iv | vi | iii,iii | iv | vi | iii,T-S-T-T,2,0.32,4178 (Professional Pirate)@10|13,4178,Professional Pirate,10,13,F,F major,iii -> IV -> vi -> iii
+29,i | bVII | bVI | V,i | bVII | bVI | V,T-D-T-D,2,0.32,5377 (Reaching Out)@7|38,5377,Reaching Out,7,38,B,B minor,v -> iv -> ? -> ii
+29,i | bVII | bVI | V,i | bVII | bVI | V,T-D-T-D,2,0.32,5377 (Reaching Out)@41|10,5377,Reaching Out,41,10,B,B minor,iv -> iv -> ? -> ii
+30,iv | iii | ii | V,iv | iii | ii | V,S-T-S-D,1,0.16,1682 (My Heart Broke Last Night)@1|9,1682,My Heart Broke Last Night,1,9,G,G major,IV -> V -> IV -> IV
+31,iii | ii | V | bVI,iii | ii | V | bVI,T-S-D-T,1,0.16,1682 (My Heart Broke Last Night)@2|8,1682,My Heart Broke Last Night,2,8,G,G major,V -> IV -> IV -> bVI
+32,ii | V | bVI | bVII,ii | V | bVI | bVII,S-D-T-D,1,0.16,1682 (My Heart Broke Last Night)@3|6,1682,My Heart Broke Last Night,3,6,G,G major,IV -> IV -> bVI -> bVI
+33,V | bVI | bVII | I,V | bVI | bVII | I,D-T-D-T,1,0.16,1682 (My Heart Broke Last Night)@4|5,1682,My Heart Broke Last Night,4,5,G,G major,IV -> bVI -> bVI -> V
+34,bVI | bVII | I | vi,bVI | bVII | I | vi,T-D-T-T,1,0.16,1682 (My Heart Broke Last Night)@5|4,1682,My Heart Broke Last Night,5,4,G,G major,bVI -> bVI -> V -> vi
+35,bVII | I | vi | #IIob,bVII | I | vi | #IIob,D-T-T-X,1,0.16,1682 (My Heart Broke Last Night)@7|3,1682,My Heart Broke Last Night,7,3,G,G major,bVI -> V -> vi -> vi
+36,I | vi | #IIob | I,I | vi | #IIob | I,T-T-X-T,1,0.16,1682 (My Heart Broke Last Night)@8|2,1682,My Heart Broke Last Night,8,2,G,G major,V -> vi -> vi -> I
+37,v | vi | IV | vii,v | vi | IV | vii,D-T-S-D,1,0.16,1875 (Kansas City Dichotomy)@1|5,1875,Kansas City Dichotomy,1,5,C,C major,V -> vi -> I -> vii
+38,vi | IV | vii | vi,vi | IV | vii | vi,T-S-D-T,1,0.16,1875 (Kansas City Dichotomy)@2|4,1875,Kansas City Dichotomy,2,4,C,C major,vi -> I -> vii -> I
+39,IV | vii | vi | vii,IV | vii | vi | vii,S-D-T-D,1,0.16,1875 (Kansas City Dichotomy)@4|3,1875,Kansas City Dichotomy,4,3,C,C major,I -> vii -> I -> vii
+40,vii | vi | vii | I,vii | vi | vii | I,D-T-D-T,1,0.16,1875 (Kansas City Dichotomy)@5|2,1875,Kansas City Dichotomy,5,2,C,C major,vii -> I -> vii -> vii
+41,vi | vii | I | vi,vi | vii | I | vi,T-D-T-T,1,0.16,1875 (Kansas City Dichotomy)@6|1,1875,Kansas City Dichotomy,6,1,C,C major,I -> vii -> vii -> vi
+42,i | I | IVb | ii,i | I | IVb | ii,T-T-X-S,1,0.16,1922 (If You Wanna Light Up the World)@1|3,1922,If You Wanna Light Up the World,1,3,Eb,Eb major,I -> I -> I -> I
+43,I | IVb | ii | IVb,I | IVb | ii | IVb,T-X-S-X,1,0.16,1922 (If You Wanna Light Up the World)@2|2,1922,If You Wanna Light Up the World,2,2,Eb,Eb major,I -> I -> I -> I
+44,IVb | ii | IVb | I,IVb | ii | IVb | I,X-S-X-T,1,0.16,1922 (If You Wanna Light Up the World)@6|1,1922,If You Wanna Light Up the World,6,1,Eb,Eb major,I -> I -> I -> I
+45,I | Ib | v | I,I | Ib | v | I,T-X-D-T,1,0.16,1936 (As Like the Breeze that Blows)@1|4,1936,As Like the Breeze that Blows,1,4,C,C major,I -> bVII -> bVII -> bVII
+46,Ib | v | I | IVb,Ib | v | I | IVb,X-D-T-X,1,0.16,1936 (As Like the Breeze that Blows)@3|3,1936,As Like the Breeze that Blows,3,3,C,C major,bVII -> bVII -> bVII -> I
+47,v | I | IVb | ii,v | I | IVb | ii,D-T-X-S,1,0.16,1936 (As Like the Breeze that Blows)@5|2,1936,As Like the Breeze that Blows,5,2,C,C major,bVII -> bVII -> I -> I
+48,I | IVb | ii | I,I | IVb | ii | I,T-X-S-T,1,0.16,1936 (As Like the Breeze that Blows)@6|1,1936,As Like the Breeze that Blows,6,1,C,C major,bVII -> I -> I -> I
+49,i | vi | i | vi,i | vi | i | vi,T-T-T-T,1,0.16,2042 (And So It's Over)@1|11,2042,And So It's Over,1,11,C,C major,I -> I -> I -> I
+50,vi | i | vi | ii,vi | i | vi | ii,T-T-T-S,1,0.16,2042 (And So It's Over)@2|10,2042,And So It's Over,2,10,C,C major,I -> I -> I -> I
+51,vi | ii | vii | I,vi | ii | vii | I,T-S-D-T,1,0.16,2042 (And So It's Over)@4|7,2042,And So It's Over,4,7,C,C major,I -> I -> vii -> iii
+52,ii | vii | I | ib,ii | vii | I | ib,S-D-T-X,1,0.16,2042 (And So It's Over)@5|6,2042,And So It's Over,5,6,C,C major,I -> vii -> iii -> bIII
+53,vii | I | ib | v,vii | I | ib | v,D-T-X-D,1,0.16,2042 (And So It's Over)@6|5,2042,And So It's Over,6,5,C,C major,vii -> iii -> bIII -> ii
+54,I | ib | v | bIII,I | ib | v | bIII,T-X-D-T,1,0.16,2042 (And So It's Over)@8|4,2042,And So It's Over,8,4,C,C major,iii -> bIII -> ii -> bII
+55,ib | v | bIII | bVI#,ib | v | bIII | bVI#,X-D-T-X,1,0.16,2042 (And So It's Over)@9|3,2042,And So It's Over,9,3,C,C major,bIII -> ii -> bII -> I
+56,v | bIII | bVI# | bII#,v | bIII | bVI# | bII#,D-T-X-X,1,0.16,2042 (And So It's Over)@10|2,2042,And So It's Over,10,2,C,C major,ii -> bII -> I -> I
+57,bIII | bVI# | bII# | I,bIII | bVI# | bII# | I,T-X-X-T,1,0.16,2042 (And So It's Over)@11|1,2042,And So It's Over,11,1,C,C major,bII -> I -> I -> vii
+58,i | V | i | IV,i | V | i | IV,T-D-T-S,1,0.16,2296 (My Funny Valentine)@5|12,2296,My Funny Valentine,5,12,B,B minor,i -> #vii -> i -> #VI
+59,V | i | IV | bVI,V | i | IV | bVI,D-T-S-T,1,0.16,2296 (My Funny Valentine)@6|11,2296,My Funny Valentine,6,11,B,B minor,#vii -> i -> #VI -> i
+60,i | IV | bVI | iv,i | IV | bVI | iv,T-S-T-S,1,0.16,2296 (My Funny Valentine)@7|10,2296,My Funny Valentine,7,10,B,B minor,i -> #VI -> i -> i
+61,IV | bVI | iv | bVI,IV | bVI | iv | bVI,S-T-S-T,1,0.16,2296 (My Funny Valentine)@11|9,2296,My Funny Valentine,11,9,B,B minor,#VI -> i -> i -> i
+62,bVI | iv | bVI | bVII,bVI | iv | bVI | bVII,T-S-T-D,1,0.16,2296 (My Funny Valentine)@12|8,2296,My Funny Valentine,12,8,B,B minor,i -> i -> i -> VI
+63,iv | bVI | bVII | v,iv | bVI | bVII | v,S-T-D-D,1,0.16,2296 (My Funny Valentine)@13|7,2296,My Funny Valentine,13,7,B,B minor,i -> i -> VI -> VII
+64,bVI | bVII | v | bVII,bVI | bVII | v | bVII,T-D-D-D,1,0.16,2296 (My Funny Valentine)@14|6,2296,My Funny Valentine,14,6,B,B minor,i -> VI -> VII -> VI
+65,bVII | v | bVII | iii,bVII | v | bVII | iii,D-D-D-T,1,0.16,2296 (My Funny Valentine)@15|5,2296,My Funny Valentine,15,5,B,B minor,VI -> VII -> VI -> III
+66,v | bVII | iii | iv,v | bVII | iii | iv,D-D-T-S,1,0.16,2296 (My Funny Valentine)@16|4,2296,My Funny Valentine,16,4,B,B minor,VII -> VI -> III -> i
+67,bVII | iii | iv | II,bVII | iii | iv | II,D-T-S-S,1,0.16,2296 (My Funny Valentine)@17|2,2296,My Funny Valentine,17,2,B,B minor,VI -> III -> i -> #VI
+68,iii | iv | II | III,iii | iv | II | III,T-S-S-T,1,0.16,2296 (My Funny Valentine)@18|1,2296,My Funny Valentine,18,1,B,B minor,III -> i -> #VI -> VII
+69,v | i | ii | bIV#,v | i | ii | bIV#,D-T-S-X,1,0.16,2425 (Bow-Tie Guy)@1|14,2425,Bow-Tie Guy,1,14,C,C major,? -> ? -> IV -> iii
+70,i | ii | bIV# | I,i | ii | bIV# | I,T-S-X-T,1,0.16,2425 (Bow-Tie Guy)@2|13,2425,Bow-Tie Guy,2,13,C,C major,? -> IV -> iii -> iii
+71,ii | bIV# | I | i,ii | bIV# | I | i,S-X-T-T,1,0.16,2425 (Bow-Tie Guy)@4|12,2425,Bow-Tie Guy,4,12,C,C major,IV -> iii -> iii -> ?
+72,bIV# | I | i | vi,bIV# | I | i | vi,X-T-T-T,1,0.16,2425 (Bow-Tie Guy)@5|11,2425,Bow-Tie Guy,5,11,C,C major,iii -> iii -> ? -> iii
+73,I | i | vi | ivob,I | i | vi | ivob,T-T-T-X,1,0.16,2425 (Bow-Tie Guy)@6|10,2425,Bow-Tie Guy,6,10,C,C major,iii -> ? -> iii -> vii
+74,i | vi | ivob | iib,i | vi | ivob | iib,T-T-X-X,1,0.16,2425 (Bow-Tie Guy)@7|9,2425,Bow-Tie Guy,7,9,C,C major,? -> iii -> vii -> ii
+75,vi | ivob | iib | vi,vi | ivob | iib | vi,T-X-X-T,1,0.16,2425 (Bow-Tie Guy)@8|8,2425,Bow-Tie Guy,8,8,C,C major,iii -> vii -> ii -> I
+76,ivob | iib | vi | iv,ivob | iib | vi | iv,X-X-T-S,1,0.16,2425 (Bow-Tie Guy)@9|5,2425,Bow-Tie Guy,9,5,C,C major,vii -> ii -> I -> iii
+77,iib | vi | iv | I,iib | vi | iv | I,X-T-S-T,1,0.16,2425 (Bow-Tie Guy)@10|4,2425,Bow-Tie Guy,10,4,C,C major,ii -> I -> iii -> iii
+78,vi | iv | I | vi,vi | iv | I | vi,T-S-T-T,1,0.16,2425 (Bow-Tie Guy)@11|2,2425,Bow-Tie Guy,11,2,C,C major,I -> iii -> iii -> iii
+79,i | V | v | I,i | V | v | I,T-D-D-T,1,0.16,2475 (Wrecking Ball)@1|41,2475,Wrecking Ball,1,41,C,C major,? -> vii -> V -> I
+80,V | v | I | vii,V | v | I | vii,D-D-T-D,1,0.16,2475 (Wrecking Ball)@7|39,2475,Wrecking Ball,7,39,C,C major,vii -> V -> I -> vi
+81,v | I | vii | V,v | I | vii | V,D-T-D-D,1,0.16,2475 (Wrecking Ball)@10|38,2475,Wrecking Ball,10,38,C,C major,V -> I -> vi -> V
+82,I | vii | V | vi,I | vii | V | vi,T-D-D-T,1,0.16,2475 (Wrecking Ball)@11|37,2475,Wrecking Ball,11,37,C,C major,I -> vi -> V -> I
+83,vii | V | vi | i,vii | V | vi | i,D-D-T-T,1,0.16,2475 (Wrecking Ball)@13|36,2475,Wrecking Ball,13,36,C,C major,vi -> V -> I -> vii
+84,V | vi | i | #IVob,V | vi | i | #IVob,D-T-T-X,1,0.16,2475 (Wrecking Ball)@14|34,2475,Wrecking Ball,14,34,C,C major,V -> I -> vii -> vi
+85,vi | i | #IVob | II,vi | i | #IVob | II,T-T-X-S,1,0.16,2475 (Wrecking Ball)@15|33,2475,Wrecking Ball,15,33,C,C major,I -> vii -> vi -> vi
+86,i | #IVob | II | V,i | #IVob | II | V,T-X-S-D,1,0.16,2475 (Wrecking Ball)@16|32,2475,Wrecking Ball,16,32,C,C major,vii -> vi -> vi -> V
+87,#IVob | II | V | I,#IVob | II | V | I,X-S-D-T,1,0.16,2475 (Wrecking Ball)@18|30,2475,Wrecking Ball,18,30,C,C major,vi -> vi -> V -> I
+88,II | V | I | vii,II | V | I | vii,S-D-T-D,1,0.16,2475 (Wrecking Ball)@19|29,2475,Wrecking Ball,19,29,C,C major,vi -> V -> I -> vii
+89,V | I | vii | vi,V | I | vii | vi,D-T-D-T,1,0.16,2475 (Wrecking Ball)@20|28,2475,Wrecking Ball,20,28,C,C major,V -> I -> vii -> vi
+90,I | vii | vi | V,I | vii | vi | V,T-D-T-D,1,0.16,2475 (Wrecking Ball)@22|27,2475,Wrecking Ball,22,27,C,C major,I -> vii -> vi -> V
+91,vii | vi | V | i,vii | vi | V | i,D-T-D-T,1,0.16,2475 (Wrecking Ball)@23|26,2475,Wrecking Ball,23,26,C,C major,vii -> vi -> V -> I
+92,vi | V | i | V,vi | V | i | V,T-D-T-D,1,0.16,2475 (Wrecking Ball)@24|24,2475,Wrecking Ball,24,24,C,C major,vi -> V -> I -> vii
+93,V | i | V | II,V | i | V | II,D-T-D-S,1,0.16,2475 (Wrecking Ball)@25|22,2475,Wrecking Ball,25,22,C,C major,V -> I -> vii -> vi
+94,i | V | II | iii,i | V | II | iii,T-D-S-T,1,0.16,2475 (Wrecking Ball)@26|20,2475,Wrecking Ball,26,20,C,C major,I -> vii -> vi -> V
+95,V | II | iii | i,V | II | iii | i,D-S-T-T,1,0.16,2475 (Wrecking Ball)@28|18,2475,Wrecking Ball,28,18,C,C major,vii -> vi -> V -> I
+96,II | iii | i | V,II | iii | i | V,S-T-T-D,1,0.16,2475 (Wrecking Ball)@30|17,2475,Wrecking Ball,30,17,C,C major,vi -> V -> I -> vii
+97,iii | i | V | #IV,iii | i | V | #IV,T-T-D-S,1,0.16,2475 (Wrecking Ball)@32|16,2475,Wrecking Ball,32,16,C,C major,V -> I -> vii -> vi
+98,i | V | #IV | V,i | V | #IV | V,T-D-S-D,1,0.16,2475 (Wrecking Ball)@34|15,2475,Wrecking Ball,34,15,C,C major,I -> vii -> vi -> V
+99,V | #IV | V | I,V | #IV | V | I,D-S-D-T,1,0.16,2475 (Wrecking Ball)@35|14,2475,Wrecking Ball,35,14,C,C major,vii -> vi -> V -> ?
+100,#IV | V | I | vi,#IV | V | I | vi,S-D-T-T,1,0.16,2475 (Wrecking Ball)@36|11,2475,Wrecking Ball,36,11,C,C major,vi -> V -> ? -> vi
+101,V | I | vi | I,V | I | vi | I,D-T-T-T,1,0.16,2475 (Wrecking Ball)@37|10,2475,Wrecking Ball,37,10,C,C major,V -> ? -> vi -> I
+102,I | vi | I | v,I | vi | I | v,T-T-T-D,1,0.16,2475 (Wrecking Ball)@38|8,2475,Wrecking Ball,38,8,C,C major,? -> vi -> I -> V
+103,vi | I | v | V,vi | I | v | V,T-T-D-D,1,0.16,2475 (Wrecking Ball)@41|6,2475,Wrecking Ball,41,6,C,C major,vi -> I -> V -> V
+104,I | v | V | I,I | v | V | I,T-D-D-T,1,0.16,2475 (Wrecking Ball)@42|5,2475,Wrecking Ball,42,5,C,C major,I -> V -> V -> I
+105,v | V | I | vi,v | V | I | vi,D-D-T-T,1,0.16,2475 (Wrecking Ball)@44|3,2475,Wrecking Ball,44,3,C,C major,V -> V -> I -> vi
+106,V | I | vi | vii,V | I | vi | vii,D-T-T-D,1,0.16,2475 (Wrecking Ball)@46|2,2475,Wrecking Ball,46,2,C,C major,V -> I -> vi -> I
+107,I | vi | vii | V,I | vi | vii | V,T-T-D-D,1,0.16,2475 (Wrecking Ball)@47|1,2475,Wrecking Ball,47,1,C,C major,I -> vi -> I -> ii
+108,I | ii | I | #Vbm,I | ii | I | #Vbm,T-S-T-X,1,0.16,2501 (Lonesome Road)@1|2,2501,Lonesome Road,1,2,D,D major,vii -> ? -> ? -> ?
+109,ii | I | #Vbm | i,ii | I | #Vbm | i,S-T-X-T,1,0.16,2501 (Lonesome Road)@4|1,2501,Lonesome Road,4,1,D,D major,? -> ? -> ? -> ?
+110,v | i | I | v,v | i | I | v,D-T-T-D,1,0.16,2533 (Dreidel)@1|10,2533,Dreidel,1,10,D,D major,? -> ? -> I -> I
+111,i | I | v | I,i | I | v | I,T-T-D-T,1,0.16,2533 (Dreidel)@2|9,2533,Dreidel,2,9,D,D major,? -> I -> I -> I
+112,I | v | I | bVI#,I | v | I | bVI#,T-D-T-X,1,0.16,2533 (Dreidel)@4|8,2533,Dreidel,4,8,D,D major,I -> I -> I -> V
+113,v | I | bVI# | bVI,v | I | bVI# | bVI,D-T-X-T,1,0.16,2533 (Dreidel)@5|7,2533,Dreidel,5,7,D,D major,I -> I -> V -> bIII
+114,I | bVI# | bVI | ib,I | bVI# | bVI | ib,T-X-T-X,1,0.16,2533 (Dreidel)@6|5,2533,Dreidel,6,5,D,D major,I -> V -> bIII -> I
+115,bVI# | bVI | ib | bII#,bVI# | bVI | ib | bII#,X-T-X-X,1,0.16,2533 (Dreidel)@7|3,2533,Dreidel,7,3,D,D major,V -> bIII -> I -> I
+116,bVI | ib | bII# | bVI#,bVI | ib | bII# | bVI#,T-X-X-X,1,0.16,2533 (Dreidel)@8|2,2533,Dreidel,8,2,D,D major,bIII -> I -> I -> I
+117,ib | bII# | bVI# | I,ib | bII# | bVI# | I,X-X-X-T,1,0.16,2533 (Dreidel)@10|1,2533,Dreidel,10,1,D,D major,I -> I -> I -> ii
+118,IVb | viøb | IVb | bVII#,IVb | viøb | IVb | bVII#,X-X-X-X,1,0.16,2559 (Mother's/Father's Day Tag)@9|4,2559,Mother's/Father's Day Tag,9,4,F,F major,I -> I -> I -> bVII
+119,viøb | IVb | bVII# | ii,viøb | IVb | bVII# | ii,X-X-X-S,1,0.16,2559 (Mother's/Father's Day Tag)@10|3,2559,Mother's/Father's Day Tag,10,3,F,F major,I -> I -> bVII -> I
+120,IVb | bVII# | ii | bVII#,IVb | bVII# | ii | bVII#,X-X-S-X,1,0.16,2559 (Mother's/Father's Day Tag)@11|2,2559,Mother's/Father's Day Tag,11,2,F,F major,I -> bVII -> I -> bVII
+121,bVII# | ii | bVII# | I,bVII# | ii | bVII# | I,X-S-X-T,1,0.16,2559 (Mother's/Father's Day Tag)@12|1,2559,Mother's/Father's Day Tag,12,1,F,F major,bVII -> I -> bVII -> I
+122,IVb | viøb | IVb | ii,IVb | viøb | IVb | ii,X-X-X-S,1,0.16,2560 (Mother's/Father's Day Tag)@9|4,2560,Mother's/Father's Day Tag,9,4,Bb,Bb major,I -> I -> I -> bVII
+123,viøb | IVb | ii | I,viøb | IVb | ii | I,X-X-S-T,1,0.16,2560 (Mother's/Father's Day Tag)@10|1,2560,Mother's/Father's Day Tag,10,1,Bb,Bb major,I -> I -> bVII -> I
+124,i | vii | vi | v,i | vii | vi | v,T-D-T-D,1,0.16,2607 (Farmersonly.com)@1|26,2607,Farmersonly.com,1,26,A,A major,I -> vii -> vi -> V
+125,vii | vi | v | vi,vii | vi | v | vi,D-T-D-T,1,0.16,2607 (Farmersonly.com)@2|24,2607,Farmersonly.com,2,24,A,A major,vii -> vi -> V -> vi
+126,vi | v | vi | v,vi | v | vi | v,T-D-T-D,1,0.16,2607 (Farmersonly.com)@3|23,2607,Farmersonly.com,3,23,A,A major,vi -> V -> vi -> V
+127,v | vi | v | i,v | vi | v | i,D-T-D-T,1,0.16,2607 (Farmersonly.com)@4|22,2607,Farmersonly.com,4,22,A,A major,V -> vi -> V -> I
+128,vi | v | i | iv,vi | v | i | iv,T-D-T-S,1,0.16,2607 (Farmersonly.com)@6|21,2607,Farmersonly.com,6,21,A,A major,vi -> V -> I -> IV
+129,v | i | iv | #IV,v | i | iv | #IV,D-T-S-S,1,0.16,2607 (Farmersonly.com)@7|19,2607,Farmersonly.com,7,19,A,A major,V -> I -> IV -> #IV
+130,i | iv | #IV | v,i | iv | #IV | v,T-S-S-D,1,0.16,2607 (Farmersonly.com)@8|17,2607,Farmersonly.com,8,17,A,A major,I -> IV -> #IV -> V
+131,iv | #IV | v | bVI,iv | #IV | v | bVI,S-S-D-T,1,0.16,2607 (Farmersonly.com)@9|16,2607,Farmersonly.com,9,16,A,A major,IV -> #IV -> V -> bVI
+132,#IV | v | bVI | bIII,#IV | v | bVI | bIII,S-D-T-T,1,0.16,2607 (Farmersonly.com)@11|15,2607,Farmersonly.com,11,15,A,A major,#IV -> V -> bVI -> bIII
+133,v | bVI | bIII | bVI,v | bVI | bIII | bVI,D-T-T-T,1,0.16,2607 (Farmersonly.com)@13|14,2607,Farmersonly.com,13,14,A,A major,V -> bVI -> bIII -> bVI
+134,bVI | bIII | bVI | bVII,bVI | bIII | bVI | bVII,T-T-T-D,1,0.16,2607 (Farmersonly.com)@14|13,2607,Farmersonly.com,14,13,A,A major,bVI -> bIII -> bVI -> bVII
+135,bIII | bVI | bVII | i,bIII | bVI | bVII | i,T-T-D-T,1,0.16,2607 (Farmersonly.com)@15|12,2607,Farmersonly.com,15,12,A,A major,bIII -> bVI -> bVII -> I
+136,bVI | bVII | i | bVII,bVI | bVII | i | bVII,T-D-T-D,1,0.16,2607 (Farmersonly.com)@16|11,2607,Farmersonly.com,16,11,A,A major,bVI -> bVII -> I -> bVII
+137,bVII | i | bVII | iv,bVII | i | bVII | iv,D-T-D-S,1,0.16,2607 (Farmersonly.com)@17|10,2607,Farmersonly.com,17,10,A,A major,bVII -> I -> bVII -> IV
+138,i | bVII | iv | bVII,i | bVII | iv | bVII,T-D-S-D,1,0.16,2607 (Farmersonly.com)@18|9,2607,Farmersonly.com,18,9,A,A major,I -> bVII -> IV -> bVII
+139,bVII | iv | bVII | i,bVII | iv | bVII | i,D-S-D-T,1,0.16,2607 (Farmersonly.com)@19|8,2607,Farmersonly.com,19,8,A,A major,bVII -> IV -> bVII -> I
+140,iv | bVII | i | ii,iv | bVII | i | ii,S-D-T-S,1,0.16,2607 (Farmersonly.com)@20|7,2607,Farmersonly.com,20,7,A,A major,IV -> bVII -> I -> ii
+141,bVII | i | ii | i,bVII | i | ii | i,D-T-S-T,1,0.16,2607 (Farmersonly.com)@21|6,2607,Farmersonly.com,21,6,A,A major,bVII -> I -> ii -> I
+142,I | vi | II# | V,I | vi | II# | V,T-T-X-D,1,0.16,2697 (Loop-dee-Loop & Pull)@1|10,2697,Loop-dee-Loop & Pull,1,10,F,F major,I -> I -> I -> vii
+143,vi | II# | V | II#,vi | II# | V | II#,T-X-D-X,1,0.16,2697 (Loop-dee-Loop & Pull)@3|6,2697,Loop-dee-Loop & Pull,3,6,F,F major,I -> I -> vii -> ii
+144,II# | V | II# | V,II# | V | II# | V,X-D-X-D,1,0.16,2697 (Loop-dee-Loop & Pull)@4|4,2697,Loop-dee-Loop & Pull,4,4,F,F major,I -> vii -> ii -> ii
+145,V | II# | V | iii,V | II# | V | iii,D-X-D-T,1,0.16,2697 (Loop-dee-Loop & Pull)@5|3,2697,Loop-dee-Loop & Pull,5,3,F,F major,vii -> ii -> ii -> iii
+146,II# | V | iii | I,II# | V | iii | I,X-D-T-T,1,0.16,2697 (Loop-dee-Loop & Pull)@9|2,2697,Loop-dee-Loop & Pull,9,2,F,F major,ii -> ii -> iii -> V
+147,v | i | I | bVI,v | i | I | bVI,D-T-T-T,1,0.16,2869 (It's My Song)@1|7,2869,It's My Song,1,7,C,C major,? -> I -> I -> I
+148,i | I | bVI | i,i | I | bVI | i,T-T-T-T,1,0.16,2869 (It's My Song)@3|5,2869,It's My Song,3,5,C,C major,I -> I -> I -> I
+149,I | bVI | i | iv,I | bVI | i | iv,T-T-T-S,1,0.16,2869 (It's My Song)@4|4,2869,It's My Song,4,4,C,C major,I -> I -> I -> I
+150,bVI | i | iv | bVI,bVI | i | iv | bVI,T-T-S-T,1,0.16,2869 (It's My Song)@6|3,2869,It's My Song,6,3,C,C major,I -> I -> I -> I
+151,i | iv | bVI | ii,i | iv | bVI | ii,T-S-T-S,1,0.16,2869 (It's My Song)@8|2,2869,It's My Song,8,2,C,C major,I -> I -> I -> I
+152,iv | bVI | ii | I,iv | bVI | ii | I,S-T-S-T,1,0.16,2869 (It's My Song)@9|1,2869,It's My Song,9,1,C,C major,I -> I -> I -> I
+153,#V | #VI | #V | #I#,#V | #VI | #V | #I#,D-T-D-X,1,0.16,2905 (That Day)@1|13,2905,That Day,1,13,Eb,Eb minor,i -> i -> ? -> ?
+154,#VI | #V | #I# | ##IIIb,#VI | #V | #I# | ##IIIb,T-D-X-X,1,0.16,2905 (That Day)@2|12,2905,That Day,2,12,Eb,Eb minor,i -> ? -> ? -> ?
+155,#V | #I# | ##IIIb | #II,#V | #I# | ##IIIb | #II,D-X-X-S,1,0.16,2905 (That Day)@4|11,2905,That Day,4,11,Eb,Eb minor,? -> ? -> ? -> ?
+156,#I# | ##IIIb | #II | #IV#,#I# | ##IIIb | #II | #IV#,X-X-S-X,1,0.16,2905 (That Day)@5|10,2905,That Day,5,10,Eb,Eb minor,? -> ? -> ? -> ?
+157,##IIIb | #II | #IV# | #V,##IIIb | #II | #IV# | #V,X-S-X-D,1,0.16,2905 (That Day)@6|9,2905,That Day,6,9,Eb,Eb minor,? -> ? -> ? -> ?
+158,#II | #IV# | #V | #VI#,#II | #IV# | #V | #VI#,S-X-D-X,1,0.16,2905 (That Day)@7|8,2905,That Day,7,8,Eb,Eb minor,? -> ? -> ? -> ?
+159,#IV# | #V | #VI# | ##III,#IV# | #V | #VI# | ##III,X-D-X-T,1,0.16,2905 (That Day)@8|7,2905,That Day,8,7,Eb,Eb minor,? -> ? -> ? -> ?
+160,#V | #VI# | ##III | ##Ib,#V | #VI# | ##III | ##Ib,D-X-T-X,1,0.16,2905 (That Day)@9|6,2905,That Day,9,6,Eb,Eb minor,? -> ? -> ? -> ?
+161,#VI# | ##III | ##Ib | ##I,#VI# | ##III | ##Ib | ##I,X-T-X-T,1,0.16,2905 (That Day)@10|2,2905,That Day,10,2,Eb,Eb minor,? -> ? -> ? -> ?
+162,bIII+## | I | #I | VI#,bIII+## | I | #I | VI#,X-T-T-X,1,0.16,2962 (You are the only girl for me)@1|9,2962,You are the only girl for me,1,9,F,F major,#IV -> V -> vii -> vi
+163,I | #I | VI# | #IV,I | #I | VI# | #IV,T-T-X-S,1,0.16,2962 (You are the only girl for me)@2|8,2962,You are the only girl for me,2,8,F,F major,V -> vii -> vi -> I
+164,#I | VI# | #IV | II,#I | VI# | #IV | II,T-X-S-S,1,0.16,2962 (You are the only girl for me)@3|7,2962,You are the only girl for me,3,7,F,F major,vii -> vi -> I -> vi
+165,VI# | #IV | II | I,VI# | #IV | II | I,X-S-S-T,1,0.16,2962 (You are the only girl for me)@4|6,2962,You are the only girl for me,4,6,F,F major,vi -> I -> vi -> V
+166,#IV | II | I | II,#IV | II | I | II,S-S-T-S,1,0.16,2962 (You are the only girl for me)@5|5,2962,You are the only girl for me,5,5,F,F major,I -> vi -> V -> vi
+167,II | I | II | ii,II | I | II | ii,S-T-S-S,1,0.16,2962 (You are the only girl for me)@6|4,2962,You are the only girl for me,6,4,F,F major,vi -> V -> vi -> IV
+168,I | II | ii | vii,I | II | ii | vii,T-S-S-D,1,0.16,2962 (You are the only girl for me)@7|2,2962,You are the only girl for me,7,2,F,F major,V -> vi -> IV -> IV
+169,II | ii | vii | I,II | ii | vii | I,S-S-D-T,1,0.16,2962 (You are the only girl for me)@8|1,2962,You are the only girl for me,8,1,F,F major,vi -> IV -> IV -> iii
+170,i | III | iv | bVII,i | III | iv | bVII,T-T-S-D,1,0.16,3095 (Young or Old)@1|18,3095,Young or Old,1,18,B,B minor,i -> III -> iv -> iv
+171,III | iv | bVII | ii,III | iv | bVII | ii,T-S-D-S,1,0.16,3095 (Young or Old)@2|17,3095,Young or Old,2,17,B,B minor,III -> iv -> iv -> iv
+172,iv | bVII | ii | bII,iv | bVII | ii | bII,S-D-S-S,1,0.16,3095 (Young or Old)@3|16,3095,Young or Old,3,16,B,B minor,iv -> iv -> iv -> iv
+173,bVII | ii | bII | bII#,bVII | ii | bII | bII#,D-S-S-X,1,0.16,3095 (Young or Old)@5|15,3095,Young or Old,5,15,B,B minor,iv -> iv -> iv -> iv
+174,ii | bII | bII# | bVII,ii | bII | bII# | bVII,S-S-X-D,1,0.16,3095 (Young or Old)@6|14,3095,Young or Old,6,14,B,B minor,iv -> iv -> iv -> bII
+175,bII | bII# | bVII | bII#,bII | bII# | bVII | bII#,S-X-D-X,1,0.16,3095 (Young or Old)@7|13,3095,Young or Old,7,13,B,B minor,iv -> iv -> bII -> bII
+176,bII# | bVII | bII# | v,bII# | bVII | bII# | v,X-D-X-D,1,0.16,3095 (Young or Old)@8|12,3095,Young or Old,8,12,B,B minor,iv -> bII -> bII -> bII
+177,bVII | bII# | v | bVI,bVII | bII# | v | bVI,D-X-D-T,1,0.16,3095 (Young or Old)@9|10,3095,Young or Old,9,10,B,B minor,bII -> bII -> bII -> VII
+178,bII# | v | bVI | bII#,bII# | v | bVI | bII#,X-D-T-X,1,0.16,3095 (Young or Old)@10|6,3095,Young or Old,10,6,B,B minor,bII -> bII -> VII -> iv
+179,v | bVI | bII# | bVII,v | bVI | bII# | bVII,D-T-X-D,1,0.16,3095 (Young or Old)@11|5,3095,Young or Old,11,5,B,B minor,bII -> VII -> iv -> iv
+180,bVI | bII# | bVII | IIIb,bVI | bII# | bVII | IIIb,T-X-D-X,1,0.16,3095 (Young or Old)@13|4,3095,Young or Old,13,4,B,B minor,VII -> iv -> iv -> v
+181,bII# | bVII | IIIb | bVIb,bII# | bVII | IIIb | bVIb,X-D-X-X,1,0.16,3095 (Young or Old)@17|3,3095,Young or Old,17,3,B,B minor,iv -> iv -> v -> VII
+182,bVII | IIIb | bVIb | bVI,bVII | IIIb | bVIb | bVI,D-X-X-T,1,0.16,3095 (Young or Old)@18|1,3095,Young or Old,18,1,B,B minor,iv -> v -> VII -> v
+183,iii | V | vi | II,iii | V | vi | II,T-D-T-S,1,0.16,3098 (Young or Old)@1|9,3098,Young or Old,1,9,G,G major,iii -> V -> vi -> vi
+184,V | vi | II | #IV,V | vi | II | #IV,D-T-S-S,1,0.16,3098 (Young or Old)@2|8,3098,Young or Old,2,8,G,G major,V -> vi -> vi -> vi
+185,vi | II | #IV | IV,vi | II | #IV | IV,T-S-S-S,1,0.16,3098 (Young or Old)@3|7,3098,Young or Old,3,7,G,G major,vi -> vi -> vi -> vi
+186,II | #IV | IV | ii,II | #IV | IV | ii,S-S-S-S,1,0.16,3098 (Young or Old)@5|5,3098,Young or Old,5,5,G,G major,vi -> vi -> vi -> IV
+187,#IV | IV | ii | IV,#IV | IV | ii | IV,S-S-S-S,1,0.16,3098 (Young or Old)@6|4,3098,Young or Old,6,4,G,G major,vi -> vi -> IV -> IV
+188,IV | ii | IV | vii,IV | ii | IV | vii,S-S-S-D,1,0.16,3098 (Young or Old)@7|3,3098,Young or Old,7,3,G,G major,vi -> IV -> IV -> IV
+189,ii | IV | vii | I,ii | IV | vii | I,S-S-D-T,1,0.16,3098 (Young or Old)@9|1,3098,Young or Old,9,1,G,G major,IV -> IV -> IV -> ii
+190,iii | i | ii | i,iii | i | ii | i,T-T-S-T,1,0.16,3137 (Hard Times)@1|13,3137,Hard Times,1,13,A,A major,? -> ? -> ? -> I
+191,i | ii | i | I,i | ii | i | I,T-S-T-T,1,0.16,3137 (Hard Times)@2|12,3137,Hard Times,2,12,A,A major,? -> ? -> I -> I
+192,ii | i | I | II,ii | i | I | II,S-T-T-S,1,0.16,3137 (Hard Times)@3|11,3137,Hard Times,3,11,A,A major,? -> I -> I -> I
+193,i | I | II | i,i | I | II | i,T-T-S-T,1,0.16,3137 (Hard Times)@4|10,3137,Hard Times,4,10,A,A major,I -> I -> I -> I
+194,I | II | i | vi,I | II | i | vi,T-S-T-T,1,0.16,3137 (Hard Times)@5|9,3137,Hard Times,5,9,A,A major,I -> I -> I -> I
+195,II | i | vi | ii,II | i | vi | ii,S-T-T-S,1,0.16,3137 (Hard Times)@6|8,3137,Hard Times,6,8,A,A major,I -> I -> I -> I
+196,i | vi | ii | i,i | vi | ii | i,T-T-S-T,1,0.16,3137 (Hard Times)@7|6,3137,Hard Times,7,6,A,A major,I -> I -> I -> I
+197,vi | ii | i | ii,vi | ii | i | ii,T-S-T-S,1,0.16,3137 (Hard Times)@8|5,3137,Hard Times,8,5,A,A major,I -> I -> I -> I
+198,iv | iii | ii | I,iv | iii | ii | I,S-T-S-T,1,0.16,3266 (Zip-a-Dee-Doo-Dah)@1|21,3266,Zip-a-Dee-Doo-Dah,1,21,F,F major,I -> vii -> I -> iii
+199,iii | ii | I | vib,iii | ii | I | vib,T-S-T-X,1,0.16,3266 (Zip-a-Dee-Doo-Dah)@2|20,3266,Zip-a-Dee-Doo-Dah,2,20,F,F major,vii -> I -> iii -> I
+200,ii | I | vib | ii,ii | I | vib | ii,S-T-X-S,1,0.16,3266 (Zip-a-Dee-Doo-Dah)@3|19,3266,Zip-a-Dee-Doo-Dah,3,19,F,F major,I -> iii -> I -> ii
+201,I | vib | ii | vii,I | vib | ii | vii,T-X-S-D,1,0.16,3266 (Zip-a-Dee-Doo-Dah)@4|17,3266,Zip-a-Dee-Doo-Dah,4,17,F,F major,iii -> I -> ii -> vii
+202,vib | ii | vii | ii,vib | ii | vii | ii,X-S-D-S,1,0.16,3266 (Zip-a-Dee-Doo-Dah)@5|16,3266,Zip-a-Dee-Doo-Dah,5,16,F,F major,I -> ii -> vii -> ?
+203,ii | vii | ii | vib,ii | vii | ii | vib,S-D-S-X,1,0.16,3266 (Zip-a-Dee-Doo-Dah)@6|12,3266,Zip-a-Dee-Doo-Dah,6,12,F,F major,ii -> vii -> ? -> I
+204,vii | ii | vib | bVI,vii | ii | vib | bVI,D-S-X-T,1,0.16,3266 (Zip-a-Dee-Doo-Dah)@8|11,3266,Zip-a-Dee-Doo-Dah,8,11,F,F major,vii -> ? -> I -> I
+205,ii | vib | bVI | iii,ii | vib | bVI | iii,S-X-T-T,1,0.16,3266 (Zip-a-Dee-Doo-Dah)@9|10,3266,Zip-a-Dee-Doo-Dah,9,10,F,F major,? -> I -> I -> vii
+206,vib | bVI | iii | V,vib | bVI | iii | V,X-T-T-D,1,0.16,3266 (Zip-a-Dee-Doo-Dah)@13|9,3266,Zip-a-Dee-Doo-Dah,13,9,F,F major,I -> I -> vii -> vii
+207,bVI | iii | V | bVI,bVI | iii | V | bVI,T-T-D-T,1,0.16,3266 (Zip-a-Dee-Doo-Dah)@14|7,3266,Zip-a-Dee-Doo-Dah,14,7,F,F major,I -> vii -> vii -> bIII
+208,iii | V | bVI | vii,iii | V | bVI | vii,T-D-T-D,1,0.16,3266 (Zip-a-Dee-Doo-Dah)@15|5,3266,Zip-a-Dee-Doo-Dah,15,5,F,F major,vii -> vii -> bIII -> vii
+209,V | bVI | vii | bVI,V | bVI | vii | bVI,D-T-D-T,1,0.16,3266 (Zip-a-Dee-Doo-Dah)@16|4,3266,Zip-a-Dee-Doo-Dah,16,4,F,F major,vii -> bIII -> vii -> I
+210,bVI | vii | bVI | ii,bVI | vii | bVI | ii,T-D-T-S,1,0.16,3266 (Zip-a-Dee-Doo-Dah)@18|3,3266,Zip-a-Dee-Doo-Dah,18,3,F,F major,bIII -> vii -> I -> ii
+211,vii | bVI | ii | Ger,vii | bVI | ii | Ger,D-T-S-X,1,0.16,3266 (Zip-a-Dee-Doo-Dah)@20|2,3266,Zip-a-Dee-Doo-Dah,20,2,F,F major,vii -> I -> ii -> bIII
+212,bVI | ii | Ger | I,bVI | ii | Ger | I,T-S-X-T,1,0.16,3266 (Zip-a-Dee-Doo-Dah)@21|1,3266,Zip-a-Dee-Doo-Dah,21,1,F,F major,I -> ii -> bIII -> iii
+213,i | iii | v | i,i | iii | v | i,T-T-D-T,1,0.16,3292 (Shangri La Rags to Riches)@1|65,3292,Shangri La Rags to Riches,1,65,Eb,Eb major,? -> ? -> ? -> ?
+214,iii | v | i | vii,iii | v | i | vii,T-D-T-D,1,0.16,3292 (Shangri La Rags to Riches)@2|64,3292,Shangri La Rags to Riches,2,64,Eb,Eb major,? -> ? -> ? -> ?
+215,v | i | vii | ii,v | i | vii | ii,D-T-D-S,1,0.16,3292 (Shangri La Rags to Riches)@3|63,3292,Shangri La Rags to Riches,3,63,Eb,Eb major,? -> ? -> ? -> ?
+216,i | vii | ii | iii,i | vii | ii | iii,T-D-S-T,1,0.16,3292 (Shangri La Rags to Riches)@4|62,3292,Shangri La Rags to Riches,4,62,Eb,Eb major,? -> ? -> ? -> ?
+217,vii | ii | iii | i,vii | ii | iii | i,D-S-T-T,1,0.16,3292 (Shangri La Rags to Riches)@5|61,3292,Shangri La Rags to Riches,5,61,Eb,Eb major,? -> ? -> ? -> ?
+218,ii | iii | i | vi,ii | iii | i | vi,S-T-T-T,1,0.16,3292 (Shangri La Rags to Riches)@6|60,3292,Shangri La Rags to Riches,6,60,Eb,Eb major,? -> ? -> ? -> ?
+219,iii | i | vi | ii,iii | i | vi | ii,T-T-T-S,1,0.16,3292 (Shangri La Rags to Riches)@7|59,3292,Shangri La Rags to Riches,7,59,Eb,Eb major,? -> ? -> ? -> ii
+220,vi | ii | vii | IV,vi | ii | vii | IV,T-S-D-S,1,0.16,3292 (Shangri La Rags to Riches)@9|57,3292,Shangri La Rags to Riches,9,57,Eb,Eb major,? -> ii -> IV -> IV
+221,ii | vii | IV | ii,ii | vii | IV | ii,S-D-S-S,1,0.16,3292 (Shangri La Rags to Riches)@10|56,3292,Shangri La Rags to Riches,10,56,Eb,Eb major,ii -> IV -> IV -> ii
+222,vii | IV | ii | vii,vii | IV | ii | vii,D-S-S-D,1,0.16,3292 (Shangri La Rags to Riches)@11|55,3292,Shangri La Rags to Riches,11,55,Eb,Eb major,IV -> IV -> ii -> ii
+223,IV | ii | vii | V,IV | ii | vii | V,S-S-D-D,1,0.16,3292 (Shangri La Rags to Riches)@12|54,3292,Shangri La Rags to Riches,12,54,Eb,Eb major,IV -> ii -> ii -> ii
+224,ii | vii | V | v,ii | vii | V | v,S-D-D-D,1,0.16,3292 (Shangri La Rags to Riches)@13|48,3292,Shangri La Rags to Riches,13,48,Eb,Eb major,ii -> ii -> ii -> ?
+225,vii | V | v | iii,vii | V | v | iii,D-D-D-T,1,0.16,3292 (Shangri La Rags to Riches)@14|47,3292,Shangri La Rags to Riches,14,47,Eb,Eb major,ii -> ii -> ? -> iii
+226,V | v | iii | V,V | v | iii | V,D-D-T-D,1,0.16,3292 (Shangri La Rags to Riches)@15|45,3292,Shangri La Rags to Riches,15,45,Eb,Eb major,ii -> ? -> iii -> V
+227,v | iii | V | VI,v | iii | V | VI,D-T-D-T,1,0.16,3292 (Shangri La Rags to Riches)@21|44,3292,Shangri La Rags to Riches,21,44,Eb,Eb major,? -> iii -> V -> V
+228,iii | V | VI | VI#,iii | V | VI | VI#,T-D-T-X,1,0.16,3292 (Shangri La Rags to Riches)@22|41,3292,Shangri La Rags to Riches,22,41,Eb,Eb major,iii -> V -> V -> V
+229,V | VI | VI# | VI,V | VI | VI# | VI,D-T-X-T,1,0.16,3292 (Shangri La Rags to Riches)@24|40,3292,Shangri La Rags to Riches,24,40,Eb,Eb major,V -> V -> V -> V
+230,VI | VI# | VI | VI#,VI | VI# | VI | VI#,T-X-T-X,1,0.16,3292 (Shangri La Rags to Riches)@25|39,3292,Shangri La Rags to Riches,25,39,Eb,Eb major,V -> V -> V -> V
+231,VI# | VI | VI# | v,VI# | VI | VI# | v,X-T-X-D,1,0.16,3292 (Shangri La Rags to Riches)@28|38,3292,Shangri La Rags to Riches,28,38,Eb,Eb major,V -> V -> V -> ii
+232,VI | VI# | v | ii,VI | VI# | v | ii,T-X-D-S,1,0.16,3292 (Shangri La Rags to Riches)@29|37,3292,Shangri La Rags to Riches,29,37,Eb,Eb major,V -> V -> ii -> ii
+233,VI# | v | ii | vi,VI# | v | ii | vi,X-D-S-T,1,0.16,3292 (Shangri La Rags to Riches)@30|36,3292,Shangri La Rags to Riches,30,36,Eb,Eb major,V -> ii -> ii -> iii
+234,v | ii | vi | IV,v | ii | vi | IV,D-S-T-S,1,0.16,3292 (Shangri La Rags to Riches)@31|35,3292,Shangri La Rags to Riches,31,35,Eb,Eb major,ii -> ii -> iii -> iii
+235,ii | vi | IV | ii,ii | vi | IV | ii,S-T-S-S,1,0.16,3292 (Shangri La Rags to Riches)@32|34,3292,Shangri La Rags to Riches,32,34,Eb,Eb major,ii -> iii -> iii -> IV
+236,vi | IV | ii | IV,vi | IV | ii | IV,T-S-S-S,1,0.16,3292 (Shangri La Rags to Riches)@33|32,3292,Shangri La Rags to Riches,33,32,Eb,Eb major,iii -> iii -> IV -> iii
+237,IV | ii | IV | V,IV | ii | IV | V,S-S-S-D,1,0.16,3292 (Shangri La Rags to Riches)@34|31,3292,Shangri La Rags to Riches,34,31,Eb,Eb major,iii -> IV -> iii -> IV
+238,ii | IV | V | #IIIbm,ii | IV | V | #IIIbm,S-S-D-X,1,0.16,3292 (Shangri La Rags to Riches)@35|29,3292,Shangri La Rags to Riches,35,29,Eb,Eb major,IV -> iii -> IV -> bVI
+239,IV | V | #IIIbm | #IIIb,IV | V | #IIIbm | #IIIb,S-D-X-X,1,0.16,3292 (Shangri La Rags to Riches)@37|28,3292,Shangri La Rags to Riches,37,28,Eb,Eb major,iii -> IV -> bVI -> V
+240,V | #IIIbm | #IIIb | iii,V | #IIIbm | #IIIb | iii,D-X-X-T,1,0.16,3292 (Shangri La Rags to Riches)@38|27,3292,Shangri La Rags to Riches,38,27,Eb,Eb major,IV -> bVI -> V -> V
+241,#IIIbm | #IIIb | iii | i,#IIIbm | #IIIb | iii | i,X-X-T-T,1,0.16,3292 (Shangri La Rags to Riches)@40|20,3292,Shangri La Rags to Riches,40,20,Eb,Eb major,bVI -> V -> V -> I
+242,#IIIb | iii | i | VI,#IIIb | iii | i | VI,X-T-T-T,1,0.16,3292 (Shangri La Rags to Riches)@41|19,3292,Shangri La Rags to Riches,41,19,Eb,Eb major,V -> V -> I -> iii
+243,iii | i | VI | ii,iii | i | VI | ii,T-T-T-S,1,0.16,3292 (Shangri La Rags to Riches)@42|18,3292,Shangri La Rags to Riches,42,18,Eb,Eb major,V -> I -> iii -> IV
+244,i | VI | ii | VI,i | VI | ii | VI,T-T-S-T,1,0.16,3292 (Shangri La Rags to Riches)@49|16,3292,Shangri La Rags to Riches,49,16,Eb,Eb major,I -> iii -> IV -> iii
+245,VI | ii | VI | ii,VI | ii | VI | ii,T-S-T-S,1,0.16,3292 (Shangri La Rags to Riches)@50|15,3292,Shangri La Rags to Riches,50,15,Eb,Eb major,iii -> IV -> iii -> IV
+246,ii | VI | ii | v,ii | VI | ii | v,S-T-S-D,1,0.16,3292 (Shangri La Rags to Riches)@51|14,3292,Shangri La Rags to Riches,51,14,Eb,Eb major,IV -> iii -> IV -> ?
+247,VI | ii | v | #IV,VI | ii | v | #IV,T-S-D-S,1,0.16,3292 (Shangri La Rags to Riches)@53|13,3292,Shangri La Rags to Riches,53,13,Eb,Eb major,iii -> IV -> ? -> ?
+248,ii | v | #IV | v,ii | v | #IV | v,S-D-S-D,1,0.16,3292 (Shangri La Rags to Riches)@54|12,3292,Shangri La Rags to Riches,54,12,Eb,Eb major,IV -> ? -> ? -> ?
+249,v | #IV | v | iii,v | #IV | v | iii,D-S-D-T,1,0.16,3292 (Shangri La Rags to Riches)@55|11,3292,Shangri La Rags to Riches,55,11,Eb,Eb major,? -> ? -> ? -> ?
+250,#IV | v | iii | ii,#IV | v | iii | ii,S-D-T-S,1,0.16,3292 (Shangri La Rags to Riches)@56|10,3292,Shangri La Rags to Riches,56,10,Eb,Eb major,? -> ? -> ? -> ?
+251,v | iii | ii | i,v | iii | ii | i,D-T-S-T,1,0.16,3292 (Shangri La Rags to Riches)@57|9,3292,Shangri La Rags to Riches,57,9,Eb,Eb major,? -> ? -> ? -> ?
+252,iii | ii | i | bVI,iii | ii | i | bVI,T-S-T-T,1,0.16,3292 (Shangri La Rags to Riches)@58|8,3292,Shangri La Rags to Riches,58,8,Eb,Eb major,? -> ? -> ? -> bIII
+253,ii | i | bVI | #VI,ii | i | bVI | #VI,S-T-T-T,1,0.16,3292 (Shangri La Rags to Riches)@59|7,3292,Shangri La Rags to Riches,59,7,Eb,Eb major,? -> ? -> bIII -> IV
+254,i | bVI | #VI | vi,i | bVI | #VI | vi,T-T-T-T,1,0.16,3292 (Shangri La Rags to Riches)@60|5,3292,Shangri La Rags to Riches,60,5,Eb,Eb major,? -> bIII -> IV -> iii
+255,bVI | #VI | vi | i,bVI | #VI | vi | i,T-T-T-T,1,0.16,3292 (Shangri La Rags to Riches)@61|4,3292,Shangri La Rags to Riches,61,4,Eb,Eb major,bIII -> IV -> iii -> ?
+256,#VI | vi | i | bVII,#VI | vi | i | bVII,T-T-T-D,1,0.16,3292 (Shangri La Rags to Riches)@62|3,3292,Shangri La Rags to Riches,62,3,Eb,Eb major,IV -> iii -> ? -> ii
+257,vi | i | bVII | I,vi | i | bVII | I,T-T-D-T,1,0.16,3292 (Shangri La Rags to Riches)@64|1,3292,Shangri La Rags to Riches,64,1,Eb,Eb major,iii -> ? -> ii -> iii
+258,III# | bVII | bVII# | vi,III# | bVII | bVII# | vi,X-D-X-T,1,0.16,3390 (Nothing Compares To You)@1|20,3390,Nothing Compares To You,1,20,F,F major,bVI -> ? -> I -> vi
+259,bVII | bVII# | vi | v,bVII | bVII# | vi | v,D-X-T-D,1,0.16,3390 (Nothing Compares To You)@2|19,3390,Nothing Compares To You,2,19,F,F major,? -> I -> vi -> V
+260,bVII# | vi | v | IV,bVII# | vi | v | IV,X-T-D-S,1,0.16,3390 (Nothing Compares To You)@3|18,3390,Nothing Compares To You,3,18,F,F major,I -> vi -> V -> ?
+261,vi | v | IV | vi,vi | v | IV | vi,T-D-S-T,1,0.16,3390 (Nothing Compares To You)@4|14,3390,Nothing Compares To You,4,14,F,F major,vi -> V -> ? -> ?
+262,vi | ii | I | V,vi | ii | I | V,T-S-T-D,1,0.16,3390 (Nothing Compares To You)@10|10,3390,Nothing Compares To You,10,10,F,F major,? -> IV -> V -> V
+263,ii | I | V | iv,ii | I | V | iv,S-T-D-S,1,0.16,3390 (Nothing Compares To You)@12|8,3390,Nothing Compares To You,12,8,F,F major,IV -> V -> V -> ?
+264,I | V | iv | ii,I | V | iv | ii,T-D-S-S,1,0.16,3390 (Nothing Compares To You)@13|2,3390,Nothing Compares To You,13,2,F,F major,V -> V -> ? -> ii
+265,V | iv | ii | I,V | iv | ii | I,D-S-S-T,1,0.16,3390 (Nothing Compares To You)@14|1,3390,Nothing Compares To You,14,1,F,F major,V -> ? -> ii -> iii
+266,IV | V | ii | v,IV | V | ii | v,S-D-S-D,1,0.16,3772 (Telegraph Line)@1|56,3772,Telegraph Line,1,56,F,F major,I -> vii -> vi -> V
+267,V | ii | v | vi,V | ii | v | vi,D-S-D-T,1,0.16,3772 (Telegraph Line)@5|54,3772,Telegraph Line,5,54,F,F major,vii -> vi -> V -> vi
+268,ii | v | vi | v,ii | v | vi | v,S-D-T-D,1,0.16,3772 (Telegraph Line)@7|52,3772,Telegraph Line,7,52,F,F major,vi -> V -> vi -> V
+269,v | vi | v | I,v | vi | v | I,D-T-D-T,1,0.16,3772 (Telegraph Line)@9|51,3772,Telegraph Line,9,51,F,F major,V -> vi -> V -> iii
+270,vi | v | I | IV,vi | v | I | IV,T-D-T-S,1,0.16,3772 (Telegraph Line)@11|47,3772,Telegraph Line,11,47,F,F major,vi -> V -> iii -> ?
+271,v | I | IV | V,v | I | IV | V,D-T-S-D,1,0.16,3772 (Telegraph Line)@13|43,3772,Telegraph Line,13,43,F,F major,V -> iii -> ? -> vii
+272,I | IV | V | IV,I | IV | V | IV,T-S-D-S,1,0.16,3772 (Telegraph Line)@14|42,3772,Telegraph Line,14,42,F,F major,iii -> ? -> vii -> vi
+273,IV | V | IV | v,IV | V | IV | v,S-D-S-D,1,0.16,3772 (Telegraph Line)@18|41,3772,Telegraph Line,18,41,F,F major,? -> vii -> vi -> V
+274,V | IV | v | I,V | IV | v | I,D-S-D-T,1,0.16,3772 (Telegraph Line)@22|40,3772,Telegraph Line,22,40,F,F major,vii -> vi -> V -> I
+275,IV | v | I | iii,IV | v | I | iii,S-D-T-T,1,0.16,3772 (Telegraph Line)@23|38,3772,Telegraph Line,23,38,F,F major,vi -> V -> I -> ?
+276,v | I | iii | iiiob,v | I | iii | iiiob,D-T-T-X,1,0.16,3772 (Telegraph Line)@24|36,3772,Telegraph Line,24,36,F,F major,V -> I -> ? -> vi
+277,I | iii | iiiob | vii,I | iii | iiiob | vii,T-T-X-D,1,0.16,3772 (Telegraph Line)@25|35,3772,Telegraph Line,25,35,F,F major,I -> ? -> vi -> vii
+278,iii | iiiob | vii | IV,iii | iiiob | vii | IV,T-X-D-S,1,0.16,3772 (Telegraph Line)@27|34,3772,Telegraph Line,27,34,F,F major,? -> vi -> vii -> I
+279,iiiob | vii | IV | V,iiiob | vii | IV | V,X-D-S-D,1,0.16,3772 (Telegraph Line)@29|29,3772,Telegraph Line,29,29,F,F major,vi -> vii -> I -> vii
+280,vii | IV | V | IV,vii | IV | V | IV,D-S-D-S,1,0.16,3772 (Telegraph Line)@30|26,3772,Telegraph Line,30,26,F,F major,vii -> I -> vii -> vi
+281,IV | V | IV | iii,IV | V | IV | iii,S-D-S-T,1,0.16,3772 (Telegraph Line)@31|25,3772,Telegraph Line,31,25,F,F major,I -> vii -> vi -> V
+282,V | IV | iii | I,V | IV | iii | I,D-S-T-T,1,0.16,3772 (Telegraph Line)@36|23,3772,Telegraph Line,36,23,F,F major,vii -> vi -> V -> iii
+283,IV | iii | I | III#,IV | iii | I | III#,S-T-T-X,1,0.16,3772 (Telegraph Line)@39|21,3772,Telegraph Line,39,21,F,F major,vi -> V -> iii -> ii
+284,iii | I | III# | vi,iii | I | III# | vi,T-T-X-T,1,0.16,3772 (Telegraph Line)@40|20,3772,Telegraph Line,40,20,F,F major,V -> iii -> ii -> I
+285,I | III# | vi | IV,I | III# | vi | IV,T-X-T-S,1,0.16,3772 (Telegraph Line)@42|16,3772,Telegraph Line,42,16,F,F major,iii -> ii -> I -> I
+286,III# | vi | IV | I,III# | vi | IV | I,X-T-S-T,1,0.16,3772 (Telegraph Line)@44|11,3772,Telegraph Line,44,11,F,F major,ii -> I -> I -> iii
+287,vi | IV | I | V,vi | IV | I | V,T-S-T-D,1,0.16,3772 (Telegraph Line)@45|9,3772,Telegraph Line,45,9,F,F major,I -> I -> iii -> ii
+288,IV | I | V | ii,IV | I | V | ii,S-T-D-S,1,0.16,3772 (Telegraph Line)@49|7,3772,Telegraph Line,49,7,F,F major,I -> iii -> ii -> I
+289,I | V | ii | V,I | V | ii | V,T-D-S-D,1,0.16,3772 (Telegraph Line)@54|6,3772,Telegraph Line,54,6,F,F major,iii -> ii -> I -> V
+290,I | bVII# | I | bVI,I | bVII# | I | bVI,T-X-T-T,1,0.16,3853 (If I May)@2|17,3853,If I May,2,17,Ab,Ab major,I -> I -> I -> I
+291,bVII# | I | bVI | bVI#,bVII# | I | bVI | bVI#,X-T-T-X,1,0.16,3853 (If I May)@3|15,3853,If I May,3,15,Ab,Ab major,I -> I -> I -> I
+292,I | bVI | bVI# | ii,I | bVI | bVI# | ii,T-T-X-S,1,0.16,3853 (If I May)@5|14,3853,If I May,5,14,Ab,Ab major,I -> I -> I -> I
+293,bVI | bVI# | ii | Sw,bVI | bVI# | ii | Sw,T-X-S-X,1,0.16,3853 (If I May)@9|12,3853,If I May,9,12,Ab,Ab major,I -> I -> I -> I
+294,bVI# | ii | Sw | ii,bVI# | ii | Sw | ii,X-S-X-S,1,0.16,3853 (If I May)@11|10,3853,If I May,11,10,Ab,Ab major,I -> I -> I -> I
+295,ii | Sw | ii | Sw,ii | Sw | ii | Sw,S-X-S-X,1,0.16,3853 (If I May)@12|9,3853,If I May,12,9,Ab,Ab major,I -> I -> I -> I
+296,Sw | ii | Sw | I,Sw | ii | Sw | I,X-S-X-T,1,0.16,3853 (If I May)@14|8,3853,If I May,14,8,Ab,Ab major,I -> I -> I -> I
+297,ii | Sw | I | vi,ii | Sw | I | vi,S-X-T-T,1,0.16,3853 (If I May)@16|7,3853,If I May,16,7,Ab,Ab major,I -> I -> I -> I
+298,Sw | I | vi | I,Sw | I | vi | I,X-T-T-T,1,0.16,3853 (If I May)@17|6,3853,If I May,17,6,Ab,Ab major,I -> I -> I -> I
+299,vi | I | vi | I,vi | I | vi | I,T-T-T-T,1,0.16,3853 (If I May)@19|3,3853,If I May,19,3,Ab,Ab major,I -> I -> I -> I
+300,I | II# | IV | VI,I | II# | IV | VI,T-X-S-T,1,0.16,3856 (Don't Make Toast)@1|48,3856,Don't Make Toast,1,48,Ab,Ab major,I -> ii -> bIII -> iii
+301,II# | IV | VI | II,II# | IV | VI | II,X-S-T-S,1,0.16,3856 (Don't Make Toast)@2|47,3856,Don't Make Toast,2,47,Ab,Ab major,ii -> bIII -> iii -> #IV
+302,IV | VI | II | ii,IV | VI | II | ii,S-T-S-S,1,0.16,3856 (Don't Make Toast)@3|46,3856,Don't Make Toast,3,46,Ab,Ab major,bIII -> iii -> #IV -> IV
+303,VI | II | ii | II,VI | II | ii | II,T-S-S-S,1,0.16,3856 (Don't Make Toast)@4|45,3856,Don't Make Toast,4,45,Ab,Ab major,iii -> #IV -> IV -> iii
+304,II | ii | II | ii,II | ii | II | ii,S-S-S-S,1,0.16,3856 (Don't Make Toast)@5|44,3856,Don't Make Toast,5,44,Ab,Ab major,#IV -> IV -> iii -> ii
+305,ii | II | ii | V,ii | II | ii | V,S-S-S-D,1,0.16,3856 (Don't Make Toast)@6|43,3856,Don't Make Toast,6,43,Ab,Ab major,IV -> iii -> ii -> V
+306,II | ii | V | I,II | ii | V | I,S-S-D-T,1,0.16,3856 (Don't Make Toast)@7|40,3856,Don't Make Toast,7,40,Ab,Ab major,iii -> ii -> V -> V
+307,ii | V | I | V,ii | V | I | V,S-D-T-D,1,0.16,3856 (Don't Make Toast)@8|38,3856,Don't Make Toast,8,38,Ab,Ab major,ii -> V -> V -> V
+308,V | I | V | v,V | I | V | v,D-T-D-D,1,0.16,3856 (Don't Make Toast)@9|36,3856,Don't Make Toast,9,36,Ab,Ab major,V -> V -> V -> V
+309,I | V | v | ii,I | V | v | ii,T-D-D-S,1,0.16,3856 (Don't Make Toast)@12|35,3856,Don't Make Toast,12,35,Ab,Ab major,V -> V -> V -> V
+310,V | v | ii | V,V | v | ii | V,D-D-S-D,1,0.16,3856 (Don't Make Toast)@14|34,3856,Don't Make Toast,14,34,Ab,Ab major,V -> V -> V -> V
+311,v | ii | V | vii,v | ii | V | vii,D-S-D-D,1,0.16,3856 (Don't Make Toast)@16|33,3856,Don't Make Toast,16,33,Ab,Ab major,V -> V -> V -> ?
+312,ii | V | vii | I,ii | V | vii | I,S-D-D-T,1,0.16,3856 (Don't Make Toast)@17|32,3856,Don't Make Toast,17,32,Ab,Ab major,V -> V -> ? -> V
+313,V | vii | I | vi,V | vii | I | vi,D-D-T-T,1,0.16,3856 (Don't Make Toast)@18|30,3856,Don't Make Toast,18,30,Ab,Ab major,V -> ? -> V -> vi
+314,vii | I | vi | I,vii | I | vi | I,D-T-T-T,1,0.16,3856 (Don't Make Toast)@19|29,3856,Don't Make Toast,19,29,Ab,Ab major,? -> V -> vi -> V
+315,vi | I | vi | II,vi | I | vi | II,T-T-T-S,1,0.16,3856 (Don't Make Toast)@22|27,3856,Don't Make Toast,22,27,Ab,Ab major,vi -> V -> vi -> #IV
+316,I | vi | II | I,I | vi | II | I,T-T-S-T,1,0.16,3856 (Don't Make Toast)@23|26,3856,Don't Make Toast,23,26,Ab,Ab major,V -> vi -> #IV -> V
+317,vi | II | I | ii,vi | II | I | ii,T-S-T-S,1,0.16,3856 (Don't Make Toast)@24|25,3856,Don't Make Toast,24,25,Ab,Ab major,vi -> #IV -> V -> bVI
+318,II | I | ii | IVb,II | I | ii | IVb,S-T-S-X,1,0.16,3856 (Don't Make Toast)@25|23,3856,Don't Make Toast,25,23,Ab,Ab major,#IV -> V -> bVI -> vi
+319,I | ii | IVb | vi,I | ii | IVb | vi,T-S-X-T,1,0.16,3856 (Don't Make Toast)@26|21,3856,Don't Make Toast,26,21,Ab,Ab major,V -> bVI -> vi -> vi
+320,ii | IVb | vi | Ger,ii | IVb | vi | Ger,S-X-T-X,1,0.16,3856 (Don't Make Toast)@27|19,3856,Don't Make Toast,27,19,Ab,Ab major,bVI -> vi -> vi -> #IV
+321,IVb | vi | Ger | II#,IVb | vi | Ger | II#,X-T-X-X,1,0.16,3856 (Don't Make Toast)@29|17,3856,Don't Make Toast,29,17,Ab,Ab major,vi -> vi -> #IV -> #IV
+322,vi | Ger | II# | ii,vi | Ger | II# | ii,T-X-X-S,1,0.16,3856 (Don't Make Toast)@31|14,3856,Don't Make Toast,31,14,Ab,Ab major,vi -> #IV -> #IV -> IV
+323,Ger | II# | ii | vi,Ger | II# | ii | vi,X-X-S-T,1,0.16,3856 (Don't Make Toast)@33|12,3856,Don't Make Toast,33,12,Ab,Ab major,#IV -> #IV -> IV -> V
+324,II# | ii | vi | II#,II# | ii | vi | II#,X-S-T-X,1,0.16,3856 (Don't Make Toast)@35|11,3856,Don't Make Toast,35,11,Ab,Ab major,#IV -> IV -> V -> #IV
+325,ii | vi | II# | #IIm,ii | vi | II# | #IIm,S-T-X-X,1,0.16,3856 (Don't Make Toast)@38|10,3856,Don't Make Toast,38,10,Ab,Ab major,IV -> V -> #IV -> #IV
+326,vi | II# | #IIm | IV,vi | II# | #IIm | IV,T-X-X-S,1,0.16,3856 (Don't Make Toast)@40|8,3856,Don't Make Toast,40,8,Ab,Ab major,V -> #IV -> #IV -> IV
+327,II# | #IIm | IV | II,II# | #IIm | IV | II,X-X-S-S,1,0.16,3856 (Don't Make Toast)@41|7,3856,Don't Make Toast,41,7,Ab,Ab major,#IV -> #IV -> IV -> #IV
+328,#IIm | IV | II | bVI#,#IIm | IV | II | bVI#,X-S-S-X,1,0.16,3856 (Don't Make Toast)@42|6,3856,Don't Make Toast,42,6,Ab,Ab major,#IV -> IV -> #IV -> bVII
+329,IV | II | bVI# | i,IV | II | bVI# | i,S-S-X-T,1,0.16,3856 (Don't Make Toast)@44|5,3856,Don't Make Toast,44,5,Ab,Ab major,IV -> #IV -> bVII -> ?
+330,II | bVI# | i | ii,II | bVI# | i | ii,S-X-T-S,1,0.16,3856 (Don't Make Toast)@45|4,3856,Don't Make Toast,45,4,Ab,Ab major,#IV -> bVII -> ? -> bVI
+331,bVI# | i | ii | IVb,bVI# | i | ii | IVb,X-T-S-X,1,0.16,3856 (Don't Make Toast)@46|2,3856,Don't Make Toast,46,2,Ab,Ab major,bVII -> ? -> bVI -> vi
+332,i | ii | IVb | I,i | ii | IVb | I,T-S-X-T,1,0.16,3856 (Don't Make Toast)@47|1,3856,Don't Make Toast,47,1,Ab,Ab major,? -> bVI -> vi -> V
+333,i | IV | Ger | I,i | IV | Ger | I,T-S-X-T,1,0.16,3858 (Cops!)@1|13,3858,Cops!,1,13,B,B major,? -> IV -> #IV -> V
+334,IV | Ger | I | IV,IV | Ger | I | IV,S-X-T-S,1,0.16,3858 (Cops!)@3|11,3858,Cops!,3,11,B,B major,IV -> #IV -> V -> V
+335,Ger | I | IV | ii,Ger | I | IV | ii,X-T-S-S,1,0.16,3858 (Cops!)@6|7,3858,Cops!,6,7,B,B major,#IV -> V -> V -> IV
+336,I | IV | ii | bVII,I | IV | ii | bVII,T-S-S-D,1,0.16,3858 (Cops!)@7|5,3858,Cops!,7,5,B,B major,V -> V -> IV -> I
+337,ii | bVII | I | i,ii | bVII | I | i,S-D-T-T,1,0.16,3858 (Cops!)@13|3,3858,Cops!,13,3,B,B major,IV -> I -> I -> I
+338,bVII | I | i | vii,bVII | I | i | vii,D-T-T-D,1,0.16,3858 (Cops!)@15|2,3858,Cops!,15,2,B,B major,I -> I -> I -> I
+339,I | i | vii | I,I | i | vii | I,T-T-D-T,1,0.16,3858 (Cops!)@16|1,3858,Cops!,16,1,B,B major,I -> I -> I -> I
+340,iv | IV | bVII# | i,iv | IV | bVII# | i,S-S-X-T,1,0.16,3859 (Shadow of The Day)@1|18,3859,Shadow of The Day,1,18,Bb,Bb major,? -> iii -> ii -> I
+341,IV | bVII# | i | I,IV | bVII# | i | I,S-X-T-T,1,0.16,3859 (Shadow of The Day)@4|16,3859,Shadow of The Day,4,16,Bb,Bb major,iii -> ii -> I -> iii
+342,bVII# | i | I | vi,bVII# | i | I | vi,X-T-T-T,1,0.16,3859 (Shadow of The Day)@5|15,3859,Shadow of The Day,5,15,Bb,Bb major,ii -> I -> iii -> iii
+343,i | I | vi | I,i | I | vi | I,T-T-T-T,1,0.16,3859 (Shadow of The Day)@6|14,3859,Shadow of The Day,6,14,Bb,Bb major,I -> iii -> iii -> iii
+344,I | vi | I | ii,I | vi | I | ii,T-T-T-S,1,0.16,3859 (Shadow of The Day)@8|12,3859,Shadow of The Day,8,12,Bb,Bb major,iii -> iii -> iii -> ii
+345,vi | I | ii | IV,vi | I | ii | IV,T-T-S-S,1,0.16,3859 (Shadow of The Day)@9|11,3859,Shadow of The Day,9,11,Bb,Bb major,iii -> iii -> ii -> I
+346,I | ii | IV | v,I | ii | IV | v,T-S-S-D,1,0.16,3859 (Shadow of The Day)@10|10,3859,Shadow of The Day,10,10,Bb,Bb major,iii -> ii -> I -> V
+347,ii | IV | v | IV,ii | IV | v | IV,S-S-D-S,1,0.16,3859 (Shadow of The Day)@12|8,3859,Shadow of The Day,12,8,Bb,Bb major,ii -> I -> V -> iii
+348,IV | v | IV | ii,IV | v | IV | ii,S-D-S-S,1,0.16,3859 (Shadow of The Day)@13|7,3859,Shadow of The Day,13,7,Bb,Bb major,I -> V -> iii -> ii
+349,v | IV | ii | bVII,v | IV | ii | bVII,D-S-S-D,1,0.16,3859 (Shadow of The Day)@14|4,3859,Shadow of The Day,14,4,Bb,Bb major,V -> iii -> ii -> ii
+350,I | ii | I | iii,I | ii | I | iii,T-S-T-T,1,0.16,3865 (Ron Rogers Medley)@1|53,3865,Ron Rogers Medley,1,53,G,G major,I -> ii -> iii -> ii
+351,ii | I | iii | vi,ii | I | iii | vi,S-T-T-T,1,0.16,3865 (Ron Rogers Medley)@2|52,3865,Ron Rogers Medley,2,52,G,G major,ii -> iii -> ii -> I
+352,I | iii | vi | I,I | iii | vi | I,T-T-T-T,1,0.16,3865 (Ron Rogers Medley)@3|51,3865,Ron Rogers Medley,3,51,G,G major,iii -> ii -> I -> iii
+353,iii | vi | I | ii,iii | vi | I | ii,T-T-T-S,1,0.16,3865 (Ron Rogers Medley)@4|50,3865,Ron Rogers Medley,4,50,G,G major,ii -> I -> iii -> ii
+354,vi | I | ii | I,vi | I | ii | I,T-T-S-T,1,0.16,3865 (Ron Rogers Medley)@5|49,3865,Ron Rogers Medley,5,49,G,G major,I -> iii -> ii -> I
+355,I | IV | V | v,I | IV | V | v,T-S-D-D,1,0.16,3865 (Ron Rogers Medley)@8|45,3865,Ron Rogers Medley,8,45,G,G major,I -> I -> ii -> V
+356,IV | V | v | vi,IV | V | v | vi,S-D-D-T,1,0.16,3865 (Ron Rogers Medley)@10|44,3865,Ron Rogers Medley,10,44,G,G major,I -> ii -> V -> vi
+357,V | v | vi | I,V | v | vi | I,D-D-T-T,1,0.16,3865 (Ron Rogers Medley)@11|42,3865,Ron Rogers Medley,11,42,G,G major,ii -> V -> vi -> iii
+358,v | vi | I | IV,v | vi | I | IV,D-T-T-S,1,0.16,3865 (Ron Rogers Medley)@12|41,3865,Ron Rogers Medley,12,41,G,G major,V -> vi -> iii -> iii
+359,vi | I | IV | ii,vi | I | IV | ii,T-T-S-S,1,0.16,3865 (Ron Rogers Medley)@13|40,3865,Ron Rogers Medley,13,40,G,G major,vi -> iii -> iii -> ii
+360,I | IV | ii | IV,I | IV | ii | IV,T-S-S-S,1,0.16,3865 (Ron Rogers Medley)@19|35,3865,Ron Rogers Medley,19,35,G,G major,V -> vi -> vi -> vi
+361,IV | ii | IV | vi,IV | ii | IV | vi,S-S-S-T,1,0.16,3865 (Ron Rogers Medley)@20|34,3865,Ron Rogers Medley,20,34,G,G major,vi -> vi -> vi -> iii
+362,ii | IV | vi | iii,ii | IV | vi | iii,S-S-T-T,1,0.16,3865 (Ron Rogers Medley)@21|32,3865,Ron Rogers Medley,21,32,G,G major,vi -> vi -> iii -> iii
+363,IV | vi | iii | IV,IV | vi | iii | IV,S-T-T-S,1,0.16,3865 (Ron Rogers Medley)@22|31,3865,Ron Rogers Medley,22,31,G,G major,vi -> iii -> iii -> V
+364,vi | iii | IV | ii,vi | iii | IV | ii,T-T-S-S,1,0.16,3865 (Ron Rogers Medley)@23|29,3865,Ron Rogers Medley,23,29,G,G major,iii -> iii -> V -> ii
+365,iii | IV | ii | iiøb,iii | IV | ii | iiøb,T-S-S-X,1,0.16,3865 (Ron Rogers Medley)@25|28,3865,Ron Rogers Medley,25,28,G,G major,iii -> V -> ii -> IV
+366,IV | ii | iiøb | I,IV | ii | iiøb | I,S-S-X-T,1,0.16,3865 (Ron Rogers Medley)@26|27,3865,Ron Rogers Medley,26,27,G,G major,V -> ii -> IV -> iii
+367,ii | iiøb | I | V,ii | iiøb | I | V,S-X-T-D,1,0.16,3865 (Ron Rogers Medley)@28|26,3865,Ron Rogers Medley,28,26,G,G major,ii -> IV -> iii -> ii
+368,iiøb | I | V | I,iiøb | I | V | I,X-T-D-T,1,0.16,3865 (Ron Rogers Medley)@29|25,3865,Ron Rogers Medley,29,25,G,G major,IV -> iii -> ii -> I
+369,V | I | V | I,V | I | V | I,D-T-D-T,1,0.16,3865 (Ron Rogers Medley)@31|22,3865,Ron Rogers Medley,31,22,G,G major,ii -> I -> V -> iii
+370,I | V | I | IV,I | V | I | IV,T-D-T-S,1,0.16,3865 (Ron Rogers Medley)@32|21,3865,Ron Rogers Medley,32,21,G,G major,I -> V -> iii -> I
+371,V | I | IV | V,V | I | IV | V,D-T-S-D,1,0.16,3865 (Ron Rogers Medley)@34|20,3865,Ron Rogers Medley,34,20,G,G major,V -> iii -> I -> ii
+372,I | IV | V | vi,I | IV | V | vi,T-S-D-T,1,0.16,3865 (Ron Rogers Medley)@35|19,3865,Ron Rogers Medley,35,19,G,G major,iii -> I -> ii -> vi
+373,IV | V | vi | bVII#,IV | V | vi | bVII#,S-D-T-X,1,0.16,3865 (Ron Rogers Medley)@36|14,3865,Ron Rogers Medley,36,14,G,G major,I -> ii -> vi -> bVII
+374,V | vi | bVII# | ii,V | vi | bVII# | ii,D-T-X-S,1,0.16,3865 (Ron Rogers Medley)@37|13,3865,Ron Rogers Medley,37,13,G,G major,ii -> vi -> bVII -> vi
+375,vi | bVII# | ii | I,vi | bVII# | ii | I,T-X-S-T,1,0.16,3865 (Ron Rogers Medley)@38|12,3865,Ron Rogers Medley,38,12,G,G major,vi -> bVII -> vi -> I
+376,bVII# | ii | I | IVb,bVII# | ii | I | IVb,X-S-T-X,1,0.16,3865 (Ron Rogers Medley)@43|11,3865,Ron Rogers Medley,43,11,G,G major,bVII -> vi -> I -> I
+377,ii | I | IVb | bVI,ii | I | IVb | bVI,S-T-X-T,1,0.16,3865 (Ron Rogers Medley)@44|9,3865,Ron Rogers Medley,44,9,G,G major,vi -> I -> I -> I
+378,I | IVb | bVI | iv,I | IVb | bVI | iv,T-X-T-S,1,0.16,3865 (Ron Rogers Medley)@45|8,3865,Ron Rogers Medley,45,8,G,G major,I -> I -> I -> I
+379,IVb | bVI | iv | i,IVb | bVI | iv | i,X-T-S-T,1,0.16,3865 (Ron Rogers Medley)@46|7,3865,Ron Rogers Medley,46,7,G,G major,I -> I -> I -> I
+380,bVI | iv | i | bVI#,bVI | iv | i | bVI#,T-S-T-X,1,0.16,3865 (Ron Rogers Medley)@48|6,3865,Ron Rogers Medley,48,6,G,G major,I -> I -> I -> I
+381,iv | i | bVI# | I,iv | i | bVI# | I,S-T-X-T,1,0.16,3865 (Ron Rogers Medley)@49|5,3865,Ron Rogers Medley,49,5,G,G major,I -> I -> I -> I
+382,i | bVI# | I | IV,i | bVI# | I | IV,T-X-T-S,1,0.16,3865 (Ron Rogers Medley)@50|3,3865,Ron Rogers Medley,50,3,G,G major,I -> I -> I -> I
+383,bVI# | I | IV | ii,bVI# | I | IV | ii,X-T-S-S,1,0.16,3865 (Ron Rogers Medley)@51|2,3865,Ron Rogers Medley,51,2,G,G major,I -> I -> I -> I
+384,I | II | I | vi,I | II | I | vi,T-S-T-T,1,0.16,3868 (I was Born Under a Wand'rin' Star)@1|13,3868,I was Born Under a Wand'rin' Star,1,13,Eb,Eb major,V -> vi -> I -> I
+385,II | I | vi | vii#,II | I | vi | vii#,S-T-T-X,1,0.16,3868 (I was Born Under a Wand'rin' Star)@2|11,3868,I was Born Under a Wand'rin' Star,2,11,Eb,Eb major,vi -> I -> I -> ?
+386,I | vi | vii# | vi,I | vi | vii# | vi,T-T-X-T,1,0.16,3868 (I was Born Under a Wand'rin' Star)@3|10,3868,I was Born Under a Wand'rin' Star,3,10,Eb,Eb major,I -> I -> ? -> vi
+387,vi | vii# | vi | IV,vi | vii# | vi | IV,T-X-T-S,1,0.16,3868 (I was Born Under a Wand'rin' Star)@4|9,3868,I was Born Under a Wand'rin' Star,4,9,Eb,Eb major,I -> ? -> vi -> I
+388,vii# | vi | IV | ii,vii# | vi | IV | ii,X-T-S-S,1,0.16,3868 (I was Born Under a Wand'rin' Star)@6|8,3868,I was Born Under a Wand'rin' Star,6,8,Eb,Eb major,? -> vi -> I -> I
+389,vi | IV | ii | vi,vi | IV | ii | vi,T-S-S-T,1,0.16,3868 (I was Born Under a Wand'rin' Star)@7|7,3868,I was Born Under a Wand'rin' Star,7,7,Eb,Eb major,vi -> I -> I -> vi
+390,IV | ii | vi | I,IV | ii | vi | I,S-S-T-T,1,0.16,3868 (I was Born Under a Wand'rin' Star)@8|6,3868,I was Born Under a Wand'rin' Star,8,6,Eb,Eb major,I -> I -> vi -> bVII
+391,ii | vi | I | IV,ii | vi | I | IV,S-T-T-S,1,0.16,3868 (I was Born Under a Wand'rin' Star)@9|5,3868,I was Born Under a Wand'rin' Star,9,5,Eb,Eb major,I -> vi -> bVII -> vi
+392,vi | I | IV | i+b,vi | I | IV | i+b,T-T-S-X,1,0.16,3868 (I was Born Under a Wand'rin' Star)@10|3,3868,I was Born Under a Wand'rin' Star,10,3,Eb,Eb major,vi -> bVII -> vi -> bVI
+393,I | IV | i+b | bVII#,I | IV | i+b | bVII#,T-S-X-X,1,0.16,3868 (I was Born Under a Wand'rin' Star)@11|2,3868,I was Born Under a Wand'rin' Star,11,2,Eb,Eb major,bVII -> vi -> bVI -> IV
+394,IV | i+b | bVII# | I,IV | i+b | bVII# | I,S-X-X-T,1,0.16,3868 (I was Born Under a Wand'rin' Star)@12|1,3868,I was Born Under a Wand'rin' Star,12,1,Eb,Eb major,vi -> bVI -> IV -> V
+395,bII | IV# | bVII | iv,bII | IV# | bVII | iv,S-X-D-S,1,0.16,3870 (Mary Had a Little Lamb)@1|27,3870,Mary Had a Little Lamb,1,27,B,B minor,iv -> III -> bII -> III
+396,IV# | bVII | iv | ii,IV# | bVII | iv | ii,X-D-S-S,1,0.16,3870 (Mary Had a Little Lamb)@2|26,3870,Mary Had a Little Lamb,2,26,B,B minor,III -> bII -> III -> ii
+397,bVII | iv | ii | bVII,bVII | iv | ii | bVII,D-S-S-D,1,0.16,3870 (Mary Had a Little Lamb)@3|25,3870,Mary Had a Little Lamb,3,25,B,B minor,bII -> III -> ii -> ii
+398,iv | ii | bVII | III,iv | ii | bVII | III,S-S-D-T,1,0.16,3870 (Mary Had a Little Lamb)@4|24,3870,Mary Had a Little Lamb,4,24,B,B minor,III -> ii -> ii -> v
+399,ii | bVII | III | V#,ii | bVII | III | V#,S-D-T-X,1,0.16,3870 (Mary Had a Little Lamb)@5|23,3870,Mary Had a Little Lamb,5,23,B,B minor,ii -> ii -> v -> v
+400,bVII | III | V# | viø#,bVII | III | V# | viø#,D-T-X-X,1,0.16,3870 (Mary Had a Little Lamb)@6|22,3870,Mary Had a Little Lamb,6,22,B,B minor,ii -> v -> v -> III
+401,III | V# | viø# | IV,III | V# | viø# | IV,T-X-X-S,1,0.16,3870 (Mary Had a Little Lamb)@7|21,3870,Mary Had a Little Lamb,7,21,B,B minor,v -> v -> III -> III
+402,V# | viø# | IV | bVIb,V# | viø# | IV | bVIb,X-X-S-X,1,0.16,3870 (Mary Had a Little Lamb)@8|20,3870,Mary Had a Little Lamb,8,20,B,B minor,v -> III -> III -> III
+403,viø# | IV | bVIb | iv,viø# | IV | bVIb | iv,X-S-X-S,1,0.16,3870 (Mary Had a Little Lamb)@9|19,3870,Mary Had a Little Lamb,9,19,B,B minor,III -> III -> III -> III
+404,IV | bVIb | iv | III,IV | bVIb | iv | III,S-X-S-T,1,0.16,3870 (Mary Had a Little Lamb)@10|18,3870,Mary Had a Little Lamb,10,18,B,B minor,III -> III -> III -> III
+405,bVIb | iv | III | bV#,bVIb | iv | III | bV#,X-S-T-X,1,0.16,3870 (Mary Had a Little Lamb)@11|16,3870,Mary Had a Little Lamb,11,16,B,B minor,III -> III -> III -> #IV
+406,iv | III | bV# | v,iv | III | bV# | v,S-T-X-D,1,0.16,3870 (Mary Had a Little Lamb)@12|15,3870,Mary Had a Little Lamb,12,15,B,B minor,III -> III -> #IV -> v
+407,III | bV# | v | vob,III | bV# | v | vob,T-X-D-X,1,0.16,3870 (Mary Had a Little Lamb)@13|14,3870,Mary Had a Little Lamb,13,14,B,B minor,III -> #IV -> v -> v
+408,bV# | v | vob | bIII,bV# | v | vob | bIII,X-D-X-T,1,0.16,3870 (Mary Had a Little Lamb)@15|13,3870,Mary Had a Little Lamb,15,13,B,B minor,#IV -> v -> v -> #IV
+409,v | vob | bIII | bV,v | vob | bIII | bV,D-X-T-D,1,0.16,3870 (Mary Had a Little Lamb)@16|12,3870,Mary Had a Little Lamb,16,12,B,B minor,v -> v -> #IV -> #III
+410,vob | bIII | bV | ivb,vob | bIII | bV | ivb,X-T-D-X,1,0.16,3870 (Mary Had a Little Lamb)@17|11,3870,Mary Had a Little Lamb,17,11,B,B minor,v -> #IV -> #III -> ii
+411,bIII | bV | ivb | iv,bIII | bV | ivb | iv,T-D-X-S,1,0.16,3870 (Mary Had a Little Lamb)@18|10,3870,Mary Had a Little Lamb,18,10,B,B minor,#IV -> #III -> ii -> III
+412,bV | ivb | iv | III,bV | ivb | iv | III,D-X-S-T,1,0.16,3870 (Mary Had a Little Lamb)@19|9,3870,Mary Had a Little Lamb,19,9,B,B minor,#III -> ii -> III -> iv
+413,ivb | iv | III | v,ivb | iv | III | v,X-S-T-D,1,0.16,3870 (Mary Had a Little Lamb)@20|8,3870,Mary Had a Little Lamb,20,8,B,B minor,ii -> III -> iv -> iv
+414,iv | III | v | I#,iv | III | v | I#,S-T-D-X,1,0.16,3870 (Mary Had a Little Lamb)@21|7,3870,Mary Had a Little Lamb,21,7,B,B minor,III -> iv -> iv -> #III
+415,III | v | I# | IV#,III | v | I# | IV#,T-D-X-X,1,0.16,3870 (Mary Had a Little Lamb)@22|5,3870,Mary Had a Little Lamb,22,5,B,B minor,iv -> iv -> #III -> iv
+416,v | I# | IV# | viø#,v | I# | IV# | viø#,D-X-X-X,1,0.16,3870 (Mary Had a Little Lamb)@23|3,3870,Mary Had a Little Lamb,23,3,B,B minor,iv -> #III -> iv -> v
+417,I# | IV# | viø# | ii,I# | IV# | viø# | ii,X-X-X-S,1,0.16,3870 (Mary Had a Little Lamb)@24|2,3870,Mary Had a Little Lamb,24,2,B,B minor,#III -> iv -> v -> iv
+418,IV# | viø# | ii | I,IV# | viø# | ii | I,X-X-S-T,1,0.16,3870 (Mary Had a Little Lamb)@26|1,3870,Mary Had a Little Lamb,26,1,B,B minor,iv -> v -> iv -> v
+419,vi# | v | v# | #III,vi# | v | v# | #III,X-D-X-T,1,0.16,3883 (This Is How You Voice Lead)@1|6,3883,This Is How You Voice Lead,1,6,F,F minor,#vii -> ? -> ? -> ?
+420,v | v# | #III | bVI,v | v# | #III | bVI,D-X-T-T,1,0.16,3883 (This Is How You Voice Lead)@2|5,3883,This Is How You Voice Lead,2,5,F,F minor,? -> ? -> ? -> VII
+421,v# | #III | bVI | bVII,v# | #III | bVI | bVII,X-T-T-D,1,0.16,3883 (This Is How You Voice Lead)@3|2,3883,This Is How You Voice Lead,3,2,F,F minor,? -> ? -> VII -> VII
+422,#III | bVI | bVII | I#,#III | bVI | bVII | I#,T-T-D-X,1,0.16,3883 (This Is How You Voice Lead)@4|1,3883,This Is How You Voice Lead,4,1,F,F minor,? -> VII -> VII -> #vii
+423,ii | iv | ii | iv,ii | iv | ii | iv,S-S-S-S,1,0.16,3912 (The Next Ten Minutes)@3|24,3912,The Next Ten Minutes,3,24,Bb,Bb major,? -> ? -> ? -> ?
+424,iv | ii | iv | iii,iv | ii | iv | iii,S-S-S-T,1,0.16,3912 (The Next Ten Minutes)@4|23,3912,The Next Ten Minutes,4,23,Bb,Bb major,? -> ? -> ? -> vii
+425,ii | iv | iii | I,ii | iv | iii | I,S-S-T-T,1,0.16,3912 (The Next Ten Minutes)@5|19,3912,The Next Ten Minutes,5,19,Bb,Bb major,? -> ? -> vii -> V
+426,iv | iii | I | iii,iv | iii | I | iii,S-T-T-T,1,0.16,3912 (The Next Ten Minutes)@6|18,3912,The Next Ten Minutes,6,18,Bb,Bb major,? -> vii -> V -> V
+427,iii | I | iii | I,iii | I | iii | I,T-T-T-T,1,0.16,3912 (The Next Ten Minutes)@7|17,3912,The Next Ten Minutes,7,17,Bb,Bb major,vii -> V -> V -> V
+428,I | iii | I | iii,I | iii | I | iii,T-T-T-T,1,0.16,3912 (The Next Ten Minutes)@11|16,3912,The Next Ten Minutes,11,16,Bb,Bb major,V -> V -> V -> V
+429,iii | I | iii | iv,iii | I | iii | iv,T-T-T-S,1,0.16,3912 (The Next Ten Minutes)@12|15,3912,The Next Ten Minutes,12,15,Bb,Bb major,V -> V -> V -> bVI
+430,I | iii | iv | ii,I | iii | iv | ii,T-T-S-S,1,0.16,3912 (The Next Ten Minutes)@13|13,3912,The Next Ten Minutes,13,13,Bb,Bb major,V -> V -> bVI -> bVI
+431,iii | iv | ii | i,iii | iv | ii | i,T-S-S-T,1,0.16,3912 (The Next Ten Minutes)@14|12,3912,The Next Ten Minutes,14,12,Bb,Bb major,V -> bVI -> bVI -> ?
+432,iv | ii | i | IV,iv | ii | i | IV,S-S-T-S,1,0.16,3912 (The Next Ten Minutes)@15|11,3912,The Next Ten Minutes,15,11,Bb,Bb major,bVI -> bVI -> ? -> vi
+433,ii | i | IV | I,ii | i | IV | I,S-T-S-T,1,0.16,3912 (The Next Ten Minutes)@17|10,3912,The Next Ten Minutes,17,10,Bb,Bb major,bVI -> ? -> vi -> V
+434,i | IV | I | ii,i | IV | I | ii,T-S-T-S,1,0.16,3912 (The Next Ten Minutes)@18|9,3912,The Next Ten Minutes,18,9,Bb,Bb major,? -> vi -> V -> IV
+435,IV | I | ii | I,IV | I | ii | I,S-T-S-T,1,0.16,3912 (The Next Ten Minutes)@19|7,3912,The Next Ten Minutes,19,7,Bb,Bb major,vi -> V -> IV -> iii
+436,I | IV | ii | bII#,I | IV | ii | bII#,T-S-S-X,1,0.16,3912 (The Next Ten Minutes)@23|3,3912,The Next Ten Minutes,23,3,Bb,Bb major,iii -> vi -> vi -> IV
+437,IV | ii | bII# | bVII#,IV | ii | bII# | bVII#,S-S-X-X,1,0.16,3912 (The Next Ten Minutes)@24|2,3912,The Next Ten Minutes,24,2,Bb,Bb major,vi -> vi -> IV -> IV
+438,ii | bII# | bVII# | I,ii | bII# | bVII# | I,S-X-X-T,1,0.16,3912 (The Next Ten Minutes)@26|1,3912,The Next Ten Minutes,26,1,Bb,Bb major,vi -> IV -> IV -> iii
+439,iii | ii | I | IV,iii | ii | I | IV,T-S-T-S,1,0.16,3979 (It's the End of the World as We Know It)@1|12,3979,It's the End of the World as We Know It,1,12,C,C major,? -> ? -> iii -> IV
+440,ii | I | IV | v,ii | I | IV | v,S-T-S-D,1,0.16,3979 (It's the End of the World as We Know It)@7|7,3979,It's the End of the World as We Know It,7,7,C,C major,IV -> I -> IV -> V
+441,I | IV | v | iii,I | IV | v | iii,T-S-D-T,1,0.16,3979 (It's the End of the World as We Know It)@8|5,3979,It's the End of the World as We Know It,8,5,C,C major,I -> IV -> V -> iii
+442,IV | v | iii | bVII##,IV | v | iii | bVII##,S-D-T-X,1,0.16,3979 (It's the End of the World as We Know It)@9|4,3979,It's the End of the World as We Know It,9,4,C,C major,IV -> V -> iii -> I
+443,v | iii | bVII## | iv,v | iii | bVII## | iv,D-T-X-S,1,0.16,3979 (It's the End of the World as We Know It)@11|3,3979,It's the End of the World as We Know It,11,3,C,C major,V -> iii -> I -> I
+444,iii | bVII## | iv | ii,iii | bVII## | iv | ii,T-X-S-S,1,0.16,3979 (It's the End of the World as We Know It)@13|2,3979,It's the End of the World as We Know It,13,2,C,C major,iii -> I -> I -> I
+445,bVII## | iv | ii | I,bVII## | iv | ii | I,X-S-S-T,1,0.16,3979 (It's the End of the World as We Know It)@14|1,3979,It's the End of the World as We Know It,14,1,C,C major,I -> I -> I -> I
+446,i | II | Ib | IV,i | II | Ib | IV,T-S-X-S,1,0.16,4003 (DuckTales)@1|14,4003,DuckTales,1,14,G,G major,I -> ii -> iii -> IV
+447,II | Ib | IV | bVI,II | Ib | IV | bVI,S-X-S-T,1,0.16,4003 (DuckTales)@4|11,4003,DuckTales,4,11,G,G major,ii -> iii -> IV -> bIII
+448,Ib | IV | bVI | bVII,Ib | IV | bVI | bVII,X-S-T-D,1,0.16,4003 (DuckTales)@7|8,4003,DuckTales,7,8,G,G major,iii -> IV -> bIII -> IV
+449,IV | bVI | bVII | i,IV | bVI | bVII | i,S-T-D-T,1,0.16,4003 (DuckTales)@10|5,4003,DuckTales,10,5,G,G major,IV -> bIII -> IV -> ?
+450,bVI | bVII | i | IV,bVI | bVII | i | IV,T-D-T-S,1,0.16,4003 (DuckTales)@13|4,4003,DuckTales,13,4,G,G major,bIII -> IV -> ? -> IV
+451,bVII | i | IV | I,bVII | i | IV | I,D-T-S-T,1,0.16,4003 (DuckTales)@16|3,4003,DuckTales,16,3,G,G major,IV -> ? -> IV -> V
+452,V | i | I | bVII#,V | i | I | bVII#,D-T-T-X,1,0.16,"4074 (Love me, and the world behind)@1|22",4074,"Love me, and the world behind",1,22,E,E major,? -> ? -> I -> I
+453,I | bVII# | I | ii,I | bVII# | I | ii,T-X-T-S,1,0.16,"4074 (Love me, and the world behind)@3|19",4074,"Love me, and the world behind",3,19,E,E major,I -> I -> I -> I
+454,bVII# | I | ii | vi,bVII# | I | ii | vi,X-T-S-T,1,0.16,"4074 (Love me, and the world behind)@4|18",4074,"Love me, and the world behind",4,18,E,E major,I -> I -> I -> I
+455,I | ii | vi | ii,I | ii | vi | ii,T-S-T-S,1,0.16,"4074 (Love me, and the world behind)@5|17",4074,"Love me, and the world behind",5,17,E,E major,I -> I -> I -> I
+456,ii | vi | ii | bII#,ii | vi | ii | bII#,S-T-S-X,1,0.16,"4074 (Love me, and the world behind)@7|16",4074,"Love me, and the world behind",7,16,E,E major,I -> I -> I -> I
+457,vi | ii | bII# | I,vi | ii | bII# | I,T-S-X-T,1,0.16,"4074 (Love me, and the world behind)@8|15",4074,"Love me, and the world behind",8,15,E,E major,I -> I -> I -> I
+458,ii | bII# | I | II#,ii | bII# | I | II#,S-X-T-X,1,0.16,"4074 (Love me, and the world behind)@9|13",4074,"Love me, and the world behind",9,13,E,E major,I -> I -> I -> I
+459,bII# | I | II# | Ger,bII# | I | II# | Ger,X-T-X-X,1,0.16,"4074 (Love me, and the world behind)@10|9",4074,"Love me, and the world behind",10,9,E,E major,I -> I -> I -> bIII
+460,I | II# | Ger | I,I | II# | Ger | I,T-X-X-T,1,0.16,"4074 (Love me, and the world behind)@11|7",4074,"Love me, and the world behind",11,7,E,E major,I -> I -> bIII -> iii
+461,II# | Ger | I | V,II# | Ger | I | V,X-X-T-D,1,0.16,"4074 (Love me, and the world behind)@13|5",4074,"Love me, and the world behind",13,5,E,E major,I -> bIII -> iii -> V
+462,Ger | I | V | I,Ger | I | V | I,X-T-D-T,1,0.16,"4074 (Love me, and the world behind)@17|4",4074,"Love me, and the world behind",17,4,E,E major,bIII -> iii -> V -> V
+463,V | I | V | iii,V | I | V | iii,D-T-D-T,1,0.16,"4074 (Love me, and the world behind)@21|2",4074,"Love me, and the world behind",21,2,E,E major,V -> V -> vii -> vii
+464,I | V | iii | V,I | V | iii | V,T-D-T-D,1,0.16,"4074 (Love me, and the world behind)@22|1",4074,"Love me, and the world behind",22,1,E,E major,V -> vii -> vii -> vii
+465,i | ii | iii | iv,i | ii | iii | iv,T-S-T-S,1,0.16,4178 (Professional Pirate)@1|18,4178,Professional Pirate,1,18,F,F major,? -> I -> ii -> iii
+466,ii | iii | iv | vi,ii | iii | iv | vi,S-T-S-T,1,0.16,4178 (Professional Pirate)@2|17,4178,Professional Pirate,2,17,F,F major,I -> ii -> iii -> iii
+467,iv | vi | iii | iv,iv | vi | iii | iv,S-T-T-S,1,0.16,4178 (Professional Pirate)@8|15,4178,Professional Pirate,8,15,F,F major,iii -> iii -> iii -> IV
+468,vi | iii | iv | vi,vi | iii | iv | vi,T-T-S-T,1,0.16,4178 (Professional Pirate)@9|14,4178,Professional Pirate,9,14,F,F major,iii -> iii -> IV -> vi
+469,iv | vi | iii | I,iv | vi | iii | I,S-T-T-T,1,0.16,4178 (Professional Pirate)@11|12,4178,Professional Pirate,11,12,F,F major,IV -> vi -> iii -> V
+470,vi | iii | I | v,vi | iii | I | v,T-T-T-D,1,0.16,4178 (Professional Pirate)@12|8,4178,Professional Pirate,12,8,F,F major,vi -> iii -> V -> V
+471,iii | I | v | i,iii | I | v | i,T-T-D-T,1,0.16,4178 (Professional Pirate)@13|4,4178,Professional Pirate,13,4,F,F major,iii -> V -> V -> I
+472,I | v | i | vi,I | v | i | vi,T-D-T-T,1,0.16,4178 (Professional Pirate)@14|3,4178,Professional Pirate,14,3,F,F major,V -> V -> I -> I
+473,v | i | vi | vii,v | i | vi | vii,D-T-T-D,1,0.16,4178 (Professional Pirate)@18|2,4178,Professional Pirate,18,2,F,F major,V -> I -> I -> I
+474,i | vi | vii | I,i | vi | vii | I,T-T-D-T,1,0.16,4178 (Professional Pirate)@22|1,4178,Professional Pirate,22,1,F,F major,I -> I -> I -> I
+475,bI | bbVI# | bbVII | bbII,bI | bbVI# | bbVII | bbII,T-X-D-S,1,0.16,4293 (Gaston (Parody))@1|26,4293,Gaston (Parody),1,26,C#,C# major,vii -> vii -> I -> I
+476,bbVI# | bbVII | bbII | bbVII,bbVI# | bbVII | bbII | bbVII,X-D-S-D,1,0.16,4293 (Gaston (Parody))@2|21,4293,Gaston (Parody),2,21,C#,C# major,vii -> I -> I -> I
+477,bbVII | bbII | bbVII | bbVIIm,bbVII | bbII | bbVII | bbVIIm,D-S-D-X,1,0.16,4293 (Gaston (Parody))@4|20,4293,Gaston (Parody),4,20,C#,C# major,I -> I -> I -> I
+478,bbII | bbVII | bbVIIm | bbVII,bbII | bbVII | bbVIIm | bbVII,S-D-X-D,1,0.16,4293 (Gaston (Parody))@5|19,4293,Gaston (Parody),5,19,C#,C# major,I -> I -> I -> I
+479,bbVII | bbVIIm | bbVII | bbII#,bbVII | bbVIIm | bbVII | bbII#,D-X-D-X,1,0.16,4293 (Gaston (Parody))@10|18,4293,Gaston (Parody),10,18,C#,C# major,I -> I -> I -> I
+480,bbVIIm | bbVII | bbII# | bbbVII#,bbVIIm | bbVII | bbII# | bbbVII#,X-D-X-X,1,0.16,4293 (Gaston (Parody))@11|15,4293,Gaston (Parody),11,15,C#,C# major,I -> I -> I -> I
+481,bbVII | bbII# | bbbVII# | bbbVII,bbVII | bbII# | bbbVII# | bbbVII,D-X-X-D,1,0.16,4293 (Gaston (Parody))@12|14,4293,Gaston (Parody),12,14,C#,C# major,I -> I -> I -> I
+482,bbII# | bbbVII# | bbbVII | bbbVII#,bbII# | bbbVII# | bbbVII | bbbVII#,X-X-D-X,1,0.16,4293 (Gaston (Parody))@13|13,4293,Gaston (Parody),13,13,C#,C# major,I -> I -> I -> I
+483,bbbVII# | bbbVII | bbbVII# | bbbVII,bbbVII# | bbbVII | bbbVII# | bbbVII,X-D-X-D,1,0.16,4293 (Gaston (Parody))@16|11,4293,Gaston (Parody),16,11,C#,C# major,I -> I -> I -> I
+484,bbbVII | bbbVII# | bbbVII | bbbVII#,bbbVII | bbbVII# | bbbVII | bbbVII#,D-X-D-X,1,0.16,4293 (Gaston (Parody))@17|10,4293,Gaston (Parody),17,10,C#,C# major,I -> I -> I -> I
+485,bbbVII# | bbbVII | bbbVII# | bbI,bbbVII# | bbbVII | bbbVII# | bbI,X-D-X-T,1,0.16,4293 (Gaston (Parody))@18|9,4293,Gaston (Parody),18,9,C#,C# major,I -> I -> I -> I
+486,bbbVII | bbbVII# | bbI | bbII,bbbVII | bbbVII# | bbI | bbII,D-X-T-S,1,0.16,4293 (Gaston (Parody))@20|8,4293,Gaston (Parody),20,8,C#,C# major,I -> I -> I -> I
+487,bbbVII# | bbI | bbII | bbIII,bbbVII# | bbI | bbII | bbIII,X-T-S-T,1,0.16,4293 (Gaston (Parody))@21|6,4293,Gaston (Parody),21,6,C#,C# major,I -> I -> I -> I
+488,bbI | bbII | bbIII | bbIIIm,bbI | bbII | bbIII | bbIIIm,T-S-T-X,1,0.16,4293 (Gaston (Parody))@22|5,4293,Gaston (Parody),22,5,C#,C# major,I -> I -> I -> I
+489,bbII | bbIII | bbIIIm | bbV,bbII | bbIII | bbIIIm | bbV,S-T-X-D,1,0.16,4293 (Gaston (Parody))@23|4,4293,Gaston (Parody),23,4,C#,C# major,I -> I -> I -> IV
+490,bbIII | bbIIIm | bbV | bbII,bbIII | bbIIIm | bbV | bbII,T-X-D-S,1,0.16,4293 (Gaston (Parody))@25|3,4293,Gaston (Parody),25,3,C#,C# major,I -> I -> IV -> ?
+491,bbIIIm | bbV | bbII | bbbVII#,bbIIIm | bbV | bbII | bbbVII#,X-D-S-X,1,0.16,4293 (Gaston (Parody))@26|2,4293,Gaston (Parody),26,2,C#,C# major,I -> IV -> ? -> bVI
+492,bbV | bbII | bbbVII# | bbII,bbV | bbII | bbbVII# | bbII,D-S-X-S,1,0.16,4293 (Gaston (Parody))@27|1,4293,Gaston (Parody),27,1,C#,C# major,IV -> ? -> bVI -> V
+493,v | ii | IV+# | ii#,v | ii | IV+# | ii#,D-S-X-X,1,0.16,4833 (Too Darn Hot)@1|21,4833,Too Darn Hot,1,21,G,G minor,? -> #VI -> #VI -> #VI
+494,ii | IV+# | ii# | vi,ii | IV+# | ii# | vi,S-X-X-T,1,0.16,4833 (Too Darn Hot)@2|19,4833,Too Darn Hot,2,19,G,G minor,#VI -> #VI -> #VI -> #VI
+495,IV+# | ii# | vi | IV#,IV+# | ii# | vi | IV#,X-X-T-X,1,0.16,4833 (Too Darn Hot)@5|18,4833,Too Darn Hot,5,18,G,G minor,#VI -> #VI -> #VI -> #VI
+496,ii# | vi | IV# | V,ii# | vi | IV# | V,X-T-X-D,1,0.16,4833 (Too Darn Hot)@9|15,4833,Too Darn Hot,9,15,G,G minor,#VI -> #VI -> #VI -> #vii
+497,vi | IV# | V | III,vi | IV# | V | III,T-X-D-T,1,0.16,4833 (Too Darn Hot)@11|14,4833,Too Darn Hot,11,14,G,G minor,#VI -> #VI -> #vii -> v
+498,IV# | V | III | #I,IV# | V | III | #I,X-D-T-T,1,0.16,4833 (Too Darn Hot)@12|13,4833,Too Darn Hot,12,13,G,G minor,#VI -> #vii -> v -> v
+499,V | III | #I | V#,V | III | #I | V#,D-T-T-X,1,0.16,4833 (Too Darn Hot)@15|12,4833,Too Darn Hot,15,12,G,G minor,#vii -> v -> v -> v
+500,III | #I | V# | i,III | #I | V# | i,T-T-X-T,1,0.16,4833 (Too Darn Hot)@16|11,4833,Too Darn Hot,16,11,G,G minor,v -> v -> v -> i
+501,#I | V# | i | ii,#I | V# | i | ii,T-X-T-S,1,0.16,4833 (Too Darn Hot)@17|9,4833,Too Darn Hot,17,9,G,G minor,v -> v -> i -> i
+502,V# | i | ii | i,V# | i | ii | i,X-T-S-T,1,0.16,4833 (Too Darn Hot)@18|7,4833,Too Darn Hot,18,7,G,G minor,v -> i -> i -> i
+503,i | ii | i | ii,i | ii | i | ii,T-S-T-S,1,0.16,4833 (Too Darn Hot)@19|5,4833,Too Darn Hot,19,5,G,G minor,i -> i -> i -> i
+504,ii | i | ii | II,ii | i | ii | II,S-T-S-S,1,0.16,4833 (Too Darn Hot)@21|3,4833,Too Darn Hot,21,3,G,G minor,i -> i -> i -> i
+505,i | ii | II | vi,i | ii | II | vi,T-S-S-T,1,0.16,4833 (Too Darn Hot)@23|2,4833,Too Darn Hot,23,2,G,G minor,i -> i -> i -> i
+506,ii | II | vi | I,ii | II | vi | I,S-S-T-T,1,0.16,4833 (Too Darn Hot)@25|1,4833,Too Darn Hot,25,1,G,G minor,i -> i -> i -> i
+507,vii | i | iib | IVb,vii | i | iib | IVb,D-T-X-X,1,0.16,5266 (Halls of Ivy)@1|16,5266,Halls of Ivy,1,16,Bb,Bb major,? -> ? -> vi -> vi
+508,i | iib | IVb | vii,i | iib | IVb | vii,T-X-X-D,1,0.16,5266 (Halls of Ivy)@2|15,5266,Halls of Ivy,2,15,Bb,Bb major,? -> vi -> vi -> #IV
+509,iib | IVb | vii | i#,iib | IVb | vii | i#,X-X-D-X,1,0.16,5266 (Halls of Ivy)@3|14,5266,Halls of Ivy,3,14,Bb,Bb major,vi -> vi -> #IV -> bIII
+510,IVb | vii | i# | I,IVb | vii | i# | I,X-D-X-T,1,0.16,5266 (Halls of Ivy)@4|13,5266,Halls of Ivy,4,13,Bb,Bb major,vi -> #IV -> bIII -> iii
+511,vii | i# | I | vi,vii | i# | I | vi,D-X-T-T,1,0.16,5266 (Halls of Ivy)@5|12,5266,Halls of Ivy,5,12,Bb,Bb major,#IV -> bIII -> iii -> iii
+512,i# | I | vi | #IVob,i# | I | vi | #IVob,X-T-T-X,1,0.16,5266 (Halls of Ivy)@6|11,5266,Halls of Ivy,6,11,Bb,Bb major,bIII -> iii -> iii -> #IV
+513,I | vi | #IVob | bIII+#,I | vi | #IVob | bIII+#,T-T-X-X,1,0.16,5266 (Halls of Ivy)@7|9,5266,Halls of Ivy,7,9,Bb,Bb major,iii -> iii -> #IV -> #IV
+514,vi | #IVob | bIII+# | ii,vi | #IVob | bIII+# | ii,T-X-X-S,1,0.16,5266 (Halls of Ivy)@8|8,5266,Halls of Ivy,8,8,Bb,Bb major,iii -> #IV -> #IV -> IV
+515,#IVob | bIII+# | ii | IV,#IVob | bIII+# | ii | IV,X-X-S-S,1,0.16,5266 (Halls of Ivy)@9|7,5266,Halls of Ivy,9,7,Bb,Bb major,#IV -> #IV -> IV -> IV
+516,bIII+# | ii | IV | V,bIII+# | ii | IV | V,X-S-S-D,1,0.16,5266 (Halls of Ivy)@11|6,5266,Halls of Ivy,11,6,Bb,Bb major,#IV -> IV -> IV -> IV
+517,ii | IV | V | IV,ii | IV | V | IV,S-S-D-S,1,0.16,5266 (Halls of Ivy)@12|5,5266,Halls of Ivy,12,5,Bb,Bb major,IV -> IV -> IV -> IV
+518,IV | V | IV | i,IV | V | IV | i,S-D-S-T,1,0.16,5266 (Halls of Ivy)@13|4,5266,Halls of Ivy,13,4,Bb,Bb major,IV -> IV -> IV -> V
+519,V | IV | i | IV,V | IV | i | IV,D-S-T-S,1,0.16,5266 (Halls of Ivy)@14|3,5266,Halls of Ivy,14,3,Bb,Bb major,IV -> IV -> V -> IV
+520,IV | i | IV | iiøb,IV | i | IV | iiøb,S-T-S-X,1,0.16,5266 (Halls of Ivy)@15|2,5266,Halls of Ivy,15,2,Bb,Bb major,IV -> V -> IV -> ii
+521,i | IV | iiøb | I,i | IV | iiøb | I,T-S-X-T,1,0.16,5266 (Halls of Ivy)@16|1,5266,Halls of Ivy,16,1,Bb,Bb major,V -> IV -> ii -> iii
+522,bVI | V | i | bVII,bVI | V | i | bVII,T-D-T-D,1,0.16,5377 (Reaching Out)@1|45,5377,Reaching Out,1,45,B,B minor,? -> ii -> v -> iv
+523,V | i | bVII | bVI,V | i | bVII | bVI,D-T-D-T,1,0.16,5377 (Reaching Out)@4|41,5377,Reaching Out,4,41,B,B minor,ii -> v -> iv -> ?
+524,bVI | V | i | ii,bVI | V | i | ii,T-D-T-S,1,0.16,5377 (Reaching Out)@15|32,5377,Reaching Out,15,32,B,B minor,? -> ii -> v -> III
+525,V | i | ii | III,V | i | ii | III,D-T-S-T,1,0.16,5377 (Reaching Out)@18|31,5377,Reaching Out,18,31,B,B minor,ii -> v -> III -> v
+526,i | ii | III | bVII,i | ii | III | bVII,T-S-T-D,1,0.16,5377 (Reaching Out)@21|29,5377,Reaching Out,21,29,B,B minor,v -> III -> v -> iv
+527,ii | III | bVII | bVI,ii | III | bVII | bVI,S-T-D-T,1,0.16,5377 (Reaching Out)@24|27,5377,Reaching Out,24,27,B,B minor,III -> v -> iv -> ?
+528,III | bVII | bVI | V,III | bVII | bVI | V,T-D-T-D,1,0.16,5377 (Reaching Out)@25|24,5377,Reaching Out,25,24,B,B minor,v -> iv -> ? -> ii
+529,bVI | V | i | bVI,bVI | V | i | bVI,T-D-T-T,1,0.16,5377 (Reaching Out)@29|18,5377,Reaching Out,29,18,B,B minor,? -> ii -> v -> v
+530,V | i | bVI | III,V | i | bVI | III,D-T-T-T,1,0.16,5377 (Reaching Out)@32|17,5377,Reaching Out,32,17,B,B minor,ii -> v -> v -> iv
+531,i | bVI | III | bVII,i | bVI | III | bVII,T-T-T-D,1,0.16,5377 (Reaching Out)@35|16,5377,Reaching Out,35,16,B,B minor,v -> v -> iv -> iv
+532,bVI | III | bVII | i,bVI | III | bVII | i,T-T-D-T,1,0.16,5377 (Reaching Out)@38|15,5377,Reaching Out,38,15,B,B minor,v -> iv -> iv -> iv
+533,III | bVII | i | bVII,III | bVII | i | bVII,T-D-T-D,1,0.16,5377 (Reaching Out)@39|14,5377,Reaching Out,39,14,B,B minor,iv -> iv -> iv -> iv
+534,bVII | i | bVII | bVI,bVII | i | bVII | bVI,D-T-D-T,1,0.16,5377 (Reaching Out)@40|13,5377,Reaching Out,40,13,B,B minor,iv -> iv -> iv -> ?
+535,bVI | V | i | v,bVI | V | i | v,T-D-T-D,1,0.16,5377 (Reaching Out)@43|6,5377,Reaching Out,43,6,B,B minor,? -> ii -> v -> ?
+536,V | i | v | i,V | i | v | i,D-T-D-T,1,0.16,5377 (Reaching Out)@46|5,5377,Reaching Out,46,5,B,B minor,ii -> v -> ? -> ?
+537,i | v | i | v,i | v | i | v,T-D-T-D,1,0.16,5377 (Reaching Out)@49|4,5377,Reaching Out,49,4,B,B minor,v -> ? -> ? -> v
+538,v | i | v | bVII,v | i | v | bVII,D-T-D-D,1,0.16,5377 (Reaching Out)@50|3,5377,Reaching Out,50,3,B,B minor,? -> ? -> v -> ii
+539,i | v | bVII | v,i | v | bVII | v,T-D-D-D,1,0.16,5377 (Reaching Out)@51|2,5377,Reaching Out,51,2,B,B minor,? -> v -> ii -> v
+540,v | bVII | v | I,v | bVII | v | I,D-D-D-T,1,0.16,5377 (Reaching Out)@52|1,5377,Reaching Out,52,1,B,B minor,v -> ii -> v -> v
+541,I | IV | V | ii,I | IV | V | ii,T-S-D-S,1,0.16,5388 (Grace Kelly)@14|5,5388,Grace Kelly,14,5,F,F major,iii -> IV -> V -> IV
+542,IV | V | ii | V,IV | V | ii | V,S-D-S-D,1,0.16,5388 (Grace Kelly)@15|2,5388,Grace Kelly,15,2,F,F major,IV -> V -> IV -> V
+543,I | vi | V | vi,I | vi | V | vi,T-T-D-T,1,0.16,5439 (Happy Halloween)@1|14,5439,Happy Halloween,1,14,D,D major,V -> vi -> IV -> iii
+544,vi | V | vi | V,vi | V | vi | V,T-D-T-D,1,0.16,5439 (Happy Halloween)@5|13,5439,Happy Halloween,5,13,D,D major,vi -> IV -> iii -> IV
+545,V | vi | V | IV,V | vi | V | IV,D-T-D-S,1,0.16,5439 (Happy Halloween)@6|11,5439,Happy Halloween,6,11,D,D major,IV -> iii -> IV -> vi
+546,vi | V | IV | v,vi | V | IV | v,T-D-S-D,1,0.16,5439 (Happy Halloween)@7|10,5439,Happy Halloween,7,10,D,D major,iii -> IV -> vi -> V
+547,V | IV | v | IV,V | IV | v | IV,D-S-D-S,1,0.16,5439 (Happy Halloween)@8|9,5439,Happy Halloween,8,9,D,D major,IV -> vi -> V -> IV
+548,IV | v | IV | V,IV | v | IV | V,S-D-S-D,1,0.16,5439 (Happy Halloween)@10|8,5439,Happy Halloween,10,8,D,D major,vi -> V -> IV -> V
+549,v | IV | V | I,v | IV | V | I,D-S-D-T,1,0.16,5439 (Happy Halloween)@11|7,5439,Happy Halloween,11,7,D,D major,V -> IV -> V -> V
+550,IV | V | I | ii,IV | V | I | ii,S-D-T-S,1,0.16,5439 (Happy Halloween)@12|5,5439,Happy Halloween,12,5,D,D major,IV -> V -> V -> V
+551,V | I | ii | I,V | I | ii | I,D-T-S-T,1,0.16,5439 (Happy Halloween)@13|4,5439,Happy Halloween,13,4,D,D major,V -> V -> V -> V
+552,I | ii | I | iv,I | ii | I | iv,T-S-T-S,1,0.16,5439 (Happy Halloween)@14|2,5439,Happy Halloween,14,2,D,D major,V -> V -> V -> V
+553,ii | I | iv | I,ii | I | iv | I,S-T-S-T,1,0.16,5439 (Happy Halloween)@16|1,5439,Happy Halloween,16,1,D,D major,V -> V -> V -> V
+554,vi | III# | vi | ii,vi | III# | vi | ii,T-X-T-S,1,0.16,5688 (What'll I Do)@1|40,5688,What'll I Do,1,40,D,D major,iii -> bVI -> vi -> I
+555,III# | vi | ii | Sw,III# | vi | ii | Sw,X-T-S-X,1,0.16,5688 (What'll I Do)@2|38,5688,What'll I Do,2,38,D,D major,bVI -> vi -> I -> I
+556,vi | ii | Sw | I,vi | ii | Sw | I,T-S-X-T,1,0.16,5688 (What'll I Do)@3|37,5688,What'll I Do,3,37,D,D major,vi -> I -> I -> I
+557,ii | Sw | I | III,ii | Sw | I | III,S-X-T-T,1,0.16,5688 (What'll I Do)@4|36,5688,What'll I Do,4,36,D,D major,I -> I -> I -> vii
+558,Sw | I | III | vi,Sw | I | III | vi,X-T-T-T,1,0.16,5688 (What'll I Do)@6|35,5688,What'll I Do,6,35,D,D major,I -> I -> vii -> vi
+559,I | III | vi | ii,I | III | vi | ii,T-T-T-S,1,0.16,5688 (What'll I Do)@7|34,5688,What'll I Do,7,34,D,D major,I -> vii -> vi -> vi
+560,III | vi | ii | V,III | vi | ii | V,T-T-S-D,1,0.16,5688 (What'll I Do)@8|32,5688,What'll I Do,8,32,D,D major,vii -> vi -> vi -> vii
+561,vi | ii | V | bVI,vi | ii | V | bVI,T-S-D-T,1,0.16,5688 (What'll I Do)@9|31,5688,What'll I Do,9,31,D,D major,vi -> vi -> vii -> I
+562,ii | V | bVI | ii,ii | V | bVI | ii,S-D-T-S,1,0.16,5688 (What'll I Do)@10|30,5688,What'll I Do,10,30,D,D major,vi -> vii -> I -> I
+563,V | bVI | ii | i,V | bVI | ii | i,D-T-S-T,1,0.16,5688 (What'll I Do)@12|28,5688,What'll I Do,12,28,D,D major,vii -> I -> I -> I
+564,bVI | ii | i | ii,bVI | ii | i | ii,T-S-T-S,1,0.16,5688 (What'll I Do)@13|27,5688,What'll I Do,13,27,D,D major,I -> I -> I -> I
+565,ii | i | ii | bVII,ii | i | ii | bVII,S-T-S-D,1,0.16,5688 (What'll I Do)@14|26,5688,What'll I Do,14,26,D,D major,I -> I -> I -> ii
+566,i | ii | bVII | iiøb,i | ii | bVII | iiøb,T-S-D-X,1,0.16,5688 (What'll I Do)@16|25,5688,What'll I Do,16,25,D,D major,I -> I -> ii -> ii
+567,ii | bVII | iiøb | i,ii | bVII | iiøb | i,S-D-X-T,1,0.16,5688 (What'll I Do)@17|24,5688,What'll I Do,17,24,D,D major,I -> ii -> ii -> ?
+568,bVII | iiøb | i | ii,bVII | iiøb | i | ii,D-X-T-S,1,0.16,5688 (What'll I Do)@18|23,5688,What'll I Do,18,23,D,D major,ii -> ii -> ? -> ?
+569,iiøb | i | ii | iii,iiøb | i | ii | iii,X-T-S-T,1,0.16,5688 (What'll I Do)@19|22,5688,What'll I Do,19,22,D,D major,ii -> ? -> ? -> ?
+570,i | ii | iii | v,i | ii | iii | v,T-S-T-D,1,0.16,5688 (What'll I Do)@20|21,5688,What'll I Do,20,21,D,D major,? -> ? -> ? -> ?
+571,ii | iii | v | Ib,ii | iii | v | Ib,S-T-D-X,1,0.16,5688 (What'll I Do)@21|20,5688,What'll I Do,21,20,D,D major,? -> ? -> ? -> bVII
+572,iii | v | Ib | iiiøb,iii | v | Ib | iiiøb,T-D-X-X,1,0.16,5688 (What'll I Do)@22|19,5688,What'll I Do,22,19,D,D major,? -> ? -> bVII -> bVII
+573,v | Ib | iiiøb | iii,v | Ib | iiiøb | iii,D-X-X-T,1,0.16,5688 (What'll I Do)@23|18,5688,What'll I Do,23,18,D,D major,? -> bVII -> bVII -> bVII
+574,Ib | iiiøb | iii | I,Ib | iiiøb | iii | I,X-X-T-T,1,0.16,5688 (What'll I Do)@24|17,5688,What'll I Do,24,17,D,D major,bVII -> bVII -> bVII -> bVII
+575,iiiøb | iii | I | iv,iiiøb | iii | I | iv,X-T-T-S,1,0.16,5688 (What'll I Do)@25|16,5688,What'll I Do,25,16,D,D major,bVII -> bVII -> bVII -> I
+576,iii | I | iv | ii,iii | I | iv | ii,T-T-S-S,1,0.16,5688 (What'll I Do)@26|15,5688,What'll I Do,26,15,D,D major,bVII -> bVII -> I -> I
+577,I | iv | ii | iv,I | iv | ii | iv,T-S-S-S,1,0.16,5688 (What'll I Do)@27|14,5688,What'll I Do,27,14,D,D major,bVII -> I -> I -> I
+578,ii | iv | ii | i,ii | iv | ii | i,S-S-S-T,1,0.16,5688 (What'll I Do)@29|10,5688,What'll I Do,29,10,D,D major,I -> I -> I -> I
+579,iv | ii | i | I,iv | ii | i | I,S-S-T-T,1,0.16,5688 (What'll I Do)@30|8,5688,What'll I Do,30,8,D,D major,I -> I -> I -> I
+580,ii | i | I | iv,ii | i | I | iv,S-T-T-S,1,0.16,5688 (What'll I Do)@31|7,5688,What'll I Do,31,7,D,D major,I -> I -> I -> I
+581,i | I | iv | I,i | I | iv | I,T-T-S-T,1,0.16,5688 (What'll I Do)@34|6,5688,What'll I Do,34,6,D,D major,I -> I -> I -> I
+582,I | iv | I | ii,I | iv | I | ii,T-S-T-S,1,0.16,5688 (What'll I Do)@36|5,5688,What'll I Do,36,5,D,D major,I -> I -> I -> I
+583,iv | I | ii | i,iv | I | ii | i,S-T-S-T,1,0.16,5688 (What'll I Do)@37|4,5688,What'll I Do,37,4,D,D major,I -> I -> I -> I
+584,I | ii | i | ii,I | ii | i | ii,T-S-T-S,1,0.16,5688 (What'll I Do)@38|3,5688,What'll I Do,38,3,D,D major,I -> I -> I -> I
+585,i | ii | I | ii,i | ii | I | ii,T-S-T-S,1,0.16,6447 (Goodnight)@1|15,6447,Goodnight,1,15,D,D major,? -> ? -> V -> IV
+586,ii | I | ii | iii,ii | I | ii | iii,S-T-S-T,1,0.16,6447 (Goodnight)@2|14,6447,Goodnight,2,14,D,D major,? -> V -> IV -> ?
+587,I | ii | iii | ii,I | ii | iii | ii,T-S-T-S,1,0.16,6447 (Goodnight)@3|13,6447,Goodnight,3,13,D,D major,V -> IV -> ? -> ?
+588,ii | iii | ii | IV,ii | iii | ii | IV,S-T-S-S,1,0.16,6447 (Goodnight)@5|12,6447,Goodnight,5,12,D,D major,IV -> ? -> ? -> IV
+589,iii | ii | IV | I,iii | ii | IV | I,T-S-S-T,1,0.16,6447 (Goodnight)@6|11,6447,Goodnight,6,11,D,D major,? -> ? -> IV -> V
+590,ii | IV | I | V,ii | IV | I | V,S-S-T-D,1,0.16,6447 (Goodnight)@7|10,6447,Goodnight,7,10,D,D major,? -> IV -> V -> vii
+591,IV | I | V | IV,IV | I | V | IV,S-T-D-S,1,0.16,6447 (Goodnight)@8|9,6447,Goodnight,8,9,D,D major,IV -> V -> vii -> vi
+592,I | V | IV | iii,I | V | IV | iii,T-D-S-T,1,0.16,6447 (Goodnight)@9|8,6447,Goodnight,9,8,D,D major,V -> vii -> vi -> V
+593,V | IV | iii | IV,V | IV | iii | IV,D-S-T-S,1,0.16,6447 (Goodnight)@10|6,6447,Goodnight,10,6,D,D major,vii -> vi -> V -> IV
+594,IV | iii | IV | iv,IV | iii | IV | iv,S-T-S-S,1,0.16,6447 (Goodnight)@11|5,6447,Goodnight,11,5,D,D major,vi -> V -> IV -> ?
+595,iii | IV | iv | i,iii | IV | iv | i,T-S-S-T,1,0.16,6447 (Goodnight)@12|4,6447,Goodnight,12,4,D,D major,V -> IV -> ? -> ?
+596,IV | iv | i | vii,IV | iv | i | vii,S-S-T-D,1,0.16,6447 (Goodnight)@14|2,6447,Goodnight,14,2,D,D major,IV -> ? -> ? -> ii
+597,iv | i | vii | I,iv | i | vii | I,S-T-D-T,1,0.16,6447 (Goodnight)@15|1,6447,Goodnight,15,1,D,D major,? -> ? -> ii -> iii
+598,i | V | vii | iii,i | V | vii | iii,T-D-D-T,1,0.16,6730 (Pink Pony Club)@1|5,6730,Pink Pony Club,1,5,F#,F# major,ii -> ? -> ? -> ?
+599,V | vii | iii | ii,V | vii | iii | ii,D-D-T-S,1,0.16,6730 (Pink Pony Club)@4|4,6730,Pink Pony Club,4,4,F#,F# major,? -> ? -> ? -> ii
+600,vii | iii | ii | iv,vii | iii | ii | iv,D-T-S-S,1,0.16,6730 (Pink Pony Club)@5|2,6730,Pink Pony Club,5,2,F#,F# major,? -> ? -> ii -> iii
+601,iii | ii | iv | I,iii | ii | iv | I,T-S-S-T,1,0.16,6730 (Pink Pony Club)@6|1,6730,Pink Pony Club,6,1,F#,F# major,? -> ii -> iii -> I

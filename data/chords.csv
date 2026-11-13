@@ -1,0 +1,399 @@
+rank,roman_numeral,count,frequency_pct,occurrences(tag@pos_from_start|pos_from_end)
+1,I,107,9.49,"1682 (My Heart Broke Last Night)@8|5 ; 1682 (My Heart Broke Last Night)@11|2 ; 1682 (My Heart Broke Last Night)@12|1 ; 1922 (If You Wanna Light Up the World)@2|10 ; 1922 (If You Wanna Light Up the World)@3|9 ; 1922 (If You Wanna Light Up the World)@11|1 ; 1936 (As Like the Breeze that Blows)@1|9 ; 1936 (As Like the Breeze that Blows)@9|1 ; 2042 (And So It's Over)@8|7 ; 2475 (Wrecking Ball)@11|41 ; 2475 (Wrecking Ball)@22|30 ; 2475 (Wrecking Ball)@38|14 ; 2475 (Wrecking Ball)@39|13 ; 2475 (Wrecking Ball)@47|5 ; 2501 (Lonesome Road)@2|11 ; 2533 (Dreidel)@4|11 ; 2559 (Mother's/Father's Day Tag)@15|1 ; 2560 (Mother's/Father's Day Tag)@15|1 ; 2697 (Loop-dee-Loop & Pull)@13|2 ; 2697 (Loop-dee-Loop & Pull)@14|1 ; 2869 (It's My Song)@4|9 ; 2869 (It's My Song)@12|1 ; 2962 (You are the only girl for me)@2|11 ; 2962 (You are the only girl for me)@12|1 ; 2963 (Pinot Noir)@5|1 ; 3137 (Hard Times)@5|12 ; 3137 (Hard Times)@15|2 ; 3137 (Hard Times)@16|1 ; 3266 (Zip-a-Dee-Doo-Dah)@4|21 ; 3266 (Zip-a-Dee-Doo-Dah)@24|1 ; 3292 (Shangri La Rags to Riches)@68|1 ; 3390 (Nothing Compares To You)@23|1 ; 3772 (Telegraph Line)@14|51 ; 3772 (Telegraph Line)@16|49 ; 3772 (Telegraph Line)@25|40 ; 3772 (Telegraph Line)@26|39 ; 3772 (Telegraph Line)@61|4 ; 3772 (Telegraph Line)@62|3 ; 3772 (Telegraph Line)@63|2 ; 3772 (Telegraph Line)@64|1 ; 3853 (If I May)@2|24 ; 3853 (If I May)@5|21 ; 3853 (If I May)@6|20 ; 3853 (If I May)@18|8 ; 3853 (If I May)@24|2 ; 3853 (If I May)@25|1 ; 3856 (Don't Make Toast)@1|51 ; 3856 (Don't Make Toast)@20|32 ; 3856 (Don't Make Toast)@51|1 ; 3858 (Cops!)@16|4 ; 3858 (Cops!)@19|1 ; 3865 (Ron Rogers Medley)@1|56 ; 3865 (Ron Rogers Medley)@3|54 ; 3865 (Ron Rogers Medley)@8|49 ; 3865 (Ron Rogers Medley)@9|48 ; 3865 (Ron Rogers Medley)@30|27 ; 3865 (Ron Rogers Medley)@32|25 ; 3865 (Ron Rogers Medley)@33|24 ; 3865 (Ron Rogers Medley)@56|1 ; 3868 (I was Born Under a Wand'rin' Star)@1|16 ; 3868 (I was Born Under a Wand'rin' Star)@3|14 ; 3868 (I was Born Under a Wand'rin' Star)@16|1 ; 3870 (Mary Had a Little Lamb)@30|1 ; 3912 (The Next Ten Minutes)@29|1 ; 4003 (DuckTales)@21|3 ; 4003 (DuckTales)@22|2 ; 4003 (DuckTales)@23|1 ; 4074 (Love me, and the world behind)@11|15 ; 4074 (Love me, and the world behind)@12|14 ; 4074 (Love me, and the world behind)@19|7 ; 4074 (Love me, and the world behind)@22|4 ; 4178 (Professional Pirate)@14|12 ; 4178 (Professional Pirate)@15|11 ; 4178 (Professional Pirate)@16|10 ; 4178 (Professional Pirate)@17|9 ; 4178 (Professional Pirate)@25|1 ; 4833 (Too Darn Hot)@29|1 ; 5266 (Halls of Ivy)@19|1 ; 5377 (Reaching Out)@55|1 ; 5388 (Grace Kelly)@1|33 ; 5388 (Grace Kelly)@2|32 ; 5388 (Grace Kelly)@3|31 ; 5388 (Grace Kelly)@4|30 ; 5388 (Grace Kelly)@5|29 ; 5388 (Grace Kelly)@6|28 ; 5388 (Grace Kelly)@7|27 ; 5388 (Grace Kelly)@8|26 ; 5388 (Grace Kelly)@9|25 ; 5388 (Grace Kelly)@10|24 ; 5388 (Grace Kelly)@11|23 ; 5388 (Grace Kelly)@12|22 ; 5388 (Grace Kelly)@33|1 ; 5439 (Happy Halloween)@1|20 ; 5439 (Happy Halloween)@2|19 ; 5439 (Happy Halloween)@3|18 ; 5439 (Happy Halloween)@4|17 ; 5439 (Happy Halloween)@14|7 ; 5439 (Happy Halloween)@15|6 ; 5439 (Happy Halloween)@17|4 ; 5439 (Happy Halloween)@20|1 ; 5688 (What'll I Do)@7|37 ; 5688 (What'll I Do)@43|1 ; 6447 (Goodnight)@3|17 ; 6447 (Goodnight)@4|16 ; 6447 (Goodnight)@9|11 ; 6447 (Goodnight)@19|1 ; 6730 (Pink Pony Club)@10|1"
+2,i,65,5.77,"1922 (If You Wanna Light Up the World)@1|11 ; 2042 (And So It's Over)@1|14 ; 2042 (And So It's Over)@3|12 ; 2296 (My Funny Valentine)@1|22 ; 2296 (My Funny Valentine)@3|20 ; 2296 (My Funny Valentine)@7|16 ; 2296 (My Funny Valentine)@8|15 ; 2296 (My Funny Valentine)@9|14 ; 2425 (Bow-Tie Guy)@2|17 ; 2425 (Bow-Tie Guy)@7|12 ; 2475 (Wrecking Ball)@1|51 ; 2475 (Wrecking Ball)@2|50 ; 2475 (Wrecking Ball)@3|49 ; 2475 (Wrecking Ball)@4|48 ; 2475 (Wrecking Ball)@5|47 ; 2533 (Dreidel)@2|13 ; 2607 (Farmersonly.com)@1|29 ; 2607 (Farmersonly.com)@8|22 ; 2607 (Farmersonly.com)@18|12 ; 2607 (Farmersonly.com)@22|8 ; 2607 (Farmersonly.com)@24|6 ; 2607 (Farmersonly.com)@25|5 ; 2607 (Farmersonly.com)@26|4 ; 2607 (Farmersonly.com)@27|3 ; 2607 (Farmersonly.com)@28|2 ; 2607 (Farmersonly.com)@29|1 ; 2869 (It's My Song)@3|10 ; 3095 (Young or Old)@1|22 ; 3137 (Hard Times)@2|15 ; 3137 (Hard Times)@4|13 ; 3137 (Hard Times)@7|10 ; 3137 (Hard Times)@11|6 ; 3292 (Shangri La Rags to Riches)@1|68 ; 3292 (Shangri La Rags to Riches)@4|65 ; 3292 (Shangri La Rags to Riches)@8|61 ; 3292 (Shangri La Rags to Riches)@49|20 ; 3292 (Shangri La Rags to Riches)@60|9 ; 3292 (Shangri La Rags to Riches)@65|4 ; 3853 (If I May)@1|25 ; 3856 (Don't Make Toast)@47|5 ; 3858 (Cops!)@1|19 ; 3858 (Cops!)@17|3 ; 3859 (Shadow of The Day)@6|18 ; 3859 (Shadow of The Day)@7|17 ; 3912 (The Next Ten Minutes)@18|12 ; 4003 (DuckTales)@19|5 ; 4074 (Love me, and the world behind)@2|24 ; 4178 (Professional Pirate)@1|25 ; 4178 (Professional Pirate)@22|4 ; 4833 (Too Darn Hot)@19|11 ; 4833 (Too Darn Hot)@20|10 ; 4833 (Too Darn Hot)@23|7 ; 4833 (Too Darn Hot)@24|6 ; 5266 (Halls of Ivy)@2|18 ; 5377 (Reaching Out)@9|47 ; 5377 (Reaching Out)@23|33 ; 5377 (Reaching Out)@51|5 ; 5688 (What'll I Do)@16|28 ; 5688 (What'll I Do)@20|24 ; 5688 (What'll I Do)@34|10 ; 5688 (What'll I Do)@35|9 ; 5688 (What'll I Do)@40|4 ; 6447 (Goodnight)@1|19 ; 6447 (Goodnight)@16|4 ; 6447 (Goodnight)@17|3"
+3,V,34,3.02,"2475 (Wrecking Ball)@7|45 ; 2475 (Wrecking Ball)@8|44 ; 2475 (Wrecking Ball)@9|43 ; 2475 (Wrecking Ball)@20|32 ; 2475 (Wrecking Ball)@21|31 ; 2475 (Wrecking Ball)@25|27 ; 2475 (Wrecking Ball)@28|24 ; 2475 (Wrecking Ball)@29|23 ; 2475 (Wrecking Ball)@51|1 ; 3292 (Shangri La Rags to Riches)@24|45 ; 3292 (Shangri La Rags to Riches)@39|30 ; 3390 (Nothing Compares To You)@14|10 ; 3390 (Nothing Compares To You)@15|9 ; 3772 (Telegraph Line)@36|29 ; 3772 (Telegraph Line)@37|28 ; 3856 (Don't Make Toast)@9|43 ; 3856 (Don't Make Toast)@10|42 ; 3865 (Ron Rogers Medley)@11|46 ; 4074 (Love me, and the world behind)@1|25 ; 4074 (Love me, and the world behind)@23|3 ; 5377 (Reaching Out)@4|52 ; 5377 (Reaching Out)@5|51 ; 5377 (Reaching Out)@6|50 ; 5377 (Reaching Out)@18|38 ; 5377 (Reaching Out)@19|37 ; 5377 (Reaching Out)@20|36 ; 5377 (Reaching Out)@32|24 ; 5377 (Reaching Out)@33|23 ; 5377 (Reaching Out)@34|22 ; 5377 (Reaching Out)@46|10 ; 5377 (Reaching Out)@47|9 ; 5377 (Reaching Out)@48|8 ; 6447 (Goodnight)@10|10 ; 6730 (Pink Pony Club)@4|7"
+4,IV,29,2.57,2963 (Pinot Noir)@2|4 ; 3098 (Young or Old)@7|7 ; 3390 (Nothing Compares To You)@6|18 ; 3390 (Nothing Compares To You)@8|16 ; 3772 (Telegraph Line)@18|47 ; 3772 (Telegraph Line)@19|46 ; 3772 (Telegraph Line)@20|45 ; 3772 (Telegraph Line)@21|44 ; 3772 (Telegraph Line)@23|42 ; 3772 (Telegraph Line)@31|34 ; 3772 (Telegraph Line)@32|33 ; 3772 (Telegraph Line)@33|32 ; 3772 (Telegraph Line)@34|31 ; 3772 (Telegraph Line)@39|26 ; 3772 (Telegraph Line)@51|14 ; 3772 (Telegraph Line)@52|13 ; 3772 (Telegraph Line)@53|12 ; 3868 (I was Born Under a Wand'rin' Star)@13|4 ; 3912 (The Next Ten Minutes)@19|11 ; 3979 (It's the End of the World as We Know It)@9|9 ; 5388 (Grace Kelly)@15|19 ; 5388 (Grace Kelly)@16|18 ; 5388 (Grace Kelly)@17|17 ; 5388 (Grace Kelly)@18|16 ; 5388 (Grace Kelly)@19|15 ; 5388 (Grace Kelly)@20|14 ; 5388 (Grace Kelly)@21|13 ; 5388 (Grace Kelly)@22|12 ; 5388 (Grace Kelly)@23|11
+5,v,28,2.48,1875 (Kansas City Dichotomy)@1|9 ; 2425 (Bow-Tie Guy)@1|18 ; 2475 (Wrecking Ball)@44|8 ; 2475 (Wrecking Ball)@45|7 ; 2533 (Dreidel)@1|14 ; 2607 (Farmersonly.com)@4|26 ; 2607 (Farmersonly.com)@5|25 ; 2607 (Farmersonly.com)@7|23 ; 2607 (Farmersonly.com)@13|17 ; 2869 (It's My Song)@1|12 ; 2869 (It's My Song)@2|11 ; 2963 (Pinot Noir)@1|5 ; 3292 (Shangri La Rags to Riches)@3|66 ; 3292 (Shangri La Rags to Riches)@21|48 ; 3292 (Shangri La Rags to Riches)@55|14 ; 3292 (Shangri La Rags to Riches)@57|12 ; 3772 (Telegraph Line)@9|56 ; 3772 (Telegraph Line)@10|55 ; 3772 (Telegraph Line)@13|52 ; 3772 (Telegraph Line)@24|41 ; 3859 (Shadow of The Day)@14|10 ; 3859 (Shadow of The Day)@15|9 ; 3865 (Ron Rogers Medley)@12|45 ; 3883 (This Is How You Voice Lead)@2|8 ; 3979 (It's the End of the World as We Know It)@11|7 ; 4833 (Too Darn Hot)@1|29 ; 5377 (Reaching Out)@50|6 ; 5688 (What'll I Do)@23|21
+6,ii,25,2.22,1682 (My Heart Broke Last Night)@3|10 ; 2559 (Mother's/Father's Day Tag)@1|15 ; 2559 (Mother's/Father's Day Tag)@3|13 ; 2559 (Mother's/Father's Day Tag)@5|11 ; 2560 (Mother's/Father's Day Tag)@1|15 ; 2560 (Mother's/Father's Day Tag)@3|13 ; 2560 (Mother's/Father's Day Tag)@5|11 ; 2607 (Farmersonly.com)@23|7 ; 2962 (You are the only girl for me)@9|4 ; 2962 (You are the only girl for me)@10|3 ; 3137 (Hard Times)@3|14 ; 3266 (Zip-a-Dee-Doo-Dah)@6|19 ; 3266 (Zip-a-Dee-Doo-Dah)@7|18 ; 3266 (Zip-a-Dee-Doo-Dah)@9|16 ; 3266 (Zip-a-Dee-Doo-Dah)@10|15 ; 3266 (Zip-a-Dee-Doo-Dah)@11|14 ; 3292 (Shangri La Rags to Riches)@6|63 ; 3292 (Shangri La Rags to Riches)@59|10 ; 3856 (Don't Make Toast)@8|44 ; 3979 (It's the End of the World as We Know It)@2|16 ; 4178 (Professional Pirate)@4|22 ; 5688 (What'll I Do)@10|34 ; 5688 (What'll I Do)@21|23 ; 6447 (Goodnight)@2|18 ; 6447 (Goodnight)@7|13
+7,vi,25,2.22,2425 (Bow-Tie Guy)@8|11 ; 2425 (Bow-Tie Guy)@13|6 ; 2425 (Bow-Tie Guy)@17|2 ; 2425 (Bow-Tie Guy)@18|1 ; 2475 (Wrecking Ball)@24|28 ; 2607 (Farmersonly.com)@3|27 ; 2607 (Farmersonly.com)@6|24 ; 3098 (Young or Old)@3|11 ; 3292 (Shangri La Rags to Riches)@9|60 ; 3292 (Shangri La Rags to Riches)@33|36 ; 3390 (Nothing Compares To You)@10|14 ; 3390 (Nothing Compares To You)@11|13 ; 3772 (Telegraph Line)@11|54 ; 3772 (Telegraph Line)@12|53 ; 3772 (Telegraph Line)@45|20 ; 3772 (Telegraph Line)@46|19 ; 3772 (Telegraph Line)@47|18 ; 3865 (Ron Rogers Medley)@13|44 ; 3865 (Ron Rogers Medley)@14|43 ; 3865 (Ron Rogers Medley)@39|18 ; 4178 (Professional Pirate)@12|14 ; 4178 (Professional Pirate)@23|3 ; 4833 (Too Darn Hot)@11|19 ; 5439 (Happy Halloween)@5|16 ; 5688 (What'll I Do)@3|41
+8,iii,23,2.04,"1682 (My Heart Broke Last Night)@2|11 ; 2296 (My Funny Valentine)@18|5 ; 2559 (Mother's/Father's Day Tag)@2|14 ; 2559 (Mother's/Father's Day Tag)@4|12 ; 2560 (Mother's/Father's Day Tag)@2|14 ; 2560 (Mother's/Father's Day Tag)@4|12 ; 3098 (Young or Old)@1|13 ; 3137 (Hard Times)@1|16 ; 3292 (Shangri La Rags to Riches)@2|67 ; 3292 (Shangri La Rags to Riches)@7|62 ; 3292 (Shangri La Rags to Riches)@42|27 ; 3292 (Shangri La Rags to Riches)@48|21 ; 3292 (Shangri La Rags to Riches)@58|11 ; 3772 (Telegraph Line)@40|25 ; 3912 (The Next Ten Minutes)@8|22 ; 3912 (The Next Ten Minutes)@9|21 ; 3912 (The Next Ten Minutes)@12|18 ; 3979 (It's the End of the World as We Know It)@1|17 ; 4074 (Love me, and the world behind)@24|2 ; 4178 (Professional Pirate)@7|19 ; 4178 (Professional Pirate)@10|16 ; 5688 (What'll I Do)@22|22 ; 6447 (Goodnight)@6|14"
+9,ii7,18,1.60,"2042 (And So It's Over)@5|10 ; 2559 (Mother's/Father's Day Tag)@7|9 ; 2560 (Mother's/Father's Day Tag)@7|9 ; 3137 (Hard Times)@12|5 ; 3137 (Hard Times)@13|4 ; 3266 (Zip-a-Dee-Doo-Dah)@12|13 ; 3772 (Telegraph Line)@58|7 ; 3856 (Don't Make Toast)@6|46 ; 3856 (Don't Make Toast)@38|14 ; 3856 (Don't Make Toast)@39|13 ; 3858 (Cops!)@13|7 ; 3865 (Ron Rogers Medley)@44|13 ; 3912 (The Next Ten Minutes)@21|9 ; 3912 (The Next Ten Minutes)@22|8 ; 3912 (The Next Ten Minutes)@26|4 ; 4074 (Love me, and the world behind)@9|17 ; 5266 (Halls of Ivy)@12|8 ; 5688 (What'll I Do)@41|3"
+10,bVI,17,1.51,1682 (My Heart Broke Last Night)@5|8 ; 1682 (My Heart Broke Last Night)@6|7 ; 2296 (My Funny Valentine)@12|11 ; 2607 (Farmersonly.com)@14|16 ; 2607 (Farmersonly.com)@16|14 ; 2869 (It's My Song)@6|7 ; 2869 (It's My Song)@7|6 ; 3095 (Young or Old)@15|8 ; 3883 (This Is How You Voice Lead)@6|4 ; 5377 (Reaching Out)@1|55 ; 5377 (Reaching Out)@2|54 ; 5377 (Reaching Out)@15|41 ; 5377 (Reaching Out)@16|40 ; 5377 (Reaching Out)@29|27 ; 5377 (Reaching Out)@30|26 ; 5377 (Reaching Out)@43|13 ; 5377 (Reaching Out)@44|12
+11,I7,16,1.42,1875 (Kansas City Dichotomy)@8|2 ; 1936 (As Like the Breeze that Blows)@2|8 ; 2042 (And So It's Over)@14|1 ; 2475 (Wrecking Ball)@12|40 ; 2475 (Wrecking Ball)@40|12 ; 2475 (Wrecking Ball)@48|4 ; 2501 (Lonesome Road)@7|6 ; 2501 (Lonesome Road)@8|5 ; 2501 (Lonesome Road)@9|4 ; 2501 (Lonesome Road)@10|3 ; 3856 (Don't Make Toast)@12|40 ; 3856 (Don't Make Toast)@13|39 ; 3859 (Shadow of The Day)@8|16 ; 3859 (Shadow of The Day)@10|14 ; 3865 (Ron Rogers Medley)@6|51 ; 5266 (Halls of Ivy)@7|13
+12,V7,15,1.33,1682 (My Heart Broke Last Night)@4|9 ; 2697 (Loop-dee-Loop & Pull)@5|10 ; 2697 (Loop-dee-Loop & Pull)@6|9 ; 2697 (Loop-dee-Loop & Pull)@7|8 ; 2697 (Loop-dee-Loop & Pull)@8|7 ; 2697 (Loop-dee-Loop & Pull)@11|4 ; 3266 (Zip-a-Dee-Doo-Dah)@16|9 ; 3292 (Shangri La Rags to Riches)@38|31 ; 3865 (Ron Rogers Medley)@31|26 ; 3865 (Ron Rogers Medley)@37|20 ; 5266 (Halls of Ivy)@14|6 ; 5439 (Happy Halloween)@6|15 ; 5439 (Happy Halloween)@8|13 ; 5439 (Happy Halloween)@9|12 ; 5688 (What'll I Do)@12|32
+13,IVb753,15,1.33,1922 (If You Wanna Light Up the World)@6|6 ; 1922 (If You Wanna Light Up the World)@7|5 ; 1922 (If You Wanna Light Up the World)@8|4 ; 1922 (If You Wanna Light Up the World)@10|2 ; 1936 (As Like the Breeze that Blows)@7|3 ; 2559 (Mother's/Father's Day Tag)@9|7 ; 2559 (Mother's/Father's Day Tag)@11|5 ; 2560 (Mother's/Father's Day Tag)@9|7 ; 2560 (Mother's/Father's Day Tag)@11|5 ; 3856 (Don't Make Toast)@29|23 ; 3856 (Don't Make Toast)@30|22 ; 3856 (Don't Make Toast)@50|2 ; 3865 (Ron Rogers Medley)@46|11 ; 3865 (Ron Rogers Medley)@47|10 ; 5266 (Halls of Ivy)@4|16
+14,IV7,14,1.24,1875 (Kansas City Dichotomy)@4|6 ; 3098 (Young or Old)@8|6 ; 3292 (Shangri La Rags to Riches)@34|35 ; 3292 (Shangri La Rags to Riches)@37|32 ; 3390 (Nothing Compares To You)@9|15 ; 3772 (Telegraph Line)@35|30 ; 3859 (Shadow of The Day)@16|8 ; 3865 (Ron Rogers Medley)@10|47 ; 3865 (Ron Rogers Medley)@16|41 ; 3865 (Ron Rogers Medley)@20|37 ; 3865 (Ron Rogers Medley)@22|35 ; 3868 (I was Born Under a Wand'rin' Star)@8|9 ; 3979 (It's the End of the World as We Know It)@10|8 ; 5439 (Happy Halloween)@10|11
+15,i5,13,1.15,2475 (Wrecking Ball)@34|18 ; 2533 (Dreidel)@3|12 ; 4003 (DuckTales)@1|23 ; 4003 (DuckTales)@2|22 ; 4003 (DuckTales)@3|21 ; 5377 (Reaching Out)@7|49 ; 5377 (Reaching Out)@8|48 ; 5377 (Reaching Out)@21|35 ; 5377 (Reaching Out)@22|34 ; 5377 (Reaching Out)@49|7 ; 6730 (Pink Pony Club)@1|10 ; 6730 (Pink Pony Club)@2|9 ; 6730 (Pink Pony Club)@3|8
+16,iv,12,1.06,1682 (My Heart Broke Last Night)@1|12 ; 2607 (Farmersonly.com)@9|21 ; 2607 (Farmersonly.com)@10|20 ; 2607 (Farmersonly.com)@20|10 ; 3095 (Young or Old)@3|20 ; 3390 (Nothing Compares To You)@16|8 ; 3390 (Nothing Compares To You)@17|7 ; 3390 (Nothing Compares To You)@20|4 ; 3390 (Nothing Compares To You)@21|3 ; 3865 (Ron Rogers Medley)@49|8 ; 4178 (Professional Pirate)@11|15 ; 6447 (Goodnight)@15|5
+17,IV532,12,1.06,3390 (Nothing Compares To You)@7|17 ; 3772 (Telegraph Line)@49|16 ; 3772 (Telegraph Line)@50|15 ; 3858 (Cops!)@9|11 ; 3858 (Cops!)@10|10 ; 3859 (Shadow of The Day)@13|11 ; 3865 (Ron Rogers Medley)@26|31 ; 3865 (Ron Rogers Medley)@36|21 ; 3865 (Ron Rogers Medley)@54|3 ; 3868 (I was Born Under a Wand'rin' Star)@12|5 ; 3912 (The Next Ten Minutes)@24|6 ; 3912 (The Next Ten Minutes)@25|5
+18,vi7,11,0.98,2425 (Bow-Tie Guy)@11|8 ; 2425 (Bow-Tie Guy)@12|7 ; 2697 (Loop-dee-Loop & Pull)@3|12 ; 3853 (If I May)@19|7 ; 3853 (If I May)@21|5 ; 3853 (If I May)@22|4 ; 3856 (Don't Make Toast)@40|12 ; 3865 (Ron Rogers Medley)@23|34 ; 3865 (Ron Rogers Medley)@24|33 ; 3868 (I was Born Under a Wand'rin' Star)@4|13 ; 3868 (I was Born Under a Wand'rin' Star)@5|12
+19,iv7,10,0.89,2425 (Bow-Tie Guy)@14|5 ; 2869 (It's My Song)@9|4 ; 3266 (Zip-a-Dee-Doo-Dah)@1|24 ; 3912 (The Next Ten Minutes)@1|29 ; 3912 (The Next Ten Minutes)@2|28 ; 3912 (The Next Ten Minutes)@4|26 ; 3912 (The Next Ten Minutes)@15|15 ; 3912 (The Next Ten Minutes)@16|14 ; 5688 (What'll I Do)@28|16 ; 5688 (What'll I Do)@30|14
+20,bVII,9,0.80,2607 (Farmersonly.com)@17|13 ; 2607 (Farmersonly.com)@19|11 ; 2607 (Farmersonly.com)@21|9 ; 3390 (Nothing Compares To You)@2|22 ; 3870 (Mary Had a Little Lamb)@3|28 ; 5377 (Reaching Out)@12|44 ; 5377 (Reaching Out)@14|42 ; 5377 (Reaching Out)@40|16 ; 5377 (Reaching Out)@42|14
+21,i7,8,0.71,2296 (My Funny Valentine)@10|13 ; 2475 (Wrecking Ball)@16|36 ; 2475 (Wrecking Ball)@17|35 ; 2501 (Lonesome Road)@12|1 ; 5266 (Halls of Ivy)@16|4 ; 5377 (Reaching Out)@35|21 ; 5377 (Reaching Out)@36|20 ; 5377 (Reaching Out)@37|19
+22,Ib753,6,0.53,1936 (As Like the Breeze that Blows)@3|7 ; 1936 (As Like the Breeze that Blows)@4|6 ; 4003 (DuckTales)@7|17 ; 4003 (DuckTales)@8|16 ; 4003 (DuckTales)@9|15 ; 5688 (What'll I Do)@24|20
+23,vii,6,0.53,2475 (Wrecking Ball)@23|29 ; 2607 (Farmersonly.com)@2|28 ; 3292 (Shangri La Rags to Riches)@5|64 ; 3772 (Telegraph Line)@30|35 ; 3856 (Don't Make Toast)@19|33 ; 5266 (Halls of Ivy)@1|19
+24,V43/G,6,0.53,2559 (Mother's/Father's Day Tag)@6|10 ; 2559 (Mother's/Father's Day Tag)@8|8 ; 3772 (Telegraph Line)@5|60 ; 3772 (Telegraph Line)@6|59 ; 3772 (Telegraph Line)@59|6 ; 3772 (Telegraph Line)@60|5
+25,bVII#5#3#2,6,0.53,3390 (Nothing Compares To You)@3|21 ; 3853 (If I May)@3|23 ; 3853 (If I May)@4|22 ; 3859 (Shadow of The Day)@5|19 ; 3868 (I was Born Under a Wand'rin' Star)@15|2 ; 3912 (The Next Ten Minutes)@28|2
+26,bbII,6,0.53,4293 (Gaston (Parody))@5|26 ; 4293 (Gaston (Parody))@6|25 ; 4293 (Gaston (Parody))@23|8 ; 4293 (Gaston (Parody))@24|7 ; 4293 (Gaston (Parody))@28|3 ; 4293 (Gaston (Parody))@30|1
+27,II,5,0.44,2475 (Wrecking Ball)@19|33 ; 2475 (Wrecking Ball)@30|22 ; 2475 (Wrecking Ball)@31|21 ; 2962 (You are the only girl for me)@6|7 ; 2962 (You are the only girl for me)@8|5
+28,iiø65b3/Eb,5,0.44,2560 (Mother's/Father's Day Tag)@13|3 ; 3859 (Shadow of The Day)@17|7 ; 3859 (Shadow of The Day)@18|6 ; 3859 (Shadow of The Day)@19|5 ; 3912 (The Next Ten Minutes)@17|13
+29,I64/C,5,0.44,2697 (Loop-dee-Loop & Pull)@1|14 ; 2697 (Loop-dee-Loop & Pull)@2|13 ; 3390 (Nothing Compares To You)@13|11 ; 3772 (Telegraph Line)@54|11 ; 3772 (Telegraph Line)@55|10
+30,iiø65b3/C#,5,0.44,2963 (Pinot Noir)@4|2 ; 3856 (Don't Make Toast)@27|25 ; 3856 (Don't Make Toast)@28|24 ; 3856 (Don't Make Toast)@48|4 ; 3856 (Don't Make Toast)@49|3
+31,v7,5,0.44,4178 (Professional Pirate)@18|8 ; 4178 (Professional Pirate)@19|7 ; 4178 (Professional Pirate)@20|6 ; 4178 (Professional Pirate)@21|5 ; 5439 (Happy Halloween)@11|10
+32,V543,5,0.44,5388 (Grace Kelly)@24|10 ; 5388 (Grace Kelly)@25|9 ; 5388 (Grace Kelly)@26|8 ; 5388 (Grace Kelly)@27|7 ; 5388 (Grace Kelly)@28|6
+33,iiø43/Bb,5,0.44,5688 (What'll I Do)@4|40 ; 5688 (What'll I Do)@5|39 ; 5688 (What'll I Do)@11|33 ; 5688 (What'll I Do)@14|30 ; 5688 (What'll I Do)@15|29
+34,bVII7#3#2,4,0.35,1682 (My Heart Broke Last Night)@7|6 ; 3858 (Cops!)@15|5 ; 3859 (Shadow of The Day)@20|4 ; 3859 (Shadow of The Day)@21|3
+35,V75#3,4,0.35,2296 (My Funny Valentine)@2|21 ; 2296 (My Funny Valentine)@4|19 ; 2296 (My Funny Valentine)@6|17 ; 4833 (Too Darn Hot)@15|15
+36,bVI5#32,4,0.35,2533 (Dreidel)@8|7 ; 2533 (Dreidel)@9|6 ; 3853 (If I May)@9|17 ; 3853 (If I May)@10|16
+37,I532,4,0.35,3098 (Young or Old)@13|1 ; 3859 (Shadow of The Day)@22|2 ; 3859 (Shadow of The Day)@23|1 ; 5439 (Happy Halloween)@18|3
+38,II75#3,4,0.35,3137 (Hard Times)@6|11 ; 3856 (Don't Make Toast)@5|47 ; 3856 (Don't Make Toast)@25|27 ; 3856 (Don't Make Toast)@45|7
+39,iii6/Bb,4,0.35,3292 (Shangri La Rags to Riches)@22|47 ; 3292 (Shangri La Rags to Riches)@23|46 ; 3292 (Shangri La Rags to Riches)@43|26 ; 3292 (Shangri La Rags to Riches)@45|24
+40,IV64/F,4,0.35,3772 (Telegraph Line)@1|64 ; 3772 (Telegraph Line)@2|63 ; 3772 (Telegraph Line)@3|62 ; 3772 (Telegraph Line)@4|61
+41,II#643/F,4,0.35,3856 (Don't Make Toast)@2|50 ; 3856 (Don't Make Toast)@35|17 ; 3856 (Don't Make Toast)@36|16 ; 3856 (Don't Make Toast)@37|15
+42,iv5,4,0.35,3859 (Shadow of The Day)@1|23 ; 3859 (Shadow of The Day)@2|22 ; 3859 (Shadow of The Day)@3|21 ; 3912 (The Next Ten Minutes)@6|24
+43,iii7,4,0.35,3865 (Ron Rogers Medley)@4|53 ; 3912 (The Next Ten Minutes)@7|23 ; 3912 (The Next Ten Minutes)@10|20 ; 3912 (The Next Ten Minutes)@14|16
+44,II#643/C#,4,0.35,"4074 (Love me, and the world behind)@13|13 ; 4074 (Love me, and the world behind)@14|12 ; 4074 (Love me, and the world behind)@15|11 ; 4074 (Love me, and the world behind)@16|10"
+45,IV+#64/Ab,4,0.35,4833 (Too Darn Hot)@5|25 ; 4833 (Too Darn Hot)@6|24 ; 4833 (Too Darn Hot)@7|23 ; 4833 (Too Darn Hot)@8|22
+46,iiø65/C,4,0.35,4833 (Too Darn Hot)@21|9 ; 4833 (Too Darn Hot)@22|8 ; 4833 (Too Darn Hot)@25|5 ; 4833 (Too Darn Hot)@26|4
+47,bVI5,4,0.35,5377 (Reaching Out)@3|53 ; 5377 (Reaching Out)@17|39 ; 5377 (Reaching Out)@31|25 ; 5377 (Reaching Out)@45|11
+48,vi43/E,3,0.27,1875 (Kansas City Dichotomy)@2|8 ; 1875 (Kansas City Dichotomy)@3|7 ; 1875 (Kansas City Dichotomy)@6|4
+49,bVI7,3,0.27,2296 (My Funny Valentine)@14|9 ; 3095 (Young or Old)@14|9 ; 3095 (Young or Old)@16|7
+50,III,3,0.27,2296 (My Funny Valentine)@22|1 ; 3870 (Mary Had a Little Lamb)@13|18 ; 4833 (Too Darn Hot)@16|14
+51,i54/G,3,0.27,2475 (Wrecking Ball)@6|46 ; 2475 (Wrecking Ball)@26|26 ; 2475 (Wrecking Ball)@27|25
+52,vi6/C,3,0.27,2475 (Wrecking Ball)@15|37 ; 2475 (Wrecking Ball)@41|11 ; 2475 (Wrecking Ball)@49|3
+53,#IV,3,0.27,2607 (Farmersonly.com)@11|19 ; 2607 (Farmersonly.com)@12|18 ; 3292 (Shangri La Rags to Riches)@56|13
+54,II#643/D,3,0.27,2697 (Loop-dee-Loop & Pull)@4|11 ; 2697 (Loop-dee-Loop & Pull)@9|6 ; 2697 (Loop-dee-Loop & Pull)@10|5
+55,I42/Bb,3,0.27,2869 (It's My Song)@5|8 ; 3979 (It's the End of the World as We Know It)@4|14 ; 3979 (It's the End of the World as We Know It)@5|13
+56,iiø7b53,3,0.27,2869 (It's My Song)@11|2 ; 3266 (Zip-a-Dee-Doo-Dah)@3|22 ; 3865 (Ron Rogers Medley)@28|29
+57,##Ib75b4/Bb,3,0.27,2905 (That Day)@12|6 ; 2905 (That Day)@13|5 ; 2905 (That Day)@14|4
+58,vi42/Eb,3,0.27,2963 (Pinot Noir)@3|3 ; 3856 (Don't Make Toast)@31|21 ; 3856 (Don't Make Toast)@32|20
+59,bII#75#3,3,0.27,"3137 (Hard Times)@14|3 ; 4074 (Love me, and the world behind)@10|16 ; 5688 (What'll I Do)@42|2"
+60,bVI75#3,3,0.27,3266 (Zip-a-Dee-Doo-Dah)@14|11 ; 3266 (Zip-a-Dee-Doo-Dah)@18|7 ; 5688 (What'll I Do)@13|31
+61,VI7#3,3,0.27,3292 (Shangri La Rags to Riches)@25|44 ; 3292 (Shangri La Rags to Riches)@26|43 ; 3292 (Shangri La Rags to Riches)@29|40
+62,VI75#3,3,0.27,3292 (Shangri La Rags to Riches)@50|19 ; 3292 (Shangri La Rags to Riches)@53|16 ; 3856 (Don't Make Toast)@4|48
+63,ii543,3,0.27,3772 (Telegraph Line)@7|58 ; 3772 (Telegraph Line)@8|57 ; 3856 (Don't Make Toast)@17|35
+64,iiio,3,0.27,3772 (Telegraph Line)@27|38 ; 3772 (Telegraph Line)@28|37 ; 5688 (What'll I Do)@26|18
+65,iiø43/E,3,0.27,3853 (If I May)@12|14 ; 3853 (If I May)@13|13 ; 3853 (If I May)@16|10
+66,Sw43/E,3,0.27,3853 (If I May)@14|12 ; 3853 (If I May)@15|11 ; 3853 (If I May)@17|9
+67,V43/Bb,3,0.27,3856 (Don't Make Toast)@14|38 ; 3856 (Don't Make Toast)@15|37 ; 3856 (Don't Make Toast)@18|34
+68,IV6b5/Ab,3,0.27,3858 (Cops!)@3|17 ; 3858 (Cops!)@4|16 ; 3858 (Cops!)@5|15
+69,iiø65b3/C,3,0.27,3865 (Ron Rogers Medley)@17|40 ; 3865 (Ron Rogers Medley)@18|39 ; 3865 (Ron Rogers Medley)@55|2
+70,IV#643/B,3,0.27,3870 (Mary Had a Little Lamb)@2|29 ; 3870 (Mary Had a Little Lamb)@26|5 ; 3870 (Mary Had a Little Lamb)@27|4
+71,ivø65b3/G,3,0.27,3870 (Mary Had a Little Lamb)@4|27 ; 3870 (Mary Had a Little Lamb)@12|19 ; 3870 (Mary Had a Little Lamb)@21|10
+72,II6#42/G,3,0.27,4003 (DuckTales)@4|20 ; 4003 (DuckTales)@5|19 ; 4003 (DuckTales)@6|18
+73,IV654/G,3,0.27,4003 (DuckTales)@10|14 ; 4003 (DuckTales)@11|13 ; 4003 (DuckTales)@12|12
+74,bVI763/G,3,0.27,4003 (DuckTales)@13|11 ; 4003 (DuckTales)@14|10 ; 4003 (DuckTales)@15|9
+75,bVII7#4#2/G,3,0.27,4003 (DuckTales)@16|8 ; 4003 (DuckTales)@17|7 ; 4003 (DuckTales)@18|6
+76,iii2/G,3,0.27,4178 (Professional Pirate)@5|21 ; 4178 (Professional Pirate)@6|20 ; 4178 (Professional Pirate)@13|13
+77,bbII#643/Ab,3,0.27,4293 (Gaston (Parody))@13|18 ; 4293 (Gaston (Parody))@14|17 ; 4293 (Gaston (Parody))@15|16
+78,ii7#53,3,0.27,4833 (Too Darn Hot)@2|28 ; 4833 (Too Darn Hot)@3|27 ; 4833 (Too Darn Hot)@4|26
+79,IV#754/F#,3,0.27,4833 (Too Darn Hot)@12|18 ; 4833 (Too Darn Hot)@13|17 ; 4833 (Too Darn Hot)@14|16
+80,ii65/Bb,3,0.27,5388 (Grace Kelly)@29|5 ; 5388 (Grace Kelly)@30|4 ; 5388 (Grace Kelly)@31|3
+81,iiø65b3/G,3,0.27,5688 (What'll I Do)@29|15 ; 5688 (What'll I Do)@31|13 ; 5688 (What'll I Do)@33|11
+82,I64b3/Bb,2,0.18,1922 (If You Wanna Light Up the World)@4|8 ; 1922 (If You Wanna Light Up the World)@5|7
+83,ii65#2/Ab,2,0.18,1922 (If You Wanna Light Up the World)@9|3 ; 3868 (I was Born Under a Wand'rin' Star)@9|8
+84,iiø65b3/F,2,0.18,1936 (As Like the Breeze that Blows)@8|2 ; 3979 (It's the End of the World as We Know It)@16|2
+85,vii6b52/C#,2,0.18,2042 (And So It's Over)@6|9 ; 2042 (And So It's Over)@7|8
+86,v65/Bb,2,0.18,2042 (And So It's Over)@10|5 ; 3979 (It's the End of the World as We Know It)@12|6
+87,iv65/G,2,0.18,2296 (My Funny Valentine)@13|10 ; 2296 (My Funny Valentine)@19|4
+88,bVII7,2,0.18,2296 (My Funny Valentine)@15|8 ; 2296 (My Funny Valentine)@17|6
+89,iv42/D,2,0.18,2296 (My Funny Valentine)@20|3 ; 3095 (Young or Old)@4|19
+90,I64/G,2,0.18,2425 (Bow-Tie Guy)@15|4 ; 2425 (Bow-Tie Guy)@16|3
+91,iii6/G,2,0.18,2475 (Wrecking Ball)@32|20 ; 2475 (Wrecking Ball)@33|19
+92,V75#4/C,2,0.18,2475 (Wrecking Ball)@37|15 ; 2475 (Wrecking Ball)@46|6
+93,I65/E,2,0.18,2475 (Wrecking Ball)@42|10 ; 2475 (Wrecking Ball)@43|9
+94,I6/F#,2,0.18,2501 (Lonesome Road)@1|12 ; 2501 (Lonesome Road)@3|10
+95,ii65#2/G,2,0.18,2501 (Lonesome Road)@4|9 ; 2501 (Lonesome Road)@6|7
+96,ib752/G,2,0.18,2533 (Dreidel)@10|5 ; 2533 (Dreidel)@11|4
+97,bVII#643/Bb,2,0.18,2559 (Mother's/Father's Day Tag)@12|4 ; 2559 (Mother's/Father's Day Tag)@14|2
+98,iiø65b3/Bb,2,0.18,2559 (Mother's/Father's Day Tag)@13|3 ; 3390 (Nothing Compares To You)@22|2
+99,V43/C,2,0.18,2560 (Mother's/Father's Day Tag)@6|10 ; 2560 (Mother's/Father's Day Tag)@8|8
+100,iio6b3#3/Eb,2,0.18,2560 (Mother's/Father's Day Tag)@12|4 ; 2560 (Mother's/Father's Day Tag)@14|2
+101,bIII,2,0.18,2607 (Farmersonly.com)@15|15 ; 3870 (Mary Had a Little Lamb)@18|13
+102,#V5#3#2,2,0.18,2905 (That Day)@4|14 ; 2905 (That Day)@9|9
+103,##I5b42/Eb,2,0.18,2905 (That Day)@16|2 ; 2905 (That Day)@17|1
+104,I6/A,2,0.18,2962 (You are the only girl for me)@7|6 ; 5388 (Grace Kelly)@14|20
+105,viio6b5/F#,2,0.18,2962 (You are the only girl for me)@11|2 ; 3266 (Zip-a-Dee-Doo-Dah)@8|17
+106,bII,2,0.18,3095 (Young or Old)@7|16 ; 3870 (Mary Had a Little Lamb)@1|30
+107,bII#7#5#3,2,0.18,3095 (Young or Old)@8|15 ; 3095 (Young or Old)@17|6
+108,vø65b3/A,2,0.18,3095 (Young or Old)@11|12 ; 3870 (Mary Had a Little Lamb)@23|8
+109,bVI532,2,0.18,3095 (Young or Old)@13|10 ; 3883 (This Is How You Voice Lead)@5|5
+110,bVIb654/D,2,0.18,3095 (Young or Old)@20|3 ; 3095 (Young or Old)@21|2
+111,ii6/C,2,0.18,3098 (Young or Old)@9|5 ; 3865 (Ron Rogers Medley)@21|36
+112,IV42/B,2,0.18,3098 (Young or Old)@10|4 ; 3865 (Ron Rogers Medley)@27|30
+113,iiø65b3/D,2,0.18,3137 (Hard Times)@9|8 ; 3137 (Hard Times)@10|7
+114,vib753,2,0.18,3266 (Zip-a-Dee-Doo-Dah)@5|20 ; 3266 (Zip-a-Dee-Doo-Dah)@13|12
+115,bVI53#3,2,0.18,3266 (Zip-a-Dee-Doo-Dah)@19|6 ; 3266 (Zip-a-Dee-Doo-Dah)@21|4
+116,iiø43/C#,2,0.18,3266 (Zip-a-Dee-Doo-Dah)@22|3 ; 3390 (Nothing Compares To You)@12|12
+117,ii43/C,2,0.18,3292 (Shangri La Rags to Riches)@13|56 ; 3292 (Shangri La Rags to Riches)@52|17
+118,vii732,2,0.18,3292 (Shangri La Rags to Riches)@14|55 ; 4178 (Professional Pirate)@24|2
+119,V6/D,2,0.18,3292 (Shangri La Rags to Riches)@17|52 ; 3292 (Shangri La Rags to Riches)@20|49
+120,ii6/Ab,2,0.18,3292 (Shangri La Rags to Riches)@35|34 ; 3292 (Shangri La Rags to Riches)@36|33
+121,ii42/Eb,2,0.18,3292 (Shangri La Rags to Riches)@51|18 ; 3292 (Shangri La Rags to Riches)@54|15
+122,#VI65/E,2,0.18,3292 (Shangri La Rags to Riches)@62|7 ; 3292 (Shangri La Rags to Riches)@63|6
+123,bVII7#4#2/Eb,2,0.18,3292 (Shangri La Rags to Riches)@66|3 ; 3292 (Shangri La Rags to Riches)@67|2
+124,III#643/E,2,0.18,3390 (Nothing Compares To You)@1|23 ; 3772 (Telegraph Line)@44|21
+125,iv5b32,2,0.18,3390 (Nothing Compares To You)@18|6 ; 3390 (Nothing Compares To You)@19|5
+126,I+,2,0.18,3772 (Telegraph Line)@42|23 ; 3772 (Telegraph Line)@43|22
+127,I64b3/Eb,2,0.18,3853 (If I May)@7|19 ; 3853 (If I May)@8|18
+128,I64/Eb,2,0.18,3853 (If I May)@20|6 ; 3853 (If I May)@23|3
+129,Ger65/E,2,0.18,3856 (Don't Make Toast)@33|19 ; 3856 (Don't Make Toast)@34|18
+130,#IIm75b4/E,2,0.18,3856 (Don't Make Toast)@42|10 ; 3856 (Don't Make Toast)@43|9
+131,I64/F#,2,0.18,3858 (Cops!)@7|13 ; 3858 (Cops!)@8|12
+132,vi65/Bb,2,0.18,3859 (Shadow of The Day)@9|15 ; 5266 (Halls of Ivy)@8|12
+133,ii42/G,2,0.18,3865 (Ron Rogers Medley)@2|55 ; 3865 (Ron Rogers Medley)@7|50
+134,vi43/B,2,0.18,3865 (Ron Rogers Medley)@5|52 ; 3865 (Ron Rogers Medley)@42|15
+135,I64b3/D,2,0.18,3865 (Ron Rogers Medley)@15|42 ; 3865 (Ron Rogers Medley)@53|4
+136,vi64/B,2,0.18,3865 (Ron Rogers Medley)@38|19 ; 3865 (Ron Rogers Medley)@41|16
+137,vi42/Bb,2,0.18,3868 (I was Born Under a Wand'rin' Star)@7|10 ; 3868 (I was Born Under a Wand'rin' Star)@10|7
+138,III532,2,0.18,3870 (Mary Had a Little Lamb)@7|24 ; 3870 (Mary Had a Little Lamb)@22|9
+139,viø#653/B,2,0.18,3870 (Mary Had a Little Lamb)@9|22 ; 3870 (Mary Had a Little Lamb)@28|3
+140,I#643/F#,2,0.18,3870 (Mary Had a Little Lamb)@24|7 ; 3870 (Mary Had a Little Lamb)@25|6
+141,ii6/Eb,2,0.18,3912 (The Next Ten Minutes)@3|27 ; 3912 (The Next Ten Minutes)@5|25
+142,I65/D,2,0.18,3912 (The Next Ten Minutes)@11|19 ; 3912 (The Next Ten Minutes)@13|17
+143,I64b3/G,2,0.18,3979 (It's the End of the World as We Know It)@3|15 ; 3979 (It's the End of the World as We Know It)@8|10
+144,I64b3/B,2,0.18,"4074 (Love me, and the world behind)@3|23 ; 4074 (Love me, and the world behind)@6|20"
+145,Ger65/C,2,0.18,"4074 (Love me, and the world behind)@17|9 ; 4074 (Love me, and the world behind)@18|8"
+146,V43/F#,2,0.18,"4074 (Love me, and the world behind)@21|5 ; 4074 (Love me, and the world behind)@25|1"
+147,ii2/F,2,0.18,4178 (Professional Pirate)@2|24 ; 4178 (Professional Pirate)@3|23
+148,vi5,2,0.18,4178 (Professional Pirate)@9|17 ; 5688 (What'll I Do)@1|43
+149,bbVI#643/Eb,2,0.18,4293 (Gaston (Parody))@2|29 ; 4293 (Gaston (Parody))@3|28
+150,bbII6#42/B,2,0.18,4293 (Gaston (Parody))@8|23 ; 4293 (Gaston (Parody))@9|22
+151,bbVII,2,0.18,4293 (Gaston (Parody))@10|21 ; 4293 (Gaston (Parody))@12|19
+152,bbbVII#5#3#2,2,0.18,4293 (Gaston (Parody))@16|15 ; 4293 (Gaston (Parody))@19|12
+153,bbbVII,2,0.18,4293 (Gaston (Parody))@17|14 ; 4293 (Gaston (Parody))@20|11
+154,bbbVII#7#5#3,2,0.18,4293 (Gaston (Parody))@18|13 ; 4293 (Gaston (Parody))@21|10
+155,ii#642/G,2,0.18,4833 (Too Darn Hot)@9|21 ; 4833 (Too Darn Hot)@10|20
+156,#IVob6b42/C#,2,0.18,5266 (Halls of Ivy)@9|11 ; 5266 (Halls of Ivy)@10|10
+157,IV64/Bb,2,0.18,5266 (Halls of Ivy)@15|5 ; 5266 (Halls of Ivy)@17|3
+158,bVII532,2,0.18,5377 (Reaching Out)@13|43 ; 5377 (Reaching Out)@27|29
+159,III654/A,2,0.18,5377 (Reaching Out)@25|31 ; 5377 (Reaching Out)@39|17
+160,v752/B,2,0.18,5377 (Reaching Out)@52|4 ; 5377 (Reaching Out)@54|2
+161,ii42/D,2,0.18,5688 (What'll I Do)@17|27 ; 6447 (Goodnight)@5|15
+162,IV6/B,2,0.18,6447 (Goodnight)@8|12 ; 6447 (Goodnight)@11|9
+163,vi65#2/G,1,0.09,1682 (My Heart Broke Last Night)@9|4
+164,#IIob6b42/G,1,0.09,1682 (My Heart Broke Last Night)@10|3
+165,viio64b3/F,1,0.09,1875 (Kansas City Dichotomy)@5|5
+166,viio63b2/C#,1,0.09,1875 (Kansas City Dichotomy)@7|3
+167,vi65/C,1,0.09,1875 (Kansas City Dichotomy)@9|1
+168,v64/D,1,0.09,1936 (As Like the Breeze that Blows)@5|5
+169,I6b5/E,1,0.09,1936 (As Like the Breeze that Blows)@6|4
+170,vi754/D,1,0.09,2042 (And So It's Over)@2|13
+171,vi752/D,1,0.09,2042 (And So It's Over)@4|11
+172,ib752/F,1,0.09,2042 (And So It's Over)@9|6
+173,bIII75#3,1,0.09,2042 (And So It's Over)@11|4
+174,bVI#75#3,1,0.09,2042 (And So It's Over)@12|3
+175,bII#7#4#3,1,0.09,2042 (And So It's Over)@13|2
+176,i64/F#,1,0.09,2296 (My Funny Valentine)@5|18
+177,IV7#32,1,0.09,2296 (My Funny Valentine)@11|12
+178,v6/A,1,0.09,2296 (My Funny Valentine)@16|7
+179,II7#5#3,1,0.09,2296 (My Funny Valentine)@21|2
+180,i52,1,0.09,2425 (Bow-Tie Guy)@3|16
+181,ii42/C,1,0.09,2425 (Bow-Tie Guy)@4|15
+182,bIV#843/B,1,0.09,2425 (Bow-Tie Guy)@5|14
+183,I542/B,1,0.09,2425 (Bow-Tie Guy)@6|13
+184,ivob55,1,0.09,2425 (Bow-Tie Guy)@9|10
+185,iib843/A,1,0.09,2425 (Bow-Tie Guy)@10|9
+186,v5,1,0.09,2475 (Wrecking Ball)@10|42
+187,vii65#3/D,1,0.09,2475 (Wrecking Ball)@13|39
+188,V64#3/D,1,0.09,2475 (Wrecking Ball)@14|38
+189,#IVob6b54/C,1,0.09,2475 (Wrecking Ball)@18|34
+190,V6/B,1,0.09,2475 (Wrecking Ball)@35|17
+191,#IV6/A,1,0.09,2475 (Wrecking Ball)@36|16
+192,vii7#4/C,1,0.09,2475 (Wrecking Ball)@50|2
+193,ii7#43,1,0.09,2501 (Lonesome Road)@5|8
+194,#Vbm75b4/Eb,1,0.09,2501 (Lonesome Road)@11|2
+195,v652/C,1,0.09,2533 (Dreidel)@5|10
+196,I542/C,1,0.09,2533 (Dreidel)@6|9
+197,bVI#75#32,1,0.09,2533 (Dreidel)@7|8
+198,bII#75#32,1,0.09,2533 (Dreidel)@12|3
+199,bVI#752/Eb,1,0.09,2533 (Dreidel)@13|2
+200,I7532,1,0.09,2533 (Dreidel)@14|1
+201,viøb642/C,1,0.09,2559 (Mother's/Father's Day Tag)@10|6
+202,viøb642/F,1,0.09,2560 (Mother's/Father's Day Tag)@10|6
+203,iii763/C,1,0.09,2697 (Loop-dee-Loop & Pull)@12|3
+204,i43/G,1,0.09,2869 (It's My Song)@8|5
+205,bVI64/Eb,1,0.09,2869 (It's My Song)@10|3
+206,#V,1,0.09,2905 (That Day)@1|17
+207,#VI,1,0.09,2905 (That Day)@2|16
+208,#VIø753#2,1,0.09,2905 (That Day)@3|15
+209,#I#75#3,1,0.09,2905 (That Day)@5|13
+210,##IIIb753,1,0.09,2905 (That Day)@6|12
+211,#II7#53#3,1,0.09,2905 (That Day)@7|11
+212,#IV#75#32,1,0.09,2905 (That Day)@8|10
+213,#VI#5#4/Ab,1,0.09,2905 (That Day)@10|8
+214,##III532,1,0.09,2905 (That Day)@11|7
+215,##Ib754/Bb,1,0.09,2905 (That Day)@15|3
+216,bIII+##54/E,1,0.09,2962 (You are the only girl for me)@1|12
+217,#Iø6b5b3/A,1,0.09,2962 (You are the only girl for me)@3|10
+218,VI#643/A,1,0.09,2962 (You are the only girl for me)@4|9
+219,#IVø6b5b3/D,1,0.09,2962 (You are the only girl for me)@5|8
+220,III64b3/A,1,0.09,3095 (Young or Old)@2|21
+221,bVII65/C#,1,0.09,3095 (Young or Old)@5|18
+222,iiø7,1,0.09,3095 (Young or Old)@6|17
+223,bVII6/C,1,0.09,3095 (Young or Old)@9|14
+224,bII#6#42/B,1,0.09,3095 (Young or Old)@10|13
+225,vo6b5b3/Ab,1,0.09,3095 (Young or Old)@12|11
+226,bVII65/C,1,0.09,3095 (Young or Old)@18|5
+227,IIIb753,1,0.09,3095 (Young or Old)@19|4
+228,bVI43[#7]/D,1,0.09,3095 (Young or Old)@22|1
+229,V43/A,1,0.09,3098 (Young or Old)@2|12
+230,vi42/D,1,0.09,3098 (Young or Old)@4|10
+231,II65/C#,1,0.09,3098 (Young or Old)@5|9
+232,#IVø7,1,0.09,3098 (Young or Old)@6|8
+233,viiø65/A,1,0.09,3098 (Young or Old)@11|3
+234,viio6b5/Ab,1,0.09,3098 (Young or Old)@12|2
+235,vi43/C#,1,0.09,3137 (Hard Times)@8|9
+236,iii52,1,0.09,3266 (Zip-a-Dee-Doo-Dah)@2|23
+237,iii6/C,1,0.09,3266 (Zip-a-Dee-Doo-Dah)@15|10
+238,V732,1,0.09,3266 (Zip-a-Dee-Doo-Dah)@17|8
+239,vii432/C#,1,0.09,3266 (Zip-a-Dee-Doo-Dah)@20|5
+240,Ger65/C#,1,0.09,3266 (Zip-a-Dee-Doo-Dah)@23|2
+241,ii64/C,1,0.09,3292 (Shangri La Rags to Riches)@10|59
+242,viiø62/C,1,0.09,3292 (Shangri La Rags to Riches)@11|58
+243,IV6/C,1,0.09,3292 (Shangri La Rags to Riches)@12|57
+244,V64/F,1,0.09,3292 (Shangri La Rags to Riches)@15|54
+245,V42/Ab,1,0.09,3292 (Shangri La Rags to Riches)@16|53
+246,V742/C,1,0.09,3292 (Shangri La Rags to Riches)@18|51
+247,V752/Eb,1,0.09,3292 (Shangri La Rags to Riches)@19|50
+248,VI65/E,1,0.09,3292 (Shangri La Rags to Riches)@27|42
+249,VI#643/G,1,0.09,3292 (Shangri La Rags to Riches)@28|41
+250,VI#42/Bb,1,0.09,3292 (Shangri La Rags to Riches)@30|39
+251,v65/C#,1,0.09,3292 (Shangri La Rags to Riches)@31|38
+252,ii764/C,1,0.09,3292 (Shangri La Rags to Riches)@32|37
+253,#IIIbm753,1,0.09,3292 (Shangri La Rags to Riches)@40|29
+254,#IIIb75b3,1,0.09,3292 (Shangri La Rags to Riches)@41|28
+255,iii742/A,1,0.09,3292 (Shangri La Rags to Riches)@44|25
+256,iiio64/C#,1,0.09,3292 (Shangri La Rags to Riches)@46|23
+257,iii752/C,1,0.09,3292 (Shangri La Rags to Riches)@47|22
+258,bVI65/Eb,1,0.09,3292 (Shangri La Rags to Riches)@61|8
+259,vi65/Eb,1,0.09,3292 (Shangri La Rags to Riches)@64|5
+260,vi742/Eb,1,0.09,3390 (Nothing Compares To You)@4|20
+261,v6/Eb,1,0.09,3390 (Nothing Compares To You)@5|19
+262,I32,1,0.09,3772 (Telegraph Line)@15|50
+263,I6b5/A,1,0.09,3772 (Telegraph Line)@17|48
+264,V542/Bb,1,0.09,3772 (Telegraph Line)@22|43
+265,iiiob543,1,0.09,3772 (Telegraph Line)@29|36
+266,V42/Bb,1,0.09,3772 (Telegraph Line)@38|27
+267,iii42/G,1,0.09,3772 (Telegraph Line)@41|24
+268,vi42/C,1,0.09,3772 (Telegraph Line)@48|17
+269,V742/D,1,0.09,3772 (Telegraph Line)@56|9
+270,V6/E,1,0.09,3772 (Telegraph Line)@57|8
+271,bVI#3,1,0.09,3853 (If I May)@11|15
+272,IV6b5/F,1,0.09,3856 (Don't Make Toast)@3|49
+273,II5#32,1,0.09,3856 (Don't Make Toast)@7|45
+274,V6/G,1,0.09,3856 (Don't Make Toast)@11|41
+275,v43/Bb,1,0.09,3856 (Don't Make Toast)@16|36
+276,I6/C,1,0.09,3856 (Don't Make Toast)@21|31
+277,vi6b54/C,1,0.09,3856 (Don't Make Toast)@22|30
+278,I6b5/C,1,0.09,3856 (Don't Make Toast)@23|29
+279,vi65/Ab,1,0.09,3856 (Don't Make Toast)@24|28
+280,I763/C,1,0.09,3856 (Don't Make Toast)@26|26
+281,II#754/E,1,0.09,3856 (Don't Make Toast)@41|11
+282,IV65/F,1,0.09,3856 (Don't Make Toast)@44|8
+283,bVI#654/B,1,0.09,3856 (Don't Make Toast)@46|6
+284,i2/A,1,0.09,3858 (Cops!)@2|18
+285,Ger65/G,1,0.09,3858 (Cops!)@6|14
+286,IV42/Eb,1,0.09,3858 (Cops!)@11|9
+287,IV42/D,1,0.09,3858 (Cops!)@12|8
+288,iiø65b3/E,1,0.09,3858 (Cops!)@14|6
+289,vii72/B,1,0.09,3858 (Cops!)@18|2
+290,IV65/G,1,0.09,3859 (Shadow of The Day)@4|20
+291,I6/D,1,0.09,3859 (Shadow of The Day)@11|13
+292,ii632/Eb,1,0.09,3859 (Shadow of The Day)@12|12
+293,I64/D,1,0.09,3865 (Ron Rogers Medley)@19|38
+294,iii43/F#,1,0.09,3865 (Ron Rogers Medley)@25|32
+295,iiøb642/G,1,0.09,3865 (Ron Rogers Medley)@29|28
+296,V64/A,1,0.09,3865 (Ron Rogers Medley)@34|23
+297,I43/D,1,0.09,3865 (Ron Rogers Medley)@35|22
+298,vi6/G,1,0.09,3865 (Ron Rogers Medley)@40|17
+299,bVII#76#3/A,1,0.09,3865 (Ron Rogers Medley)@43|14
+300,I6b5/B,1,0.09,3865 (Ron Rogers Medley)@45|12
+301,bVI6#42/C#,1,0.09,3865 (Ron Rogers Medley)@48|9
+302,iø6b5b3/Bb,1,0.09,3865 (Ron Rogers Medley)@50|7
+303,bVI#643/Bb,1,0.09,3865 (Ron Rogers Medley)@51|6
+304,I6/B,1,0.09,3865 (Ron Rogers Medley)@52|5
+305,II6#42/Eb,1,0.09,3868 (I was Born Under a Wand'rin' Star)@2|15
+306,vii#642/C,1,0.09,3868 (I was Born Under a Wand'rin' Star)@6|11
+307,I6b5/G,1,0.09,3868 (I was Born Under a Wand'rin' Star)@11|6
+308,i+b75#2/Ab,1,0.09,3868 (I was Born Under a Wand'rin' Star)@14|3
+309,ii75b4/F#,1,0.09,3870 (Mary Had a Little Lamb)@5|26
+310,bVII42/G,1,0.09,3870 (Mary Had a Little Lamb)@6|25
+311,V#643/C#,1,0.09,3870 (Mary Had a Little Lamb)@8|23
+312,IV65/Ab,1,0.09,3870 (Mary Had a Little Lamb)@10|21
+313,bVIb753,1,0.09,3870 (Mary Had a Little Lamb)@11|20
+314,III42/C#,1,0.09,3870 (Mary Had a Little Lamb)@14|17
+315,bV#643/C,1,0.09,3870 (Mary Had a Little Lamb)@15|16
+316,v75b4/B,1,0.09,3870 (Mary Had a Little Lamb)@16|15
+317,vob64b3/C,1,0.09,3870 (Mary Had a Little Lamb)@17|14
+318,bV65#2/Ab,1,0.09,3870 (Mary Had a Little Lamb)@19|12
+319,ivb743,1,0.09,3870 (Mary Had a Little Lamb)@20|11
+320,iiø42/B,1,0.09,3870 (Mary Had a Little Lamb)@29|2
+321,vi#2/C,1,0.09,3883 (This Is How You Voice Lead)@1|9
+322,v#7,1,0.09,3883 (This Is How You Voice Lead)@3|7
+323,#III6/C,1,0.09,3883 (This Is How You Voice Lead)@4|6
+324,bVI42/C,1,0.09,3883 (This Is How You Voice Lead)@7|3
+325,bVII654/Bb,1,0.09,3883 (This Is How You Voice Lead)@8|2
+326,I#7#32,1,0.09,3883 (This Is How You Voice Lead)@9|1
+327,I6b5/D,1,0.09,3912 (The Next Ten Minutes)@20|10
+328,I64b3/F,1,0.09,3912 (The Next Ten Minutes)@23|7
+329,bII#7#32,1,0.09,3912 (The Next Ten Minutes)@27|3
+330,IV763/A,1,0.09,3979 (It's the End of the World as We Know It)@6|12
+331,ii6/F,1,0.09,3979 (It's the End of the World as We Know It)@7|11
+332,iiiø43/Bb,1,0.09,3979 (It's the End of the World as We Know It)@13|5
+333,bVII##6#54/F,1,0.09,3979 (It's the End of the World as We Know It)@14|4
+334,iv63b2/Ab,1,0.09,3979 (It's the End of the World as We Know It)@15|3
+335,I654/G,1,0.09,3979 (It's the End of the World as We Know It)@17|1
+336,IV64b3/G,1,0.09,4003 (DuckTales)@20|4
+337,bVII#54/A,1,0.09,"4074 (Love me, and the world behind)@4|22"
+338,I6b5/Ab,1,0.09,"4074 (Love me, and the world behind)@5|21"
+339,ii65/A,1,0.09,"4074 (Love me, and the world behind)@7|19"
+340,vi64/Ab,1,0.09,"4074 (Love me, and the world behind)@8|18"
+341,I6/Ab,1,0.09,"4074 (Love me, and the world behind)@20|6"
+342,iv2/A,1,0.09,4178 (Professional Pirate)@8|18
+343,bI,1,0.09,4293 (Gaston (Parody))@1|30
+344,bbVII6/C#,1,0.09,4293 (Gaston (Parody))@4|27
+345,bbII6#42/C,1,0.09,4293 (Gaston (Parody))@7|24
+346,bbVIIm7#53,1,0.09,4293 (Gaston (Parody))@11|20
+347,bbI532,1,0.09,4293 (Gaston (Parody))@22|9
+348,bbIII42/C#,1,0.09,4293 (Gaston (Parody))@25|6
+349,bbIIIm754/Ab,1,0.09,4293 (Gaston (Parody))@26|5
+350,bbV43/C#,1,0.09,4293 (Gaston (Parody))@27|4
+351,bbbVII#76#3/C#,1,0.09,4293 (Gaston (Parody))@29|2
+352,#Iø7b53,1,0.09,4833 (Too Darn Hot)@17|13
+353,V#643/A,1,0.09,4833 (Too Darn Hot)@18|12
+354,II65#3/C#,1,0.09,4833 (Too Darn Hot)@27|3
+355,viø64#2/D,1,0.09,4833 (Too Darn Hot)@28|2
+356,iib763/Eb,1,0.09,5266 (Halls of Ivy)@3|17
+357,vii76#3/C,1,0.09,5266 (Halls of Ivy)@5|15
+358,i#5b42/A,1,0.09,5266 (Halls of Ivy)@6|14
+359,bIII+#5##2,1,0.09,5266 (Halls of Ivy)@11|9
+360,IV742/F,1,0.09,5266 (Halls of Ivy)@13|7
+361,iiøb62/Bb,1,0.09,5266 (Halls of Ivy)@18|2
+362,i532,1,0.09,5377 (Reaching Out)@10|46
+363,bVII543,1,0.09,5377 (Reaching Out)@11|45
+364,ii432/B,1,0.09,5377 (Reaching Out)@24|32
+365,III43/A,1,0.09,5377 (Reaching Out)@26|30
+366,bVII52,1,0.09,5377 (Reaching Out)@28|28
+367,bVI652/B,1,0.09,5377 (Reaching Out)@38|18
+368,i542/A,1,0.09,5377 (Reaching Out)@41|15
+369,bVII742/B,1,0.09,5377 (Reaching Out)@53|3
+370,ii75432,1,0.09,5388 (Grace Kelly)@13|21
+371,V743,1,0.09,5388 (Grace Kelly)@32|2
+372,vi64/F#,1,0.09,5439 (Happy Halloween)@7|14
+373,IV65/B,1,0.09,5439 (Happy Halloween)@12|9
+374,V65/C#,1,0.09,5439 (Happy Halloween)@13|8
+375,ii542/D,1,0.09,5439 (Happy Halloween)@16|5
+376,iv54/D,1,0.09,5439 (Happy Halloween)@19|2
+377,III#3,1,0.09,5688 (What'll I Do)@2|42
+378,Sw43/Bb,1,0.09,5688 (What'll I Do)@6|38
+379,III75#3,1,0.09,5688 (What'll I Do)@8|36
+380,viø43/F,1,0.09,5688 (What'll I Do)@9|35
+381,bVII7#4#2/D,1,0.09,5688 (What'll I Do)@18|26
+382,iiøb642/D,1,0.09,5688 (What'll I Do)@19|25
+383,iiiøb642/E,1,0.09,5688 (What'll I Do)@25|19
+384,I6b5/F#,1,0.09,5688 (What'll I Do)@27|17
+385,iio6/G,1,0.09,5688 (What'll I Do)@32|12
+386,I42/C,1,0.09,5688 (What'll I Do)@36|8
+387,iv6/Bb,1,0.09,5688 (What'll I Do)@37|7
+388,I64b3/A,1,0.09,5688 (What'll I Do)@38|6
+389,ii65/G,1,0.09,5688 (What'll I Do)@39|5
+390,iii65/A,1,0.09,6447 (Goodnight)@12|8
+391,iii64/C#,1,0.09,6447 (Goodnight)@13|7
+392,IV64/D,1,0.09,6447 (Goodnight)@14|6
+393,viio532,1,0.09,6447 (Goodnight)@18|2
+394,vii6/Ab,1,0.09,6730 (Pink Pony Club)@5|6
+395,iii5,1,0.09,6730 (Pink Pony Club)@6|5
+396,ii65/B,1,0.09,6730 (Pink Pony Club)@7|4
+397,iiø65b3/B,1,0.09,6730 (Pink Pony Club)@8|3
+398,iv7[#7],1,0.09,6730 (Pink Pony Club)@9|2

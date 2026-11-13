@@ -1,0 +1,1128 @@
+roman_norm,count,tag_id,tag_title,pos_from_start,pos_from_end,tonic,key,lead
+I,184,1682,My Heart Broke Last Night,8,5,G,G major,D
+I,184,1682,My Heart Broke Last Night,11,2,G,G major,G
+I,184,1682,My Heart Broke Last Night,12,1,G,G major,G
+I,184,1875,Kansas City Dichotomy,8,2,C,C major,B
+I,184,1922,If You Wanna Light Up the World,2,10,Eb,Eb major,Eb
+I,184,1922,If You Wanna Light Up the World,3,9,Eb,Eb major,Eb
+I,184,1922,If You Wanna Light Up the World,4,8,Eb,Eb major,Eb
+I,184,1922,If You Wanna Light Up the World,5,7,Eb,Eb major,Eb
+I,184,1922,If You Wanna Light Up the World,11,1,Eb,Eb major,Eb
+I,184,1936,As Like the Breeze that Blows,1,9,C,C major,C
+I,184,1936,As Like the Breeze that Blows,2,8,C,C major,B
+I,184,1936,As Like the Breeze that Blows,6,4,C,C major,Bb
+I,184,1936,As Like the Breeze that Blows,9,1,C,C major,C
+I,184,2042,And So It's Over,8,7,C,C major,E
+I,184,2042,And So It's Over,14,1,C,C major,B
+I,184,2425,Bow-Tie Guy,6,13,C,C major,E
+I,184,2425,Bow-Tie Guy,15,4,C,C major,E
+I,184,2425,Bow-Tie Guy,16,3,C,C major,E
+I,184,2475,Wrecking Ball,11,41,C,C major,C
+I,184,2475,Wrecking Ball,12,40,C,C major,B
+I,184,2475,Wrecking Ball,22,30,C,C major,C
+I,184,2475,Wrecking Ball,38,14,C,C major,
+I,184,2475,Wrecking Ball,39,13,C,C major,C
+I,184,2475,Wrecking Ball,40,12,C,C major,B
+I,184,2475,Wrecking Ball,42,10,C,C major,C
+I,184,2475,Wrecking Ball,43,9,C,C major,C
+I,184,2475,Wrecking Ball,47,5,C,C major,C
+I,184,2475,Wrecking Ball,48,4,C,C major,
+I,184,2501,Lonesome Road,1,12,D,D major,C#
+I,184,2501,Lonesome Road,2,11,D,D major,C#
+I,184,2501,Lonesome Road,3,10,D,D major,C#
+I,184,2501,Lonesome Road,7,6,D,D major,
+I,184,2501,Lonesome Road,8,5,D,D major,
+I,184,2501,Lonesome Road,9,4,D,D major,
+I,184,2501,Lonesome Road,10,3,D,D major,
+I,184,2533,Dreidel,4,11,D,D major,D
+I,184,2533,Dreidel,6,9,D,D major,D
+I,184,2533,Dreidel,14,1,D,D major,E
+I,184,2559,Mother's/Father's Day Tag,15,1,F,F major,F
+I,184,2560,Mother's/Father's Day Tag,15,1,Bb,Bb major,Bb
+I,184,2697,Loop-dee-Loop & Pull,1,14,F,F major,F
+I,184,2697,Loop-dee-Loop & Pull,2,13,F,F major,F
+I,184,2697,Loop-dee-Loop & Pull,13,2,F,F major,C
+I,184,2697,Loop-dee-Loop & Pull,14,1,F,F major,C
+I,184,2869,It's My Song,4,9,C,C major,C
+I,184,2869,It's My Song,5,8,C,C major,C
+I,184,2869,It's My Song,12,1,C,C major,C
+I,184,2962,You are the only girl for me,2,11,F,F major,C
+I,184,2962,You are the only girl for me,7,6,F,F major,C
+I,184,2962,You are the only girl for me,12,1,F,F major,A
+I,184,2963,Pinot Noir,5,1,Ab,Ab major,Eb
+I,184,3098,Young or Old,13,1,G,G major,A
+I,184,3137,Hard Times,5,12,A,A major,A
+I,184,3137,Hard Times,15,2,A,A major,A
+I,184,3137,Hard Times,16,1,A,A major,A
+I,184,3266,Zip-a-Dee-Doo-Dah,4,21,F,F major,A
+I,184,3266,Zip-a-Dee-Doo-Dah,24,1,F,F major,A
+I,184,3292,Shangri La Rags to Riches,68,1,Eb,Eb major,G
+I,184,3390,Nothing Compares To You,13,11,F,F major,C
+I,184,3390,Nothing Compares To You,23,1,F,F major,A
+I,184,3772,Telegraph Line,14,51,F,F major,A
+I,184,3772,Telegraph Line,15,50,F,F major,G
+I,184,3772,Telegraph Line,16,49,F,F major,F
+I,184,3772,Telegraph Line,17,48,F,F major,F
+I,184,3772,Telegraph Line,25,40,F,F major,F
+I,184,3772,Telegraph Line,26,39,F,F major,F
+I,184,3772,Telegraph Line,42,23,F,F major,A
+I,184,3772,Telegraph Line,43,22,F,F major,A
+I,184,3772,Telegraph Line,54,11,F,F major,A
+I,184,3772,Telegraph Line,55,10,F,F major,A
+I,184,3772,Telegraph Line,61,4,F,F major,F
+I,184,3772,Telegraph Line,62,3,F,F major,F
+I,184,3772,Telegraph Line,63,2,F,F major,F
+I,184,3772,Telegraph Line,64,1,F,F major,F
+I,184,3853,If I May,2,24,Ab,Ab major,Ab
+I,184,3853,If I May,5,21,Ab,Ab major,Ab
+I,184,3853,If I May,6,20,Ab,Ab major,Ab
+I,184,3853,If I May,7,19,Ab,Ab major,Ab
+I,184,3853,If I May,8,18,Ab,Ab major,Ab
+I,184,3853,If I May,18,8,Ab,Ab major,Ab
+I,184,3853,If I May,20,6,Ab,Ab major,Ab
+I,184,3853,If I May,23,3,Ab,Ab major,Ab
+I,184,3853,If I May,24,2,Ab,Ab major,Ab
+I,184,3853,If I May,25,1,Ab,Ab major,Ab
+I,184,3856,Don't Make Toast,1,51,Ab,Ab major,Ab
+I,184,3856,Don't Make Toast,12,40,Ab,Ab major,Eb
+I,184,3856,Don't Make Toast,13,39,Ab,Ab major,Eb
+I,184,3856,Don't Make Toast,20,32,Ab,Ab major,Eb
+I,184,3856,Don't Make Toast,21,31,Ab,Ab major,Eb
+I,184,3856,Don't Make Toast,23,29,Ab,Ab major,Eb
+I,184,3856,Don't Make Toast,26,26,Ab,Ab major,Eb
+I,184,3856,Don't Make Toast,51,1,Ab,Ab major,Eb
+I,184,3858,Cops!,7,13,B,B major,F#
+I,184,3858,Cops!,8,12,B,B major,F#
+I,184,3858,Cops!,16,4,B,B major,B
+I,184,3858,Cops!,19,1,B,B major,B
+I,184,3859,Shadow of The Day,8,16,Bb,Bb major,D
+I,184,3859,Shadow of The Day,10,14,Bb,Bb major,D
+I,184,3859,Shadow of The Day,11,13,Bb,Bb major,F
+I,184,3859,Shadow of The Day,22,2,Bb,Bb major,Bb
+I,184,3859,Shadow of The Day,23,1,Bb,Bb major,Bb
+I,184,3865,Ron Rogers Medley,1,56,G,G major,G
+I,184,3865,Ron Rogers Medley,3,54,G,G major,B
+I,184,3865,Ron Rogers Medley,6,51,G,G major,B
+I,184,3865,Ron Rogers Medley,8,49,G,G major,G
+I,184,3865,Ron Rogers Medley,9,48,G,G major,B
+I,184,3865,Ron Rogers Medley,15,42,G,G major,B
+I,184,3865,Ron Rogers Medley,19,38,G,G major,D
+I,184,3865,Ron Rogers Medley,30,27,G,G major,B
+I,184,3865,Ron Rogers Medley,32,25,G,G major,G
+I,184,3865,Ron Rogers Medley,33,24,G,G major,G
+I,184,3865,Ron Rogers Medley,35,22,G,G major,B
+I,184,3865,Ron Rogers Medley,45,12,G,G major,G
+I,184,3865,Ron Rogers Medley,52,5,G,G major,G
+I,184,3865,Ron Rogers Medley,53,4,G,G major,G
+I,184,3865,Ron Rogers Medley,56,1,G,G major,G
+I,184,3868,I was Born Under a Wand'rin' Star,1,16,Eb,Eb major,Bb
+I,184,3868,I was Born Under a Wand'rin' Star,3,14,Eb,Eb major,Eb
+I,184,3868,I was Born Under a Wand'rin' Star,11,6,Eb,Eb major,C#
+I,184,3868,I was Born Under a Wand'rin' Star,16,1,Eb,Eb major,Bb
+I,184,3870,Mary Had a Little Lamb,30,1,B,B minor,F#
+I,184,3912,The Next Ten Minutes,11,19,Bb,Bb major,F
+I,184,3912,The Next Ten Minutes,13,17,Bb,Bb major,F
+I,184,3912,The Next Ten Minutes,20,10,Bb,Bb major,F
+I,184,3912,The Next Ten Minutes,23,7,Bb,Bb major,D
+I,184,3912,The Next Ten Minutes,29,1,Bb,Bb major,D
+I,184,3979,It's the End of the World as We Know It,3,15,C,C major,E
+I,184,3979,It's the End of the World as We Know It,4,14,C,C major,E
+I,184,3979,It's the End of the World as We Know It,5,13,C,C major,E
+I,184,3979,It's the End of the World as We Know It,8,10,C,C major,C
+I,184,3979,It's the End of the World as We Know It,17,1,C,C major,C
+I,184,4003,DuckTales,21,3,G,G major,D
+I,184,4003,DuckTales,22,2,G,G major,D
+I,184,4003,DuckTales,23,1,G,G major,D
+I,184,4074,"Love me, and the world behind",3,23,E,E major,E
+I,184,4074,"Love me, and the world behind",5,21,E,E major,E
+I,184,4074,"Love me, and the world behind",6,20,E,E major,E
+I,184,4074,"Love me, and the world behind",11,15,E,E major,E
+I,184,4074,"Love me, and the world behind",12,14,E,E major,E
+I,184,4074,"Love me, and the world behind",19,7,E,E major,Ab
+I,184,4074,"Love me, and the world behind",20,6,E,E major,B
+I,184,4074,"Love me, and the world behind",22,4,E,E major,B
+I,184,4178,Professional Pirate,14,12,F,F major,C
+I,184,4178,Professional Pirate,15,11,F,F major,C
+I,184,4178,Professional Pirate,16,10,F,F major,C
+I,184,4178,Professional Pirate,17,9,F,F major,C
+I,184,4178,Professional Pirate,25,1,F,F major,F
+I,184,4833,Too Darn Hot,29,1,G,G minor,G
+I,184,5266,Halls of Ivy,7,13,Bb,Bb major,D
+I,184,5266,Halls of Ivy,19,1,Bb,Bb major,D
+I,184,5377,Reaching Out,55,1,B,B minor,F#
+I,184,5388,Grace Kelly,1,33,F,F major,F
+I,184,5388,Grace Kelly,2,32,F,F major,F
+I,184,5388,Grace Kelly,3,31,F,F major,F
+I,184,5388,Grace Kelly,4,30,F,F major,F
+I,184,5388,Grace Kelly,5,29,F,F major,F
+I,184,5388,Grace Kelly,6,28,F,F major,F
+I,184,5388,Grace Kelly,7,27,F,F major,F
+I,184,5388,Grace Kelly,8,26,F,F major,F
+I,184,5388,Grace Kelly,9,25,F,F major,F
+I,184,5388,Grace Kelly,10,24,F,F major,F
+I,184,5388,Grace Kelly,11,23,F,F major,F
+I,184,5388,Grace Kelly,12,22,F,F major,F
+I,184,5388,Grace Kelly,14,20,F,F major,A
+I,184,5388,Grace Kelly,33,1,F,F major,F
+I,184,5439,Happy Halloween,1,20,D,D major,A
+I,184,5439,Happy Halloween,2,19,D,D major,A
+I,184,5439,Happy Halloween,3,18,D,D major,A
+I,184,5439,Happy Halloween,4,17,D,D major,A
+I,184,5439,Happy Halloween,14,7,D,D major,A
+I,184,5439,Happy Halloween,15,6,D,D major,A
+I,184,5439,Happy Halloween,17,4,D,D major,A
+I,184,5439,Happy Halloween,18,3,D,D major,A
+I,184,5439,Happy Halloween,20,1,D,D major,A
+I,184,5688,What'll I Do,7,37,D,D major,D
+I,184,5688,What'll I Do,27,17,D,D major,C
+I,184,5688,What'll I Do,36,8,D,D major,D
+I,184,5688,What'll I Do,38,6,D,D major,D
+I,184,5688,What'll I Do,43,1,D,D major,D
+I,184,6447,Goodnight,3,17,D,D major,A
+I,184,6447,Goodnight,4,16,D,D major,A
+I,184,6447,Goodnight,9,11,D,D major,A
+I,184,6447,Goodnight,19,1,D,D major,F#
+I,184,6730,Pink Pony Club,10,1,F#,F# major,F#
+ii,131,1682,My Heart Broke Last Night,3,10,G,G major,C
+ii,131,1922,If You Wanna Light Up the World,9,3,Eb,Eb major,Eb
+ii,131,1936,As Like the Breeze that Blows,8,2,C,C major,C
+ii,131,2042,And So It's Over,5,10,C,C major,C
+ii,131,2425,Bow-Tie Guy,4,15,C,C major,F
+ii,131,2501,Lonesome Road,4,9,D,D major,
+ii,131,2501,Lonesome Road,5,8,D,D major,
+ii,131,2501,Lonesome Road,6,7,D,D major,
+ii,131,2559,Mother's/Father's Day Tag,1,15,F,F major,G
+ii,131,2559,Mother's/Father's Day Tag,3,13,F,F major,Bb
+ii,131,2559,Mother's/Father's Day Tag,5,11,F,F major,D
+ii,131,2559,Mother's/Father's Day Tag,7,9,F,F major,D
+ii,131,2559,Mother's/Father's Day Tag,13,3,F,F major,F
+ii,131,2560,Mother's/Father's Day Tag,1,15,Bb,Bb major,C
+ii,131,2560,Mother's/Father's Day Tag,3,13,Bb,Bb major,Eb
+ii,131,2560,Mother's/Father's Day Tag,5,11,Bb,Bb major,G
+ii,131,2560,Mother's/Father's Day Tag,7,9,Bb,Bb major,G
+ii,131,2560,Mother's/Father's Day Tag,12,4,Bb,Bb major,Ab
+ii,131,2560,Mother's/Father's Day Tag,13,3,Bb,Bb major,Bb
+ii,131,2560,Mother's/Father's Day Tag,14,2,Bb,Bb major,Ab
+ii,131,2607,Farmersonly.com,23,7,A,A major,B
+ii,131,2869,It's My Song,11,2,C,C major,C
+ii,131,2962,You are the only girl for me,9,4,F,F major,Bb
+ii,131,2962,You are the only girl for me,10,3,F,F major,G
+ii,131,2963,Pinot Noir,4,2,Ab,Ab major,Bb
+ii,131,3095,Young or Old,6,17,B,B minor,E
+ii,131,3098,Young or Old,9,5,G,G major,C
+ii,131,3137,Hard Times,3,14,A,A major,
+ii,131,3137,Hard Times,9,8,A,A major,A
+ii,131,3137,Hard Times,10,7,A,A major,A
+ii,131,3137,Hard Times,12,5,A,A major,A
+ii,131,3137,Hard Times,13,4,A,A major,A
+ii,131,3266,Zip-a-Dee-Doo-Dah,3,22,F,F major,F
+ii,131,3266,Zip-a-Dee-Doo-Dah,6,19,F,F major,G
+ii,131,3266,Zip-a-Dee-Doo-Dah,7,18,F,F major,D
+ii,131,3266,Zip-a-Dee-Doo-Dah,9,16,F,F major,
+ii,131,3266,Zip-a-Dee-Doo-Dah,10,15,F,F major,
+ii,131,3266,Zip-a-Dee-Doo-Dah,11,14,F,F major,D
+ii,131,3266,Zip-a-Dee-Doo-Dah,12,13,F,F major,D
+ii,131,3266,Zip-a-Dee-Doo-Dah,22,3,F,F major,G
+ii,131,3292,Shangri La Rags to Riches,6,63,Eb,Eb major,
+ii,131,3292,Shangri La Rags to Riches,10,59,Eb,Eb major,F
+ii,131,3292,Shangri La Rags to Riches,13,56,Eb,Eb major,F
+ii,131,3292,Shangri La Rags to Riches,32,37,Eb,Eb major,F
+ii,131,3292,Shangri La Rags to Riches,35,34,Eb,Eb major,Ab
+ii,131,3292,Shangri La Rags to Riches,36,33,Eb,Eb major,F
+ii,131,3292,Shangri La Rags to Riches,51,18,Eb,Eb major,Ab
+ii,131,3292,Shangri La Rags to Riches,52,17,Eb,Eb major,F
+ii,131,3292,Shangri La Rags to Riches,54,15,Eb,Eb major,Ab
+ii,131,3292,Shangri La Rags to Riches,59,10,Eb,Eb major,
+ii,131,3390,Nothing Compares To You,12,12,F,F major,Bb
+ii,131,3390,Nothing Compares To You,22,2,F,F major,G
+ii,131,3772,Telegraph Line,7,58,F,F major,D
+ii,131,3772,Telegraph Line,8,57,F,F major,D
+ii,131,3772,Telegraph Line,58,7,F,F major,F
+ii,131,3853,If I May,12,14,Ab,Ab major,Ab
+ii,131,3853,If I May,13,13,Ab,Ab major,Ab
+ii,131,3853,If I May,16,10,Ab,Ab major,Ab
+ii,131,3856,Don't Make Toast,6,46,Ab,Ab major,C#
+ii,131,3856,Don't Make Toast,8,44,Ab,Ab major,Bb
+ii,131,3856,Don't Make Toast,17,35,Ab,Ab major,Eb
+ii,131,3856,Don't Make Toast,27,25,Ab,Ab major,E
+ii,131,3856,Don't Make Toast,28,24,Ab,Ab major,E
+ii,131,3856,Don't Make Toast,38,14,Ab,Ab major,C#
+ii,131,3856,Don't Make Toast,39,13,Ab,Ab major,C#
+ii,131,3856,Don't Make Toast,48,4,Ab,Ab major,E
+ii,131,3856,Don't Make Toast,49,3,Ab,Ab major,E
+ii,131,3858,Cops!,13,7,B,B major,E
+ii,131,3858,Cops!,14,6,B,B major,B
+ii,131,3859,Shadow of The Day,12,12,Bb,Bb major,C
+ii,131,3859,Shadow of The Day,17,7,Bb,Bb major,C
+ii,131,3859,Shadow of The Day,18,6,Bb,Bb major,Bb
+ii,131,3859,Shadow of The Day,19,5,Bb,Bb major,Bb
+ii,131,3865,Ron Rogers Medley,2,55,G,G major,A
+ii,131,3865,Ron Rogers Medley,7,50,G,G major,A
+ii,131,3865,Ron Rogers Medley,17,40,G,G major,A
+ii,131,3865,Ron Rogers Medley,18,39,G,G major,G
+ii,131,3865,Ron Rogers Medley,21,36,G,G major,E
+ii,131,3865,Ron Rogers Medley,28,29,G,G major,A
+ii,131,3865,Ron Rogers Medley,44,13,G,G major,E
+ii,131,3865,Ron Rogers Medley,55,2,G,G major,G
+ii,131,3868,I was Born Under a Wand'rin' Star,9,8,Eb,Eb major,Eb
+ii,131,3870,Mary Had a Little Lamb,5,26,B,B minor,C#
+ii,131,3870,Mary Had a Little Lamb,29,2,B,B minor,E
+ii,131,3912,The Next Ten Minutes,3,27,Bb,Bb major,
+ii,131,3912,The Next Ten Minutes,5,25,Bb,Bb major,
+ii,131,3912,The Next Ten Minutes,17,13,Bb,Bb major,F#
+ii,131,3912,The Next Ten Minutes,21,9,Bb,Bb major,Eb
+ii,131,3912,The Next Ten Minutes,22,8,Bb,Bb major,Eb
+ii,131,3912,The Next Ten Minutes,26,4,Bb,Bb major,G
+ii,131,3979,It's the End of the World as We Know It,2,16,C,C major,
+ii,131,3979,It's the End of the World as We Know It,7,11,C,C major,F
+ii,131,3979,It's the End of the World as We Know It,16,2,C,C major,C
+ii,131,4074,"Love me, and the world behind",7,19,E,E major,E
+ii,131,4074,"Love me, and the world behind",9,17,E,E major,E
+ii,131,4178,Professional Pirate,2,24,F,F major,F
+ii,131,4178,Professional Pirate,3,23,F,F major,F
+ii,131,4178,Professional Pirate,4,22,F,F major,G
+ii,131,4833,Too Darn Hot,2,28,G,G minor,E
+ii,131,4833,Too Darn Hot,3,27,G,G minor,E
+ii,131,4833,Too Darn Hot,4,26,G,G minor,E
+ii,131,4833,Too Darn Hot,21,9,G,G minor,G
+ii,131,4833,Too Darn Hot,22,8,G,G minor,G
+ii,131,4833,Too Darn Hot,25,5,G,G minor,G
+ii,131,4833,Too Darn Hot,26,4,G,G minor,G
+ii,131,5266,Halls of Ivy,12,8,Bb,Bb major,Eb
+ii,131,5377,Reaching Out,24,32,B,B minor,D
+ii,131,5388,Grace Kelly,13,21,F,F major,G
+ii,131,5388,Grace Kelly,29,5,F,F major,Bb
+ii,131,5388,Grace Kelly,30,4,F,F major,Bb
+ii,131,5388,Grace Kelly,31,3,F,F major,Bb
+ii,131,5439,Happy Halloween,16,5,D,D major,A
+ii,131,5688,What'll I Do,4,40,D,D major,D
+ii,131,5688,What'll I Do,5,39,D,D major,D
+ii,131,5688,What'll I Do,10,34,D,D major,B
+ii,131,5688,What'll I Do,11,33,D,D major,D
+ii,131,5688,What'll I Do,14,30,D,D major,D
+ii,131,5688,What'll I Do,15,29,D,D major,D
+ii,131,5688,What'll I Do,17,27,D,D major,D
+ii,131,5688,What'll I Do,21,23,D,D major,
+ii,131,5688,What'll I Do,29,15,D,D major,D
+ii,131,5688,What'll I Do,31,13,D,D major,D
+ii,131,5688,What'll I Do,32,12,D,D major,
+ii,131,5688,What'll I Do,33,11,D,D major,D
+ii,131,5688,What'll I Do,39,5,D,D major,D
+ii,131,5688,What'll I Do,41,3,D,D major,D
+ii,131,6447,Goodnight,2,18,D,D major,
+ii,131,6447,Goodnight,5,15,D,D major,G
+ii,131,6447,Goodnight,7,13,D,D major,
+ii,131,6730,Pink Pony Club,7,4,F#,F# major,Ab
+ii,131,6730,Pink Pony Club,8,3,F#,F# major,Ab
+i,96,1922,If You Wanna Light Up the World,1,11,Eb,Eb major,Eb
+i,96,2042,And So It's Over,1,14,C,C major,C
+i,96,2042,And So It's Over,3,12,C,C major,C
+i,96,2296,My Funny Valentine,1,22,B,B minor,F#
+i,96,2296,My Funny Valentine,3,20,B,B minor,B
+i,96,2296,My Funny Valentine,5,18,B,B minor,B
+i,96,2296,My Funny Valentine,7,16,B,B minor,B
+i,96,2296,My Funny Valentine,8,15,B,B minor,B
+i,96,2296,My Funny Valentine,9,14,B,B minor,F#
+i,96,2296,My Funny Valentine,10,13,B,B minor,A
+i,96,2425,Bow-Tie Guy,2,17,C,C major,
+i,96,2425,Bow-Tie Guy,3,16,C,C major,G
+i,96,2425,Bow-Tie Guy,7,12,C,C major,
+i,96,2475,Wrecking Ball,1,51,C,C major,
+i,96,2475,Wrecking Ball,2,50,C,C major,
+i,96,2475,Wrecking Ball,3,49,C,C major,
+i,96,2475,Wrecking Ball,4,48,C,C major,
+i,96,2475,Wrecking Ball,5,47,C,C major,
+i,96,2475,Wrecking Ball,6,46,C,C major,C
+i,96,2475,Wrecking Ball,16,36,C,C major,B
+i,96,2475,Wrecking Ball,17,35,C,C major,B
+i,96,2475,Wrecking Ball,26,26,C,C major,C
+i,96,2475,Wrecking Ball,27,25,C,C major,C
+i,96,2475,Wrecking Ball,34,18,C,C major,C
+i,96,2501,Lonesome Road,12,1,D,D major,
+i,96,2533,Dreidel,2,13,D,D major,
+i,96,2533,Dreidel,3,12,D,D major,D
+i,96,2607,Farmersonly.com,1,29,A,A major,A
+i,96,2607,Farmersonly.com,8,22,A,A major,A
+i,96,2607,Farmersonly.com,18,12,A,A major,A
+i,96,2607,Farmersonly.com,22,8,A,A major,A
+i,96,2607,Farmersonly.com,24,6,A,A major,A
+i,96,2607,Farmersonly.com,25,5,A,A major,A
+i,96,2607,Farmersonly.com,26,4,A,A major,A
+i,96,2607,Farmersonly.com,27,3,A,A major,A
+i,96,2607,Farmersonly.com,28,2,A,A major,A
+i,96,2607,Farmersonly.com,29,1,A,A major,A
+i,96,2869,It's My Song,3,10,C,C major,C
+i,96,2869,It's My Song,8,5,C,C major,C
+i,96,3095,Young or Old,1,22,B,B minor,B
+i,96,3137,Hard Times,2,15,A,A major,
+i,96,3137,Hard Times,4,13,A,A major,A
+i,96,3137,Hard Times,7,10,A,A major,A
+i,96,3137,Hard Times,11,6,A,A major,A
+i,96,3292,Shangri La Rags to Riches,1,68,Eb,Eb major,
+i,96,3292,Shangri La Rags to Riches,4,65,Eb,Eb major,
+i,96,3292,Shangri La Rags to Riches,8,61,Eb,Eb major,
+i,96,3292,Shangri La Rags to Riches,49,20,Eb,Eb major,Eb
+i,96,3292,Shangri La Rags to Riches,60,9,Eb,Eb major,
+i,96,3292,Shangri La Rags to Riches,65,4,Eb,Eb major,
+i,96,3853,If I May,1,25,Ab,Ab major,Ab
+i,96,3856,Don't Make Toast,47,5,Ab,Ab major,
+i,96,3858,Cops!,1,19,B,B major,
+i,96,3858,Cops!,2,18,B,B major,
+i,96,3858,Cops!,17,3,B,B major,B
+i,96,3859,Shadow of The Day,6,18,Bb,Bb major,Bb
+i,96,3859,Shadow of The Day,7,17,Bb,Bb major,Bb
+i,96,3865,Ron Rogers Medley,50,7,G,G major,G
+i,96,3912,The Next Ten Minutes,18,12,Bb,Bb major,
+i,96,4003,DuckTales,1,23,G,G major,G
+i,96,4003,DuckTales,2,22,G,G major,
+i,96,4003,DuckTales,3,21,G,G major,
+i,96,4003,DuckTales,19,5,G,G major,
+i,96,4074,"Love me, and the world behind",2,24,E,E major,
+i,96,4178,Professional Pirate,1,25,F,F major,
+i,96,4178,Professional Pirate,22,4,F,F major,F
+i,96,4833,Too Darn Hot,19,11,G,G minor,G
+i,96,4833,Too Darn Hot,20,10,G,G minor,G
+i,96,4833,Too Darn Hot,23,7,G,G minor,G
+i,96,4833,Too Darn Hot,24,6,G,G minor,G
+i,96,5266,Halls of Ivy,2,18,Bb,Bb major,
+i,96,5266,Halls of Ivy,16,4,Bb,Bb major,F
+i,96,5377,Reaching Out,7,49,B,B minor,F#
+i,96,5377,Reaching Out,8,48,B,B minor,F#
+i,96,5377,Reaching Out,9,47,B,B minor,F#
+i,96,5377,Reaching Out,10,46,B,B minor,F#
+i,96,5377,Reaching Out,21,35,B,B minor,F#
+i,96,5377,Reaching Out,22,34,B,B minor,F#
+i,96,5377,Reaching Out,23,33,B,B minor,D
+i,96,5377,Reaching Out,35,21,B,B minor,F#
+i,96,5377,Reaching Out,36,20,B,B minor,F#
+i,96,5377,Reaching Out,37,19,B,B minor,F#
+i,96,5377,Reaching Out,41,15,B,B minor,E
+i,96,5377,Reaching Out,49,7,B,B minor,F#
+i,96,5377,Reaching Out,51,5,B,B minor,
+i,96,5688,What'll I Do,16,28,D,D major,D
+i,96,5688,What'll I Do,20,24,D,D major,
+i,96,5688,What'll I Do,34,10,D,D major,D
+i,96,5688,What'll I Do,35,9,D,D major,D
+i,96,5688,What'll I Do,40,4,D,D major,D
+i,96,6447,Goodnight,1,19,D,D major,
+i,96,6447,Goodnight,16,4,D,D major,
+i,96,6447,Goodnight,17,3,D,D major,
+i,96,6730,Pink Pony Club,1,10,F#,F# major,Ab
+i,96,6730,Pink Pony Club,2,9,F#,F# major,
+i,96,6730,Pink Pony Club,3,8,F#,F# major,
+V,91,1682,My Heart Broke Last Night,4,9,G,G major,C
+V,91,2296,My Funny Valentine,2,21,B,B minor,Bb
+V,91,2296,My Funny Valentine,4,19,B,B minor,Bb
+V,91,2296,My Funny Valentine,6,17,B,B minor,Bb
+V,91,2475,Wrecking Ball,7,45,C,C major,B
+V,91,2475,Wrecking Ball,8,44,C,C major,B
+V,91,2475,Wrecking Ball,9,43,C,C major,B
+V,91,2475,Wrecking Ball,14,38,C,C major,G
+V,91,2475,Wrecking Ball,20,32,C,C major,G
+V,91,2475,Wrecking Ball,21,31,C,C major,G
+V,91,2475,Wrecking Ball,25,27,C,C major,G
+V,91,2475,Wrecking Ball,28,24,C,C major,B
+V,91,2475,Wrecking Ball,29,23,C,C major,B
+V,91,2475,Wrecking Ball,35,17,C,C major,B
+V,91,2475,Wrecking Ball,37,15,C,C major,G
+V,91,2475,Wrecking Ball,46,6,C,C major,G
+V,91,2475,Wrecking Ball,51,1,C,C major,D
+V,91,2559,Mother's/Father's Day Tag,6,10,F,F major,C
+V,91,2559,Mother's/Father's Day Tag,8,8,F,F major,E
+V,91,2560,Mother's/Father's Day Tag,6,10,Bb,Bb major,F
+V,91,2560,Mother's/Father's Day Tag,8,8,Bb,Bb major,A
+V,91,2697,Loop-dee-Loop & Pull,5,10,F,F major,E
+V,91,2697,Loop-dee-Loop & Pull,6,9,F,F major,E
+V,91,2697,Loop-dee-Loop & Pull,7,8,F,F major,E
+V,91,2697,Loop-dee-Loop & Pull,8,7,F,F major,E
+V,91,2697,Loop-dee-Loop & Pull,11,4,F,F major,G
+V,91,3098,Young or Old,2,12,G,G major,D
+V,91,3266,Zip-a-Dee-Doo-Dah,16,9,F,F major,E
+V,91,3266,Zip-a-Dee-Doo-Dah,17,8,F,F major,E
+V,91,3292,Shangri La Rags to Riches,15,54,Eb,Eb major,F
+V,91,3292,Shangri La Rags to Riches,16,53,Eb,Eb major,F
+V,91,3292,Shangri La Rags to Riches,17,52,Eb,Eb major,F
+V,91,3292,Shangri La Rags to Riches,18,51,Eb,Eb major,F
+V,91,3292,Shangri La Rags to Riches,19,50,Eb,Eb major,F
+V,91,3292,Shangri La Rags to Riches,20,49,Eb,Eb major,F
+V,91,3292,Shangri La Rags to Riches,24,45,Eb,Eb major,Bb
+V,91,3292,Shangri La Rags to Riches,38,31,Eb,Eb major,Ab
+V,91,3292,Shangri La Rags to Riches,39,30,Eb,Eb major,Bb
+V,91,3390,Nothing Compares To You,14,10,F,F major,C
+V,91,3390,Nothing Compares To You,15,9,F,F major,G
+V,91,3772,Telegraph Line,5,60,F,F major,E
+V,91,3772,Telegraph Line,6,59,F,F major,E
+V,91,3772,Telegraph Line,22,43,F,F major,E
+V,91,3772,Telegraph Line,36,29,F,F major,E
+V,91,3772,Telegraph Line,37,28,F,F major,E
+V,91,3772,Telegraph Line,38,27,F,F major,E
+V,91,3772,Telegraph Line,56,9,F,F major,G
+V,91,3772,Telegraph Line,57,8,F,F major,G
+V,91,3772,Telegraph Line,59,6,F,F major,C
+V,91,3772,Telegraph Line,60,5,F,F major,C
+V,91,3856,Don't Make Toast,9,43,Ab,Ab major,Eb
+V,91,3856,Don't Make Toast,10,42,Ab,Ab major,Eb
+V,91,3856,Don't Make Toast,11,41,Ab,Ab major,Eb
+V,91,3856,Don't Make Toast,14,38,Ab,Ab major,Eb
+V,91,3856,Don't Make Toast,15,37,Ab,Ab major,Eb
+V,91,3856,Don't Make Toast,18,34,Ab,Ab major,Eb
+V,91,3865,Ron Rogers Medley,11,46,G,G major,A
+V,91,3865,Ron Rogers Medley,31,26,G,G major,A
+V,91,3865,Ron Rogers Medley,34,23,G,G major,D
+V,91,3865,Ron Rogers Medley,37,20,G,G major,A
+V,91,4074,"Love me, and the world behind",1,25,E,E major,
+V,91,4074,"Love me, and the world behind",21,5,E,E major,B
+V,91,4074,"Love me, and the world behind",23,3,E,E major,Eb
+V,91,4074,"Love me, and the world behind",25,1,E,E major,Eb
+V,91,4833,Too Darn Hot,15,15,G,G minor,F#
+V,91,5266,Halls of Ivy,14,6,Bb,Bb major,Eb
+V,91,5377,Reaching Out,4,52,B,B minor,C#
+V,91,5377,Reaching Out,5,51,B,B minor,C#
+V,91,5377,Reaching Out,6,50,B,B minor,C#
+V,91,5377,Reaching Out,18,38,B,B minor,C#
+V,91,5377,Reaching Out,19,37,B,B minor,C#
+V,91,5377,Reaching Out,20,36,B,B minor,C#
+V,91,5377,Reaching Out,32,24,B,B minor,C#
+V,91,5377,Reaching Out,33,23,B,B minor,C#
+V,91,5377,Reaching Out,34,22,B,B minor,C#
+V,91,5377,Reaching Out,46,10,B,B minor,C#
+V,91,5377,Reaching Out,47,9,B,B minor,C#
+V,91,5377,Reaching Out,48,8,B,B minor,C#
+V,91,5388,Grace Kelly,24,10,F,F major,C
+V,91,5388,Grace Kelly,25,9,F,F major,C
+V,91,5388,Grace Kelly,26,8,F,F major,C
+V,91,5388,Grace Kelly,27,7,F,F major,C
+V,91,5388,Grace Kelly,28,6,F,F major,C
+V,91,5388,Grace Kelly,32,2,F,F major,C
+V,91,5439,Happy Halloween,6,15,D,D major,G
+V,91,5439,Happy Halloween,8,13,D,D major,G
+V,91,5439,Happy Halloween,9,12,D,D major,G
+V,91,5439,Happy Halloween,13,8,D,D major,A
+V,91,5688,What'll I Do,12,32,D,D major,C#
+V,91,6447,Goodnight,10,10,D,D major,C#
+V,91,6730,Pink Pony Club,4,7,F#,F# major,
+IV,84,1875,Kansas City Dichotomy,4,6,C,C major,C
+IV,84,2296,My Funny Valentine,11,12,B,B minor,Ab
+IV,84,2963,Pinot Noir,2,4,Ab,Ab major,Ab
+IV,84,3098,Young or Old,7,7,G,G major,E
+IV,84,3098,Young or Old,8,6,G,G major,E
+IV,84,3098,Young or Old,10,4,G,G major,C
+IV,84,3292,Shangri La Rags to Riches,12,57,Eb,Eb major,Ab
+IV,84,3292,Shangri La Rags to Riches,34,35,Eb,Eb major,G
+IV,84,3292,Shangri La Rags to Riches,37,32,Eb,Eb major,G
+IV,84,3390,Nothing Compares To You,6,18,F,F major,
+IV,84,3390,Nothing Compares To You,7,17,F,F major,C
+IV,84,3390,Nothing Compares To You,8,16,F,F major,Bb
+IV,84,3390,Nothing Compares To You,9,15,F,F major,A
+IV,84,3772,Telegraph Line,1,64,F,F major,F
+IV,84,3772,Telegraph Line,2,63,F,F major,F
+IV,84,3772,Telegraph Line,3,62,F,F major,F
+IV,84,3772,Telegraph Line,4,61,F,F major,F
+IV,84,3772,Telegraph Line,18,47,F,F major,
+IV,84,3772,Telegraph Line,19,46,F,F major,F
+IV,84,3772,Telegraph Line,20,45,F,F major,F
+IV,84,3772,Telegraph Line,21,44,F,F major,F
+IV,84,3772,Telegraph Line,23,42,F,F major,D
+IV,84,3772,Telegraph Line,31,34,F,F major,F
+IV,84,3772,Telegraph Line,32,33,F,F major,F
+IV,84,3772,Telegraph Line,33,32,F,F major,F
+IV,84,3772,Telegraph Line,34,31,F,F major,F
+IV,84,3772,Telegraph Line,35,30,F,F major,F
+IV,84,3772,Telegraph Line,39,26,F,F major,D
+IV,84,3772,Telegraph Line,49,16,F,F major,F
+IV,84,3772,Telegraph Line,50,15,F,F major,F
+IV,84,3772,Telegraph Line,51,14,F,F major,D
+IV,84,3772,Telegraph Line,52,13,F,F major,F
+IV,84,3772,Telegraph Line,53,12,F,F major,D
+IV,84,3856,Don't Make Toast,3,49,Ab,Ab major,B
+IV,84,3856,Don't Make Toast,44,8,Ab,Ab major,C#
+IV,84,3858,Cops!,3,17,B,B major,E
+IV,84,3858,Cops!,4,16,B,B major,E
+IV,84,3858,Cops!,5,15,B,B major,E
+IV,84,3858,Cops!,9,11,B,B major,F#
+IV,84,3858,Cops!,10,10,B,B major,F#
+IV,84,3858,Cops!,11,9,B,B major,E
+IV,84,3858,Cops!,12,8,B,B major,E
+IV,84,3859,Shadow of The Day,4,20,Bb,Bb major,D
+IV,84,3859,Shadow of The Day,13,11,Bb,Bb major,Bb
+IV,84,3859,Shadow of The Day,16,8,Bb,Bb major,D
+IV,84,3865,Ron Rogers Medley,10,47,G,G major,G
+IV,84,3865,Ron Rogers Medley,16,41,G,G major,B
+IV,84,3865,Ron Rogers Medley,20,37,G,G major,E
+IV,84,3865,Ron Rogers Medley,22,35,G,G major,E
+IV,84,3865,Ron Rogers Medley,26,31,G,G major,D
+IV,84,3865,Ron Rogers Medley,27,30,G,G major,B
+IV,84,3865,Ron Rogers Medley,36,21,G,G major,G
+IV,84,3865,Ron Rogers Medley,54,3,G,G major,G
+IV,84,3868,I was Born Under a Wand'rin' Star,8,9,Eb,Eb major,Eb
+IV,84,3868,I was Born Under a Wand'rin' Star,12,5,Eb,Eb major,C
+IV,84,3868,I was Born Under a Wand'rin' Star,13,4,Eb,Eb major,C
+IV,84,3870,Mary Had a Little Lamb,10,21,B,B minor,D
+IV,84,3912,The Next Ten Minutes,19,11,Bb,Bb major,G
+IV,84,3912,The Next Ten Minutes,24,6,Bb,Bb major,G
+IV,84,3912,The Next Ten Minutes,25,5,Bb,Bb major,G
+IV,84,3979,It's the End of the World as We Know It,6,12,C,C major,F
+IV,84,3979,It's the End of the World as We Know It,9,9,C,C major,F
+IV,84,3979,It's the End of the World as We Know It,10,8,C,C major,E
+IV,84,4003,DuckTales,10,14,G,G major,C
+IV,84,4003,DuckTales,11,13,G,G major,C
+IV,84,4003,DuckTales,12,12,G,G major,C
+IV,84,4003,DuckTales,20,4,G,G major,C
+IV,84,5266,Halls of Ivy,13,7,Bb,Bb major,Eb
+IV,84,5266,Halls of Ivy,15,5,Bb,Bb major,Eb
+IV,84,5266,Halls of Ivy,17,3,Bb,Bb major,Eb
+IV,84,5388,Grace Kelly,15,19,F,F major,Bb
+IV,84,5388,Grace Kelly,16,18,F,F major,Bb
+IV,84,5388,Grace Kelly,17,17,F,F major,Bb
+IV,84,5388,Grace Kelly,18,16,F,F major,Bb
+IV,84,5388,Grace Kelly,19,15,F,F major,Bb
+IV,84,5388,Grace Kelly,20,14,F,F major,Bb
+IV,84,5388,Grace Kelly,21,13,F,F major,Bb
+IV,84,5388,Grace Kelly,22,12,F,F major,Bb
+IV,84,5388,Grace Kelly,23,11,F,F major,Bb
+IV,84,5439,Happy Halloween,10,11,D,D major,B
+IV,84,5439,Happy Halloween,12,9,D,D major,G
+IV,84,6447,Goodnight,8,12,D,D major,G
+IV,84,6447,Goodnight,11,9,D,D major,B
+IV,84,6447,Goodnight,14,6,D,D major,G
+vi,71,1682,My Heart Broke Last Night,9,4,G,G major,E
+vi,71,1875,Kansas City Dichotomy,2,8,C,C major,A
+vi,71,1875,Kansas City Dichotomy,3,7,C,C major,A
+vi,71,1875,Kansas City Dichotomy,6,4,C,C major,C
+vi,71,1875,Kansas City Dichotomy,9,1,C,C major,A
+vi,71,2042,And So It's Over,2,13,C,C major,C
+vi,71,2042,And So It's Over,4,11,C,C major,C
+vi,71,2425,Bow-Tie Guy,8,11,C,C major,E
+vi,71,2425,Bow-Tie Guy,11,8,C,C major,C
+vi,71,2425,Bow-Tie Guy,12,7,C,C major,E
+vi,71,2425,Bow-Tie Guy,13,6,C,C major,E
+vi,71,2425,Bow-Tie Guy,17,2,C,C major,E
+vi,71,2425,Bow-Tie Guy,18,1,C,C major,E
+vi,71,2475,Wrecking Ball,15,37,C,C major,C
+vi,71,2475,Wrecking Ball,24,28,C,C major,A
+vi,71,2475,Wrecking Ball,41,11,C,C major,A
+vi,71,2475,Wrecking Ball,49,3,C,C major,A
+vi,71,2607,Farmersonly.com,3,27,A,A major,F#
+vi,71,2607,Farmersonly.com,6,24,A,A major,F#
+vi,71,2697,Loop-dee-Loop & Pull,3,12,F,F major,F
+vi,71,2963,Pinot Noir,3,3,Ab,Ab major,Ab
+vi,71,3098,Young or Old,3,11,G,G major,E
+vi,71,3098,Young or Old,4,10,G,G major,E
+vi,71,3137,Hard Times,8,9,A,A major,A
+vi,71,3292,Shangri La Rags to Riches,9,60,Eb,Eb major,
+vi,71,3292,Shangri La Rags to Riches,33,36,Eb,Eb major,G
+vi,71,3292,Shangri La Rags to Riches,64,5,Eb,Eb major,G
+vi,71,3390,Nothing Compares To You,4,20,F,F major,D
+vi,71,3390,Nothing Compares To You,10,14,F,F major,
+vi,71,3390,Nothing Compares To You,11,13,F,F major,D
+vi,71,3772,Telegraph Line,11,54,F,F major,D
+vi,71,3772,Telegraph Line,12,53,F,F major,D
+vi,71,3772,Telegraph Line,45,20,F,F major,F
+vi,71,3772,Telegraph Line,46,19,F,F major,F
+vi,71,3772,Telegraph Line,47,18,F,F major,F
+vi,71,3772,Telegraph Line,48,17,F,F major,D
+vi,71,3853,If I May,19,7,Ab,Ab major,Ab
+vi,71,3853,If I May,21,5,Ab,Ab major,Ab
+vi,71,3853,If I May,22,4,Ab,Ab major,Ab
+vi,71,3856,Don't Make Toast,22,30,Ab,Ab major,F
+vi,71,3856,Don't Make Toast,24,28,Ab,Ab major,F
+vi,71,3856,Don't Make Toast,31,21,Ab,Ab major,F
+vi,71,3856,Don't Make Toast,32,20,Ab,Ab major,F
+vi,71,3856,Don't Make Toast,40,12,Ab,Ab major,Eb
+vi,71,3859,Shadow of The Day,9,15,Bb,Bb major,D
+vi,71,3865,Ron Rogers Medley,5,52,G,G major,G
+vi,71,3865,Ron Rogers Medley,13,44,G,G major,E
+vi,71,3865,Ron Rogers Medley,14,43,G,G major,B
+vi,71,3865,Ron Rogers Medley,23,34,G,G major,B
+vi,71,3865,Ron Rogers Medley,24,33,G,G major,D
+vi,71,3865,Ron Rogers Medley,38,19,G,G major,E
+vi,71,3865,Ron Rogers Medley,39,18,G,G major,E
+vi,71,3865,Ron Rogers Medley,40,17,G,G major,E
+vi,71,3865,Ron Rogers Medley,41,16,G,G major,E
+vi,71,3865,Ron Rogers Medley,42,15,G,G major,E
+vi,71,3868,I was Born Under a Wand'rin' Star,4,13,Eb,Eb major,Eb
+vi,71,3868,I was Born Under a Wand'rin' Star,5,12,Eb,Eb major,Eb
+vi,71,3868,I was Born Under a Wand'rin' Star,7,10,Eb,Eb major,C
+vi,71,3868,I was Born Under a Wand'rin' Star,10,7,Eb,Eb major,C
+vi,71,4074,"Love me, and the world behind",8,18,E,E major,E
+vi,71,4178,Professional Pirate,9,17,F,F major,A
+vi,71,4178,Professional Pirate,12,14,F,F major,D
+vi,71,4178,Professional Pirate,23,3,F,F major,F
+vi,71,4833,Too Darn Hot,11,19,G,G minor,E
+vi,71,4833,Too Darn Hot,28,2,G,G minor,G
+vi,71,5266,Halls of Ivy,8,12,Bb,Bb major,D
+vi,71,5439,Happy Halloween,5,16,D,D major,B
+vi,71,5439,Happy Halloween,7,14,D,D major,F#
+vi,71,5688,What'll I Do,1,43,D,D major,F#
+vi,71,5688,What'll I Do,3,41,D,D major,B
+vi,71,5688,What'll I Do,9,35,D,D major,B
+iii,51,1682,My Heart Broke Last Night,2,11,G,G major,D
+iii,51,2296,My Funny Valentine,18,5,B,B minor,D
+iii,51,2475,Wrecking Ball,32,20,C,C major,G
+iii,51,2475,Wrecking Ball,33,19,C,C major,G
+iii,51,2559,Mother's/Father's Day Tag,2,14,F,F major,A
+iii,51,2559,Mother's/Father's Day Tag,4,12,F,F major,C
+iii,51,2560,Mother's/Father's Day Tag,2,14,Bb,Bb major,D
+iii,51,2560,Mother's/Father's Day Tag,4,12,Bb,Bb major,F
+iii,51,2697,Loop-dee-Loop & Pull,12,3,F,F major,A
+iii,51,3098,Young or Old,1,13,G,G major,B
+iii,51,3137,Hard Times,1,16,A,A major,
+iii,51,3266,Zip-a-Dee-Doo-Dah,2,23,F,F major,E
+iii,51,3266,Zip-a-Dee-Doo-Dah,15,10,F,F major,E
+iii,51,3292,Shangri La Rags to Riches,2,67,Eb,Eb major,
+iii,51,3292,Shangri La Rags to Riches,7,62,Eb,Eb major,
+iii,51,3292,Shangri La Rags to Riches,22,47,Eb,Eb major,G
+iii,51,3292,Shangri La Rags to Riches,23,46,Eb,Eb major,Bb
+iii,51,3292,Shangri La Rags to Riches,42,27,Eb,Eb major,Bb
+iii,51,3292,Shangri La Rags to Riches,43,26,Eb,Eb major,Bb
+iii,51,3292,Shangri La Rags to Riches,44,25,Eb,Eb major,Bb
+iii,51,3292,Shangri La Rags to Riches,45,24,Eb,Eb major,Bb
+iii,51,3292,Shangri La Rags to Riches,46,23,Eb,Eb major,Bb
+iii,51,3292,Shangri La Rags to Riches,47,22,Eb,Eb major,Bb
+iii,51,3292,Shangri La Rags to Riches,48,21,Eb,Eb major,Bb
+iii,51,3292,Shangri La Rags to Riches,58,11,Eb,Eb major,
+iii,51,3772,Telegraph Line,27,38,F,F major,
+iii,51,3772,Telegraph Line,28,37,F,F major,C
+iii,51,3772,Telegraph Line,40,25,F,F major,C
+iii,51,3772,Telegraph Line,41,24,F,F major,C
+iii,51,3865,Ron Rogers Medley,4,53,G,G major,A
+iii,51,3865,Ron Rogers Medley,25,32,G,G major,B
+iii,51,3912,The Next Ten Minutes,7,23,Bb,Bb major,A
+iii,51,3912,The Next Ten Minutes,8,22,Bb,Bb major,F
+iii,51,3912,The Next Ten Minutes,9,21,Bb,Bb major,F
+iii,51,3912,The Next Ten Minutes,10,20,Bb,Bb major,F
+iii,51,3912,The Next Ten Minutes,12,18,Bb,Bb major,F
+iii,51,3912,The Next Ten Minutes,14,16,Bb,Bb major,F
+iii,51,3979,It's the End of the World as We Know It,1,17,C,C major,
+iii,51,3979,It's the End of the World as We Know It,13,5,C,C major,E
+iii,51,4074,"Love me, and the world behind",24,2,E,E major,Eb
+iii,51,4178,Professional Pirate,5,21,F,F major,G
+iii,51,4178,Professional Pirate,6,20,F,F major,G
+iii,51,4178,Professional Pirate,7,19,F,F major,A
+iii,51,4178,Professional Pirate,10,16,F,F major,A
+iii,51,4178,Professional Pirate,13,13,F,F major,A
+iii,51,5688,What'll I Do,22,22,D,D major,
+iii,51,5688,What'll I Do,26,18,D,D major,C
+iii,51,6447,Goodnight,6,14,D,D major,
+iii,51,6447,Goodnight,12,8,D,D major,A
+iii,51,6447,Goodnight,13,7,D,D major,F#
+iii,51,6730,Pink Pony Club,6,5,F#,F# major,
+v,48,1875,Kansas City Dichotomy,1,9,C,C major,G
+v,48,1936,As Like the Breeze that Blows,5,5,C,C major,Bb
+v,48,2042,And So It's Over,10,5,C,C major,D
+v,48,2296,My Funny Valentine,16,7,B,B minor,A
+v,48,2425,Bow-Tie Guy,1,18,C,C major,
+v,48,2475,Wrecking Ball,10,42,C,C major,G
+v,48,2475,Wrecking Ball,44,8,C,C major,G
+v,48,2475,Wrecking Ball,45,7,C,C major,G
+v,48,2533,Dreidel,1,14,D,D major,
+v,48,2533,Dreidel,5,10,D,D major,D
+v,48,2607,Farmersonly.com,4,26,A,A major,E
+v,48,2607,Farmersonly.com,5,25,A,A major,E
+v,48,2607,Farmersonly.com,7,23,A,A major,E
+v,48,2607,Farmersonly.com,13,17,A,A major,E
+v,48,2869,It's My Song,1,12,C,C major,
+v,48,2869,It's My Song,2,11,C,C major,
+v,48,2963,Pinot Noir,1,5,Ab,Ab major,Eb
+v,48,3095,Young or Old,11,12,B,B minor,C
+v,48,3095,Young or Old,12,11,B,B minor,C
+v,48,3292,Shangri La Rags to Riches,3,66,Eb,Eb major,
+v,48,3292,Shangri La Rags to Riches,21,48,Eb,Eb major,
+v,48,3292,Shangri La Rags to Riches,31,38,Eb,Eb major,F
+v,48,3292,Shangri La Rags to Riches,55,14,Eb,Eb major,
+v,48,3292,Shangri La Rags to Riches,57,12,Eb,Eb major,
+v,48,3390,Nothing Compares To You,5,19,F,F major,C
+v,48,3772,Telegraph Line,9,56,F,F major,C
+v,48,3772,Telegraph Line,10,55,F,F major,C
+v,48,3772,Telegraph Line,13,52,F,F major,C
+v,48,3772,Telegraph Line,24,41,F,F major,C
+v,48,3856,Don't Make Toast,16,36,Ab,Ab major,Eb
+v,48,3859,Shadow of The Day,14,10,Bb,Bb major,F
+v,48,3859,Shadow of The Day,15,9,Bb,Bb major,F
+v,48,3865,Ron Rogers Medley,12,45,G,G major,D
+v,48,3870,Mary Had a Little Lamb,16,15,B,B minor,F#
+v,48,3870,Mary Had a Little Lamb,23,8,B,B minor,E
+v,48,3883,This Is How You Voice Lead,2,8,F,F minor,
+v,48,3979,It's the End of the World as We Know It,11,7,C,C major,G
+v,48,3979,It's the End of the World as We Know It,12,6,C,C major,F
+v,48,4178,Professional Pirate,18,8,F,F major,C
+v,48,4178,Professional Pirate,19,7,F,F major,C
+v,48,4178,Professional Pirate,20,6,F,F major,C
+v,48,4178,Professional Pirate,21,5,F,F major,C
+v,48,4833,Too Darn Hot,1,29,G,G minor,
+v,48,5377,Reaching Out,50,6,B,B minor,
+v,48,5377,Reaching Out,52,4,B,B minor,F#
+v,48,5377,Reaching Out,54,2,B,B minor,F#
+v,48,5439,Happy Halloween,11,10,D,D major,A
+v,48,5688,What'll I Do,23,21,D,D major,
+bVI,44,1682,My Heart Broke Last Night,5,8,G,G major,Eb
+bVI,44,1682,My Heart Broke Last Night,6,7,G,G major,Eb
+bVI,44,2296,My Funny Valentine,12,11,B,B minor,B
+bVI,44,2296,My Funny Valentine,14,9,B,B minor,B
+bVI,44,2533,Dreidel,8,7,D,D major,F
+bVI,44,2533,Dreidel,9,6,D,D major,F
+bVI,44,2607,Farmersonly.com,14,16,A,A major,F
+bVI,44,2607,Farmersonly.com,16,14,A,A major,F
+bVI,44,2869,It's My Song,6,7,C,C major,C
+bVI,44,2869,It's My Song,7,6,C,C major,C
+bVI,44,2869,It's My Song,10,3,C,C major,C
+bVI,44,3095,Young or Old,13,10,B,B minor,A
+bVI,44,3095,Young or Old,14,9,B,B minor,F#
+bVI,44,3095,Young or Old,15,8,B,B minor,G
+bVI,44,3095,Young or Old,16,7,B,B minor,F#
+bVI,44,3095,Young or Old,22,1,B,B minor,F#
+bVI,44,3266,Zip-a-Dee-Doo-Dah,14,11,F,F major,F
+bVI,44,3266,Zip-a-Dee-Doo-Dah,18,7,F,F major,Ab
+bVI,44,3266,Zip-a-Dee-Doo-Dah,19,6,F,F major,F
+bVI,44,3266,Zip-a-Dee-Doo-Dah,21,4,F,F major,F
+bVI,44,3292,Shangri La Rags to Riches,61,8,Eb,Eb major,F#
+bVI,44,3853,If I May,9,17,Ab,Ab major,Ab
+bVI,44,3853,If I May,10,16,Ab,Ab major,Ab
+bVI,44,3865,Ron Rogers Medley,48,9,G,G major,G
+bVI,44,3883,This Is How You Voice Lead,5,5,F,F minor,Eb
+bVI,44,3883,This Is How You Voice Lead,6,4,F,F minor,C#
+bVI,44,3883,This Is How You Voice Lead,7,3,F,F minor,C#
+bVI,44,4003,DuckTales,13,11,G,G major,Bb
+bVI,44,4003,DuckTales,14,10,G,G major,Bb
+bVI,44,4003,DuckTales,15,9,G,G major,Bb
+bVI,44,5377,Reaching Out,1,55,B,B minor,
+bVI,44,5377,Reaching Out,2,54,B,B minor,D
+bVI,44,5377,Reaching Out,3,53,B,B minor,D
+bVI,44,5377,Reaching Out,15,41,B,B minor,
+bVI,44,5377,Reaching Out,16,40,B,B minor,D
+bVI,44,5377,Reaching Out,17,39,B,B minor,D
+bVI,44,5377,Reaching Out,29,27,B,B minor,
+bVI,44,5377,Reaching Out,30,26,B,B minor,D
+bVI,44,5377,Reaching Out,31,25,B,B minor,D
+bVI,44,5377,Reaching Out,38,18,B,B minor,F#
+bVI,44,5377,Reaching Out,43,13,B,B minor,
+bVI,44,5377,Reaching Out,44,12,B,B minor,D
+bVI,44,5377,Reaching Out,45,11,B,B minor,D
+bVI,44,5688,What'll I Do,13,31,D,D major,D
+iv,40,1682,My Heart Broke Last Night,1,12,G,G major,C
+iv,40,2296,My Funny Valentine,13,10,B,B minor,B
+iv,40,2296,My Funny Valentine,19,4,B,B minor,B
+iv,40,2296,My Funny Valentine,20,3,B,B minor,
+iv,40,2425,Bow-Tie Guy,14,5,C,C major,E
+iv,40,2607,Farmersonly.com,9,21,A,A major,D
+iv,40,2607,Farmersonly.com,10,20,A,A major,D
+iv,40,2607,Farmersonly.com,20,10,A,A major,D
+iv,40,2869,It's My Song,9,4,C,C major,C
+iv,40,3095,Young or Old,3,20,B,B minor,E
+iv,40,3095,Young or Old,4,19,B,B minor,E
+iv,40,3266,Zip-a-Dee-Doo-Dah,1,24,F,F major,F
+iv,40,3390,Nothing Compares To You,16,8,F,F major,
+iv,40,3390,Nothing Compares To You,17,7,F,F major,F
+iv,40,3390,Nothing Compares To You,18,6,F,F major,C
+iv,40,3390,Nothing Compares To You,19,5,F,F major,C
+iv,40,3390,Nothing Compares To You,20,4,F,F major,Bb
+iv,40,3390,Nothing Compares To You,21,3,F,F major,F
+iv,40,3859,Shadow of The Day,1,23,Bb,Bb major,
+iv,40,3859,Shadow of The Day,2,22,Bb,Bb major,
+iv,40,3859,Shadow of The Day,3,21,Bb,Bb major,
+iv,40,3865,Ron Rogers Medley,49,8,G,G major,G
+iv,40,3870,Mary Had a Little Lamb,4,27,B,B minor,D
+iv,40,3870,Mary Had a Little Lamb,12,19,B,B minor,D
+iv,40,3870,Mary Had a Little Lamb,21,10,B,B minor,D
+iv,40,3912,The Next Ten Minutes,1,29,Bb,Bb major,
+iv,40,3912,The Next Ten Minutes,2,28,Bb,Bb major,
+iv,40,3912,The Next Ten Minutes,4,26,Bb,Bb major,
+iv,40,3912,The Next Ten Minutes,6,24,Bb,Bb major,
+iv,40,3912,The Next Ten Minutes,15,15,Bb,Bb major,F#
+iv,40,3912,The Next Ten Minutes,16,14,Bb,Bb major,F#
+iv,40,3979,It's the End of the World as We Know It,15,3,C,C major,C
+iv,40,4178,Professional Pirate,8,18,F,F major,A
+iv,40,4178,Professional Pirate,11,15,F,F major,Bb
+iv,40,5439,Happy Halloween,19,2,D,D major,A
+iv,40,5688,What'll I Do,28,16,D,D major,D
+iv,40,5688,What'll I Do,30,14,D,D major,D
+iv,40,5688,What'll I Do,37,7,D,D major,D
+iv,40,6447,Goodnight,15,5,D,D major,
+iv,40,6730,Pink Pony Club,9,2,F#,F# major,Bb
+bVII,31,1682,My Heart Broke Last Night,7,6,G,G major,Eb
+bVII,31,2296,My Funny Valentine,15,8,B,B minor,G
+bVII,31,2296,My Funny Valentine,17,6,B,B minor,G
+bVII,31,2607,Farmersonly.com,17,13,A,A major,G
+bVII,31,2607,Farmersonly.com,19,11,A,A major,G
+bVII,31,2607,Farmersonly.com,21,9,A,A major,G
+bVII,31,3095,Young or Old,5,18,B,B minor,E
+bVII,31,3095,Young or Old,9,14,B,B minor,C
+bVII,31,3095,Young or Old,18,5,B,B minor,E
+bVII,31,3292,Shangri La Rags to Riches,66,3,Eb,Eb major,F
+bVII,31,3292,Shangri La Rags to Riches,67,2,Eb,Eb major,F
+bVII,31,3390,Nothing Compares To You,2,22,F,F major,
+bVII,31,3858,Cops!,15,5,B,B major,B
+bVII,31,3859,Shadow of The Day,20,4,Bb,Bb major,C
+bVII,31,3859,Shadow of The Day,21,3,Bb,Bb major,C
+bVII,31,3870,Mary Had a Little Lamb,3,28,B,B minor,C
+bVII,31,3870,Mary Had a Little Lamb,6,25,B,B minor,C#
+bVII,31,3883,This Is How You Voice Lead,8,2,F,F minor,Eb
+bVII,31,4003,DuckTales,16,8,G,G major,C
+bVII,31,4003,DuckTales,17,7,G,G major,C
+bVII,31,4003,DuckTales,18,6,G,G major,C
+bVII,31,5377,Reaching Out,11,45,B,B minor,E
+bVII,31,5377,Reaching Out,12,44,B,B minor,E
+bVII,31,5377,Reaching Out,13,43,B,B minor,E
+bVII,31,5377,Reaching Out,14,42,B,B minor,E
+bVII,31,5377,Reaching Out,27,29,B,B minor,E
+bVII,31,5377,Reaching Out,28,28,B,B minor,E
+bVII,31,5377,Reaching Out,40,16,B,B minor,E
+bVII,31,5377,Reaching Out,42,14,B,B minor,E
+bVII,31,5377,Reaching Out,53,3,B,B minor,C#
+bVII,31,5688,What'll I Do,18,26,D,D major,E
+vii,24,1875,Kansas City Dichotomy,5,5,C,C major,B
+vii,24,1875,Kansas City Dichotomy,7,3,C,C major,B
+vii,24,2042,And So It's Over,6,9,C,C major,B
+vii,24,2042,And So It's Over,7,8,C,C major,B
+vii,24,2475,Wrecking Ball,13,39,C,C major,A
+vii,24,2475,Wrecking Ball,23,29,C,C major,B
+vii,24,2475,Wrecking Ball,50,2,C,C major,C
+vii,24,2607,Farmersonly.com,2,28,A,A major,Ab
+vii,24,2962,You are the only girl for me,11,2,F,F major,Bb
+vii,24,3098,Young or Old,11,3,G,G major,C
+vii,24,3098,Young or Old,12,2,G,G major,C
+vii,24,3266,Zip-a-Dee-Doo-Dah,8,17,F,F major,E
+vii,24,3266,Zip-a-Dee-Doo-Dah,20,5,F,F major,E
+vii,24,3292,Shangri La Rags to Riches,5,64,Eb,Eb major,
+vii,24,3292,Shangri La Rags to Riches,11,58,Eb,Eb major,Ab
+vii,24,3292,Shangri La Rags to Riches,14,55,Eb,Eb major,F
+vii,24,3772,Telegraph Line,30,35,F,F major,E
+vii,24,3856,Don't Make Toast,19,33,Ab,Ab major,
+vii,24,3858,Cops!,18,2,B,B major,B
+vii,24,4178,Professional Pirate,24,2,F,F major,F
+vii,24,5266,Halls of Ivy,1,19,Bb,Bb major,
+vii,24,5266,Halls of Ivy,5,15,Bb,Bb major,E
+vii,24,6447,Goodnight,18,2,D,D major,E
+vii,24,6730,Pink Pony Club,5,6,F#,F# major,
+II,17,2296,My Funny Valentine,21,2,B,B minor,Ab
+II,17,2475,Wrecking Ball,19,33,C,C major,A
+II,17,2475,Wrecking Ball,30,22,C,C major,A
+II,17,2475,Wrecking Ball,31,21,C,C major,A
+II,17,2962,You are the only girl for me,6,7,F,F major,D
+II,17,2962,You are the only girl for me,8,5,F,F major,D
+II,17,3098,Young or Old,5,9,G,G major,E
+II,17,3137,Hard Times,6,11,A,A major,A
+II,17,3856,Don't Make Toast,5,47,Ab,Ab major,D
+II,17,3856,Don't Make Toast,7,45,Ab,Ab major,C
+II,17,3856,Don't Make Toast,25,27,Ab,Ab major,D
+II,17,3856,Don't Make Toast,45,7,Ab,Ab major,D
+II,17,3868,I was Born Under a Wand'rin' Star,2,15,Eb,Eb major,C
+II,17,4003,DuckTales,4,20,G,G major,A
+II,17,4003,DuckTales,5,19,G,G major,A
+II,17,4003,DuckTales,6,18,G,G major,A
+II,17,4833,Too Darn Hot,27,3,G,G minor,G
+IVb,15,1922,If You Wanna Light Up the World,6,6,Eb,Eb major,Eb
+IVb,15,1922,If You Wanna Light Up the World,7,5,Eb,Eb major,Eb
+IVb,15,1922,If You Wanna Light Up the World,8,4,Eb,Eb major,Eb
+IVb,15,1922,If You Wanna Light Up the World,10,2,Eb,Eb major,Eb
+IVb,15,1936,As Like the Breeze that Blows,7,3,C,C major,C
+IVb,15,2559,Mother's/Father's Day Tag,9,7,F,F major,F
+IVb,15,2559,Mother's/Father's Day Tag,11,5,F,F major,F
+IVb,15,2560,Mother's/Father's Day Tag,9,7,Bb,Bb major,Bb
+IVb,15,2560,Mother's/Father's Day Tag,11,5,Bb,Bb major,Bb
+IVb,15,3856,Don't Make Toast,29,23,Ab,Ab major,F
+IVb,15,3856,Don't Make Toast,30,22,Ab,Ab major,F
+IVb,15,3856,Don't Make Toast,50,2,Ab,Ab major,F
+IVb,15,3865,Ron Rogers Medley,46,11,G,G major,G
+IVb,15,3865,Ron Rogers Medley,47,10,G,G major,G
+IVb,15,5266,Halls of Ivy,4,16,Bb,Bb major,G
+II#,12,2697,Loop-dee-Loop & Pull,4,11,F,F major,F
+II#,12,2697,Loop-dee-Loop & Pull,9,6,F,F major,G
+II#,12,2697,Loop-dee-Loop & Pull,10,5,F,F major,G
+II#,12,3856,Don't Make Toast,2,50,Ab,Ab major,Bb
+II#,12,3856,Don't Make Toast,35,17,Ab,Ab major,D
+II#,12,3856,Don't Make Toast,36,16,Ab,Ab major,D
+II#,12,3856,Don't Make Toast,37,15,Ab,Ab major,D
+II#,12,3856,Don't Make Toast,41,11,Ab,Ab major,D
+II#,12,4074,"Love me, and the world behind",13,13,E,E major,E
+II#,12,4074,"Love me, and the world behind",14,12,E,E major,E
+II#,12,4074,"Love me, and the world behind",15,11,E,E major,E
+II#,12,4074,"Love me, and the world behind",16,10,E,E major,E
+III,11,2296,My Funny Valentine,22,1,B,B minor,A
+III,11,3095,Young or Old,2,21,B,B minor,D
+III,11,3870,Mary Had a Little Lamb,7,24,B,B minor,F#
+III,11,3870,Mary Had a Little Lamb,13,18,B,B minor,D
+III,11,3870,Mary Had a Little Lamb,14,17,B,B minor,F#
+III,11,3870,Mary Had a Little Lamb,22,9,B,B minor,E
+III,11,4833,Too Darn Hot,16,14,G,G minor,D
+III,11,5377,Reaching Out,25,31,B,B minor,F#
+III,11,5377,Reaching Out,26,30,B,B minor,F#
+III,11,5377,Reaching Out,39,17,B,B minor,E
+III,11,5688,What'll I Do,8,36,D,D major,C#
+bVII#,10,2559,Mother's/Father's Day Tag,12,4,F,F major,Eb
+bVII#,10,2559,Mother's/Father's Day Tag,14,2,F,F major,Eb
+bVII#,10,3390,Nothing Compares To You,3,21,F,F major,F
+bVII#,10,3853,If I May,3,23,Ab,Ab major,Ab
+bVII#,10,3853,If I May,4,22,Ab,Ab major,Ab
+bVII#,10,3859,Shadow of The Day,5,19,Bb,Bb major,C
+bVII#,10,3865,Ron Rogers Medley,43,14,G,G major,F
+bVII#,10,3868,I was Born Under a Wand'rin' Star,15,2,Eb,Eb major,Ab
+bVII#,10,3912,The Next Ten Minutes,28,2,Bb,Bb major,Eb
+bVII#,10,4074,"Love me, and the world behind",4,22,E,E major,E
+bII#,9,2042,And So It's Over,13,2,C,C major,C
+bII#,9,2533,Dreidel,12,3,D,D major,D
+bII#,9,3095,Young or Old,8,15,B,B minor,E
+bII#,9,3095,Young or Old,10,13,B,B minor,C
+bII#,9,3095,Young or Old,17,6,B,B minor,E
+bII#,9,3137,Hard Times,14,3,A,A major,A
+bII#,9,3912,The Next Ten Minutes,27,3,Bb,Bb major,Eb
+bII#,9,4074,"Love me, and the world behind",10,16,E,E major,E
+bII#,9,5688,What'll I Do,42,2,D,D major,D
+bbII,9,4293,Gaston (Parody),5,26,C#,C# major,C#
+bbII,9,4293,Gaston (Parody),6,25,C#,C# major,C#
+bbII,9,4293,Gaston (Parody),7,24,C#,C# major,C#
+bbII,9,4293,Gaston (Parody),8,23,C#,C# major,C#
+bbII,9,4293,Gaston (Parody),9,22,C#,C# major,C#
+bbII,9,4293,Gaston (Parody),23,8,C#,C# major,C#
+bbII,9,4293,Gaston (Parody),24,7,C#,C# major,C#
+bbII,9,4293,Gaston (Parody),28,3,C#,C# major,
+bbII,9,4293,Gaston (Parody),30,1,C#,C# major,Ab
+VI,7,3292,Shangri La Rags to Riches,25,44,Eb,Eb major,Bb
+VI,7,3292,Shangri La Rags to Riches,26,43,Eb,Eb major,Bb
+VI,7,3292,Shangri La Rags to Riches,27,42,Eb,Eb major,Bb
+VI,7,3292,Shangri La Rags to Riches,29,40,Eb,Eb major,Bb
+VI,7,3292,Shangri La Rags to Riches,50,19,Eb,Eb major,G
+VI,7,3292,Shangri La Rags to Riches,53,16,Eb,Eb major,G
+VI,7,3856,Don't Make Toast,4,48,Ab,Ab major,C
+Ib,6,1936,As Like the Breeze that Blows,3,7,C,C major,Bb
+Ib,6,1936,As Like the Breeze that Blows,4,6,C,C major,Bb
+Ib,6,4003,DuckTales,7,17,G,G major,B
+Ib,6,4003,DuckTales,8,16,G,G major,B
+Ib,6,4003,DuckTales,9,15,G,G major,B
+Ib,6,5688,What'll I Do,24,20,D,D major,C
+bVI#,6,2042,And So It's Over,12,3,C,C major,C
+bVI#,6,2533,Dreidel,7,8,D,D major,A
+bVI#,6,2533,Dreidel,13,2,D,D major,D
+bVI#,6,3853,If I May,11,15,Ab,Ab major,Ab
+bVI#,6,3856,Don't Make Toast,46,6,Ab,Ab major,F#
+bVI#,6,3865,Ron Rogers Medley,51,6,G,G major,G
+#IV,6,2475,Wrecking Ball,36,16,C,C major,A
+#IV,6,2607,Farmersonly.com,11,19,A,A major,Eb
+#IV,6,2607,Farmersonly.com,12,18,A,A major,Eb
+#IV,6,2962,You are the only girl for me,5,8,F,F major,F
+#IV,6,3098,Young or Old,6,8,G,G major,E
+#IV,6,3292,Shangri La Rags to Riches,56,13,Eb,Eb major,
+Ger,6,3266,Zip-a-Dee-Doo-Dah,23,2,F,F major,Ab
+Ger,6,3856,Don't Make Toast,33,19,Ab,Ab major,D
+Ger,6,3856,Don't Make Toast,34,18,Ab,Ab major,D
+Ger,6,3858,Cops!,6,14,B,B major,F
+Ger,6,4074,"Love me, and the world behind",17,9,E,E major,G
+Ger,6,4074,"Love me, and the world behind",18,8,E,E major,E
+IV#,6,3870,Mary Had a Little Lamb,2,29,B,B minor,D
+IV#,6,3870,Mary Had a Little Lamb,26,5,B,B minor,E
+IV#,6,3870,Mary Had a Little Lamb,27,4,B,B minor,E
+IV#,6,4833,Too Darn Hot,12,18,G,G minor,E
+IV#,6,4833,Too Darn Hot,13,17,G,G minor,E
+IV#,6,4833,Too Darn Hot,14,16,G,G minor,E
+bbbVII#,5,4293,Gaston (Parody),16,15,C#,C# major,C#
+bbbVII#,5,4293,Gaston (Parody),18,13,C#,C# major,C#
+bbbVII#,5,4293,Gaston (Parody),19,12,C#,C# major,C#
+bbbVII#,5,4293,Gaston (Parody),21,10,C#,C# major,C#
+bbbVII#,5,4293,Gaston (Parody),29,2,C#,C# major,A
+#VI,4,2905,That Day,2,16,Eb,Eb minor,Eb
+#VI,4,2905,That Day,3,15,Eb,Eb minor,
+#VI,4,3292,Shangri La Rags to Riches,62,7,Eb,Eb major,Ab
+#VI,4,3292,Shangri La Rags to Riches,63,6,Eb,Eb major,Ab
+##Ib,4,2905,That Day,12,6,Eb,Eb minor,
+##Ib,4,2905,That Day,13,5,Eb,Eb minor,
+##Ib,4,2905,That Day,14,4,Eb,Eb minor,
+##Ib,4,2905,That Day,15,3,Eb,Eb minor,
+Sw,4,3853,If I May,14,12,Ab,Ab major,Ab
+Sw,4,3853,If I May,15,11,Ab,Ab major,Ab
+Sw,4,3853,If I May,17,9,Ab,Ab major,Ab
+Sw,4,5688,What'll I Do,6,38,D,D major,D
+IV+#,4,4833,Too Darn Hot,5,25,G,G minor,E
+IV+#,4,4833,Too Darn Hot,6,24,G,G minor,E
+IV+#,4,4833,Too Darn Hot,7,23,G,G minor,E
+IV+#,4,4833,Too Darn Hot,8,22,G,G minor,E
+ib,3,2042,And So It's Over,9,6,C,C major,Eb
+ib,3,2533,Dreidel,10,5,D,D major,D
+ib,3,2533,Dreidel,11,4,D,D major,D
+bIII,3,2042,And So It's Over,11,4,C,C major,C#
+bIII,3,2607,Farmersonly.com,15,15,A,A major,C
+bIII,3,3870,Mary Had a Little Lamb,18,13,B,B minor,F
+#IVob,3,2475,Wrecking Ball,18,34,C,C major,A
+#IVob,3,5266,Halls of Ivy,9,11,Bb,Bb major,E
+#IVob,3,5266,Halls of Ivy,10,10,Bb,Bb major,E
+#V,3,2905,That Day,1,17,Eb,Eb minor,Eb
+#V,3,2905,That Day,4,14,Eb,Eb minor,
+#V,3,2905,That Day,9,9,Eb,Eb minor,
+VI#,3,2962,You are the only girl for me,4,9,F,F major,D
+VI#,3,3292,Shangri La Rags to Riches,28,41,Eb,Eb major,Bb
+VI#,3,3292,Shangri La Rags to Riches,30,39,Eb,Eb major,Bb
+bVIb,3,3095,Young or Old,20,3,B,B minor,A
+bVIb,3,3095,Young or Old,21,2,B,B minor,A
+bVIb,3,3870,Mary Had a Little Lamb,11,20,B,B minor,D
+III#,3,3390,Nothing Compares To You,1,23,F,F major,C#
+III#,3,3772,Telegraph Line,44,21,F,F major,G
+III#,3,5688,What'll I Do,2,42,D,D major,Bb
+iiøb,3,3865,Ron Rogers Medley,29,28,G,G major,C
+iiøb,3,5266,Halls of Ivy,18,2,Bb,Bb major,C
+iiøb,3,5688,What'll I Do,19,25,D,D major,E
+I#,3,3870,Mary Had a Little Lamb,24,7,B,B minor,Eb
+I#,3,3870,Mary Had a Little Lamb,25,6,B,B minor,Eb
+I#,3,3883,This Is How You Voice Lead,9,1,F,F minor,E
+bbVII,3,4293,Gaston (Parody),4,27,C#,C# major,C#
+bbVII,3,4293,Gaston (Parody),10,21,C#,C# major,C#
+bbVII,3,4293,Gaston (Parody),12,19,C#,C# major,C#
+bbII#,3,4293,Gaston (Parody),13,18,C#,C# major,C#
+bbII#,3,4293,Gaston (Parody),14,17,C#,C# major,C#
+bbII#,3,4293,Gaston (Parody),15,16,C#,C# major,C#
+iib,2,2425,Bow-Tie Guy,10,9,C,C major,D
+iib,2,5266,Halls of Ivy,3,17,Bb,Bb major,G
+viøb,2,2559,Mother's/Father's Day Tag,10,6,F,F major,F
+viøb,2,2560,Mother's/Father's Day Tag,10,6,Bb,Bb major,Bb
+##I,2,2905,That Day,16,2,Eb,Eb minor,
+##I,2,2905,That Day,17,1,Eb,Eb minor,
+#I,2,2962,You are the only girl for me,3,10,F,F major,E
+#I,2,4833,Too Darn Hot,17,13,G,G minor,D
+bII,2,3095,Young or Old,7,16,B,B minor,E
+bII,2,3870,Mary Had a Little Lamb,1,30,B,B minor,E
+vib,2,3266,Zip-a-Dee-Doo-Dah,5,20,F,F major,F
+vib,2,3266,Zip-a-Dee-Doo-Dah,13,12,F,F major,F
+#IIm,2,3856,Don't Make Toast,42,10,Ab,Ab major,D
+#IIm,2,3856,Don't Make Toast,43,9,Ab,Ab major,D
+V#,2,3870,Mary Had a Little Lamb,8,23,B,B minor,F#
+V#,2,4833,Too Darn Hot,18,12,G,G minor,D
+viø#,2,3870,Mary Had a Little Lamb,9,22,B,B minor,D
+viø#,2,3870,Mary Had a Little Lamb,28,3,B,B minor,F#
+bbVI#,2,4293,Gaston (Parody),2,29,C#,C# major,C
+bbVI#,2,4293,Gaston (Parody),3,28,C#,C# major,C
+bbbVII,2,4293,Gaston (Parody),17,14,C#,C# major,C#
+bbbVII,2,4293,Gaston (Parody),20,11,C#,C# major,C#
+ii#,2,4833,Too Darn Hot,9,21,G,G minor,E
+ii#,2,4833,Too Darn Hot,10,20,G,G minor,E
+#IIob,1,1682,My Heart Broke Last Night,10,3,G,G major,E
+bIV#,1,2425,Bow-Tie Guy,5,14,C,C major,E
+ivob,1,2425,Bow-Tie Guy,9,10,C,C major,B
+#Vbm,1,2501,Lonesome Road,11,2,D,D major,
+#I#,1,2905,That Day,5,13,Eb,Eb minor,
+##IIIb,1,2905,That Day,6,12,Eb,Eb minor,
+#II,1,2905,That Day,7,11,Eb,Eb minor,
+#IV#,1,2905,That Day,8,10,Eb,Eb minor,
+#VI#,1,2905,That Day,10,8,Eb,Eb minor,
+##III,1,2905,That Day,11,7,Eb,Eb minor,
+bIII+##,1,2962,You are the only girl for me,1,12,F,F major,B
+IIIb,1,3095,Young or Old,19,4,B,B minor,F#
+#IIIbm,1,3292,Shangri La Rags to Riches,40,29,Eb,Eb major,B
+#IIIb,1,3292,Shangri La Rags to Riches,41,28,Eb,Eb major,Bb
+iiiob,1,3772,Telegraph Line,29,36,F,F major,D
+vii#,1,3868,I was Born Under a Wand'rin' Star,6,11,Eb,Eb major,
+i+b,1,3868,I was Born Under a Wand'rin' Star,14,3,Eb,Eb major,B
+bV#,1,3870,Mary Had a Little Lamb,15,16,B,B minor,F
+vob,1,3870,Mary Had a Little Lamb,17,14,B,B minor,F#
+bV,1,3870,Mary Had a Little Lamb,19,12,B,B minor,Eb
+ivb,1,3870,Mary Had a Little Lamb,20,11,B,B minor,C#
+vi#,1,3883,This Is How You Voice Lead,1,9,F,F minor,E
+v#,1,3883,This Is How You Voice Lead,3,7,F,F minor,
+#III,1,3883,This Is How You Voice Lead,4,6,F,F minor,
+bVII##,1,3979,It's the End of the World as We Know It,14,4,C,C major,C
+bI,1,4293,Gaston (Parody),1,30,C#,C# major,C
+bbVIIm,1,4293,Gaston (Parody),11,20,C#,C# major,C#
+bbI,1,4293,Gaston (Parody),22,9,C#,C# major,C#
+bbIII,1,4293,Gaston (Parody),25,6,C#,C# major,C#
+bbIIIm,1,4293,Gaston (Parody),26,5,C#,C# major,C#
+bbV,1,4293,Gaston (Parody),27,4,C#,C# major,F#
+i#,1,5266,Halls of Ivy,6,14,Bb,Bb major,C#
+bIII+#,1,5266,Halls of Ivy,11,9,Bb,Bb major,E
+iiiøb,1,5688,What'll I Do,25,19,D,D major,C
