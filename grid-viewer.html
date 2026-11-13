@@ -248,8 +248,8 @@ function buildGrid() {
       td.addEventListener('click', () =>
         playCell(td.dataset.rn, td.dataset.ton,
           td.classList.contains('trcell')
-            ? (Object.entries(cellLead[td.dataset.src + '|' + tag.tonic]||{}).sort((a,b)=>b[1]-a[1])[0]?.[0] || '1')
-            : undefined));
+            ? bestLead(td.dataset.src, tag.tonic)
+            : undefined, td));
     }
     grid.appendChild(tr);
   }
@@ -273,23 +273,25 @@ function romanRootSemi(rn) {
 function romanIsMinor(rn) { return /[iv]/.test(rn.match(/[IViv]+/)[0][0]); }
 
 /* ---------- audio ---------- */
-let ctx = null, convolver = null, wetGain = null;
+let ctx = null, convolver = null;
+function makeReverb(c) {
+  // simple synthetic plate-ish reverb: decaying noise IR
+  const conv = c.createConvolver();
+  const len = c.sampleRate * 1.6, ir = c.createBuffer(2, len, c.sampleRate);
+  for (let ch = 0; ch < 2; ch++) {
+    const d = ir.getChannelData(ch);
+    for (let i = 0; i < len; i++)
+      d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 2.8);
+  }
+  conv.buffer = ir;
+  const wet = c.createGain(); wet.gain.value = 0.22;
+  conv.connect(wet).connect(c.destination);
+  return conv;
+}
 function audio() {
   if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
   if (ctx.state === 'suspended') ctx.resume();
-  if (!convolver) {
-    // simple synthetic plate-ish reverb: decaying noise IR
-    convolver = ctx.createConvolver();
-    const len = ctx.sampleRate * 1.6, ir = ctx.createBuffer(2, len, ctx.sampleRate);
-    for (let ch = 0; ch < 2; ch++) {
-      const d = ir.getChannelData(ch);
-      for (let i = 0; i < len; i++)
-        d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 2.8);
-    }
-    convolver.buffer = ir;
-    wetGain = ctx.createGain(); wetGain.gain.value = 0.22;
-    convolver.connect(wetGain).connect(ctx.destination);
-  }
+  if (!convolver) convolver = makeReverb(ctx);
   return ctx;
 }
 function midiOf(tonic, semi) {
@@ -298,38 +300,81 @@ function midiOf(tonic, semi) {
 }
 /* warm electric-piano style tone: two detuned triangle oscs through a
    lowpass filter with a soft envelope; optional reverb send */
-function pianoVoice(freq, t, dur, peak, cutoff) {
-  const g = ctx.createGain();
+/* dry = main output, wet = reverb send (convolver); nodes are disconnected
+   when the first oscillator ends so the live graph never accumulates */
+function pianoVoice(c, dry, wet, freq, t, dur, peak, cutoff) {
+  const g = c.createGain();
   g.gain.setValueAtTime(0, t);
   g.gain.linearRampToValueAtTime(peak, t + 0.025);
   g.gain.exponentialRampToValueAtTime(Math.max(peak * 0.25, 0.001), t + Math.max(0.1, dur * 0.7));
   g.gain.linearRampToValueAtTime(0, t + dur);
-  const f = ctx.createBiquadFilter();
+  const f = c.createBiquadFilter();
   f.type = 'lowpass'; f.frequency.setValueAtTime(cutoff, t);
   f.frequency.exponentialRampToValueAtTime(Math.max(400, cutoff * 0.35), t + dur);
   f.Q.value = 0.6;
-  const o1 = ctx.createOscillator(), o2 = ctx.createOscillator();
+  const o1 = c.createOscillator(), o2 = c.createOscillator();
   o1.type = 'triangle'; o2.type = 'triangle';
   o1.frequency.value = freq; o2.frequency.value = freq * 1.003; // gentle chorus detune
-  const sub = ctx.createOscillator(); sub.type = 'sine'; sub.frequency.value = freq / 2;
-  const subG = ctx.createGain(); subG.gain.value = 0.35;
+  const sub = c.createOscillator(); sub.type = 'sine'; sub.frequency.value = freq / 2;
+  const subG = c.createGain(); subG.gain.value = 0.35;
   o1.connect(f); o2.connect(f); sub.connect(subG).connect(f);
   f.connect(g);
-  g.connect(ctx.destination);
-  g.connect(convolver);
+  g.connect(dry);
+  if (wet) g.connect(wet);
   for (const o of [o1, o2, sub]) { o.start(t); o.stop(t + dur + 0.1); }
+  o1.onended = () => {
+    for (const n of [o1, o2, sub, subG, f, g]) { try { n.disconnect(); } catch (e) {} }
+  };
 }
-function playLead(midi, t, dur) {
+function playLead(c, dry, wet, midi, t, dur) {
   const freq = 440 * Math.pow(2, (midi - 69) / 12);
-  pianoVoice(freq, t, dur, 0.18, 2600);
+  pianoVoice(c, dry, wet, freq, t, dur, 0.18, 2600);
 }
-function playChord(midiRoot, minor, has7, t, dur) {
+function playChord(c, dry, wet, midiRoot, minor, has7, t, dur) {
   const ivs = minor ? [0,3,7] : [0,4,7];
   if (has7) ivs.push(10);
   for (const iv of ivs) {
     const freq = 440 * Math.pow(2, (midiRoot + iv - 12 - 69) / 12);
-    pianoVoice(freq, t, dur * 0.95, 0.055, 1400);
+    pianoVoice(c, dry, wet, freq, t, dur * 0.95, 0.055, 1400);
   }
+}
+
+/* ---------- pre-rendered chord buffers ----------
+   Every grid cell's chord (+ lead note) is rendered once, per tag selection,
+   into an AudioBuffer via OfflineAudioContext. Pad clicks then play the
+   buffer directly — zero synthesis at click time, no graph accumulation. */
+const bufferCache = {}; // 'rn|ton|leadDeg' -> AudioBuffer (null while pending)
+let renderQueue = Promise.resolve();
+function bestLead(rn, ton) {
+  return Object.entries(cellLead[rn + '|' + ton] || {}).sort((a, b) => b[1] - a[1])[0]?.[0] || '1';
+}
+async function renderCellBuffer(rn, ton, ld) {
+  const sr = 44100, dur = 2.2;
+  const oc = new OfflineAudioContext(2, Math.ceil(sr * dur), sr);
+  const conv = makeReverb(oc);
+  const root = midiOf(ton, romanRootSemi(rn));
+  const leadMidi = root + (DEG_SEMI[ld] ?? 0) + 12;
+  playLead(oc, oc.destination, conv, leadMidi, 0.05, 1.4);
+  playChord(oc, oc.destination, conv, root, romanIsMinor(rn), /7/.test(rn), 0.05, 1.4);
+  return oc.startRendering();
+}
+function queueRender(rn, ton, ld) {
+  const key = rn + '|' + ton + '|' + ld;
+  if (bufferCache[key] !== undefined) return;
+  bufferCache[key] = null; // pending — pad falls back to live synth until ready
+  renderQueue = renderQueue.then(async () => {
+    try { bufferCache[key] = await renderCellBuffer(rn, ton, ld); }
+    catch (e) { delete bufferCache[key]; }
+  });
+}
+function preloadBuffers() {
+  const tag = curTagObj();
+  document.querySelectorAll('#grid td.cell:not(.empty)').forEach(td => {
+    const ton = td.dataset.ton;
+    const ld = td.classList.contains('trcell')
+      ? bestLead(td.dataset.src, tag.tonic) : bestLead(td.dataset.rn, ton);
+    queueRender(td.dataset.rn, ton, ld);
+  });
 }
 
 /* ---------- playback model ---------- */
@@ -363,8 +408,9 @@ function scheduleRange(steps, startBeat) {
   schedule = []; let beat = startBeat;
   for (const s of steps) {
     const t = tNow + beat * spb;
-    if (s.leadMidi != null) playLead(s.leadMidi, t, s.leadDur * spb);
-    playChord(s.leadMidi != null ? s.leadMidi : 48, s.fc === 'D' ? minorHint(s) : romanIsMinor(s.rn),
+    if (s.leadMidi != null) playLead(ctx, ctx.destination, convolver, s.leadMidi, t, s.leadDur * spb);
+    playChord(ctx, ctx.destination, convolver, s.leadMidi != null ? s.leadMidi : 48,
+              s.fc === 'D' ? minorHint(s) : romanIsMinor(s.rn),
               /7/.test(s.rn) || s.rn.length > 1, t, s.dur * spb * 0.95);
     schedule.push({ t, end: t + s.dur * spb, ...s });
     beat += s.dur;
@@ -524,7 +570,7 @@ function stepTo(i) {
   playSteps(steps.slice(0,1), false);
 }
 
-tagSel.addEventListener('change', () => { stopAll(); fillNg(); fillStrip(); updateRoll(); buildGrid(); });
+tagSel.addEventListener('change', () => { stopAll(); fillNg(); fillStrip(); updateRoll(); buildGrid(); preloadBuffers(); });
 document.getElementById('btnMode').addEventListener('click', () => {
   gridMode = gridMode === 'col3' ? 'full' : 'col3';
   document.getElementById('btnMode').textContent = gridMode === 'col3' ? 'full 11-tonic view' : '3-tonic view';
@@ -557,11 +603,25 @@ document.getElementById('btnPrev').addEventListener('click', () => {
 });
 tempo.addEventListener('input', () => document.getElementById('bpmLab').textContent = tempo.value + ' bpm');
 
-function playCell(rn, ton, leadDeg) {
+/* minimum gap before the same pad can retrigger (double-click guard);
+   a different pad inside that window still fires immediately */
+const RECLICK_MS = 120;
+let lastCellKey = '', lastCellAt = 0;
+function playCell(rn, ton, leadDeg, td) {
+  const key = rn + '|' + ton, now = Date.now();
+  if (key === lastCellKey && now - lastCellAt < RECLICK_MS) return;
+  lastCellKey = key; lastCellAt = now;
   audio();
-  const tag = curTagObj();
-  const ld = leadDeg || Object.entries(cellLead[rn+'|'+ton]||{}).sort((a,b)=>b[1]-a[1])[0]?.[0] || '1';
-  const fake = { ...tag, tonic: ton, rows: [{ roman: rn, roman_norm: rn, function_class: fcOfNorm(rn),
+  const ld = leadDeg || bestLead(rn, ton);
+  const buf = bufferCache[rn + '|' + ton + '|' + ld];
+  if (buf) { // pre-rendered: instant
+    const src = ctx.createBufferSource(); src.buffer = buf;
+    src.connect(ctx.destination); src.start();
+    if (td) { td.classList.add('active'); src.onended = () => td.classList.remove('active'); }
+    return;
+  }
+  // fallback: live synth (also used while buffers are still rendering)
+  const fake = { ...curTagObj(), tonic: ton, rows: [{ roman: rn, roman_norm: rn, function_class: fcOfNorm(rn),
     pos_from_start: '0', lead_degree: ld,
     lead_dur: '1', phrase_end: 'False', resolution: '' }] };
   playSteps(stepsFor(fake, 0, 0), false);
@@ -569,6 +629,7 @@ function playCell(rn, ton, leadDeg) {
 
 /* init */
 fillNg(); fillStrip(); updateRoll(); buildGrid();
+audio(); preloadBuffers();
 </script>
 </body>
 </html>
