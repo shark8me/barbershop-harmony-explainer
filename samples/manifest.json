@@ -1,0 +1,168 @@
+{
+ "version": 1,
+ "instruments": {
+  "piano": {
+   "label": "Grand Piano",
+   "gain": 1,
+   "files": {
+    "63": "samples/salamander/63.ogg",
+    "51": "samples/salamander/51.ogg",
+    "69": "samples/salamander/69.ogg",
+    "75": "samples/salamander/75.ogg",
+    "48": "samples/salamander/48.ogg",
+    "57": "samples/salamander/57.ogg",
+    "66": "samples/salamander/66.ogg",
+    "72": "samples/salamander/72.ogg",
+    "60": "samples/salamander/60.ogg",
+    "54": "samples/salamander/54.ogg",
+    "45": "samples/salamander/45.ogg",
+    "42": "samples/salamander/42.ogg",
+    "78": "samples/salamander/78.ogg"
+   },
+   "pitchShiftFallback": true
+  },
+  "harp": {
+   "label": "Harp",
+   "gain": 4,
+   "files": {
+    "48": "samples/vcsl/harp/48.ogg",
+    "52": "samples/vcsl/harp/52.ogg",
+    "55": "samples/vcsl/harp/55.ogg",
+    "59": "samples/vcsl/harp/59.ogg",
+    "62": "samples/vcsl/harp/62.ogg",
+    "65": "samples/vcsl/harp/65.ogg",
+    "69": "samples/vcsl/harp/69.ogg",
+    "72": "samples/vcsl/harp/72.ogg"
+   },
+   "pitchShiftFallback": true
+  },
+  "vibraphone": {
+   "label": "Vibraphone",
+   "gain": 2,
+   "files": {
+    "48": "samples/vcsl/vibraphone/48.ogg",
+    "52": "samples/vcsl/vibraphone/52.ogg",
+    "55": "samples/vcsl/vibraphone/55.ogg",
+    "59": "samples/vcsl/vibraphone/59.ogg",
+    "62": "samples/vcsl/vibraphone/62.ogg",
+    "65": "samples/vcsl/vibraphone/65.ogg",
+    "69": "samples/vcsl/vibraphone/69.ogg",
+    "72": "samples/vcsl/vibraphone/72.ogg"
+   },
+   "pitchShiftFallback": true
+  },
+  "harmonica": {
+   "label": "Harmonica",
+   "gain": 2,
+   "files": {
+    "48": "samples/vcsl/harmonica/48.ogg",
+    "52": "samples/vcsl/harmonica/52.ogg",
+    "60": "samples/vcsl/harmonica/60.ogg",
+    "64": "samples/vcsl/harmonica/64.ogg",
+    "67": "samples/vcsl/harmonica/67.ogg",
+    "72": "samples/vcsl/harmonica/72.ogg"
+   },
+   "pitchShiftFallback": true
+  },
+  "sax": {
+   "label": "Saxophone",
+   "gain": 4,
+   "files": {
+    "48": "samples/vcsl/sax/48.ogg",
+    "50": "samples/vcsl/sax/50.ogg",
+    "52": "samples/vcsl/sax/52.ogg",
+    "54": "samples/vcsl/sax/54.ogg",
+    "56": "samples/vcsl/sax/56.ogg",
+    "58": "samples/vcsl/sax/58.ogg",
+    "60": "samples/vcsl/sax/60.ogg",
+    "62": "samples/vcsl/sax/62.ogg",
+    "64": "samples/vcsl/sax/64.ogg",
+    "66": "samples/vcsl/sax/66.ogg",
+    "68": "samples/vcsl/sax/68.ogg",
+    "70": "samples/vcsl/sax/70.ogg",
+    "72": "samples/vcsl/sax/72.ogg"
+   },
+   "pitchShiftFallback": true
+  },
+  "organ_full": {
+   "label": "Church Organ",
+   "gain": 2,
+   "files": {
+    "48": "samples/vcsl/organ_full/48.ogg",
+    "50": "samples/vcsl/organ_full/50.ogg",
+    "52": "samples/vcsl/organ_full/52.ogg",
+    "54": "samples/vcsl/organ_full/54.ogg",
+    "56": "samples/vcsl/organ_full/56.ogg",
+    "58": "samples/vcsl/organ_full/58.ogg",
+    "60": "samples/vcsl/organ_full/60.ogg",
+    "62": "samples/vcsl/organ_full/62.ogg",
+    "64": "samples/vcsl/organ_full/64.ogg",
+    "66": "samples/vcsl/organ_full/66.ogg",
+    "68": "samples/vcsl/organ_full/68.ogg",
+    "70": "samples/vcsl/organ_full/70.ogg",
+    "72": "samples/vcsl/organ_full/72.ogg"
+   },
+   "pitchShiftFallback": true
+  },
+  "balafon": {
+   "label": "Balafon",
+   "gain": 4,
+   "files": {
+    "49": "samples/vcsl/balafon/49.ogg",
+    "53": "samples/vcsl/balafon/53.ogg",
+    "60": "samples/vcsl/balafon/60.ogg",
+    "65": "samples/vcsl/balafon/65.ogg",
+    "72": "samples/vcsl/balafon/72.ogg"
+   },
+   "pitchShiftFallback": true
+  },
+  "clavisynth": {
+   "label": "Clavinet",
+   "gain": 2,
+   "files": {
+    "48": "samples/vcsl/clavisynth/48.ogg",
+    "52": "samples/vcsl/clavisynth/52.ogg",
+    "56": "samples/vcsl/clavisynth/56.ogg",
+    "60": "samples/vcsl/clavisynth/60.ogg",
+    "64": "samples/vcsl/clavisynth/64.ogg",
+    "68": "samples/vcsl/clavisynth/68.ogg",
+    "72": "samples/vcsl/clavisynth/72.ogg"
+   },
+   "pitchShiftFallback": true
+  },
+  "recorder_alto_sus": {
+   "label": "Alto Recorder",
+   "gain": 4,
+   "files": {
+    "53": "samples/vcsl/recorder_alto_sus/53.ogg",
+    "56": "samples/vcsl/recorder_alto_sus/56.ogg",
+    "58": "samples/vcsl/recorder_alto_sus/58.ogg",
+    "60": "samples/vcsl/recorder_alto_sus/60.ogg",
+    "62": "samples/vcsl/recorder_alto_sus/62.ogg",
+    "64": "samples/vcsl/recorder_alto_sus/64.ogg",
+    "66": "samples/vcsl/recorder_alto_sus/66.ogg",
+    "68": "samples/vcsl/recorder_alto_sus/68.ogg",
+    "70": "samples/vcsl/recorder_alto_sus/70.ogg",
+    "72": "samples/vcsl/recorder_alto_sus/72.ogg"
+   },
+   "pitchShiftFallback": true
+  },
+  "kalimba": {
+   "label": "Kalimba",
+   "gain": 4,
+   "files": {
+    "49": "samples/vcsl/kalimba/49.ogg",
+    "51": "samples/vcsl/kalimba/51.ogg",
+    "54": "samples/vcsl/kalimba/54.ogg",
+    "56": "samples/vcsl/kalimba/56.ogg",
+    "59": "samples/vcsl/kalimba/59.ogg",
+    "61": "samples/vcsl/kalimba/61.ogg",
+    "63": "samples/vcsl/kalimba/63.ogg",
+    "66": "samples/vcsl/kalimba/66.ogg",
+    "69": "samples/vcsl/kalimba/69.ogg",
+    "71": "samples/vcsl/kalimba/71.ogg"
+   },
+   "pitchShiftFallback": true
+  }
+ }
+}

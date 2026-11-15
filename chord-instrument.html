@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>Chord Instrument — Strudel</title>
+<title>Chord Instrument</title>
 <style>
   :root {
     --bg: #14161a; --panel: #1e2127; --ink: #d8dbe2; --dim: #8a8f9a;
@@ -63,7 +63,7 @@
 <body>
 <header>
   <h1>Chord Instrument</h1>
-  <div class="sub">3 rows — subdominant / tonic / dominant — × chord columns. Powered by Strudel's audio engine.</div>
+  <div class="sub">3 rows — subdominant / tonic / dominant — × chord columns. Real acoustic samples, played instantly.</div>
 </header>
 
 <div class="bar">
@@ -80,7 +80,7 @@
 </div>
 
 <div id="startOverlay">
-  <div class="big">Tap to load sounds</div>
+  <div class="big">Loading samples…</div>
   <div class="small">Browsers on iPad require a tap before audio can start.</div>
 </div>
 
@@ -153,8 +153,8 @@ const SETS = {
     { name: '−2',     semi: -2, q: 'M' },
   ]},
 };
-/* strudel sounds — all acoustic sample patches (Salamander piano + VCSL), each
-   RMS-verified audible; gain balances the sampled instruments to comparable level */
+/* acoustic sample instruments — locally served (Salamander piano + VCSL),
+   RMS-balanced; gain balances the sampled instruments to comparable level */
 const SYNTHS = [
   { id: 'piano',             label: 'Grand Piano',   gain: 1 },
   { id: 'harp',              label: 'Harp',          gain: 4 },
@@ -168,38 +168,153 @@ const SYNTHS = [
   { id: 'kalimba',           label: 'Kalimba',       gain: 4 },
 ];
 
-/* ================= strudel ================= */
-import { initStrudel, getAudioContext } from 'https://cdn.jsdelivr.net/npm/@strudel/web@1/+esm';
-let sd = null;
-let unlocked = false;          /* audio unlocked by a user gesture? */
-/* single-flight: concurrent callers (page-load preload + unlock gesture) must
-   share ONE initStrudel call — a second concurrent initStrudel hangs forever */
-let sdPromise = null;
-function ensureStrudel() {
-  if (!sdPromise) {
-    status('loading strudel…');
-    sdPromise = initStrudel({
-      prebake: () => {
-        samples('https://strudel.cc/piano.json');
-        samples('https://strudel.cc/vcsl.json', 'https://raw.githubusercontent.com/sgossner/VCSL/master/');
-      },
-    }).then(s => { sd = s; return s; })
-      .catch(e => { sdPromise = null; throw e; });
+/* ================= WebAudio ================= */
+/* Pre-decode pipeline: fetch + decode every manifest sample at page load into
+   bufferCache (fetch/decode are NOT gesture-gated on modern iOS; only
+   ctx.resume() is). Playback is plain WebAudio: AudioBufferSourceNode per note
+   started exactly at ctx.currentTime — no scheduler, no cycle math. */
+const bufferCache = window.bufferCache = {};    /* key = `${instrument}/${midi}` -> AudioBuffer */
+const manifestFiles = window.manifestFiles = {};/* key -> file url, for expected-count check */
+let manifest = null, samplesReady = false;
+let unlockPromiseResolve = null;
+const unlockPromise = new Promise(res => { unlockPromiseResolve = res; });
+let ctx = null, masterGain = null, convolver = null, wetGain = null;
+function audioCtx() {
+  if (!ctx) {
+    ctx = new (window.AudioContext || window.webkitAudioContext)();
+    masterGain = ctx.createGain();
+    masterGain.gain.value = 1;
+    masterGain.connect(ctx.destination);
+    window.masterGain = masterGain;
+    /* shared reverb: 1.5 s exponentially-decaying noise IR, wet ~0.25 (the
+       room(.25) equivalent) */
+    convolver = ctx.createConvolver();
+    convolver.buffer = makeIR(ctx, 1.5);
+    wetGain = ctx.createGain();
+    wetGain.gain.value = 0.25;
+    convolver.connect(wetGain);
+    wetGain.connect(masterGain);
+    window.__getAudioCtx = () => ctx;
   }
-  return sdPromise;
+  return ctx;
 }
+function makeIR(ac, dur) {
+  const sr = ac.sampleRate, len = Math.floor(sr * dur);
+  const buf = ac.createBuffer(2, len, sr);
+  for (let ch = 0; ch < 2; ch++) {
+    const d = buf.getChannelData(ch);
+    for (let i = 0; i < len; i++)
+      d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 2.5);
+  }
+  return buf;
+}
+function setStatus(html) { status(html); }
+async function loadSamples() {
+  try {
+    setStatus('loading manifest…');
+    startOverlay.querySelector('.big').textContent = 'Preparing samples…';
+    const res = await fetch('samples/manifest.json');
+    if (!res.ok) throw new Error('manifest HTTP ' + res.status);
+    manifest = await res.json();
+  } catch (e) { setStatus('manifest failed: ' + e.message); return; }
+  const insts = manifest.instruments;
+  const jobs = [];
+  for (const id in insts) for (const m in insts[id].files) {
+    const key = `${id}/${m}`;
+    manifestFiles[key] = insts[id].files[m];
+    jobs.push({ key, url: insts[id].files[m] });
+  }
+  const expected = jobs.length;
+  let done = 0, decoded = 0, failed = 0;
+  const ac = audioCtx();          /* fetch is fine; decode below may need ctx */
+  setStatus(`loading samples 0/${expected}`);
+  const decodeOne = async job => {
+    try {
+      const r = await fetch(job.url);
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      const ab = await r.arrayBuffer();
+      /* decodeAudioData usually works pre-gesture; older iPad Safari can stall
+         it — on failure, wait for the unlock gesture and retry once */
+      let buf = null;
+      try {
+        buf = await ac.decodeAudioData(ab);
+      } catch (derr) {
+        if (ac.state !== 'running') {
+          await unlockPromise;
+          await ac.resume().catch(() => {});
+          buf = await ac.decodeAudioData(ab);
+        } else throw derr;
+      }
+      bufferCache[job.key] = buf;
+      decoded++;
+    } catch (err) {
+      failed++;                   /* nearest-fallback covers the gap */
+      console.error('[samples] decode failed', job.key, err.message);
+    }
+    done++;
+    if (done % 8 === 0 || done === expected)
+      setStatus(`loading samples ${done}/${expected}`);
+  };
+  setStatus('decoding…');
+  await Promise.all(jobs.map(decodeOne));
+  samplesReady = true;
+  const n = Object.keys(bufferCache).length;
+  console.log(`[samples] bufferCache full: ${n}/${expected} (decoded=${decoded} failed=${failed})` +
+              (n === expected ? ' ✓' : ' ⚠ INCOMPLETE'));
+  startOverlay.querySelector('.big').textContent = 'samples loaded — tap to start';
+  startOverlay.querySelector('.small').textContent = 'Tap once to unlock audio (iPad requirement).';
+  setStatus(`samples ready — tap a pad`);
+}
+/* ===== latency instrumentation ===== */
+window.__latT0 = 0;
+window.__latLog = window.__latLog || [];
+let onsetArmed = false, onsetSeen = false, onsetProbeReady = false;
+function latLog(line) { window.__latLog.push(line); console.log(line); }
+function latMark(stage) {
+  if (!window.__latT0) return;
+  const dt = performance.now() - window.__latT0;
+  latLog(`[LAT] t=${performance.now().toFixed(1)} stage=${stage} dt=${dt.toFixed(1)}ms`);
+}
+function armOnset() {
+  onsetSeen = false;
+  onsetArmed = onsetProbeReady;
+  if (!onsetProbeReady) console.log('[LAT] onset probe not ready yet');
+}
+function armOnsetProbe() {
+  if (onsetProbeReady) return;
+  try {
+    const ac = audioCtx();
+    const an = ac.createAnalyser();
+    an.fftSize = 256;
+    masterGain.connect(an);
+    const buf = new Float32Array(an.fftSize);
+    const tick = () => {
+      an.getFloatTimeDomainData(buf);
+      let rms = 0;
+      for (let i = 0; i < buf.length; i++) rms += buf[i] * buf[i];
+      rms = Math.sqrt(rms / buf.length);
+      if (onsetArmed && !onsetSeen && rms > 0.01) {
+        onsetSeen = true;
+        onsetArmed = false;
+        latLog(`[LAT] AUDIBLE ONSET dt=${(performance.now() - window.__latT0).toFixed(1)}ms rms=${rms.toFixed(3)}`);
+      }
+      requestAnimationFrame(tick);
+    };
+    tick();
+    onsetProbeReady = true;
+    console.log('[LAT] onset probe attached to masterGain');
+  } catch (e) { console.error('[LAT] onset probe failed', e); }
+}
+/* ===== end latency instrumentation ===== */
 /* unlock: must run synchronously inside a trusted gesture (iPad/Safari keep the
-   AudioContext suspended otherwise, and sample decode never completes). Resume
-   the context first, before any await; then load strudel + prewarm samples. */
-let unlockStarted = false;
+   AudioContext suspended otherwise). Resume the context first, before any
+   await; then release the loader if it was waiting. */
 function unlock() {
   startOverlay.classList.add('hidden');
-  const ac = getAudioContext();
-  if (ac && ac.state !== 'running') ac.resume().catch(e => console.error('ctx resume', e));
-  if (unlockStarted) return;
-  unlockStarted = true;
-  ensureStrudel().then(() => { unlocked = true; applyBpm(false); prewarm(); })
-    .catch(e => status('strudel failed to load: ' + e.message));
+  const ac = audioCtx();
+  if (ac.state !== 'running') ac.resume().catch(e => console.error('ctx resume', e));
+  if (unlockPromiseResolve) { unlockPromiseResolve(); unlockPromiseResolve = null; }
+  armOnsetProbe();
 }
 function midiToNote(m) {
   const p = ((m % 12) + 12) % 12;
@@ -217,79 +332,56 @@ function chordNotes(tonicIdx, rowOffset, colSemi, qual) {
   if (ivs.length === 3) ivs.push(12);          /* every chord voices 4 notes */
   return ivs.map(iv => midiToNote(root + iv));
 }
+function noteToMidi(n) {
+  const p = FLAT.indexOf(n.replace(/[^A-G#]/g, ''));
+  const oct = parseInt(n.match(/\d+/)[0], 10);
+  return p + (oct + 1) * 12;
+}
+/* nearest available sample for a target midi, with pitch-shift offset */
+function bufferFor(instId, midi) {
+  const inst = manifest && manifest.instruments[instId];
+  if (!inst) return null;
+  let key = `${instId}/${midi}`;
+  let buf = bufferCache[key];
+  let shift = 0;
+  if (!buf) {
+    const keys = Object.keys(inst.files).map(Number).sort((a, b) => a - b);
+    if (!keys.length) return null;
+    let best = keys[0], bd = 1e9;
+    for (const k of keys) { const d = Math.abs(k - midi); if (d < bd) { bd = d; best = k; } }
+    key = `${instId}/${best}`;
+    buf = bufferCache[key];
+    shift = midi - best;
+  }
+  return buf ? { buf, shift } : null;
+}
+const liveSources = new Set();
 let lastPlay = null;         /* last chord args, to re-arm after a tempo change */
 function playChord(tonicIdx, rowOffset, colSemi, qual, synth) {
   const notes = chordNotes(tonicIdx, rowOffset, colSemi, qual);
-  const g = SYNTHS.find(s => s.id === synth).gain;
+  const g = SYNTHS.find(s => s.id === synth).gain * 0.9;
   const arp = modeSel.value === 'arp';
   lastPlay = { tonicIdx, rowOffset, colSemi, qual, synth };
-  /* commas stack all notes together; spaces sequence them evenly across the cycle */
-  const seq = notes.join(arp ? ' ' : ',');
-  const code = `note("${seq}").s('${synth}').gain(${g}).release(.6).room(.25).repeatCycles(1)`;
-  const cycDur = 1 / sd.scheduler.cps;                       /* seconds per cycle */
-  /* arp: one subdivision of the cycle per voiced note (always 4 — triads are
-     octave-doubled in chordNotes) */
-  const step = arp ? 1 / notes.length : 0;
-  const now = sd.scheduler.now();
-  /* quantize the arp start onto the next step grid line by DELAYING the evaluate
-     itself — NOT with .late(): a fractional late() shifts the last note's span
-     across the cycle boundary and the scheduler re-triggers the leftover fragment
-     as an extra onset (a 5th note per cycle) */
-  const delayMs = arp ? (Math.ceil(now / step) * step - now) * cycDur * 1000 : 0;
-  clearTimeout(evalTimer);
-  clearTimeout(oneShotTimer);
-  evalTimer = setTimeout(() => {
-    try { sd.evaluate(code); } catch (e) { console.error('strudel eval', e); }
-  }, delayMs);
-  /* repeatCycles(1) does not stop the pattern in this build — it re-strikes every
-     cycle. Replace with silence just before the second cycle would be scheduled
-     (small margin so the final arp note keeps nearly its full duration). */
-  const ms = Math.max(600, delayMs + cycDur * 1000 - (arp ? 80 : 350));
-  oneShotTimer = setTimeout(() => { try { sd.evaluate('silence'); } catch (e) {} }, ms);
-}
-let evalTimer = 0, oneShotTimer = 0;
-/* prewarm: load every sample the current grid needs (silent), so chord presses
-   fire together instead of staggering while buffers stream in */
-let prewarmTimer = 0, prewarmDone = 0;
-function prewarm() {
-  /* sample decode needs a running AudioContext — before the unlock gesture it
-     would stall on iPad, so wait (unlock() calls prewarm once audio is free) */
-  const ac = getAudioContext();
-  if (!sd || !unlocked) return;
-  if (ac && ac.state !== 'running') {
-    /* resume() is async — retry prewarm once it completes instead of bailing */
-    ac.resume().then(prewarm).catch(() => {});
-    return;
+  const now = ctx.currentTime + 0.02;
+  /* arp: one subdivision per voiced note (4 notes per beat grid = 60/bpm/4) */
+  const stepSec = arp ? 60 / (+bpmRange.value) / notes.length : 0;
+  latMark('playChord scheduling');
+  for (let i = 0; i < notes.length; i++) {
+    const got = bufferFor(synth, noteToMidi(notes[i]));
+    if (!got) { console.error('[samples] no buffer for', synth, notes[i]); continue; }
+    const src = ctx.createBufferSource();
+    src.buffer = got.buf;
+    if (got.shift) src.playbackRate.value = Math.pow(2, got.shift / 12);
+    const gn = ctx.createGain();
+    gn.gain.value = g;
+    src.connect(gn);
+    gn.connect(masterGain);          /* dry */
+    gn.connect(convolver);           /* wet (reverb) */
+    const t = now + i * stepSec;
+    src.start(t);
+    src.onended = () => liveSources.delete(src);
+    liveSources.add(src);
   }
-  clearTimeout(prewarmTimer);
-  prewarmTimer = setTimeout(() => {
-    try {
-      const tonicIdx = NOTE_NAMES.indexOf(keySel.value);
-      /* union of every set's notes, so any pad in any set/key is already warm */
-      const notes = new Set();
-      for (const k in SETS)
-        for (const row of ROWS)
-          for (const c of SETS[k].cols)
-            chordNotes(tonicIdx, row.offset, c.semi, c.q).forEach(n => notes.add(n));
-      /* stagger one silent stack per instrument: this forces each synth's
-         sample bank to download + decode before the user ever presses a pad */
-      SYNTHS.forEach((s, i) => {
-        setTimeout(() => {
-          try {
-            sd.evaluate(`note("${[...notes].join(',')}").s('${s.id}').gain(0.001).release(.01).repeatCycles(1)`);
-            prewarmDone = i + 1;
-            status(`warming samples ${prewarmDone}/${SYNTHS.length} (${s.label})…`);
-            /* silence the prewarm pattern only when no user one-shot is active —
-               the user's own one-shot timer handles its own silence */
-            setTimeout(() => {
-              if (!oneShotTimer) { try { sd.evaluate('silence'); } catch (e) {} }
-            }, 2200);
-          } catch (e) { console.error('prewarm', s.id, e); }
-        }, i * 280);
-      });
-      setTimeout(() => status('samples ready — tap a pad'), SYNTHS.length * 280 + 2300);
-    } catch (e) { console.error('prewarm', e); }
-  }, 400);
 }
 
 /* ================= UI ================= */
@@ -348,7 +440,15 @@ function buildGrid() {
       td.style.background = `hsla(${row.hue},50%,${isMinor ? 30 : 42}%,.85)`;
       const press = ev => {
         ev.preventDefault();
+        /* retrigger guard: same cell within ~120 ms is ignored; different
+           cells always fire immediately */
+        const t = performance.now();
+        if (t - (lastPressAt.get(td) || 0) < 120) return;
+        lastPressAt.set(td, t);
         unlock();   /* resume ctx synchronously inside the gesture (iPad-safe) */
+        window.__latT0 = performance.now();
+        armOnset();
+        latMark('pointerdown');
         pressCell(tonicIdx, row, c, td);
       };
       td.addEventListener('pointerdown', press);
@@ -358,52 +458,42 @@ function buildGrid() {
     grid.appendChild(tr);
   }
 }
+const lastPressAt = new Map();
 
-let pressTimer = 0;
 function pressCell(tonicIdx, row, col, td) {
   td.classList.add('pressed');
-  clearTimeout(pressTimer);
   setTimeout(() => td.classList.remove('pressed'), 140);
-  ensureStrudel().then(() => {
-    playChord(tonicIdx, row.offset, col.semi, col.q, synthSel.value);
-    const acState = getAudioContext().state;
-    const rootPc = FLAT[((tonicIdx + row.offset + col.semi) % 12 + 12) % 12];
-    const deg = degreeLabel(row.offset + col.semi);
-    const minor = ['m','m7','dim'].includes(col.q);
-    status(`<span class="rn">${minor ? deg.toLowerCase() : deg}</span>` +
-           ` ${rootPc}${QUAL[col.q].label === 'maj' ? '' : QUAL[col.q].label}` +
-           ` · ${row.fn} row · ${synthSel.value}` +
-           (acState !== 'running' ? ` · ⚠ audio ${acState}` : ''));
-  }).catch(e => status('strudel failed to load: ' + e.message));
+  playChord(tonicIdx, row.offset, col.semi, col.q, synthSel.value);
+  const acState = ctx.state;
+  const rootPc = FLAT[((tonicIdx + row.offset + col.semi) % 12 + 12) % 12];
+  const deg = degreeLabel(row.offset + col.semi);
+  const minor = ['m','m7','dim'].includes(col.q);
+  status(`<span class="rn">${minor ? deg.toLowerCase() : deg}</span>` +
+         ` ${rootPc}${QUAL[col.q].label === 'maj' ? '' : QUAL[col.q].label}` +
+         ` · ${row.fn} row · ${synthSel.value}` +
+         (acState !== 'running' ? ` · ⚠ audio ${acState}` : ''));
 }
 
-keySel.addEventListener('change', () => { buildGrid(); prewarm(); });
-setSel.addEventListener('change', () => { buildGrid(); prewarm(); });
-synthSel.addEventListener('change', prewarm);
+keySel.addEventListener('change', buildGrid);
+setSel.addEventListener('change', buildGrid);
 stopBtn.addEventListener('click', () => {
-  clearTimeout(evalTimer);
-  clearTimeout(oneShotTimer);
-  if (sd) sd.stop();
+  liveSources.forEach(s => { try { s.stop(); } catch (e) {} });
+  liveSources.clear();
   status('stopped — tap a pad to play again');
 });
-/* tempo: global setcpm control — changes sd.scheduler.cps so every derived timing
-   in playChord (grid delay, one-shot timer) stays consistent automatically.
-   The arp has 4 notes per cycle (4 = beats per cycle), so BPM = setcpm(bpm/4). */
+/* tempo: re-schedule the current arp/chord from ctx.currentTime so a tempo
+   change is heard immediately (no re-eval needed) */
 function applyBpm(rearm) {
   const bpm = +bpmRange.value;
   bpmLab.textContent = bpm;
-  if (!sd) return;
-  try { sd.evaluate(`setcpm(${bpm / 4})`); } catch (e) { console.error('setcpm', e); }
-  /* re-strike the current one-shot so a tempo change is heard immediately */
-  if (rearm && oneShotTimer && lastPlay) {
-    clearTimeout(oneShotTimer);
+  if (rearm && lastPlay) {
     playChord(lastPlay.tonicIdx, lastPlay.rowOffset, lastPlay.colSemi,
               lastPlay.qual, lastPlay.synth);
   }
 }
 bpmRange.addEventListener('input', () => applyBpm(true));
 /* start overlay: the first trusted gesture unlocks audio. Resume the context
-   synchronously in the handler, then load strudel and prewarm all samples. */
+   synchronously in the handler. */
 startOverlay.addEventListener('pointerdown', ev => {
   ev.preventDefault();
   unlock();
@@ -411,11 +501,9 @@ startOverlay.addEventListener('pointerdown', ev => {
 /* also accept any first touch on the page (e.g. a pad press under the overlay) */
 document.addEventListener('pointerdown', () => unlock(), { once: true, capture: true });
 buildGrid();
-/* fetch strudel itself (module + sample-bank JSONs) at page load — network
-   requests are not gesture-gated; the sample DECODE is, so prewarm waits for
-   the overlay tap via unlock() */
-ensureStrudel().then(() => { startOverlay.querySelector('.small').textContent = 'engine ready — tap to load sounds'; })
-  .catch(e => console.error('preload', e));
+/* fetch + decode all samples at page load (not gesture-gated; the loader
+   itself waits on unlockPromise only if decode stalls pre-gesture) */
+loadSamples().catch(e => console.error('loadSamples', e));
 </script>
 </body>
 </html>

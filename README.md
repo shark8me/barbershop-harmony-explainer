@@ -13,7 +13,7 @@ All pages are hosted on GitHub Pages and work in the browser (works on iPad too)
 | Home | [index.html](https://shark8me.github.io/barbershop-harmony-explainer/index.html) | Barbershop Harmony Explainer — main entry page |
 | Tag Explorer | [tag-viewer.html](https://shark8me.github.io/barbershop-harmony-explainer/tag-viewer.html) | Explore real barbershop tags with harmony visualization |
 | Chord Grid | [grid-viewer.html](https://shark8me.github.io/barbershop-harmony-explainer/grid-viewer.html) | Chord grid viewer for browsing harmony progressions |
-| Chord Instrument | [chord-instrument.html](https://shark8me.github.io/barbershop-harmony-explainer/chord-instrument.html) | Playable chord instrument backed by Strudel — arpeggios, BPM control, instant pads (samples preloaded at page load) |
+| Chord Instrument | [chord-instrument.html](https://shark8me.github.io/barbershop-harmony-explainer/chord-instrument.html) | Playable chord instrument — arpeggios, BPM control, instant pads (WebAudio + local acoustic samples pre-decoded at page load) |
 
 ## Repository layout
 
