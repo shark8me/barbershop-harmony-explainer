@@ -163,6 +163,142 @@
     "71": "samples/vcsl/kalimba/71.ogg"
    },
    "pitchShiftFallback": true
+  },
+  "strings": {
+   "label": "Strings",
+   "gain": 2.2,
+   "files": {
+    "48": "samples/musyng/string_ensemble_1/48.ogg",
+    "52": "samples/musyng/string_ensemble_1/52.ogg",
+    "55": "samples/musyng/string_ensemble_1/55.ogg",
+    "59": "samples/musyng/string_ensemble_1/59.ogg",
+    "60": "samples/musyng/string_ensemble_1/60.ogg",
+    "62": "samples/musyng/string_ensemble_1/62.ogg",
+    "64": "samples/musyng/string_ensemble_1/64.ogg",
+    "67": "samples/musyng/string_ensemble_1/67.ogg",
+    "71": "samples/musyng/string_ensemble_1/71.ogg",
+    "72": "samples/musyng/string_ensemble_1/72.ogg"
+   },
+   "pitchShiftFallback": true
+  },
+  "violin": {
+   "label": "Violin",
+   "gain": 14,
+   "files": {
+    "48": "samples/musyng/violin/48.ogg",
+    "52": "samples/musyng/violin/52.ogg",
+    "55": "samples/musyng/violin/55.ogg",
+    "59": "samples/musyng/violin/59.ogg",
+    "60": "samples/musyng/violin/60.ogg",
+    "62": "samples/musyng/violin/62.ogg",
+    "64": "samples/musyng/violin/64.ogg",
+    "67": "samples/musyng/violin/67.ogg",
+    "71": "samples/musyng/violin/71.ogg",
+    "72": "samples/musyng/violin/72.ogg"
+   },
+   "pitchShiftFallback": true
+  },
+  "french_horn": {
+   "label": "French Horn",
+   "gain": 5.6,
+   "files": {
+    "48": "samples/musyng/french_horn/48.ogg",
+    "52": "samples/musyng/french_horn/52.ogg",
+    "55": "samples/musyng/french_horn/55.ogg",
+    "59": "samples/musyng/french_horn/59.ogg",
+    "60": "samples/musyng/french_horn/60.ogg",
+    "62": "samples/musyng/french_horn/62.ogg",
+    "64": "samples/musyng/french_horn/64.ogg",
+    "67": "samples/musyng/french_horn/67.ogg",
+    "71": "samples/musyng/french_horn/71.ogg",
+    "72": "samples/musyng/french_horn/72.ogg"
+   },
+   "pitchShiftFallback": true
+  },
+  "trumpet": {
+   "label": "Trumpet",
+   "gain": 4.4,
+   "files": {
+    "48": "samples/musyng/trumpet/48.ogg",
+    "52": "samples/musyng/trumpet/52.ogg",
+    "55": "samples/musyng/trumpet/55.ogg",
+    "59": "samples/musyng/trumpet/59.ogg",
+    "60": "samples/musyng/trumpet/60.ogg",
+    "62": "samples/musyng/trumpet/62.ogg",
+    "64": "samples/musyng/trumpet/64.ogg",
+    "67": "samples/musyng/trumpet/67.ogg",
+    "71": "samples/musyng/trumpet/71.ogg",
+    "72": "samples/musyng/trumpet/72.ogg"
+   },
+   "pitchShiftFallback": true
+  },
+  "trombone": {
+   "label": "Trombone",
+   "gain": 6.8,
+   "files": {
+    "48": "samples/musyng/trombone/48.ogg",
+    "52": "samples/musyng/trombone/52.ogg",
+    "55": "samples/musyng/trombone/55.ogg",
+    "59": "samples/musyng/trombone/59.ogg",
+    "60": "samples/musyng/trombone/60.ogg",
+    "62": "samples/musyng/trombone/62.ogg",
+    "64": "samples/musyng/trombone/64.ogg",
+    "67": "samples/musyng/trombone/67.ogg",
+    "71": "samples/musyng/trombone/71.ogg",
+    "72": "samples/musyng/trombone/72.ogg"
+   },
+   "pitchShiftFallback": true
+  },
+  "acoustic_guitar_nylon": {
+   "label": "Nylon Guitar",
+   "gain": 4.6,
+   "files": {
+    "48": "samples/musyng/acoustic_guitar_nylon/48.ogg",
+    "52": "samples/musyng/acoustic_guitar_nylon/52.ogg",
+    "55": "samples/musyng/acoustic_guitar_nylon/55.ogg",
+    "59": "samples/musyng/acoustic_guitar_nylon/59.ogg",
+    "60": "samples/musyng/acoustic_guitar_nylon/60.ogg",
+    "62": "samples/musyng/acoustic_guitar_nylon/62.ogg",
+    "64": "samples/musyng/acoustic_guitar_nylon/64.ogg",
+    "67": "samples/musyng/acoustic_guitar_nylon/67.ogg",
+    "71": "samples/musyng/acoustic_guitar_nylon/71.ogg",
+    "72": "samples/musyng/acoustic_guitar_nylon/72.ogg"
+   },
+   "pitchShiftFallback": true
+  },
+  "acoustic_guitar_steel": {
+   "label": "Steel Guitar",
+   "gain": 4.1,
+   "files": {
+    "48": "samples/musyng/acoustic_guitar_steel/48.ogg",
+    "52": "samples/musyng/acoustic_guitar_steel/52.ogg",
+    "55": "samples/musyng/acoustic_guitar_steel/55.ogg",
+    "59": "samples/musyng/acoustic_guitar_steel/59.ogg",
+    "60": "samples/musyng/acoustic_guitar_steel/60.ogg",
+    "62": "samples/musyng/acoustic_guitar_steel/62.ogg",
+    "64": "samples/musyng/acoustic_guitar_steel/64.ogg",
+    "67": "samples/musyng/acoustic_guitar_steel/67.ogg",
+    "71": "samples/musyng/acoustic_guitar_steel/71.ogg",
+    "72": "samples/musyng/acoustic_guitar_steel/72.ogg"
+   },
+   "pitchShiftFallback": true
+  },
+  "electric_guitar_clean": {
+   "label": "Electric Guitar",
+   "gain": 7.4,
+   "files": {
+    "48": "samples/musyng/electric_guitar_clean/48.ogg",
+    "52": "samples/musyng/electric_guitar_clean/52.ogg",
+    "55": "samples/musyng/electric_guitar_clean/55.ogg",
+    "59": "samples/musyng/electric_guitar_clean/59.ogg",
+    "60": "samples/musyng/electric_guitar_clean/60.ogg",
+    "62": "samples/musyng/electric_guitar_clean/62.ogg",
+    "64": "samples/musyng/electric_guitar_clean/64.ogg",
+    "67": "samples/musyng/electric_guitar_clean/67.ogg",
+    "71": "samples/musyng/electric_guitar_clean/71.ogg",
+    "72": "samples/musyng/electric_guitar_clean/72.ogg"
+   },
+   "pitchShiftFallback": true
   }
  }
 }

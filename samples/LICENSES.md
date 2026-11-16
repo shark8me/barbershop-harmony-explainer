@@ -24,4 +24,16 @@
   - kalimba: Idiophones/Plucked Idiophones/Kalimba, Kenya (Mbira6_Normal_MainSpirit_*)
 - Modifications: WAV → OGG Vorbis (-q 4), renamed to MIDI numbers.
 
+## `musyng/` — MusyngKite soundfont (midi-js-soundfonts)
+- Source: https://github.com/gleitz/midi-js-soundfonts (gh-pages branch,
+  MusyngKite), built from the FluidR3_GM soundfont.
+- License: FluidR3_GM is released by Dean M. Harmon under the MIT license
+  (see https://github.com/gleitz/midi-js-soundfonts#musyngkite).
+- Instruments taken (10 notes each, C3–C5 range): string_ensemble_1, violin,
+  french_horn, trumpet, trombone, acoustic_guitar_nylon,
+  acoustic_guitar_steel, electric_guitar_clean.
+- Modifications: base64 MP3 extracted from the data-URI JS bundles, trimmed to
+  the requested notes, MP3 → OGG Vorbis (-q 4), renamed to MIDI numbers
+  (see samples/build_musyng.py).
+
 No NC-licensed material is used.

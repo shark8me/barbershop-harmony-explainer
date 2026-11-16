@@ -166,6 +166,14 @@ const SYNTHS = [
   { id: 'clavisynth',        label: 'Clavinet',      gain: 2 },
   { id: 'recorder_alto_sus', label: 'Alto Recorder', gain: 4 },
   { id: 'kalimba',           label: 'Kalimba',       gain: 4 },
+  { id: 'strings',           label: 'Strings',       gain: 2.2 },
+  { id: 'violin',            label: 'Violin',        gain: 14 },
+  { id: 'french_horn',       label: 'French Horn',   gain: 5.6 },
+  { id: 'trumpet',           label: 'Trumpet',       gain: 4.4 },
+  { id: 'trombone',          label: 'Trombone',      gain: 6.8 },
+  { id: 'acoustic_guitar_nylon', label: 'Nylon Guitar',     gain: 4.6 },
+  { id: 'acoustic_guitar_steel', label: 'Steel Guitar',     gain: 4.1 },
+  { id: 'electric_guitar_clean', label: 'Electric Guitar',  gain: 7.4 },
 ];
 
 /* ================= WebAudio ================= */
@@ -194,6 +202,7 @@ function audioCtx() {
     wetGain.gain.value = 0.25;
     convolver.connect(wetGain);
     wetGain.connect(masterGain);
+    window.wetGain = wetGain;
     window.__getAudioCtx = () => ctx;
   }
   return ctx;
@@ -357,10 +366,34 @@ function bufferFor(instId, midi) {
 }
 const liveSources = new Set();
 let lastPlay = null;         /* last chord args, to re-arm after a tempo change */
+/* Instruments whose samples sustain (bowed strings, horns, wind, organ) keep
+   sounding until stopped — stop the previous chord when a new one starts, with
+   a short fade so the cut isn't a click. Percussive/decaying instruments
+   (piano, harp, kalimba, guitars…) just ring out naturally. */
+const SUSTAINED = new Set(['sax', 'organ_full', 'harmonica', 'recorder_alto_sus',
+  'strings', 'violin', 'french_horn', 'trumpet', 'trombone']);
+function stopLiveSources(fadeSec) {
+  const t = ctx.currentTime;
+  latLog(`[STOP] fading ${liveSources.size} live source(s) over ${fadeSec}s`);
+  liveSources.forEach(s => {
+    try {
+      if (fadeSec && s._gn) {
+        const gn = s._gn;
+        gn.gain.setValueAtTime(gn.gain.value, t);
+        gn.gain.linearRampToValueAtTime(0.0001, t + fadeSec);
+        s.stop(t + fadeSec + 0.02);
+      } else {
+        s.stop();
+      }
+    } catch (e) {}
+  });
+  liveSources.clear();
+}
 function playChord(tonicIdx, rowOffset, colSemi, qual, synth) {
   const notes = chordNotes(tonicIdx, rowOffset, colSemi, qual);
   const g = SYNTHS.find(s => s.id === synth).gain * 0.9;
   const arp = modeSel.value === 'arp';
+  if (SUSTAINED.has(synth)) stopLiveSources(0.08);
   lastPlay = { tonicIdx, rowOffset, colSemi, qual, synth };
   const now = ctx.currentTime + 0.02;
   /* arp: one subdivision per voiced note (4 notes per beat grid = 60/bpm/4) */
@@ -377,6 +410,7 @@ function playChord(tonicIdx, rowOffset, colSemi, qual, synth) {
     src.connect(gn);
     gn.connect(masterGain);          /* dry */
     gn.connect(convolver);           /* wet (reverb) */
+    src._gn = gn;
     const t = now + i * stepSec;
     src.start(t);
     src.onended = () => liveSources.delete(src);
@@ -477,8 +511,7 @@ function pressCell(tonicIdx, row, col, td) {
 keySel.addEventListener('change', buildGrid);
 setSel.addEventListener('change', buildGrid);
 stopBtn.addEventListener('click', () => {
-  liveSources.forEach(s => { try { s.stop(); } catch (e) {} });
-  liveSources.clear();
+  stopLiveSources(0.08);
   status('stopped — tap a pad to play again');
 });
 /* tempo: re-schedule the current arp/chord from ctx.currentTime so a tempo
